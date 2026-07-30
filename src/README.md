@@ -10,7 +10,7 @@ Three algorithms cover the main design trade-offs:
 |-----------|--------------|-----------|
 | **MRLC** | Maximum latency (cycles) | Minimise randomness (bits) |
 | **MLRC** | Maximum randomness (bits) | Minimise latency (cycles) |
-| **MARC** | Maximum latency **and** maximum randomness | Minimise area (GE) |
+
 
 ---
 
@@ -23,7 +23,7 @@ Three algorithms cover the main design trade-offs:
 5. [Algorithm reference](#algorithm-reference)
    - [MRLC](#mrlc--minimize-randomness-under-latency-constraint)
    - [MLRC](#mlrc--minimize-latency-under-randomness-constraint)
-   - [MARC](#marc--minimize-area-under-randomness-and-latency-constraints)
+
 6. [Verification](#verification)
 7. [Adding your own design](#adding-your-own-design)
 8. [Gadget system](#gadget-system)
@@ -48,7 +48,7 @@ Three algorithms cover the main design trade-offs:
                                │
               ┌────────────────▼────────────────┐
               │  2. DSE algorithm               │
-              │     MRLC / MLRC / MARC          │
+              │     MRLC / MLRC                │
               │     Assigns HPC gadgets to      │
               │     every AND gate              │
               └────────────────┬────────────────┘
@@ -80,7 +80,7 @@ Three algorithms cover the main design trade-offs:
 
 | Tool | Purpose | Install (Ubuntu/Debian) |
 |------|---------|------------------------|
-| Python 3.8+ | Runtime | `sudo apt install python3` |
+| Python 3.10 | Runtime | `sudo apt install python3` |
 | Graphviz (`dot`) | AND-tree processing | `sudo apt install graphviz` |
 | Yosys | Gate-level synthesis | `sudo apt install yosys` |
 | iverilog + vvp | RTL simulation (verification) | `sudo apt install iverilog` |
@@ -107,7 +107,7 @@ gcc --version
 ```bash
 # 1. Clone / download the repository
 git clone <repo-url>
-cd DSE-Framework
+cd TETRIS-artifact/src
 
 # 2. (Recommended) Create a virtual environment
 python3 -m venv myenv
@@ -134,12 +134,10 @@ python run_mrlc.py --design Canright_sbox.c --latency 4 --order 1
 # MLRC: minimise latency, Boyer-Peralta S-box, randomness ≤ 168 bits, order d=2
 python run_mlrc.py --design Boyer_Peraltas_sbox.c --randomness 168 --order 2
 
-# MARC: minimise area, skinny S-box, latency ≤ 4 AND randomness ≤ 80, order d=1
-python run_marc.py --design skinny_sbox_nor.c --max-latency 4 --max-randomness 80 --order 1
 ```
 
 Each command prints a summary table to the terminal and writes detailed results to
-`Results/<design>/<ALGO>_d<d>_<constraint>/`.
+`src/Results/<design>/<ALGO>_d<d>_<constraint>/`.
 
 ---
 
@@ -161,11 +159,9 @@ make all-synth    # same, with Yosys synthesis — adds area (kGE) to tables (sl
 ```bash
 make mrlc         # MRLC only  (no synthesis)
 make mlrc         # MLRC only  (no synthesis)
-make marc         # MARC only  (no synthesis)
 
 make mrlc-synth   # MRLC with Yosys synthesis
 make mlrc-synth   # MLRC with synthesis
-make marc-synth   # MARC with synthesis
 ```
 
 Or equivalently via the script directly:
@@ -173,13 +169,11 @@ Or equivalently via the script directly:
 ```bash
 python3 run_all_experiments.py --algo mrlc
 python3 run_all_experiments.py --algo mlrc
-python3 run_all_experiments.py --algo marc
-python3 run_all_experiments.py --algo marc --with-synth
 ```
 
 ### Regenerate tables without re-running
 
-If results are already cached in `Results/`, rebuild the summary table instantly:
+If results are already cached in `src/Results/`, rebuild the summary table instantly:
 
 ```bash
 make tables
@@ -194,7 +188,7 @@ make clean-results    # delete all results.json files (keeps directory structure
 make help             # print target list
 ```
 
-The combined summary table (`Results/all_results.txt`) always shows `—` for any
+The combined summary table (`src/Results/all_results.txt`) always shows `—` for any
 algorithm that has not been run yet, so you can run algorithms incrementally.
 
 ---
@@ -441,12 +435,12 @@ python run_mrlc.py --design Canright_sbox.c --latency 4 --order 3
 Every run writes its results to:
 
 ```
-Results/<design_name>/<ALGO>_d<d>_<constraint>/
+src/Results/<design_name>/<ALGO>_d<d>_<constraint>/
 ```
 
 For example:
 ```
-Results/Canright_sbox/MRLC_d1_lat4/
+src/Results/Canright_sbox/MRLC_d1_lat4/
     masked_output.c     ← masked C (used by run_verify.py)
     design_synth.v      ← Yosys gate-level Verilog netlist
     area.json           ← raw synthesis area breakdown
@@ -477,7 +471,7 @@ Results/Canright_sbox/MRLC_d1_lat4/
 }
 ```
 
-MARC additionally includes a `pareto_front` array listing every non-dominated design point found.
+
 
 **Log file:** `dse_run.log` in the repository root contains all verbose algorithm output.  Only the final summary table is shown in the terminal.
 
@@ -510,9 +504,6 @@ vvp -V
 **`COMAR is only available for d <= 1`**
 Remove `--use-comar` or set `--order 1`.
 
-**`No feasible design found within the given constraints`** (MARC only)
-No gadget combination satisfies both constraints simultaneously.
-Increase `--max-latency` or `--max-randomness`.
 
 **Custom top-level function name**
 If your function is not named `sbox`, pass `--top-module`:
