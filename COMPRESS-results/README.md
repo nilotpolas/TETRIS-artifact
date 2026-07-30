@@ -51,9 +51,9 @@ python3 parse_compress_logs.py --csv all_compress.csv   # export as CSV
 Requires TETRIS results to exist under `../src/Results/`. Run TETRIS first:
 
 ```bash
-cd ..
+cd ../src
 make mrlc-synth   # or make all-synth
-cd comparison
+cd ../COMPRESS-results
 ```
 
 Then:
