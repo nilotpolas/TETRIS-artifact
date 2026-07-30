@@ -1,0 +1,275 @@
+{
+  "creator": "Yosys 0.33 (git sha1 2584903a0, gcc 8.4.0-1ubuntu1~18.04 -fPIC -Os)",
+  "modules": {
+    "$paramod$1c66fe8f8348cfde03fbce5eda2b09723557e449\\MSKxor": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "hdlname": "\\MSKxor",
+        "src": "gadget_library/MSK/MSKxor.v:18.1-25.10"
+      },
+      "parameter_default_values": {
+        "count": "00000000000000000000000000000001",
+        "d": "00000000000000000000000000000100"
+      },
+      "ports": {
+        "ina": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "inb": {
+          "direction": "input",
+          "bits": [ 6, 7, 8, 9 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 10, 11, 12, 13 ]
+        }
+      },
+      "cells": {
+        "$abc$1138$auto$blifparse.cc:386:parse_blif$1139": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 6 ],
+            "Z": [ 10 ]
+          }
+        },
+        "$abc$1138$auto$blifparse.cc:386:parse_blif$1140": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 3 ],
+            "B": [ 7 ],
+            "Z": [ 11 ]
+          }
+        },
+        "$abc$1138$auto$blifparse.cc:386:parse_blif$1141": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 8 ],
+            "Z": [ 12 ]
+          }
+        },
+        "$abc$1138$auto$blifparse.cc:386:parse_blif$1142": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 5 ],
+            "B": [ 9 ],
+            "Z": [ 13 ]
+          }
+        }
+      },
+      "netnames": {
+        "ina": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKxor.v:20.80-20.83"
+          }
+        },
+        "inb": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8, 9 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKxor.v:20.85-20.88"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12, 13 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKxor.v:21.80-21.83"
+          }
+        }
+      }
+    },
+    "$paramod\\MSKinv\\d=s32'00000000000000000000000000000100": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "hdlname": "\\MSKinv",
+        "src": "gadget_library/MSK/MSKinv.v:18.1-34.10"
+      },
+      "parameter_default_values": {
+        "count": "00000000000000000000000000000001",
+        "d": "00000000000000000000000000000100"
+      },
+      "ports": {
+        "in": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 6, 3, 4, 5 ]
+        }
+      },
+      "cells": {
+        "$abc$1143$auto$blifparse.cc:386:parse_blif$1144": {
+          "hide_name": 1,
+          "type": "INV_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 2 ],
+            "ZN": [ 6 ]
+          }
+        }
+      },
+      "netnames": {
+        "in": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKinv.v:21.80-21.82"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 6, 3, 4, 5 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKinv.v:22.80-22.83"
+          }
+        }
+      }
+    },
+    "MSKxnor": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "top": "00000000000000000000000000000001",
+        "src": "gadget_library/MSK/MSKxnor.v:18.1-28.10"
+      },
+      "parameter_default_values": {
+        "count": "00000000000000000000000000000001",
+        "d": "00000000000000000000000000000100"
+      },
+      "ports": {
+        "ina": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "inb": {
+          "direction": "input",
+          "bits": [ 6, 7, 8, 9 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 10, 11, 12, 13 ]
+        }
+      },
+      "cells": {
+        "notg": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKinv\\d=s32'00000000000000000000000000000100",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKxnor.v:26.17-26.43"
+          },
+          "port_directions": {
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "in": [ 14, 15, 16, 17 ],
+            "out": [ 10, 11, 12, 13 ]
+          }
+        },
+        "xorg": {
+          "hide_name": 0,
+          "type": "$paramod$1c66fe8f8348cfde03fbce5eda2b09723557e449\\MSKxor",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKxnor.v:25.32-25.69"
+          },
+          "port_directions": {
+            "ina": "input",
+            "inb": "input",
+            "out": "output"
+          },
+          "connections": {
+            "ina": [ 2, 3, 4, 5 ],
+            "inb": [ 6, 7, 8, 9 ],
+            "out": [ 14, 15, 16, 17 ]
+          }
+        }
+      },
+      "netnames": {
+        "ina": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKxnor.v:20.80-20.83"
+          }
+        },
+        "inb": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8, 9 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKxnor.v:20.85-20.88"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 10, 11, 12, 13 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKxnor.v:21.80-21.83"
+          }
+        },
+        "tmp": {
+          "hide_name": 0,
+          "bits": [ 14, 15, 16, 17 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKxnor.v:23.20-23.23"
+          }
+        }
+      }
+    }
+  }
+}

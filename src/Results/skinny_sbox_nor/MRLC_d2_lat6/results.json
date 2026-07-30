@@ -1,0 +1,23 @@
+{
+  "algorithm": "MRLC",
+  "design": "skinny_sbox_nor",
+  "security_order_d": 2,
+  "latency_budget": 6,
+  "achieved_randomness": 24,
+  "achieved_latency": 6,
+  "hls_verified_latency": 6,
+  "synthesis": {
+    "area_ge": 1795.5,
+    "cell_count": 621,
+    "dff_count": 312,
+    "area_kge": 1.7955,
+    "area_kge_wo_rand": 2.114
+  },
+  "gadget_distribution": {
+    "hpc2": 5,
+    "hpc2_swapped": 1,
+    "hpc2o": 1,
+    "hpc2o_swapped": 1
+  },
+  "dse_time_sec": 0.031
+}

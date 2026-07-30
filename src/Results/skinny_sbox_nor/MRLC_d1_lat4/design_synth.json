@@ -1,0 +1,5753 @@
+{
+  "creator": "Yosys 0.33 (git sha1 2584903a0, gcc 8.4.0-1ubuntu1~18.04 -fPIC -Os)",
+  "modules": {
+    "sbox": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:1.1-567.10"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "i0_0": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "i0_1": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "i1_0": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "i1_1": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "i2_0": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "i2_1": {
+          "direction": "input",
+          "bits": [ 8 ]
+        },
+        "i3_0": {
+          "direction": "input",
+          "bits": [ 9 ]
+        },
+        "i3_1": {
+          "direction": "input",
+          "bits": [ 10 ]
+        },
+        "i4_0": {
+          "direction": "input",
+          "bits": [ 11 ]
+        },
+        "i4_1": {
+          "direction": "input",
+          "bits": [ 12 ]
+        },
+        "i5_0": {
+          "direction": "input",
+          "bits": [ 13 ]
+        },
+        "i5_1": {
+          "direction": "input",
+          "bits": [ 14 ]
+        },
+        "i6_0": {
+          "direction": "input",
+          "bits": [ 15 ]
+        },
+        "i6_1": {
+          "direction": "input",
+          "bits": [ 16 ]
+        },
+        "i7_0": {
+          "direction": "input",
+          "bits": [ 17 ]
+        },
+        "i7_1": {
+          "direction": "input",
+          "bits": [ 18 ]
+        },
+        "dec_1": {
+          "direction": "input",
+          "bits": [ 19 ]
+        },
+        "rand_2": {
+          "direction": "input",
+          "bits": [ 20 ]
+        },
+        "rand_6": {
+          "direction": "input",
+          "bits": [ 21 ]
+        },
+        "rand_11": {
+          "direction": "input",
+          "bits": [ 22 ]
+        },
+        "rand_7": {
+          "direction": "input",
+          "bits": [ 23 ]
+        },
+        "rand_3": {
+          "direction": "input",
+          "bits": [ 24 ]
+        },
+        "rand_12": {
+          "direction": "input",
+          "bits": [ 25 ]
+        },
+        "rand_8": {
+          "direction": "input",
+          "bits": [ 26 ]
+        },
+        "rand_4": {
+          "direction": "input",
+          "bits": [ 27 ]
+        },
+        "rand_9": {
+          "direction": "input",
+          "bits": [ 28 ]
+        },
+        "rand_1": {
+          "direction": "input",
+          "bits": [ 29 ]
+        },
+        "rand_5": {
+          "direction": "input",
+          "bits": [ 30 ]
+        },
+        "rand_10": {
+          "direction": "input",
+          "bits": [ 31 ]
+        },
+        "o0_0": {
+          "direction": "output",
+          "bits": [ 32 ]
+        },
+        "o0_1": {
+          "direction": "output",
+          "bits": [ 33 ]
+        },
+        "o1_0": {
+          "direction": "output",
+          "bits": [ 34 ]
+        },
+        "o1_1": {
+          "direction": "output",
+          "bits": [ 35 ]
+        },
+        "o2_0": {
+          "direction": "output",
+          "bits": [ 36 ]
+        },
+        "o2_1": {
+          "direction": "output",
+          "bits": [ 37 ]
+        },
+        "o3_0": {
+          "direction": "output",
+          "bits": [ 38 ]
+        },
+        "o3_1": {
+          "direction": "output",
+          "bits": [ 39 ]
+        },
+        "o4_0": {
+          "direction": "output",
+          "bits": [ 40 ]
+        },
+        "o4_1": {
+          "direction": "output",
+          "bits": [ 41 ]
+        },
+        "o5_0": {
+          "direction": "output",
+          "bits": [ 42 ]
+        },
+        "o5_1": {
+          "direction": "output",
+          "bits": [ 43 ]
+        },
+        "o6_0": {
+          "direction": "output",
+          "bits": [ 44 ]
+        },
+        "o6_1": {
+          "direction": "output",
+          "bits": [ 45 ]
+        },
+        "o7_0": {
+          "direction": "output",
+          "bits": [ 46 ]
+        },
+        "o7_1": {
+          "direction": "output",
+          "bits": [ 47 ]
+        }
+      },
+      "cells": {
+        "$abc$652$auto$blifparse.cc:386:parse_blif$653": {
+          "hide_name": 1,
+          "type": "INV_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 8 ],
+            "ZN": [ 48 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$654": {
+          "hide_name": 1,
+          "type": "INV_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 10 ],
+            "ZN": [ 49 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$655": {
+          "hide_name": 1,
+          "type": "INV_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 16 ],
+            "ZN": [ 50 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$656": {
+          "hide_name": 1,
+          "type": "INV_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 15 ],
+            "ZN": [ 51 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$657": {
+          "hide_name": 1,
+          "type": "INV_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 9 ],
+            "ZN": [ 52 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$658": {
+          "hide_name": 1,
+          "type": "INV_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 7 ],
+            "ZN": [ 53 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$659": {
+          "hide_name": 1,
+          "type": "INV_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 54 ],
+            "ZN": [ 55 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$660": {
+          "hide_name": 1,
+          "type": "INV_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 23 ],
+            "ZN": [ 56 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$661": {
+          "hide_name": 1,
+          "type": "INV_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 57 ],
+            "ZN": [ 58 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$662": {
+          "hide_name": 1,
+          "type": "INV_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 28 ],
+            "ZN": [ 59 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$663": {
+          "hide_name": 1,
+          "type": "INV_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 60 ],
+            "ZN": [ 61 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$664": {
+          "hide_name": 1,
+          "type": "INV_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 31 ],
+            "ZN": [ 62 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$665": {
+          "hide_name": 1,
+          "type": "NAND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 63 ],
+            "A2": [ 64 ],
+            "ZN": [ 65 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$666": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 66 ],
+            "B": [ 65 ],
+            "Z": [ 67 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$667": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 68 ],
+            "B": [ 67 ],
+            "ZN": [ 69 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$668": {
+          "hide_name": 1,
+          "type": "INV_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 69 ],
+            "ZN": [ 70 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$669": {
+          "hide_name": 1,
+          "type": "NAND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 71 ],
+            "A2": [ 72 ],
+            "ZN": [ 73 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$670": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 74 ],
+            "B": [ 73 ],
+            "Z": [ 75 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$671": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 76 ],
+            "B": [ 75 ],
+            "ZN": [ 77 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$672": {
+          "hide_name": 1,
+          "type": "INV_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 77 ],
+            "ZN": [ 78 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$673": {
+          "hide_name": 1,
+          "type": "NAND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 79 ],
+            "A2": [ 80 ],
+            "ZN": [ 81 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$674": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 82 ],
+            "B": [ 81 ],
+            "Z": [ 83 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$675": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 84 ],
+            "B": [ 83 ],
+            "ZN": [ 85 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$676": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 86 ],
+            "B": [ 87 ],
+            "ZN": [ 88 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$677": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 89 ],
+            "B": [ 88 ],
+            "ZN": [ 90 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$678": {
+          "hide_name": 1,
+          "type": "INV_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 90 ],
+            "ZN": [ 91 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$679": {
+          "hide_name": 1,
+          "type": "AND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 15 ],
+            "A2": [ 17 ],
+            "ZN": [ 92 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$680": {
+          "hide_name": 1,
+          "type": "NOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 16 ],
+            "A2": [ 18 ],
+            "ZN": [ 93 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$681": {
+          "hide_name": 1,
+          "type": "NOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 52 ],
+            "A2": [ 53 ],
+            "ZN": [ 94 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$682": {
+          "hide_name": 1,
+          "type": "NOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 8 ],
+            "A2": [ 10 ],
+            "ZN": [ 95 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$683": {
+          "hide_name": 1,
+          "type": "AND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 7 ],
+            "A2": [ 5 ],
+            "ZN": [ 96 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$684": {
+          "hide_name": 1,
+          "type": "NOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 6 ],
+            "A2": [ 8 ],
+            "ZN": [ 97 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$685": {
+          "hide_name": 1,
+          "type": "NAND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 98 ],
+            "A2": [ 99 ],
+            "ZN": [ 100 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$686": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 101 ],
+            "B": [ 100 ],
+            "Z": [ 102 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$687": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 103 ],
+            "B": [ 102 ],
+            "ZN": [ 104 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$688": {
+          "hide_name": 1,
+          "type": "NAND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 105 ],
+            "A2": [ 106 ],
+            "ZN": [ 107 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$689": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 108 ],
+            "B": [ 107 ],
+            "Z": [ 109 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$690": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 110 ],
+            "B": [ 109 ],
+            "ZN": [ 111 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$691": {
+          "hide_name": 1,
+          "type": "AND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 85 ],
+            "A2": [ 111 ],
+            "ZN": [ 112 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$692": {
+          "hide_name": 1,
+          "type": "NAND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 113 ],
+            "A2": [ 54 ],
+            "ZN": [ 114 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$693": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 115 ],
+            "B": [ 114 ],
+            "Z": [ 116 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$694": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 117 ],
+            "B": [ 116 ],
+            "ZN": [ 118 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$695": {
+          "hide_name": 1,
+          "type": "NOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 69 ],
+            "A2": [ 118 ],
+            "ZN": [ 119 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$696": {
+          "hide_name": 1,
+          "type": "AND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 106 ],
+            "A2": [ 111 ],
+            "ZN": [ 120 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$697": {
+          "hide_name": 1,
+          "type": "NOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 55 ],
+            "A2": [ 118 ],
+            "ZN": [ 121 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$698": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 122 ],
+            "B": [ 123 ],
+            "ZN": [ 124 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$699": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 125 ],
+            "B": [ 124 ],
+            "ZN": [ 126 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$700": {
+          "hide_name": 1,
+          "type": "NAND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 127 ],
+            "A2": [ 128 ],
+            "ZN": [ 129 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$701": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 130 ],
+            "B": [ 129 ],
+            "Z": [ 131 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$702": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 132 ],
+            "B": [ 131 ],
+            "ZN": [ 133 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$703": {
+          "hide_name": 1,
+          "type": "AND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 134 ],
+            "A2": [ 133 ],
+            "ZN": [ 135 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$704": {
+          "hide_name": 1,
+          "type": "NAND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 136 ],
+            "A2": [ 137 ],
+            "ZN": [ 138 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$705": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 139 ],
+            "B": [ 138 ],
+            "ZN": [ 140 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$706": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 141 ],
+            "B": [ 140 ],
+            "ZN": [ 142 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$707": {
+          "hide_name": 1,
+          "type": "AND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 143 ],
+            "A2": [ 142 ],
+            "ZN": [ 144 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$708": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 85 ],
+            "Z": [ 145 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$709": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 12 ],
+            "B": [ 69 ],
+            "Z": [ 146 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$710": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 3 ],
+            "B": [ 111 ],
+            "Z": [ 147 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$711": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 118 ],
+            "Z": [ 148 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$712": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 51 ],
+            "B": [ 104 ],
+            "ZN": [ 149 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$713": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 50 ],
+            "B": [ 77 ],
+            "ZN": [ 150 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$714": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 13 ],
+            "B": [ 133 ],
+            "Z": [ 151 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$715": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 14 ],
+            "B": [ 142 ],
+            "ZN": [ 152 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$716": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 153 ],
+            "B": [ 154 ],
+            "ZN": [ 155 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$717": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 156 ],
+            "B": [ 155 ],
+            "ZN": [ 157 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$718": {
+          "hide_name": 1,
+          "type": "MUX2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 22 ],
+            "B": [ 158 ],
+            "S": [ 157 ],
+            "Z": [ 159 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$719": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 53 ],
+            "B": [ 159 ],
+            "ZN": [ 160 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$720": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 22 ],
+            "B": [ 90 ],
+            "ZN": [ 161 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$721": {
+          "hide_name": 1,
+          "type": "AND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 162 ],
+            "A2": [ 157 ],
+            "ZN": [ 163 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$722": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 164 ],
+            "B": [ 165 ],
+            "Z": [ 166 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$723": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 167 ],
+            "B": [ 168 ],
+            "ZN": [ 169 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$724": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 170 ],
+            "B": [ 169 ],
+            "ZN": [ 171 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$725": {
+          "hide_name": 1,
+          "type": "MUX2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 172 ],
+            "B": [ 22 ],
+            "S": [ 171 ],
+            "Z": [ 173 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$726": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 48 ],
+            "B": [ 173 ],
+            "ZN": [ 174 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$727": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 22 ],
+            "B": [ 126 ],
+            "Z": [ 175 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$728": {
+          "hide_name": 1,
+          "type": "NOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 58 ],
+            "A2": [ 171 ],
+            "ZN": [ 176 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$729": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 177 ],
+            "B": [ 178 ],
+            "Z": [ 179 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$730": {
+          "hide_name": 1,
+          "type": "MUX2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 25 ],
+            "B": [ 128 ],
+            "S": [ 133 ],
+            "Z": [ 180 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$731": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 52 ],
+            "B": [ 180 ],
+            "ZN": [ 181 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$732": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 25 ],
+            "B": [ 69 ],
+            "ZN": [ 182 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$733": {
+          "hide_name": 1,
+          "type": "AND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 183 ],
+            "A2": [ 133 ],
+            "ZN": [ 184 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$734": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 185 ],
+            "B": [ 186 ],
+            "Z": [ 187 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$735": {
+          "hide_name": 1,
+          "type": "MUX2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 25 ],
+            "B": [ 137 ],
+            "S": [ 142 ],
+            "Z": [ 188 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$736": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 49 ],
+            "B": [ 188 ],
+            "ZN": [ 189 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$737": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 25 ],
+            "B": [ 85 ],
+            "Z": [ 190 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$738": {
+          "hide_name": 1,
+          "type": "AND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 191 ],
+            "A2": [ 142 ],
+            "ZN": [ 192 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$739": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 193 ],
+            "B": [ 194 ],
+            "Z": [ 195 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$740": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 17 ],
+            "B": [ 157 ],
+            "Z": [ 196 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$741": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 18 ],
+            "B": [ 171 ],
+            "Z": [ 197 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$742": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 5 ],
+            "B": [ 126 ],
+            "Z": [ 198 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$743": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 90 ],
+            "Z": [ 199 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$744": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 18 ],
+            "B": [ 29 ],
+            "ZN": [ 200 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$745": {
+          "hide_name": 1,
+          "type": "NAND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 51 ],
+            "A2": [ 29 ],
+            "ZN": [ 201 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$746": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 20 ],
+            "B": [ 201 ],
+            "ZN": [ 202 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$747": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 17 ],
+            "B": [ 29 ],
+            "Z": [ 203 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$748": {
+          "hide_name": 1,
+          "type": "NAND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 16 ],
+            "A2": [ 29 ],
+            "ZN": [ 204 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$749": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 20 ],
+            "B": [ 204 ],
+            "ZN": [ 205 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$750": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 8 ],
+            "B": [ 24 ],
+            "ZN": [ 206 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$751": {
+          "hide_name": 1,
+          "type": "NAND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 52 ],
+            "A2": [ 24 ],
+            "ZN": [ 207 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$752": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 27 ],
+            "B": [ 207 ],
+            "ZN": [ 208 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$753": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 24 ],
+            "Z": [ 209 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$754": {
+          "hide_name": 1,
+          "type": "NAND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 10 ],
+            "A2": [ 24 ],
+            "ZN": [ 210 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$755": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 27 ],
+            "B": [ 210 ],
+            "ZN": [ 211 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$756": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 30 ],
+            "ZN": [ 212 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$757": {
+          "hide_name": 1,
+          "type": "NAND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 53 ],
+            "A2": [ 30 ],
+            "ZN": [ 213 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$758": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 21 ],
+            "B": [ 213 ],
+            "ZN": [ 214 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$759": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 5 ],
+            "B": [ 30 ],
+            "Z": [ 215 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$760": {
+          "hide_name": 1,
+          "type": "NAND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 8 ],
+            "A2": [ 30 ],
+            "ZN": [ 216 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$761": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 21 ],
+            "B": [ 216 ],
+            "ZN": [ 217 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$762": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 23 ],
+            "B": [ 118 ],
+            "ZN": [ 218 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$763": {
+          "hide_name": 1,
+          "type": "NOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 56 ],
+            "A2": [ 85 ],
+            "ZN": [ 219 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$764": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 26 ],
+            "B": [ 219 ],
+            "Z": [ 220 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$765": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 56 ],
+            "B": [ 111 ],
+            "ZN": [ 221 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$766": {
+          "hide_name": 1,
+          "type": "NAND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 23 ],
+            "A2": [ 69 ],
+            "ZN": [ 222 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$767": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 26 ],
+            "B": [ 222 ],
+            "ZN": [ 223 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$768": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 10 ],
+            "B": [ 28 ],
+            "ZN": [ 224 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$769": {
+          "hide_name": 1,
+          "type": "AND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 225 ],
+            "A2": [ 111 ],
+            "ZN": [ 226 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$770": {
+          "hide_name": 1,
+          "type": "NOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 59 ],
+            "A2": [ 111 ],
+            "ZN": [ 227 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$771": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 28 ],
+            "Z": [ 228 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$772": {
+          "hide_name": 1,
+          "type": "NOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 61 ],
+            "A2": [ 118 ],
+            "ZN": [ 229 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$773": {
+          "hide_name": 1,
+          "type": "AND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 28 ],
+            "A2": [ 118 ],
+            "ZN": [ 230 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$774": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 31 ],
+            "B": [ 77 ],
+            "ZN": [ 231 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$775": {
+          "hide_name": 1,
+          "type": "AND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 232 ],
+            "A2": [ 133 ],
+            "ZN": [ 233 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$776": {
+          "hide_name": 1,
+          "type": "NOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 62 ],
+            "A2": [ 133 ],
+            "ZN": [ 234 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$777": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 62 ],
+            "B": [ 104 ],
+            "ZN": [ 235 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$778": {
+          "hide_name": 1,
+          "type": "AND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 236 ],
+            "A2": [ 142 ],
+            "ZN": [ 237 ]
+          }
+        },
+        "$abc$652$auto$blifparse.cc:386:parse_blif$779": {
+          "hide_name": 1,
+          "type": "NOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 62 ],
+            "A2": [ 142 ],
+            "ZN": [ 238 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$460": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 166 ],
+            "Q": [ 32 ],
+            "QN": [ 239 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$461": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 179 ],
+            "Q": [ 33 ],
+            "QN": [ 240 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$462": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 196 ],
+            "Q": [ 34 ],
+            "QN": [ 241 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$463": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 197 ],
+            "Q": [ 35 ],
+            "QN": [ 242 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$464": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 243 ],
+            "Q": [ 36 ],
+            "QN": [ 244 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$465": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 245 ],
+            "Q": [ 37 ],
+            "QN": [ 246 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$466": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 247 ],
+            "Q": [ 38 ],
+            "QN": [ 248 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$467": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 249 ],
+            "Q": [ 39 ],
+            "QN": [ 250 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$468": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 187 ],
+            "Q": [ 40 ],
+            "QN": [ 251 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$469": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 195 ],
+            "Q": [ 41 ],
+            "QN": [ 252 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$470": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 253 ],
+            "Q": [ 42 ],
+            "QN": [ 254 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$471": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 255 ],
+            "Q": [ 43 ],
+            "QN": [ 256 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$472": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 257 ],
+            "Q": [ 44 ],
+            "QN": [ 258 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$473": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 259 ],
+            "Q": [ 45 ],
+            "QN": [ 260 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$474": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 261 ],
+            "Q": [ 46 ],
+            "QN": [ 262 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$475": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 263 ],
+            "Q": [ 47 ],
+            "QN": [ 264 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$476": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 200 ],
+            "Q": [ 79 ],
+            "QN": [ 265 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$477": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 15 ],
+            "Q": [ 80 ],
+            "QN": [ 266 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$478": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 202 ],
+            "Q": [ 82 ],
+            "QN": [ 267 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$479": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 203 ],
+            "Q": [ 63 ],
+            "QN": [ 268 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$480": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 50 ],
+            "Q": [ 64 ],
+            "QN": [ 269 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$481": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 205 ],
+            "Q": [ 66 ],
+            "QN": [ 270 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$482": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 92 ],
+            "Q": [ 84 ],
+            "QN": [ 271 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$483": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 93 ],
+            "Q": [ 68 ],
+            "QN": [ 272 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$484": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 206 ],
+            "Q": [ 105 ],
+            "QN": [ 273 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$485": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 9 ],
+            "Q": [ 106 ],
+            "QN": [ 274 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$486": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 208 ],
+            "Q": [ 108 ],
+            "QN": [ 275 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$487": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 209 ],
+            "Q": [ 113 ],
+            "QN": [ 276 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$488": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 49 ],
+            "Q": [ 54 ],
+            "QN": [ 277 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$489": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 211 ],
+            "Q": [ 115 ],
+            "QN": [ 278 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$490": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 94 ],
+            "Q": [ 110 ],
+            "QN": [ 279 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$491": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 95 ],
+            "Q": [ 117 ],
+            "QN": [ 280 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$492": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 212 ],
+            "Q": [ 98 ],
+            "QN": [ 281 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$493": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 7 ],
+            "Q": [ 99 ],
+            "QN": [ 282 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$494": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 214 ],
+            "Q": [ 101 ],
+            "QN": [ 283 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$495": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 215 ],
+            "Q": [ 71 ],
+            "QN": [ 284 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$496": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 48 ],
+            "Q": [ 72 ],
+            "QN": [ 285 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$497": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 217 ],
+            "Q": [ 74 ],
+            "QN": [ 286 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$498": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 96 ],
+            "Q": [ 103 ],
+            "QN": [ 287 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$499": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 97 ],
+            "Q": [ 76 ],
+            "QN": [ 288 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$500": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 218 ],
+            "Q": [ 127 ],
+            "QN": [ 289 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$501": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 85 ],
+            "Q": [ 128 ],
+            "QN": [ 290 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$502": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 220 ],
+            "Q": [ 130 ],
+            "QN": [ 291 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$503": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 221 ],
+            "Q": [ 136 ],
+            "QN": [ 292 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$504": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 70 ],
+            "Q": [ 137 ],
+            "QN": [ 293 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$505": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 223 ],
+            "Q": [ 139 ],
+            "QN": [ 294 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$506": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 112 ],
+            "Q": [ 132 ],
+            "QN": [ 295 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$507": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 119 ],
+            "Q": [ 141 ],
+            "QN": [ 296 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$508": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 224 ],
+            "Q": [ 225 ],
+            "QN": [ 297 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$509": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 226 ],
+            "Q": [ 122 ],
+            "QN": [ 298 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$510": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 227 ],
+            "Q": [ 123 ],
+            "QN": [ 299 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$511": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 228 ],
+            "Q": [ 60 ],
+            "QN": [ 300 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$512": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 229 ],
+            "Q": [ 86 ],
+            "QN": [ 301 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$513": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 230 ],
+            "Q": [ 87 ],
+            "QN": [ 302 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$514": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 120 ],
+            "Q": [ 125 ],
+            "QN": [ 303 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$515": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 121 ],
+            "Q": [ 89 ],
+            "QN": [ 304 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$516": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 104 ],
+            "Q": [ 134 ],
+            "QN": [ 305 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$517": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 231 ],
+            "Q": [ 232 ],
+            "QN": [ 306 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$518": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 233 ],
+            "Q": [ 153 ],
+            "QN": [ 307 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$519": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 234 ],
+            "Q": [ 154 ],
+            "QN": [ 308 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$520": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 235 ],
+            "Q": [ 236 ],
+            "QN": [ 309 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$521": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 237 ],
+            "Q": [ 167 ],
+            "QN": [ 310 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$522": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 238 ],
+            "Q": [ 168 ],
+            "QN": [ 311 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$523": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 78 ],
+            "Q": [ 143 ],
+            "QN": [ 312 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$524": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 135 ],
+            "Q": [ 156 ],
+            "QN": [ 313 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$525": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 144 ],
+            "Q": [ 170 ],
+            "QN": [ 314 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$526": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 126 ],
+            "Q": [ 158 ],
+            "QN": [ 315 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$527": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 160 ],
+            "Q": [ 165 ],
+            "QN": [ 316 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$528": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 161 ],
+            "Q": [ 162 ],
+            "QN": [ 317 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$529": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 163 ],
+            "Q": [ 164 ],
+            "QN": [ 318 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$530": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 91 ],
+            "Q": [ 172 ],
+            "QN": [ 319 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$531": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 174 ],
+            "Q": [ 178 ],
+            "QN": [ 320 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$532": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 175 ],
+            "Q": [ 57 ],
+            "QN": [ 321 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$533": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 176 ],
+            "Q": [ 177 ],
+            "QN": [ 322 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$534": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 181 ],
+            "Q": [ 186 ],
+            "QN": [ 323 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$535": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 182 ],
+            "Q": [ 183 ],
+            "QN": [ 324 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$536": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 184 ],
+            "Q": [ 185 ],
+            "QN": [ 325 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$537": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 189 ],
+            "Q": [ 194 ],
+            "QN": [ 326 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$538": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 190 ],
+            "Q": [ 191 ],
+            "QN": [ 327 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$539": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 192 ],
+            "Q": [ 193 ],
+            "QN": [ 328 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$540": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 149 ],
+            "Q": [ 329 ],
+            "QN": [ 330 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$541": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 329 ],
+            "Q": [ 243 ],
+            "QN": [ 331 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$542": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 150 ],
+            "Q": [ 332 ],
+            "QN": [ 333 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$543": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 332 ],
+            "Q": [ 245 ],
+            "QN": [ 334 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$544": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 198 ],
+            "Q": [ 247 ],
+            "QN": [ 335 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$545": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 199 ],
+            "Q": [ 249 ],
+            "QN": [ 336 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$546": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 147 ],
+            "Q": [ 337 ],
+            "QN": [ 338 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$547": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 337 ],
+            "Q": [ 253 ],
+            "QN": [ 339 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$548": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 148 ],
+            "Q": [ 340 ],
+            "QN": [ 341 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$549": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 340 ],
+            "Q": [ 255 ],
+            "QN": [ 342 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$550": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 145 ],
+            "Q": [ 343 ],
+            "QN": [ 344 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$551": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 343 ],
+            "Q": [ 257 ],
+            "QN": [ 345 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$552": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 146 ],
+            "Q": [ 346 ],
+            "QN": [ 347 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$553": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 346 ],
+            "Q": [ 259 ],
+            "QN": [ 348 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$554": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 151 ],
+            "Q": [ 261 ],
+            "QN": [ 349 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$555": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 152 ],
+            "Q": [ 263 ],
+            "QN": [ 350 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\temp_hpc2_v_1_order0_HPC24[0:0]": {
+          "hide_name": 1,
+          "bits": [ 224 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\temp_hpc2_v_1_order1_HPC24[0:0]": {
+          "hide_name": 1,
+          "bits": [ 228 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\temp_hpc2sw_v_1_order0_HPC2_swapped5[0:0]": {
+          "hide_name": 1,
+          "bits": [ 231 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\temp_hpc2sw_v_1_order1_HPC2_swapped5[0:0]": {
+          "hide_name": 1,
+          "bits": [ 235 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\temp_hpc3_v_1_order0_HPC30[0:0]": {
+          "hide_name": 1,
+          "bits": [ 200 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\temp_hpc3_v_1_order0_HPC31[0:0]": {
+          "hide_name": 1,
+          "bits": [ 206 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\temp_hpc3_v_1_order0_HPC32[0:0]": {
+          "hide_name": 1,
+          "bits": [ 212 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\temp_hpc3_v_1_order0_HPC33[0:0]": {
+          "hide_name": 1,
+          "bits": [ 218 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\temp_hpc3_v_1_order1_HPC30[0:0]": {
+          "hide_name": 1,
+          "bits": [ 203 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\temp_hpc3_v_1_order1_HPC31[0:0]": {
+          "hide_name": 1,
+          "bits": [ 209 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\temp_hpc3_v_1_order1_HPC32[0:0]": {
+          "hide_name": 1,
+          "bits": [ 215 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\temp_hpc3_v_1_order1_HPC33[0:0]": {
+          "hide_name": 1,
+          "bits": [ 221 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\v01_HPC24[0:0]": {
+          "hide_name": 1,
+          "bits": [ 226 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\v01_HPC2_swapped5[0:0]": {
+          "hide_name": 1,
+          "bits": [ 233 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\v10_HPC24[0:0]": {
+          "hide_name": 1,
+          "bits": [ 229 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\v10_HPC2_swapped5[0:0]": {
+          "hide_name": 1,
+          "bits": [ 237 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\w01_HPC24[0:0]": {
+          "hide_name": 1,
+          "bits": [ 227 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\w01_HPC2_swapped5[0:0]": {
+          "hide_name": 1,
+          "bits": [ 234 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\w01_HPC30[0:0]": {
+          "hide_name": 1,
+          "bits": [ 202 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\w01_HPC31[0:0]": {
+          "hide_name": 1,
+          "bits": [ 208 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\w01_HPC32[0:0]": {
+          "hide_name": 1,
+          "bits": [ 214 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\w01_HPC33[0:0]": {
+          "hide_name": 1,
+          "bits": [ 220 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\w10_HPC24[0:0]": {
+          "hide_name": 1,
+          "bits": [ 230 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\w10_HPC2_swapped5[0:0]": {
+          "hide_name": 1,
+          "bits": [ 238 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\w10_HPC30[0:0]": {
+          "hide_name": 1,
+          "bits": [ 205 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\w10_HPC31[0:0]": {
+          "hide_name": 1,
+          "bits": [ 211 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\w10_HPC32[0:0]": {
+          "hide_name": 1,
+          "bits": [ 217 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$0\\w10_HPC33[0:0]": {
+          "hide_name": 1,
+          "bits": [ 223 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:468.5-565.8"
+          }
+        },
+        "$abc$652$new_n173_": {
+          "hide_name": 1,
+          "bits": [ 51 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n174_": {
+          "hide_name": 1,
+          "bits": [ 52 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n175_": {
+          "hide_name": 1,
+          "bits": [ 53 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n176_": {
+          "hide_name": 1,
+          "bits": [ 55 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n177_": {
+          "hide_name": 1,
+          "bits": [ 56 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n178_": {
+          "hide_name": 1,
+          "bits": [ 58 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n179_": {
+          "hide_name": 1,
+          "bits": [ 59 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n180_": {
+          "hide_name": 1,
+          "bits": [ 61 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n181_": {
+          "hide_name": 1,
+          "bits": [ 62 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n182_": {
+          "hide_name": 1,
+          "bits": [ 65 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n183_": {
+          "hide_name": 1,
+          "bits": [ 67 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n184_": {
+          "hide_name": 1,
+          "bits": [ 69 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n186_": {
+          "hide_name": 1,
+          "bits": [ 73 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n187_": {
+          "hide_name": 1,
+          "bits": [ 75 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n188_": {
+          "hide_name": 1,
+          "bits": [ 77 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n190_": {
+          "hide_name": 1,
+          "bits": [ 81 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n191_": {
+          "hide_name": 1,
+          "bits": [ 83 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n193_": {
+          "hide_name": 1,
+          "bits": [ 88 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n194_": {
+          "hide_name": 1,
+          "bits": [ 90 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n202_": {
+          "hide_name": 1,
+          "bits": [ 100 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n203_": {
+          "hide_name": 1,
+          "bits": [ 102 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n205_": {
+          "hide_name": 1,
+          "bits": [ 107 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n206_": {
+          "hide_name": 1,
+          "bits": [ 109 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n207_": {
+          "hide_name": 1,
+          "bits": [ 111 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n209_": {
+          "hide_name": 1,
+          "bits": [ 114 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n210_": {
+          "hide_name": 1,
+          "bits": [ 116 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n211_": {
+          "hide_name": 1,
+          "bits": [ 118 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n215_": {
+          "hide_name": 1,
+          "bits": [ 124 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n217_": {
+          "hide_name": 1,
+          "bits": [ 129 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n218_": {
+          "hide_name": 1,
+          "bits": [ 131 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n219_": {
+          "hide_name": 1,
+          "bits": [ 133 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n221_": {
+          "hide_name": 1,
+          "bits": [ 138 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n222_": {
+          "hide_name": 1,
+          "bits": [ 140 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n223_": {
+          "hide_name": 1,
+          "bits": [ 142 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n233_": {
+          "hide_name": 1,
+          "bits": [ 155 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n234_": {
+          "hide_name": 1,
+          "bits": [ 157 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n235_": {
+          "hide_name": 1,
+          "bits": [ 159 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n240_": {
+          "hide_name": 1,
+          "bits": [ 169 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n241_": {
+          "hide_name": 1,
+          "bits": [ 171 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n242_": {
+          "hide_name": 1,
+          "bits": [ 173 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n247_": {
+          "hide_name": 1,
+          "bits": [ 180 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n252_": {
+          "hide_name": 1,
+          "bits": [ 188 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n262_": {
+          "hide_name": 1,
+          "bits": [ 201 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n265_": {
+          "hide_name": 1,
+          "bits": [ 204 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n268_": {
+          "hide_name": 1,
+          "bits": [ 207 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n271_": {
+          "hide_name": 1,
+          "bits": [ 210 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n274_": {
+          "hide_name": 1,
+          "bits": [ 213 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n277_": {
+          "hide_name": 1,
+          "bits": [ 216 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n280_": {
+          "hide_name": 1,
+          "bits": [ 219 ],
+          "attributes": {
+          }
+        },
+        "$abc$652$new_n283_": {
+          "hide_name": 1,
+          "bits": [ 222 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$556": {
+          "hide_name": 1,
+          "bits": [ 350 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$557": {
+          "hide_name": 1,
+          "bits": [ 239 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$558": {
+          "hide_name": 1,
+          "bits": [ 240 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$559": {
+          "hide_name": 1,
+          "bits": [ 241 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$560": {
+          "hide_name": 1,
+          "bits": [ 242 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$561": {
+          "hide_name": 1,
+          "bits": [ 244 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$562": {
+          "hide_name": 1,
+          "bits": [ 246 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$563": {
+          "hide_name": 1,
+          "bits": [ 248 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$564": {
+          "hide_name": 1,
+          "bits": [ 250 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$565": {
+          "hide_name": 1,
+          "bits": [ 251 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$566": {
+          "hide_name": 1,
+          "bits": [ 252 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$567": {
+          "hide_name": 1,
+          "bits": [ 254 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$568": {
+          "hide_name": 1,
+          "bits": [ 256 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$569": {
+          "hide_name": 1,
+          "bits": [ 258 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$570": {
+          "hide_name": 1,
+          "bits": [ 260 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$571": {
+          "hide_name": 1,
+          "bits": [ 262 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$572": {
+          "hide_name": 1,
+          "bits": [ 264 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$573": {
+          "hide_name": 1,
+          "bits": [ 265 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$574": {
+          "hide_name": 1,
+          "bits": [ 266 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$575": {
+          "hide_name": 1,
+          "bits": [ 267 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$576": {
+          "hide_name": 1,
+          "bits": [ 268 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$577": {
+          "hide_name": 1,
+          "bits": [ 269 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$578": {
+          "hide_name": 1,
+          "bits": [ 270 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$579": {
+          "hide_name": 1,
+          "bits": [ 271 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$580": {
+          "hide_name": 1,
+          "bits": [ 272 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$581": {
+          "hide_name": 1,
+          "bits": [ 273 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$582": {
+          "hide_name": 1,
+          "bits": [ 274 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$583": {
+          "hide_name": 1,
+          "bits": [ 275 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$584": {
+          "hide_name": 1,
+          "bits": [ 276 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$585": {
+          "hide_name": 1,
+          "bits": [ 277 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$586": {
+          "hide_name": 1,
+          "bits": [ 278 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$587": {
+          "hide_name": 1,
+          "bits": [ 279 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$588": {
+          "hide_name": 1,
+          "bits": [ 280 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$589": {
+          "hide_name": 1,
+          "bits": [ 281 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$590": {
+          "hide_name": 1,
+          "bits": [ 282 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$591": {
+          "hide_name": 1,
+          "bits": [ 283 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$592": {
+          "hide_name": 1,
+          "bits": [ 284 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$593": {
+          "hide_name": 1,
+          "bits": [ 285 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$594": {
+          "hide_name": 1,
+          "bits": [ 286 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$595": {
+          "hide_name": 1,
+          "bits": [ 287 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$596": {
+          "hide_name": 1,
+          "bits": [ 288 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$597": {
+          "hide_name": 1,
+          "bits": [ 289 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$598": {
+          "hide_name": 1,
+          "bits": [ 290 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$599": {
+          "hide_name": 1,
+          "bits": [ 291 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$600": {
+          "hide_name": 1,
+          "bits": [ 292 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$601": {
+          "hide_name": 1,
+          "bits": [ 293 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$602": {
+          "hide_name": 1,
+          "bits": [ 294 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$603": {
+          "hide_name": 1,
+          "bits": [ 295 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$604": {
+          "hide_name": 1,
+          "bits": [ 296 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$605": {
+          "hide_name": 1,
+          "bits": [ 297 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$606": {
+          "hide_name": 1,
+          "bits": [ 298 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$607": {
+          "hide_name": 1,
+          "bits": [ 299 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$608": {
+          "hide_name": 1,
+          "bits": [ 300 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$609": {
+          "hide_name": 1,
+          "bits": [ 301 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$610": {
+          "hide_name": 1,
+          "bits": [ 302 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$611": {
+          "hide_name": 1,
+          "bits": [ 303 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$612": {
+          "hide_name": 1,
+          "bits": [ 304 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$613": {
+          "hide_name": 1,
+          "bits": [ 305 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$614": {
+          "hide_name": 1,
+          "bits": [ 306 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$615": {
+          "hide_name": 1,
+          "bits": [ 307 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$616": {
+          "hide_name": 1,
+          "bits": [ 308 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$617": {
+          "hide_name": 1,
+          "bits": [ 309 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$618": {
+          "hide_name": 1,
+          "bits": [ 310 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$619": {
+          "hide_name": 1,
+          "bits": [ 311 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$620": {
+          "hide_name": 1,
+          "bits": [ 312 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$621": {
+          "hide_name": 1,
+          "bits": [ 313 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$622": {
+          "hide_name": 1,
+          "bits": [ 314 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$623": {
+          "hide_name": 1,
+          "bits": [ 315 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$624": {
+          "hide_name": 1,
+          "bits": [ 316 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$625": {
+          "hide_name": 1,
+          "bits": [ 317 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$626": {
+          "hide_name": 1,
+          "bits": [ 318 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$627": {
+          "hide_name": 1,
+          "bits": [ 319 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$628": {
+          "hide_name": 1,
+          "bits": [ 320 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$629": {
+          "hide_name": 1,
+          "bits": [ 321 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$630": {
+          "hide_name": 1,
+          "bits": [ 322 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$631": {
+          "hide_name": 1,
+          "bits": [ 323 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$632": {
+          "hide_name": 1,
+          "bits": [ 324 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$633": {
+          "hide_name": 1,
+          "bits": [ 325 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$634": {
+          "hide_name": 1,
+          "bits": [ 326 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$635": {
+          "hide_name": 1,
+          "bits": [ 327 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$636": {
+          "hide_name": 1,
+          "bits": [ 328 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$637": {
+          "hide_name": 1,
+          "bits": [ 330 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$638": {
+          "hide_name": 1,
+          "bits": [ 331 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$639": {
+          "hide_name": 1,
+          "bits": [ 333 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$640": {
+          "hide_name": 1,
+          "bits": [ 334 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$641": {
+          "hide_name": 1,
+          "bits": [ 335 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$642": {
+          "hide_name": 1,
+          "bits": [ 336 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$643": {
+          "hide_name": 1,
+          "bits": [ 338 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$644": {
+          "hide_name": 1,
+          "bits": [ 339 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$645": {
+          "hide_name": 1,
+          "bits": [ 341 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$646": {
+          "hide_name": 1,
+          "bits": [ 342 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$647": {
+          "hide_name": 1,
+          "bits": [ 344 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$648": {
+          "hide_name": 1,
+          "bits": [ 345 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$649": {
+          "hide_name": 1,
+          "bits": [ 347 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$650": {
+          "hide_name": 1,
+          "bits": [ 348 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$651": {
+          "hide_name": 1,
+          "bits": [ 349 ],
+          "attributes": {
+          }
+        },
+        "a_share_neg_hpc3_w_1_order1_HPC30": {
+          "hide_name": 0,
+          "bits": [ 16 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:119.10-119.43"
+          }
+        },
+        "a_share_neg_hpc3_w_1_order1_HPC31": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:139.10-139.43"
+          }
+        },
+        "a_share_neg_hpc3_w_1_order1_HPC32": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:159.10-159.43"
+          }
+        },
+        "and_ta_hpc2o_v_1_order0_HPC2o7": {
+          "hide_name": 0,
+          "bits": [ 184 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:276.10-276.40"
+          }
+        },
+        "and_ta_hpc2o_v_1_order1_HPC2o7": {
+          "hide_name": 0,
+          "bits": [ 192 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:287.10-287.40"
+          }
+        },
+        "and_ta_hpc2osw_v_1_order0_HPC2o_swapped6": {
+          "hide_name": 0,
+          "bits": [ 163 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:251.10-251.50"
+          }
+        },
+        "and_ta_hpc2osw_v_1_order1_HPC2o_swapped6": {
+          "hide_name": 0,
+          "bits": [ 176 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:263.10-263.50"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:50.11-50.14"
+          }
+        },
+        "dec_1": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:67.12-67.17"
+          }
+        },
+        "i0_0": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:51.12-51.16"
+          }
+        },
+        "i0_1": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:52.12-52.16"
+          }
+        },
+        "i1_0": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:53.12-53.16"
+          }
+        },
+        "i1_1": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:54.12-54.16"
+          }
+        },
+        "i2_0": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:55.12-55.16"
+          }
+        },
+        "i2_1": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:56.12-56.16"
+          }
+        },
+        "i3_0": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:57.12-57.16"
+          }
+        },
+        "i3_1": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:58.12-58.16"
+          }
+        },
+        "i4_0": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:59.12-59.16"
+          }
+        },
+        "i4_1": {
+          "hide_name": 0,
+          "bits": [ 12 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:60.12-60.16"
+          }
+        },
+        "i5_0": {
+          "hide_name": 0,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:61.12-61.16"
+          }
+        },
+        "i5_1": {
+          "hide_name": 0,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:62.12-62.16"
+          }
+        },
+        "i6_0": {
+          "hide_name": 0,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:63.12-63.16"
+          }
+        },
+        "i6_1": {
+          "hide_name": 0,
+          "bits": [ 16 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:64.12-64.16"
+          }
+        },
+        "i7_0": {
+          "hide_name": 0,
+          "bits": [ 17 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:65.12-65.16"
+          }
+        },
+        "i7_1": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:66.12-66.16"
+          }
+        },
+        "n1_0": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:98.10-98.14"
+          }
+        },
+        "n2_0": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:100.10-100.14"
+          }
+        },
+        "n2_0_reg": {
+          "hide_name": 0,
+          "bits": [ 99 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:150.9-150.17"
+          }
+        },
+        "n2_1": {
+          "hide_name": 0,
+          "bits": [ 48 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:101.10-101.14"
+          }
+        },
+        "n2_1_reg": {
+          "hide_name": 0,
+          "bits": [ 72 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:157.9-157.17"
+          }
+        },
+        "n3_0": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:102.10-102.14"
+          }
+        },
+        "n3_0_reg": {
+          "hide_name": 0,
+          "bits": [ 106 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:130.9-130.17"
+          }
+        },
+        "n3_1": {
+          "hide_name": 0,
+          "bits": [ 49 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:103.10-103.14"
+          }
+        },
+        "n3_1_reg": {
+          "hide_name": 0,
+          "bits": [ 54 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:137.9-137.17"
+          }
+        },
+        "n6_0": {
+          "hide_name": 0,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:104.10-104.14"
+          }
+        },
+        "n6_0_reg": {
+          "hide_name": 0,
+          "bits": [ 80 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:110.9-110.17"
+          }
+        },
+        "n6_1": {
+          "hide_name": 0,
+          "bits": [ 50 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:105.10-105.14"
+          }
+        },
+        "n6_1_reg": {
+          "hide_name": 0,
+          "bits": [ 64 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:117.9-117.17"
+          }
+        },
+        "n7_0": {
+          "hide_name": 0,
+          "bits": [ 17 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:106.10-106.14"
+          }
+        },
+        "nt0_0": {
+          "hide_name": 0,
+          "bits": [ 85 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:168.10-168.15"
+          }
+        },
+        "nt0_0_reg": {
+          "hide_name": 0,
+          "bits": [ 128 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:176.9-176.18"
+          }
+        },
+        "nt0_1": {
+          "hide_name": 0,
+          "bits": [ 70 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:169.10-169.15"
+          }
+        },
+        "nt0_1_reg": {
+          "hide_name": 0,
+          "bits": [ 137 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:183.9-183.18"
+          }
+        },
+        "nt2_0": {
+          "hide_name": 0,
+          "bits": [ 104 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:172.10-172.15"
+          }
+        },
+        "nt2_0_reg": {
+          "hide_name": 0,
+          "bits": [ 134 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:212.9-212.18"
+          }
+        },
+        "nt2_1": {
+          "hide_name": 0,
+          "bits": [ 78 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:173.10-173.15"
+          }
+        },
+        "nt2_1_reg": {
+          "hide_name": 0,
+          "bits": [ 143 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:224.9-224.18"
+          }
+        },
+        "nt4_0": {
+          "hide_name": 0,
+          "bits": [ 126 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:230.10-230.15"
+          }
+        },
+        "nt4_0_reg": {
+          "hide_name": 0,
+          "bits": [ 158 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:242.9-242.18"
+          }
+        },
+        "nt4_1": {
+          "hide_name": 0,
+          "bits": [ 91 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:231.10-231.15"
+          }
+        },
+        "nt4_1_reg": {
+          "hide_name": 0,
+          "bits": [ 172 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:254.9-254.18"
+          }
+        },
+        "o0_0": {
+          "hide_name": 0,
+          "bits": [ 32 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:81.17-81.21"
+          }
+        },
+        "o0_1": {
+          "hide_name": 0,
+          "bits": [ 33 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:82.17-82.21"
+          }
+        },
+        "o1_0": {
+          "hide_name": 0,
+          "bits": [ 34 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:83.17-83.21"
+          }
+        },
+        "o1_1": {
+          "hide_name": 0,
+          "bits": [ 35 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:84.17-84.21"
+          }
+        },
+        "o1_val_0": {
+          "hide_name": 0,
+          "bits": [ 196 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:292.10-292.18"
+          }
+        },
+        "o1_val_1": {
+          "hide_name": 0,
+          "bits": [ 197 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:293.10-293.18"
+          }
+        },
+        "o2_0": {
+          "hide_name": 0,
+          "bits": [ 36 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:85.17-85.21"
+          }
+        },
+        "o2_1": {
+          "hide_name": 0,
+          "bits": [ 37 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:86.17-86.21"
+          }
+        },
+        "o2_val_0": {
+          "hide_name": 0,
+          "bits": [ 149 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:238.10-238.18"
+          }
+        },
+        "o2_val_1": {
+          "hide_name": 0,
+          "bits": [ 150 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:239.10-239.18"
+          }
+        },
+        "o3_0": {
+          "hide_name": 0,
+          "bits": [ 38 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:87.17-87.21"
+          }
+        },
+        "o3_1": {
+          "hide_name": 0,
+          "bits": [ 39 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:88.17-88.21"
+          }
+        },
+        "o3_val_0": {
+          "hide_name": 0,
+          "bits": [ 198 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:294.10-294.18"
+          }
+        },
+        "o3_val_1": {
+          "hide_name": 0,
+          "bits": [ 199 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:295.10-295.18"
+          }
+        },
+        "o4_0": {
+          "hide_name": 0,
+          "bits": [ 40 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:89.17-89.21"
+          }
+        },
+        "o4_1": {
+          "hide_name": 0,
+          "bits": [ 41 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:90.17-90.21"
+          }
+        },
+        "o5_0": {
+          "hide_name": 0,
+          "bits": [ 42 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:91.17-91.21"
+          }
+        },
+        "o5_1": {
+          "hide_name": 0,
+          "bits": [ 43 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:92.17-92.21"
+          }
+        },
+        "o5_val_0": {
+          "hide_name": 0,
+          "bits": [ 147 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:236.10-236.18"
+          }
+        },
+        "o5_val_1": {
+          "hide_name": 0,
+          "bits": [ 148 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:237.10-237.18"
+          }
+        },
+        "o6_0": {
+          "hide_name": 0,
+          "bits": [ 44 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:93.17-93.21"
+          }
+        },
+        "o6_1": {
+          "hide_name": 0,
+          "bits": [ 45 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:94.17-94.21"
+          }
+        },
+        "o6_val_0": {
+          "hide_name": 0,
+          "bits": [ 145 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:234.10-234.18"
+          }
+        },
+        "o6_val_1": {
+          "hide_name": 0,
+          "bits": [ 146 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:235.10-235.18"
+          }
+        },
+        "o7_0": {
+          "hide_name": 0,
+          "bits": [ 46 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:95.17-95.21"
+          }
+        },
+        "o7_1": {
+          "hide_name": 0,
+          "bits": [ 47 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:96.17-96.21"
+          }
+        },
+        "o7_val_0": {
+          "hide_name": 0,
+          "bits": [ 151 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:240.10-240.18"
+          }
+        },
+        "o7_val_1": {
+          "hide_name": 0,
+          "bits": [ 152 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:241.10-241.18"
+          }
+        },
+        "rand_1": {
+          "hide_name": 0,
+          "bits": [ 29 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:77.12-77.18"
+          }
+        },
+        "rand_10": {
+          "hide_name": 0,
+          "bits": [ 31 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:79.12-79.19"
+          }
+        },
+        "rand_11": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:70.12-70.19"
+          }
+        },
+        "rand_12": {
+          "hide_name": 0,
+          "bits": [ 25 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:73.12-73.19"
+          }
+        },
+        "rand_2": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:68.12-68.18"
+          }
+        },
+        "rand_3": {
+          "hide_name": 0,
+          "bits": [ 24 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:72.12-72.18"
+          }
+        },
+        "rand_4": {
+          "hide_name": 0,
+          "bits": [ 27 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:75.12-75.18"
+          }
+        },
+        "rand_5": {
+          "hide_name": 0,
+          "bits": [ 30 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:78.12-78.18"
+          }
+        },
+        "rand_6": {
+          "hide_name": 0,
+          "bits": [ 21 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:69.12-69.18"
+          }
+        },
+        "rand_7": {
+          "hide_name": 0,
+          "bits": [ 23 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:71.12-71.18"
+          }
+        },
+        "rand_8": {
+          "hide_name": 0,
+          "bits": [ 26 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:74.12-74.18"
+          }
+        },
+        "rand_9": {
+          "hide_name": 0,
+          "bits": [ 28 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:76.12-76.18"
+          }
+        },
+        "t0_0": {
+          "hide_name": 0,
+          "bits": [ 85 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:125.10-125.14"
+          }
+        },
+        "t2_0": {
+          "hide_name": 0,
+          "bits": [ 104 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:165.10-165.14"
+          }
+        },
+        "t4_0": {
+          "hide_name": 0,
+          "bits": [ 126 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:207.10-207.14"
+          }
+        },
+        "t6_0": {
+          "hide_name": 0,
+          "bits": [ 187 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:290.10-290.14"
+          }
+        },
+        "t6_1": {
+          "hide_name": 0,
+          "bits": [ 195 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:291.10-291.14"
+          }
+        },
+        "t7_0": {
+          "hide_name": 0,
+          "bits": [ 166 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:266.10-266.14"
+          }
+        },
+        "t7_1": {
+          "hide_name": 0,
+          "bits": [ 179 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:267.10-267.14"
+          }
+        },
+        "temp_hpc2_v_1_order0_HPC24": {
+          "hide_name": 0,
+          "bits": [ 225 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:195.9-195.35"
+          }
+        },
+        "temp_hpc2_v_1_order1_HPC24": {
+          "hide_name": 0,
+          "bits": [ 60 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:200.9-200.35"
+          }
+        },
+        "temp_hpc2o_v_1_order0_HPC2o7": {
+          "hide_name": 0,
+          "bits": [ 183 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:275.9-275.37"
+          }
+        },
+        "temp_hpc2o_v_1_order1_HPC2o7": {
+          "hide_name": 0,
+          "bits": [ 191 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:286.9-286.37"
+          }
+        },
+        "temp_hpc2osw_v_1_order0_HPC2o_swapped6": {
+          "hide_name": 0,
+          "bits": [ 162 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:250.9-250.47"
+          }
+        },
+        "temp_hpc2osw_v_1_order1_HPC2o_swapped6": {
+          "hide_name": 0,
+          "bits": [ 57 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:262.9-262.47"
+          }
+        },
+        "temp_hpc2sw_v_1_order0_HPC2_swapped5": {
+          "hide_name": 0,
+          "bits": [ 232 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:214.9-214.45"
+          }
+        },
+        "temp_hpc2sw_v_1_order1_HPC2_swapped5": {
+          "hide_name": 0,
+          "bits": [ 236 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:219.9-219.45"
+          }
+        },
+        "temp_hpc3_v_1_order0_HPC30": {
+          "hide_name": 0,
+          "bits": [ 79 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:109.9-109.35"
+          }
+        },
+        "temp_hpc3_v_1_order0_HPC31": {
+          "hide_name": 0,
+          "bits": [ 105 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:129.9-129.35"
+          }
+        },
+        "temp_hpc3_v_1_order0_HPC32": {
+          "hide_name": 0,
+          "bits": [ 98 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:149.9-149.35"
+          }
+        },
+        "temp_hpc3_v_1_order0_HPC33": {
+          "hide_name": 0,
+          "bits": [ 127 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:175.9-175.35"
+          }
+        },
+        "temp_hpc3_v_1_order1_HPC30": {
+          "hide_name": 0,
+          "bits": [ 63 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:116.9-116.35"
+          }
+        },
+        "temp_hpc3_v_1_order1_HPC31": {
+          "hide_name": 0,
+          "bits": [ 113 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:136.9-136.35"
+          }
+        },
+        "temp_hpc3_v_1_order1_HPC32": {
+          "hide_name": 0,
+          "bits": [ 71 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:156.9-156.35"
+          }
+        },
+        "temp_hpc3_v_1_order1_HPC33": {
+          "hide_name": 0,
+          "bits": [ 136 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:182.9-182.35"
+          }
+        },
+        "u00_HPC24": {
+          "hide_name": 0,
+          "bits": [ 120 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:194.10-194.19"
+          }
+        },
+        "u00_HPC24_reg": {
+          "hide_name": 0,
+          "bits": [ 125 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:206.9-206.22"
+          }
+        },
+        "u00_HPC2_swapped5": {
+          "hide_name": 0,
+          "bits": [ 135 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:213.10-213.27"
+          }
+        },
+        "u00_HPC2_swapped5_reg": {
+          "hide_name": 0,
+          "bits": [ 156 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:226.9-226.30"
+          }
+        },
+        "u00_HPC30": {
+          "hide_name": 0,
+          "bits": [ 92 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:108.10-108.19"
+          }
+        },
+        "u00_HPC30_reg": {
+          "hide_name": 0,
+          "bits": [ 84 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:124.9-124.22"
+          }
+        },
+        "u00_HPC31": {
+          "hide_name": 0,
+          "bits": [ 94 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:128.10-128.19"
+          }
+        },
+        "u00_HPC31_reg": {
+          "hide_name": 0,
+          "bits": [ 110 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:144.9-144.22"
+          }
+        },
+        "u00_HPC32": {
+          "hide_name": 0,
+          "bits": [ 96 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:148.10-148.19"
+          }
+        },
+        "u00_HPC32_reg": {
+          "hide_name": 0,
+          "bits": [ 103 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:164.9-164.22"
+          }
+        },
+        "u00_HPC33": {
+          "hide_name": 0,
+          "bits": [ 112 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:174.10-174.19"
+          }
+        },
+        "u00_HPC33_reg": {
+          "hide_name": 0,
+          "bits": [ 132 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:190.9-190.22"
+          }
+        },
+        "u01_HPC2o7": {
+          "hide_name": 0,
+          "bits": [ 187 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:278.10-278.20"
+          }
+        },
+        "u01_HPC2o_swapped6": {
+          "hide_name": 0,
+          "bits": [ 166 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:253.10-253.28"
+          }
+        },
+        "u10_HPC2o7": {
+          "hide_name": 0,
+          "bits": [ 195 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:289.10-289.20"
+          }
+        },
+        "u10_HPC2o_swapped6": {
+          "hide_name": 0,
+          "bits": [ 179 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:265.10-265.28"
+          }
+        },
+        "u11_HPC24": {
+          "hide_name": 0,
+          "bits": [ 121 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:205.10-205.19"
+          }
+        },
+        "u11_HPC24_reg": {
+          "hide_name": 0,
+          "bits": [ 89 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:208.9-208.22"
+          }
+        },
+        "u11_HPC2_swapped5": {
+          "hide_name": 0,
+          "bits": [ 144 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:225.10-225.27"
+          }
+        },
+        "u11_HPC2_swapped5_reg": {
+          "hide_name": 0,
+          "bits": [ 170 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:228.9-228.30"
+          }
+        },
+        "u11_HPC30": {
+          "hide_name": 0,
+          "bits": [ 93 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:123.10-123.19"
+          }
+        },
+        "u11_HPC30_reg": {
+          "hide_name": 0,
+          "bits": [ 68 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:126.9-126.22"
+          }
+        },
+        "u11_HPC31": {
+          "hide_name": 0,
+          "bits": [ 95 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:143.10-143.19"
+          }
+        },
+        "u11_HPC31_reg": {
+          "hide_name": 0,
+          "bits": [ 117 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:146.9-146.22"
+          }
+        },
+        "u11_HPC32": {
+          "hide_name": 0,
+          "bits": [ 97 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:163.10-163.19"
+          }
+        },
+        "u11_HPC32_reg": {
+          "hide_name": 0,
+          "bits": [ 76 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:166.9-166.22"
+          }
+        },
+        "u11_HPC33": {
+          "hide_name": 0,
+          "bits": [ 119 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:189.10-189.19"
+          }
+        },
+        "u11_HPC33_reg": {
+          "hide_name": 0,
+          "bits": [ 141 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:192.9-192.22"
+          }
+        },
+        "v01_HPC24": {
+          "hide_name": 0,
+          "bits": [ 122 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:196.9-196.18"
+          }
+        },
+        "v01_HPC2_swapped5": {
+          "hide_name": 0,
+          "bits": [ 153 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:215.9-215.26"
+          }
+        },
+        "v01_HPC2o7": {
+          "hide_name": 0,
+          "bits": [ 185 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:277.9-277.19"
+          }
+        },
+        "v01_HPC2o_swapped6": {
+          "hide_name": 0,
+          "bits": [ 164 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:252.9-252.27"
+          }
+        },
+        "v10_HPC24": {
+          "hide_name": 0,
+          "bits": [ 86 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:201.9-201.18"
+          }
+        },
+        "v10_HPC2_swapped5": {
+          "hide_name": 0,
+          "bits": [ 167 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:220.9-220.26"
+          }
+        },
+        "v10_HPC2o7": {
+          "hide_name": 0,
+          "bits": [ 193 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:288.9-288.19"
+          }
+        },
+        "v10_HPC2o_swapped6": {
+          "hide_name": 0,
+          "bits": [ 177 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:264.9-264.27"
+          }
+        },
+        "w01_HPC24": {
+          "hide_name": 0,
+          "bits": [ 123 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:198.9-198.18"
+          }
+        },
+        "w01_HPC2_swapped5": {
+          "hide_name": 0,
+          "bits": [ 154 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:217.9-217.26"
+          }
+        },
+        "w01_HPC2o7": {
+          "hide_name": 0,
+          "bits": [ 186 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:273.9-273.19"
+          }
+        },
+        "w01_HPC2o_swapped6": {
+          "hide_name": 0,
+          "bits": [ 165 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:248.9-248.27"
+          }
+        },
+        "w01_HPC30": {
+          "hide_name": 0,
+          "bits": [ 82 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:114.9-114.18"
+          }
+        },
+        "w01_HPC31": {
+          "hide_name": 0,
+          "bits": [ 108 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:134.9-134.18"
+          }
+        },
+        "w01_HPC32": {
+          "hide_name": 0,
+          "bits": [ 101 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:154.9-154.18"
+          }
+        },
+        "w01_HPC33": {
+          "hide_name": 0,
+          "bits": [ 130 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:180.9-180.18"
+          }
+        },
+        "w10_HPC24": {
+          "hide_name": 0,
+          "bits": [ 87 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:203.9-203.18"
+          }
+        },
+        "w10_HPC2_swapped5": {
+          "hide_name": 0,
+          "bits": [ 168 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:222.9-222.26"
+          }
+        },
+        "w10_HPC2o7": {
+          "hide_name": 0,
+          "bits": [ 194 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:284.9-284.19"
+          }
+        },
+        "w10_HPC2o_swapped6": {
+          "hide_name": 0,
+          "bits": [ 178 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:260.9-260.27"
+          }
+        },
+        "w10_HPC30": {
+          "hide_name": 0,
+          "bits": [ 66 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:121.9-121.18"
+          }
+        },
+        "w10_HPC31": {
+          "hide_name": 0,
+          "bits": [ 115 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:141.9-141.18"
+          }
+        },
+        "w10_HPC32": {
+          "hide_name": 0,
+          "bits": [ 74 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:161.9-161.18"
+          }
+        },
+        "w10_HPC33": {
+          "hide_name": 0,
+          "bits": [ 139 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:187.9-187.18"
+          }
+        },
+        "xor_br_hpc2o_v_1_order0_HPC2o7": {
+          "hide_name": 0,
+          "bits": [ 182 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:274.10-274.40"
+          }
+        },
+        "xor_br_hpc2o_v_1_order1_HPC2o7": {
+          "hide_name": 0,
+          "bits": [ 190 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:285.10-285.40"
+          }
+        },
+        "xor_br_hpc2osw_v_1_order0_HPC2o_swapped6": {
+          "hide_name": 0,
+          "bits": [ 161 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:249.10-249.50"
+          }
+        },
+        "xor_br_hpc2osw_v_1_order1_HPC2o_swapped6": {
+          "hide_name": 0,
+          "bits": [ 175 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:261.10-261.50"
+          }
+        },
+        "xor_step2_hpc2o_first_half_1_order0_HPC2o7": {
+          "hide_name": 0,
+          "bits": [ 181 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:272.10-272.52"
+          }
+        },
+        "xor_step2_hpc2o_first_half_1_order1_HPC2o7": {
+          "hide_name": 0,
+          "bits": [ 189 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:283.10-283.52"
+          }
+        },
+        "xor_step2_hpc2osw_first_half_1_order0_HPC2o_swapped6": {
+          "hide_name": 0,
+          "bits": [ 160 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:247.10-247.62"
+          }
+        },
+        "xor_step2_hpc2osw_first_half_1_order1_HPC2o_swapped6": {
+          "hide_name": 0,
+          "bits": [ 174 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:259.10-259.62"
+          }
+        },
+        "z737_assgn737": {
+          "hide_name": 0,
+          "bits": [ 149 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:296.10-296.23"
+          }
+        },
+        "z737_assgn7370": {
+          "hide_name": 0,
+          "bits": [ 329 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:297.9-297.23"
+          }
+        },
+        "z737_assgn7371": {
+          "hide_name": 0,
+          "bits": [ 243 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:298.9-298.23"
+          }
+        },
+        "z739_assgn739": {
+          "hide_name": 0,
+          "bits": [ 150 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:299.10-299.23"
+          }
+        },
+        "z739_assgn7390": {
+          "hide_name": 0,
+          "bits": [ 332 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:300.9-300.23"
+          }
+        },
+        "z739_assgn7391": {
+          "hide_name": 0,
+          "bits": [ 245 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:301.9-301.23"
+          }
+        },
+        "z741_assgn741": {
+          "hide_name": 0,
+          "bits": [ 198 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:302.10-302.23"
+          }
+        },
+        "z741_assgn7410": {
+          "hide_name": 0,
+          "bits": [ 247 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:303.9-303.23"
+          }
+        },
+        "z743_assgn743": {
+          "hide_name": 0,
+          "bits": [ 199 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:304.10-304.23"
+          }
+        },
+        "z743_assgn7430": {
+          "hide_name": 0,
+          "bits": [ 249 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:305.9-305.23"
+          }
+        },
+        "z749_assgn749": {
+          "hide_name": 0,
+          "bits": [ 147 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:306.10-306.23"
+          }
+        },
+        "z749_assgn7490": {
+          "hide_name": 0,
+          "bits": [ 337 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:307.9-307.23"
+          }
+        },
+        "z749_assgn7491": {
+          "hide_name": 0,
+          "bits": [ 253 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:308.9-308.23"
+          }
+        },
+        "z751_assgn751": {
+          "hide_name": 0,
+          "bits": [ 148 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:309.10-309.23"
+          }
+        },
+        "z751_assgn7510": {
+          "hide_name": 0,
+          "bits": [ 340 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:310.9-310.23"
+          }
+        },
+        "z751_assgn7511": {
+          "hide_name": 0,
+          "bits": [ 255 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:311.9-311.23"
+          }
+        },
+        "z753_assgn753": {
+          "hide_name": 0,
+          "bits": [ 145 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:312.10-312.23"
+          }
+        },
+        "z753_assgn7530": {
+          "hide_name": 0,
+          "bits": [ 343 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:313.9-313.23"
+          }
+        },
+        "z753_assgn7531": {
+          "hide_name": 0,
+          "bits": [ 257 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:314.9-314.23"
+          }
+        },
+        "z755_assgn755": {
+          "hide_name": 0,
+          "bits": [ 146 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:315.10-315.23"
+          }
+        },
+        "z755_assgn7550": {
+          "hide_name": 0,
+          "bits": [ 346 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:316.9-316.23"
+          }
+        },
+        "z755_assgn7551": {
+          "hide_name": 0,
+          "bits": [ 259 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:317.9-317.23"
+          }
+        },
+        "z757_assgn757": {
+          "hide_name": 0,
+          "bits": [ 151 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:318.10-318.23"
+          }
+        },
+        "z757_assgn7570": {
+          "hide_name": 0,
+          "bits": [ 261 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:319.9-319.23"
+          }
+        },
+        "z759_assgn759": {
+          "hide_name": 0,
+          "bits": [ 152 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:320.10-320.23"
+          }
+        },
+        "z759_assgn7590": {
+          "hide_name": 0,
+          "bits": [ 263 ],
+          "attributes": {
+            "src": "/home/nilotpola/Downloads/TETRIS-artefact/src/MaskedHLS_LP/src/skinny_sbox_nor_d1_lat4.v:321.9-321.23"
+          }
+        }
+      }
+    }
+  }
+}

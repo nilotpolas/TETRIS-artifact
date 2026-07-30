@@ -1,0 +1,18 @@
+{
+    "MSKxor": 90,
+    "MSKxnor": 4,
+    "MSKinv": 0,
+    "MSKand_hpc2": 20,
+    "MSKand_hpc2_swapped": 2,
+    "MSKand_hpc3": 12,
+    "MSKreg": 45,
+    "Area Estimate (GE)": 24534.763020833336,
+    "RNG Bits": 276,
+    "Toffoli": 0,
+    "Num Shares": 4,
+    "Latency": 4,
+    "Use Toffoli": true,
+    "Circuit": "circuits/aes_bp.txt",
+    "RNG Cost Per Bit": 38.063151041666664,
+    "solve_time": 1.0994629859924316
+}

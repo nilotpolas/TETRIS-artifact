@@ -1,0 +1,30 @@
+n possible toffoli: 4
+Status: ExitStatus.OPTIMAL (0.31897256 seconds)
+solution found.
+MSKxor: 90
+MSKxnor: 4
+MSKinv: 0
+MSKand_hpc2: 0
+MSKand_hpc2_swapped: 0
+MSKand_hpc2o: 20
+MSKand_hpc2o_swapped: 2
+MSKand_hpc3: 0
+MSKand_hpc3o: 9
+MSKand_hpc3o_swapped: 3
+MSKand_hpc2_cross: 0
+MSKand_hpc2_cross_swapped: 0
+MSKand_hpc2o_cross: 0
+MSKand_hpc2o_cross_swapped: 0
+MSKand_hpc3_cross: 0
+MSKand_hpc3_cross_er: 0
+MSKand_hpc3_cross_er_swapped: 0
+MSKand_sharewise: 0
+MSKg4mul_hpc1: 0
+MSKg4mul_hpc3: 0
+MSKg16mul_hpc1: 0
+MSKg16mul_hpc3: 0
+MSKmux: 0
+MSKreg: 64
+Approx. area cost (GE): 12038.714843750002
+#RNG bits 138
+Toffoli: 0

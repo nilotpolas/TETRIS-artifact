@@ -1,0 +1,147 @@
+==========================================================================================
+  DSE EXPERIMENT RESULTS — MRLC / MLRC / MARC
+  Designs: Boyer-Peralta AES S-box  |  Canright AES S-box  |  SKINNY S-box
+  Note: Area (kGE) shown only when --with-synth was used; '—' otherwise.
+==========================================================================================
+
+══════════════════════════════════════════════════════════════════════════════════════════
+  TABLE 1: MRLC  (Minimize Randomness under Latency Constraint)
+
+Design          d-1    Target Lat    Rand Used    Achieved Lat    Area (kGE)    DSE Time (s)
+------------  -----  ------------  -----------  --------------  ------------  --------------
+BoyerPeralta      1             4           46               4          2.9            0.281
+BoyerPeralta      1             5           37               5          3.48           0.076
+BoyerPeralta      1             6           34               6          3.94           0.071
+BoyerPeralta      2             4          138               4          6.82           0.099
+BoyerPeralta      2             5          111               5          8.15           0.095
+BoyerPeralta      2             6          102               6          9.22           0.091
+BoyerPeralta      3             4          276               4         12.36           0.11
+BoyerPeralta      3             5          222               5         14.74           0.119
+BoyerPeralta      3             6          204               6         16.66           0.111
+BoyerPeralta      4             4          460               4         19.52           0.13
+BoyerPeralta      4             5          370               5         23.26           0.133
+BoyerPeralta      4             6          340               6         26.27           0.126
+Canright          1             4           48               4          3.11           0.118
+Canright          1             5           39               5          3.69           0.117
+Canright          1             6           36               6          4.22           0.11
+Canright          2             4          144               4          7.25           0.152
+Canright          2             5          117               5          8.59           0.147
+Canright          2             6          108               6          9.77           0.136
+Canright          3             4          288               4         13.13           0.209
+Canright          3             5          234               5         15.52           0.182
+Canright          3             6          216               6         17.63           0.183
+Canright          4             4          480               4         20.7            0.209
+Canright          4             5          390               5         24.46           0.21
+Canright          4             6          360               6         27.76           0.203
+SKINNY            1             4           12               4          0.59           0.024
+SKINNY            1             5            9               5          0.69           0.024
+SKINNY            1             6            8               6          0.8            0.024
+SKINNY            2             4           36               4          1.34           0.029
+SKINNY            2             5           27               5          1.56           0.029
+SKINNY            2             6           24               6          1.8            0.031
+SKINNY            3             4           72               4          2.38           0.034
+SKINNY            3             5           54               5          2.79           0.034
+SKINNY            3             6           48               6          3.19           0.039
+SKINNY            4             4          120               4          3.72           0.044
+SKINNY            4             5           90               5          4.37           0.04
+SKINNY            4             6           80               6          4.98           0.04
+
+══════════════════════════════════════════════════════════════════════════════════════════
+  TABLE 2: MLRC  (Minimize Latency under Randomness Constraint)
+
+Design          d-1    Target Rand  Rand Used    Achieved Lat    Area (kGE)    DSE Time (s)
+------------  -----  -------------  -----------  --------------  ------------  --------------
+BoyerPeralta      1             57  —            —               —             —
+BoyerPeralta      1             43  —            —               —             —
+BoyerPeralta      1             36  —            —               —             —
+BoyerPeralta      1             34  —            —               —             —
+BoyerPeralta      2            172  —            —               —             —
+BoyerPeralta      2            130  —            —               —             —
+BoyerPeralta      2            108  —            —               —             —
+BoyerPeralta      2            102  —            —               —             —
+BoyerPeralta      3            344  —            —               —             —
+BoyerPeralta      3            260  —            —               —             —
+BoyerPeralta      3            216  —            —               —             —
+BoyerPeralta      3            204  —            —               —             —
+BoyerPeralta      4            570  —            —               —             —
+BoyerPeralta      4            430  —            —               —             —
+BoyerPeralta      4            360  —            —               —             —
+BoyerPeralta      4            340  —            —               —             —
+Canright          1             57  —            —               —             —
+Canright          1             43  —            —               —             —
+Canright          1             36  —            —               —             —
+Canright          2            172  —            —               —             —
+Canright          2            130  —            —               —             —
+Canright          2            108  —            —               —             —
+Canright          3            344  —            —               —             —
+Canright          3            260  —            —               —             —
+Canright          3            216  —            —               —             —
+Canright          4            570  —            —               —             —
+Canright          4            432  —            —               —             —
+Canright          4            360  —            —               —             —
+SKINNY            1             21  —            —               —             —
+SKINNY            1             15  —            —               —             —
+SKINNY            1             11  —            —               —             —
+SKINNY            1              9  —            —               —             —
+SKINNY            1              8  —            —               —             —
+SKINNY            2             64  —            —               —             —
+SKINNY            2             46  —            —               —             —
+SKINNY            2             34  —            —               —             —
+SKINNY            2             28  —            —               —             —
+SKINNY            2             24  —            —               —             —
+SKINNY            3            126  —            —               —             —
+SKINNY            3             90  —            —               —             —
+SKINNY            3             66  —            —               —             —
+SKINNY            3             54  —            —               —             —
+SKINNY            3             48  —            —               —             —
+SKINNY            4            212  —            —               —             —
+SKINNY            4            152  —            —               —             —
+SKINNY            4            112  —            —               —             —
+SKINNY            4             92  —            —               —             —
+SKINNY            4             80  —            —               —             —
+
+══════════════════════════════════════════════════════════════════════════════════════════
+  TABLE 3: MARC  (Minimize Area under Randomness and Latency Constraints)
+
+Design          d-1    Max Lat    Max Rand  Best Lat    Best Rand    Min Area (kGE)    Pareto Pts
+------------  -----  ---------  ----------  ----------  -----------  ----------------  ------------
+BoyerPeralta      1          4          68  —           —            —                 —
+BoyerPeralta      1          5          65  —           —            —                 —
+BoyerPeralta      1          6          60  —           —            —                 —
+BoyerPeralta      2          4         204  —           —            —                 —
+BoyerPeralta      2          5         200  —           —            —                 —
+BoyerPeralta      2          6         190  —           —            —                 —
+BoyerPeralta      3          4         408  —           —            —                 —
+BoyerPeralta      3          5         380  —           —            —                 —
+BoyerPeralta      3          6         340  —           —            —                 —
+BoyerPeralta      4          4         680  —           —            —                 —
+BoyerPeralta      4          5         640  —           —            —                 —
+BoyerPeralta      4          6         570  —           —            —                 —
+Canright          1          4          72  —           —            —                 —
+Canright          1          5          68  —           —            —                 —
+Canright          1          6          60  —           —            —                 —
+Canright          2          4         216  —           —            —                 —
+Canright          2          5         200  —           —            —                 —
+Canright          2          6         180  —           —            —                 —
+Canright          3          4         482  —           —            —                 —
+Canright          3          5         400  —           —            —                 —
+Canright          3          6         380  —           —            —                 —
+Canright          4          4         720  —           —            —                 —
+Canright          4          5         690  —           —            —                 —
+Canright          4          6         500  —           —            —                 —
+SKINNY            1          4          21  —           —            —                 —
+SKINNY            1          5          15  —           —            —                 —
+SKINNY            1          6          13  —           —            —                 —
+SKINNY            2          4          64  —           —            —                 —
+SKINNY            2          5          50  —           —            —                 —
+SKINNY            2          6          40  —           —            —                 —
+SKINNY            3          4         126  —           —            —                 —
+SKINNY            3          5         110  —           —            —                 —
+SKINNY            3          6          90  —           —            —                 —
+SKINNY            4          4         190  —           —            —                 —
+SKINNY            4          5         160  —           —            —                 —
+SKINNY            4          6         130  —           —            —                 —
+
+══════════════════════════════════════════════════════════════════════════════════════════
+
+  Coverage: MRLC 36/36  MLRC 0/48  MARC 0/36

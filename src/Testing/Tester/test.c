@@ -1,0 +1,388 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int reg(int x){
+    return x;
+}
+void sbox(int x0_0, int x0_1, int x1_0, int x1_1, int x2_0, int x2_1, int x3_0, int x3_1, int *output_0, int *output_1, int dec_1, int dec_0, int dec_2, int dec_3, int rand_2, int rand_3, int rand_1, int rand_4)
+{
+  int x0_0_inp;
+  int x0_1_inp;
+  int x1_0_inp;
+  int x1_1_inp;
+  int x2_0_inp;
+  int x2_1_inp;
+  int x3_0_inp;
+  int x3_1_inp;
+  int dec_1_inp;
+  int dec_0_inp;
+  int dec_2_inp;
+  int dec_3_inp;
+  int rand_2_inp;
+  int rand_3_inp;
+  int rand_1_inp;
+  int rand_4_inp;
+  x0_0_inp = x0_0;
+  x0_1_inp = x0_1;
+  x1_0_inp = x1_0;
+  x1_1_inp = x1_1;
+  x2_0_inp = x2_0;
+  x2_1_inp = x2_1;
+  x3_0_inp = x3_0;
+  x3_1_inp = x3_1;
+  dec_1_inp = dec_1;
+  dec_0_inp = dec_0;
+  dec_2_inp = dec_2;
+  dec_3_inp = dec_3;
+  rand_2_inp = rand_2;
+  rand_3_inp = rand_3;
+  rand_1_inp = rand_1;
+  rand_4_inp = rand_4;
+  int X0_0;
+  int X0_1;
+  X0_0 = x1_0_inp & dec_1_inp;
+  X0_1 = x1_1_inp & dec_1_inp;
+  int temp_var_0_0;
+  int temp_var_0_1;
+  temp_var_0_0 = x0_0_inp ^ x2_0_inp;
+  temp_var_0_1 = x0_1_inp ^ x2_1_inp;
+  int X1_0;
+  int X1_1;
+  X1_0 = temp_var_0_0 & dec_1_inp;
+  X1_1 = temp_var_0_1 & dec_1_inp;
+  int temp_var_1_0;
+  int temp_var_1_1;
+  temp_var_1_0 = x2_0_inp ^ x3_0_inp;
+  temp_var_1_1 = x2_1_inp ^ x3_1_inp;
+  int X2_0;
+  int X2_1;
+  X2_0 = temp_var_1_0 & dec_1_inp;
+  X2_1 = temp_var_1_1 & dec_1_inp;
+  int X3_0;
+  int X3_1;
+  X3_0 = (~x2_0_inp) & dec_1_inp;
+  X3_1 = x2_1_inp & dec_1_inp;
+  int temp_var_2_0;
+  int temp_var_2_1;
+  temp_var_2_0 = X0_0 ^ X1_0;
+  temp_var_2_1 = X0_1 ^ X1_1;
+  int Q0_0;
+  int Q0_1;
+  Q0_0 = temp_var_2_0 & dec_1_inp;
+  Q0_1 = temp_var_2_1 & dec_1_inp;
+  int temp_var_3_0;
+  int temp_var_3_1;
+  temp_var_3_0 = X0_0 ^ X2_0;
+  temp_var_3_1 = X0_1 ^ X2_1;
+  int Q1_0;
+  int Q1_1;
+  Q1_0 = temp_var_3_0 & dec_1_inp;
+  Q1_1 = temp_var_3_1 & dec_1_inp;
+  int T0_0;
+  int T0_1;
+  int u00_HPC20;
+  int u01_HPC20;
+  int u10_HPC20;
+  int u11_HPC20;
+  int v01_HPC20;
+  int v10_HPC20;
+  int w01_HPC20;
+  int w10_HPC20;
+  int b_share_reg_hpc2_same_shares_1_order0_HPC20;
+  int temp_hpc2_v_1_order0_HPC20;
+  int rand_reg_hpc2_w_1_order0_HPC20;
+  int a_neg_hpc2_w_1_order0_HPC20;
+  int temp_hpc2_v_1_order1_HPC20;
+  int rand_reg_hpc2_w_1_order1_HPC20;
+  int a_neg_hpc2_w_1_order1_HPC20;
+  int b_share_reg_hpc2_same_shares_1_order1_HPC20;
+  b_share_reg_hpc2_same_shares_1_order0_HPC20 = reg(Q1_0);
+  u00_HPC20 = reg(reg(X3_0) & b_share_reg_hpc2_same_shares_1_order0_HPC20);
+  temp_hpc2_v_1_order0_HPC20 = reg(Q1_1 ^ rand_1_inp);
+  v01_HPC20 = reg(temp_hpc2_v_1_order0_HPC20 & reg(X3_0));
+  rand_reg_hpc2_w_1_order0_HPC20 = reg(rand_1_inp);
+  a_neg_hpc2_w_1_order0_HPC20 = ~X3_0;
+  w01_HPC20 = reg(reg(a_neg_hpc2_w_1_order0_HPC20) & rand_reg_hpc2_w_1_order0_HPC20);
+  u01_HPC20 = v01_HPC20 ^ w01_HPC20;
+  temp_hpc2_v_1_order1_HPC20 = reg(Q1_0 ^ rand_1_inp);
+  v10_HPC20 = reg(temp_hpc2_v_1_order1_HPC20 & reg(X3_1));
+  rand_reg_hpc2_w_1_order1_HPC20 = reg(rand_1_inp);
+  a_neg_hpc2_w_1_order1_HPC20 = ~X3_1;
+  w10_HPC20 = reg(reg(a_neg_hpc2_w_1_order1_HPC20) & rand_reg_hpc2_w_1_order1_HPC20);
+  u10_HPC20 = v10_HPC20 ^ w10_HPC20;
+  b_share_reg_hpc2_same_shares_1_order1_HPC20 = reg(Q1_1);
+  u11_HPC20 = reg(reg(X3_1) & b_share_reg_hpc2_same_shares_1_order1_HPC20);
+  T0_0 = u00_HPC20 ^ u01_HPC20;
+  T0_1 = u10_HPC20 ^ u11_HPC20;
+  int temp_var_4_0;
+  int temp_var_4_1;
+  temp_var_4_0 = reg(reg(Q0_0)) ^ T0_0;
+  temp_var_4_1 = reg(reg(Q0_1)) ^ T0_1;
+  int Q2_0;
+  int Q2_1;
+  Q2_0 = temp_var_4_0 & reg(reg(dec_1_inp));
+  Q2_1 = temp_var_4_1 & reg(reg(dec_1_inp));
+  int T1_0;
+  int T1_1;
+  int u00_HPC21;
+  int u01_HPC21;
+  int u10_HPC21;
+  int u11_HPC21;
+  int v01_HPC21;
+  int v10_HPC21;
+  int w01_HPC21;
+  int w10_HPC21;
+  int b_share_reg_hpc2_same_shares_1_order0_HPC21;
+  int temp_hpc2_v_1_order0_HPC21;
+  int rand_reg_hpc2_w_1_order0_HPC21;
+  int a_neg_hpc2_w_1_order0_HPC21;
+  int temp_hpc2_v_1_order1_HPC21;
+  int rand_reg_hpc2_w_1_order1_HPC21;
+  int a_neg_hpc2_w_1_order1_HPC21;
+  int b_share_reg_hpc2_same_shares_1_order1_HPC21;
+  b_share_reg_hpc2_same_shares_1_order0_HPC21 = reg(Q2_0);
+  u00_HPC21 = reg(reg(reg(reg(X0_0))) & b_share_reg_hpc2_same_shares_1_order0_HPC21);
+  temp_hpc2_v_1_order0_HPC21 = reg(Q2_1 ^ reg(reg(rand_2_inp)));
+  v01_HPC21 = reg(temp_hpc2_v_1_order0_HPC21 & reg(reg(reg(X0_0))));
+  rand_reg_hpc2_w_1_order0_HPC21 = reg(rand_2_inp);
+  a_neg_hpc2_w_1_order0_HPC21 = ~X0_0;
+  w01_HPC21 = reg(reg(a_neg_hpc2_w_1_order0_HPC21) & rand_reg_hpc2_w_1_order0_HPC21);
+  u01_HPC21 = v01_HPC21 ^ reg(reg(w01_HPC21));
+  temp_hpc2_v_1_order1_HPC21 = reg(Q2_0 ^ reg(reg(rand_2_inp)));
+  v10_HPC21 = reg(temp_hpc2_v_1_order1_HPC21 & reg(reg(reg(X0_1))));
+  rand_reg_hpc2_w_1_order1_HPC21 = reg(rand_2_inp);
+  a_neg_hpc2_w_1_order1_HPC21 = ~X0_1;
+  w10_HPC21 = reg(reg(a_neg_hpc2_w_1_order1_HPC21) & rand_reg_hpc2_w_1_order1_HPC21);
+  u10_HPC21 = v10_HPC21 ^ reg(reg(w10_HPC21));
+  b_share_reg_hpc2_same_shares_1_order1_HPC21 = reg(Q2_1);
+  u11_HPC21 = reg(reg(reg(reg(X0_1))) & b_share_reg_hpc2_same_shares_1_order1_HPC21);
+  T1_0 = u00_HPC21 ^ u01_HPC21;
+  T1_1 = u10_HPC21 ^ u11_HPC21;
+  int Q3_0;
+  int Q3_1;
+  Q3_0 = reg(reg(reg(reg(X0_0 ^ X3_0))));
+  Q3_1 = reg(reg(reg(reg(X0_1 ^ X3_1))));
+  int neg_Q3_0 = ~Q3_0;
+  int neg_Q3_1 = Q3_1;
+  int Q4_0;
+  int Q4_1;
+  Q4_0 = neg_Q3_0 & dec_1_inp;
+  Q4_1 = neg_Q3_1 & dec_1_inp;
+  int T2_0;
+  int T2_1;
+  int u00_HPC22;
+  int u01_HPC22;
+  int u10_HPC22;
+  int u11_HPC22;
+  int v01_HPC22;
+  int v10_HPC22;
+  int w01_HPC22;
+  int w10_HPC22;
+  int b_share_reg_hpc2_same_shares_1_order0_HPC22;
+  int temp_hpc2_v_1_order0_HPC22;
+  int rand_reg_hpc2_w_1_order0_HPC22;
+  int a_neg_hpc2_w_1_order0_HPC22;
+  int temp_hpc2_v_1_order1_HPC22;
+  int rand_reg_hpc2_w_1_order1_HPC22;
+  int a_neg_hpc2_w_1_order1_HPC22;
+  int b_share_reg_hpc2_same_shares_1_order1_HPC22;
+  b_share_reg_hpc2_same_shares_1_order0_HPC22 = reg(Q4_0);
+  u00_HPC22 = reg(reg(X3_0) & b_share_reg_hpc2_same_shares_1_order0_HPC22);
+  temp_hpc2_v_1_order0_HPC22 = reg(Q4_1 ^ rand_3_inp);
+  v01_HPC22 = reg(temp_hpc2_v_1_order0_HPC22 & reg(X3_0));
+  rand_reg_hpc2_w_1_order0_HPC22 = reg(rand_3_inp);
+  a_neg_hpc2_w_1_order0_HPC22 = ~X3_0;
+  w01_HPC22 = reg(reg(a_neg_hpc2_w_1_order0_HPC22) & rand_reg_hpc2_w_1_order0_HPC22);
+  u01_HPC22 = v01_HPC22 ^ w01_HPC22;
+  temp_hpc2_v_1_order1_HPC22 = reg(Q4_0 ^ rand_3_inp);
+  v10_HPC22 = reg(temp_hpc2_v_1_order1_HPC22 & reg(X3_1));
+  rand_reg_hpc2_w_1_order1_HPC22 = reg(rand_3_inp);
+  a_neg_hpc2_w_1_order1_HPC22 = ~X3_1;
+  w10_HPC22 = reg(reg(a_neg_hpc2_w_1_order1_HPC22) & rand_reg_hpc2_w_1_order1_HPC22);
+  u10_HPC22 = v10_HPC22 ^ w10_HPC22;
+  b_share_reg_hpc2_same_shares_1_order1_HPC22 = reg(Q4_1);
+  u11_HPC22 = reg(reg(X3_1) & b_share_reg_hpc2_same_shares_1_order1_HPC22);
+  T2_0 = u00_HPC22 ^ u01_HPC22;
+  T2_1 = u10_HPC22 ^ u11_HPC22;
+  int L0_0;
+  int L0_1;
+  L0_0 = T1_0 ^ reg(reg(T2_0));
+  L0_1 = T1_1 ^ reg(reg(T2_1));
+  int Q6_0;
+  int Q6_1;
+  Q6_0 = X1_0 ^ X3_0;
+  Q6_1 = X1_1 ^ X3_1;
+  int L4_0;
+  int L4_1;
+  L4_0 = reg(reg(reg(reg(Q1_0 ^ Q6_0))));
+  L4_1 = reg(reg(reg(reg(Q1_1 ^ Q6_1))));
+  int neg_L3_0 = ~L4_0;
+  int neg_L3_1 = L4_1;
+  int L1_0;
+  int L1_1;
+  L1_0 = neg_L3_0 & dec_1_inp;
+  L1_1 = neg_L3_1 & dec_1_inp;
+  int Q7_0;
+  int Q7_1;
+  Q7_0 = reg(reg(L1_0)) ^ T2_0;
+  Q7_1 = reg(reg(L1_1)) ^ T2_1;
+  int T3_0;
+  int T3_1;
+  int u00_HPC23;
+  int u01_HPC23;
+  int u10_HPC23;
+  int u11_HPC23;
+  int v01_HPC23;
+  int v10_HPC23;
+  int w01_HPC23;
+  int w10_HPC23;
+  int b_share_reg_hpc2_same_shares_1_order0_HPC23;
+  int temp_hpc2_v_1_order0_HPC23;
+  int rand_reg_hpc2_w_1_order0_HPC23;
+  int a_neg_hpc2_w_1_order0_HPC23;
+  int temp_hpc2_v_1_order1_HPC23;
+  int rand_reg_hpc2_w_1_order1_HPC23;
+  int a_neg_hpc2_w_1_order1_HPC23;
+  int b_share_reg_hpc2_same_shares_1_order1_HPC23;
+  b_share_reg_hpc2_same_shares_1_order0_HPC23 = reg(Q7_0);
+  u00_HPC23 = reg(reg(reg(reg(Q6_0))) & b_share_reg_hpc2_same_shares_1_order0_HPC23);
+  temp_hpc2_v_1_order0_HPC23 = reg(Q7_1 ^ reg(reg(rand_4_inp)));
+  v01_HPC23 = reg(temp_hpc2_v_1_order0_HPC23 & reg(reg(reg(Q6_0))));
+  rand_reg_hpc2_w_1_order0_HPC23 = reg(rand_4_inp);
+  a_neg_hpc2_w_1_order0_HPC23 = ~Q6_0;
+  w01_HPC23 = reg(reg(a_neg_hpc2_w_1_order0_HPC23) & rand_reg_hpc2_w_1_order0_HPC23);
+  u01_HPC23 = v01_HPC23 ^ reg(reg(w01_HPC23));
+  temp_hpc2_v_1_order1_HPC23 = reg(Q7_0 ^ reg(reg(rand_4_inp)));
+  v10_HPC23 = reg(temp_hpc2_v_1_order1_HPC23 & reg(reg(reg(Q6_1))));
+  rand_reg_hpc2_w_1_order1_HPC23 = reg(rand_4_inp);
+  a_neg_hpc2_w_1_order1_HPC23 = ~Q6_1;
+  w10_HPC23 = reg(reg(a_neg_hpc2_w_1_order1_HPC23) & rand_reg_hpc2_w_1_order1_HPC23);
+  u10_HPC23 = v10_HPC23 ^ reg(reg(w10_HPC23));
+  b_share_reg_hpc2_same_shares_1_order1_HPC23 = reg(Q7_1);
+  u11_HPC23 = reg(reg(reg(reg(Q6_1))) & b_share_reg_hpc2_same_shares_1_order1_HPC23);
+  T3_0 = u00_HPC23 ^ u01_HPC23;
+  T3_1 = u10_HPC23 ^ u11_HPC23;
+  int L2_0;
+  int L2_1;
+  L2_0 = X0_0 ^ X3_0;
+  L2_1 = X0_1 ^ X3_1;
+  int Y0_0;
+  int Y0_1;
+  Y0_0 = L0_0 ^ reg(reg(reg(reg(L2_0))));
+  Y0_1 = L0_1 ^ reg(reg(reg(reg(L2_1))));
+  int Y1_0;
+  int Y1_1;
+  Y1_0 = L0_0 ^ T3_0;
+  Y1_1 = L0_1 ^ T3_1;
+  int L3_0;
+  int L3_1;
+  L3_0 = reg(reg(X1_0)) ^ T0_0;
+  L3_1 = reg(reg(X1_1)) ^ T0_1;
+  int Y2_0;
+  int Y2_1;
+  Y2_0 = L3_0 ^ T2_0;
+  Y2_1 = L3_1 ^ T2_1;
+  int Y3_0;
+  int Y3_1;
+  Y3_0 = reg(reg(X2_0)) ^ T2_0;
+  Y3_1 = reg(reg(X2_1)) ^ T2_1;
+  int O0_0;
+  int O0_1;
+  O0_0 = Y1_0 & reg(reg(reg(reg(dec_1_inp))));
+  O0_1 = Y1_1 & reg(reg(reg(reg(dec_1_inp))));
+  int O_temp_0;
+  int O_temp_1;
+  O_temp_0 = reg(reg(Y2_0)) ^ Y0_0;
+  O_temp_1 = reg(reg(Y2_1)) ^ Y0_1;
+  int neg_O_temp_0 = ~O_temp_0;
+  int neg_O_temp_1 = O_temp_1;
+  int O1_0;
+  int O1_1;
+  O1_0 = neg_O_temp_0 & dec_1_inp;
+  O1_1 = neg_O_temp_1 & dec_1_inp;
+  int O2_0;
+  int O2_1;
+  O2_0 = (~Y3_0) & reg(reg(dec_1_inp));
+  O2_1 = Y3_1 & reg(reg(dec_1_inp));
+  int O3_0;
+  int O3_1;
+  O3_0 = (~Y2_0) & reg(reg(dec_1_inp));
+  O3_1 = Y2_1 & reg(reg(dec_1_inp));
+  int temp_var_5_0;
+  int temp_var_5_1;
+  temp_var_5_0 = O0_0 << reg(reg(reg(reg(dec_0_inp))));
+  temp_var_5_1 = O0_1 << reg(reg(reg(reg(dec_0_inp))));
+  int temp_var_6_0;
+  int temp_var_6_1;
+  temp_var_6_0 = O1_0 << dec_1_inp;
+  temp_var_6_1 = O1_1 << dec_1_inp;
+  int temp_var_7_0;
+  int temp_var_7_1;
+  temp_var_7_0 = temp_var_5_0 | reg(reg(reg(reg(temp_var_6_0))));
+  temp_var_7_1 = temp_var_5_1 | reg(reg(reg(reg(temp_var_6_1))));
+  int temp_var_8_0;
+  int temp_var_8_1;
+  temp_var_8_0 = O2_0 << reg(reg(dec_2_inp));
+  temp_var_8_1 = O2_1 << reg(reg(dec_2_inp));
+  int temp_var_9_0;
+  int temp_var_9_1;
+  temp_var_9_0 = temp_var_7_0 | reg(reg(temp_var_8_0));
+  temp_var_9_1 = temp_var_7_1 | reg(reg(temp_var_8_1));
+  int temp_var_10_0;
+  int temp_var_10_1;
+  temp_var_10_0 = O3_0 << reg(reg(dec_3_inp));
+  temp_var_10_1 = O3_1 << reg(reg(dec_3_inp));
+  *output_0 = temp_var_9_0 | reg(reg(temp_var_10_0));
+  *output_1 = temp_var_9_1 | reg(reg(temp_var_10_1));
+}
+
+
+
+int main(void) {
+    int sbox_table[16] = {
+        0xC, 0x6, 0x9, 0x0,
+        0x1, 0xA, 0x2, 0xB,
+        0x3, 0x8, 0x5, 0xD,
+        0x4, 0xE, 0x7, 0xF
+    };
+
+    int errors = 0;
+
+    for (int input = 0; input < 16; input++) {
+        int x0 = (input >> 0) & 1;
+        int x1 = (input >> 1) & 1;
+        int x2 = (input >> 2) & 1;
+        int x3 = (input >> 3) & 1;
+        srand(time(NULL)); // seed RNG
+
+        // int x00,x01,x10,x11,x20,x21,x30,x31;
+
+        int x00 = rand() % 16; int x10 = rand() % 16;
+        int x20 = rand() % 16; int x30 = rand() % 16;
+
+        int x01 = x00 ^ x0;
+        int x11 = x10 ^ x1;
+        int x21 = x20 ^ x2;
+        int x31 = x30 ^ x3;
+
+        int output0,output1,rand_1,rand_2,rand_3,rand_4 ;
+        sbox(x00, x01, x10, x11, x20, x21, x30, x31, &output0, &output1, 1, 0, 2, 3, rand_2, rand_3, rand_1, rand_4);
+
+        
+        int expected = sbox_table[input];
+        int output = output0 ^ output1;
+        printf("Input = %X -> Output = %X (Expected = %X)%s\n",
+               input, output, expected,
+               (output == expected) ? " [OK]" : " [FAIL]");
+
+        if (output != expected) errors++;
+    }
+
+    if (errors == 0)
+        printf("All tests passed!\n");
+    else
+        printf("%d mismatches found.\n", errors);
+
+    return 0;
+}

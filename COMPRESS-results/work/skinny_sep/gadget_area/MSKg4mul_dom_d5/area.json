@@ -1,0 +1,58 @@
+{
+   "creator": "Yosys 0.33 (git sha1 2584903a0, gcc 8.4.0-1ubuntu1~18.04 -fPIC -Os)",
+   "invocation": "stat -liberty synthesis/nangate45-pdk/stdcells.lib -json ",
+   "modules": {
+      "\\G4_mul": {
+         "num_wires":         12,
+         "num_wire_bits":     15,
+         "num_pub_wires":     7,
+         "num_pub_wire_bits": 10,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         7,
+         "area":              8.778000,
+         "num_cells_by_type": {
+            "NAND2_X1": 2,
+            "NOR2_X1": 1,
+            "XNOR2_X1": 4
+         }
+      },
+      "\\MSKg4mul_dom": {
+         "num_wires":         183,
+         "num_wire_bits":     651,
+         "num_pub_wires":     103,
+         "num_pub_wire_bits": 571,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         155,
+         "area":              353.780000,
+         "num_cells_by_type": {
+            "DFF_X1": 50,
+            "G4_mul": 25,
+            "XNOR2_X1": 40,
+            "XOR2_X1": 40
+         }
+      }
+   },
+      "design": {
+         "num_wires":         483,
+         "num_wire_bits":     1026,
+         "num_pub_wires":     278,
+         "num_pub_wire_bits": 821,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         305,
+         "area":              573.230000,
+         "num_cells_by_type": {
+            "DFF_X1": 50,
+            "NAND2_X1": 50,
+            "NOR2_X1": 25,
+            "XNOR2_X1": 140,
+            "XOR2_X1": 40
+         }
+      }
+}
+

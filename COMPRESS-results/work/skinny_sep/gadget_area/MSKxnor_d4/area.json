@@ -1,0 +1,64 @@
+{
+   "creator": "Yosys 0.33 (git sha1 2584903a0, gcc 8.4.0-1ubuntu1~18.04 -fPIC -Os)",
+   "invocation": "stat -liberty synthesis/nangate45-pdk/stdcells.lib -json ",
+   "modules": {
+      "$paramod$1c66fe8f8348cfde03fbce5eda2b09723557e449\\MSKxor": {
+         "num_wires":         3,
+         "num_wire_bits":     12,
+         "num_pub_wires":     3,
+         "num_pub_wire_bits": 12,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         4,
+         "area":              6.384000,
+         "num_cells_by_type": {
+            "XOR2_X1": 4
+         }
+      },
+      "$paramod\\MSKinv\\d=s32'00000000000000000000000000000100": {
+         "num_wires":         2,
+         "num_wire_bits":     8,
+         "num_pub_wires":     2,
+         "num_pub_wire_bits": 8,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1,
+         "area":              0.532000,
+         "num_cells_by_type": {
+            "INV_X1": 1
+         }
+      },
+      "\\MSKxnor": {
+         "num_wires":         4,
+         "num_wire_bits":     16,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 16,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         2,
+         "num_cells_by_type": {
+            "$paramod$1c66fe8f8348cfde03fbce5eda2b09723557e449\\MSKxor": 1,
+            "$paramod\\MSKinv\\d=s32'00000000000000000000000000000100": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         9,
+         "num_wire_bits":     36,
+         "num_pub_wires":     9,
+         "num_pub_wire_bits": 36,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         5,
+         "area":              6.916000,
+         "num_cells_by_type": {
+            "INV_X1": 1,
+            "XOR2_X1": 4
+         }
+      }
+}
+

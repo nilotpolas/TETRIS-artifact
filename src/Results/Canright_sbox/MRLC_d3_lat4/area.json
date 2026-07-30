@@ -1,0 +1,47 @@
+{
+   "creator": "Yosys 0.33 (git sha1 2584903a0, gcc 8.4.0-1ubuntu1~18.04 -fPIC -Os)",
+   "invocation": "stat -liberty /home/nilotpola/Downloads/TETRIS-artefact/src/Design Synthesis/nangate45-pdk/stdcells.lib -json ",
+   "modules": {
+      "\\sbox": {
+         "num_wires":         7782,
+         "num_wire_bits":     7782,
+         "num_pub_wires":     3278,
+         "num_pub_wire_bits": 3278,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         5008,
+         "area":              13125.504000,
+         "num_cells_by_type": {
+            "AND2_X1": 568,
+            "DFF_X1": 2024,
+            "INV_X1": 128,
+            "NAND2_X1": 288,
+            "NOR2_X1": 152,
+            "XNOR2_X1": 1420,
+            "XOR2_X1": 428
+         }
+      }
+   },
+      "design": {
+         "num_wires":         7782,
+         "num_wire_bits":     7782,
+         "num_pub_wires":     3278,
+         "num_pub_wire_bits": 3278,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         5008,
+         "area":              13125.504000,
+         "num_cells_by_type": {
+            "AND2_X1": 568,
+            "DFF_X1": 2024,
+            "INV_X1": 128,
+            "NAND2_X1": 288,
+            "NOR2_X1": 152,
+            "XNOR2_X1": 1420,
+            "XOR2_X1": 428
+         }
+      }
+}
+

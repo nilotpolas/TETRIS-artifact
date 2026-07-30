@@ -1,0 +1,83 @@
+========================================================================================================================
+CIRCUIT HIERARCHY ANALYSIS - NODES BY LEVEL
+========================================================================================================================
+
+Total Levels: 4
+Total Nodes: 36
+
+
+========================================================================================================================
+LEVEL 1
+========================================================================================================================
+Total nodes: 9
+  AND nodes: 9
+  XOR nodes: 0
+  Mixed nodes: 0
+
+AND NODES:
+  1. m4_e_G4_mul0_G16_mul0_G256_inv0 = m4_ab_G4_mul0_G16_mul0_G256_inv0 & m4_cd_G4_mul0_G16_mul0_G256_inv0
+  2. temp_var_0_G4_mul0_G16_mul0_G256_inv0 = m16_tx1_G16_mul0_G256_inv0 & m16_ty1_G16_mul0_G256_inv0
+  3. temp_var_1_G4_mul0_G16_mul0_G256_inv0 = m16_tx0_G16_mul0_G256_inv0 & m16_ty0_G16_mul0_G256_inv0
+  4. m4_e_G4_mul1_G16_mul0_G256_inv0 = m4_ab_G4_mul1_G16_mul0_G256_inv0 & m4_cd_G4_mul1_G16_mul0_G256_inv0
+  5. temp_var_0_G4_mul1_G16_mul0_G256_inv0 = sb_y7 & sb_y3
+  6. temp_var_1_G4_mul1_G16_mul0_G256_inv0 = sb_y6 & sb_y2
+  7. m4_e_G4_mul2_G16_mul0_G256_inv0 = m4_ab_G4_mul2_G16_mul0_G256_inv0 & m4_cd_G4_mul2_G16_mul0_G256_inv0
+  8. temp_var_0_G4_mul2_G16_mul0_G256_inv0 = sb_y5 & sb_y1
+  9. temp_var_1_G4_mul2_G16_mul0_G256_inv0 = sb_y4 & sb_y0
+
+========================================================================================================================
+LEVEL 2
+========================================================================================================================
+Total nodes: 3
+  AND nodes: 3
+  XOR nodes: 0
+  Mixed nodes: 0
+
+AND NODES:
+  1. m4_e_G4_mul3_G16_inv0_G256_inv0 = m4_ab_G4_mul3_G16_inv0_G256_inv0 & m4_cd_G4_mul3_G16_inv0_G256_inv0
+  2. temp_var_0_G4_mul3_G16_inv0_G256_inv0 = i256_te3_G256_inv0 & i256_te1_G256_inv0
+  3. temp_var_1_G4_mul3_G16_inv0_G256_inv0 = i256_te2_G256_inv0 & i256_te0_G256_inv0
+
+========================================================================================================================
+LEVEL 3
+========================================================================================================================
+Total nodes: 6
+  AND nodes: 6
+  XOR nodes: 0
+  Mixed nodes: 0
+
+AND NODES:
+  1. m4_e_G4_mul4_G16_inv0_G256_inv0 = m4_ab_G4_mul4_G16_inv0_G256_inv0 & m4_cd_G4_mul4_G16_inv0_G256_inv0
+  2. temp_var_0_G4_mul4_G16_inv0_G256_inv0 = i16_e1_G16_inv0_G256_inv0 & i256_te1_G256_inv0
+  3. temp_var_1_G4_mul4_G16_inv0_G256_inv0 = i16_e0_G16_inv0_G256_inv0 & i256_te0_G256_inv0
+  4. m4_e_G4_mul5_G16_inv0_G256_inv0 = m4_ab_G4_mul5_G16_inv0_G256_inv0 & m4_cd_G4_mul5_G16_inv0_G256_inv0
+  5. temp_var_0_G4_mul5_G16_inv0_G256_inv0 = i16_e1_G16_inv0_G256_inv0 & i256_te3_G256_inv0
+  6. temp_var_1_G4_mul5_G16_inv0_G256_inv0 = i16_e0_G16_inv0_G256_inv0 & i256_te2_G256_inv0
+
+========================================================================================================================
+LEVEL 4
+========================================================================================================================
+Total nodes: 18
+  AND nodes: 18
+  XOR nodes: 0
+  Mixed nodes: 0
+
+AND NODES:
+  1. m4_e_G4_mul0_G16_mul1_G256_inv0 = m4_ab_G4_mul0_G16_mul1_G256_inv0 & m4_cd_G4_mul0_G16_mul1_G256_inv0
+  2. temp_var_0_G4_mul0_G16_mul1_G256_inv0 = m16_tx1_G16_mul1_G256_inv0 & m16_ty1_G16_mul1_G256_inv0
+  3. temp_var_1_G4_mul0_G16_mul1_G256_inv0 = m16_tx0_G16_mul1_G256_inv0 & m16_ty0_G16_mul1_G256_inv0
+  4. m4_e_G4_mul1_G16_mul1_G256_inv0 = m4_ab_G4_mul1_G16_mul1_G256_inv0 & m4_cd_G4_mul1_G16_mul1_G256_inv0
+  5. temp_var_0_G4_mul1_G16_mul1_G256_inv0 = i256_e3_G256_inv0 & sb_y3
+  6. temp_var_1_G4_mul1_G16_mul1_G256_inv0 = i256_e2_G256_inv0 & sb_y2
+  7. m4_e_G4_mul2_G16_mul1_G256_inv0 = m4_ab_G4_mul2_G16_mul1_G256_inv0 & m4_cd_G4_mul2_G16_mul1_G256_inv0
+  8. temp_var_0_G4_mul2_G16_mul1_G256_inv0 = i256_e1_G256_inv0 & sb_y1
+  9. temp_var_1_G4_mul2_G16_mul1_G256_inv0 = i256_e0_G256_inv0 & sb_y0
+  10. m4_e_G4_mul0_G16_mul2_G256_inv0 = m4_ab_G4_mul0_G16_mul2_G256_inv0 & m4_cd_G4_mul0_G16_mul2_G256_inv0
+  11. temp_var_0_G4_mul0_G16_mul2_G256_inv0 = m16_tx1_G16_mul2_G256_inv0 & m16_ty1_G16_mul2_G256_inv0
+  12. temp_var_1_G4_mul0_G16_mul2_G256_inv0 = m16_tx0_G16_mul2_G256_inv0 & m16_ty0_G16_mul2_G256_inv0
+  13. m4_e_G4_mul1_G16_mul2_G256_inv0 = m4_ab_G4_mul1_G16_mul2_G256_inv0 & m4_cd_G4_mul1_G16_mul2_G256_inv0
+  14. temp_var_0_G4_mul1_G16_mul2_G256_inv0 = i256_e3_G256_inv0 & sb_y7
+  15. temp_var_1_G4_mul1_G16_mul2_G256_inv0 = i256_e2_G256_inv0 & sb_y6
+  16. m4_e_G4_mul2_G16_mul2_G256_inv0 = m4_ab_G4_mul2_G16_mul2_G256_inv0 & m4_cd_G4_mul2_G16_mul2_G256_inv0
+  17. temp_var_0_G4_mul2_G16_mul2_G256_inv0 = i256_e1_G256_inv0 & sb_y5
+  18. temp_var_1_G4_mul2_G16_mul2_G256_inv0 = i256_e0_G256_inv0 & sb_y4

@@ -1,0 +1,18 @@
+{
+    "MSKxor": 8,
+    "MSKxnor": 0,
+    "MSKinv": 11,
+    "MSKand_hpc2": 2,
+    "MSKand_hpc2_swapped": 2,
+    "MSKand_hpc3": 4,
+    "MSKreg": 32,
+    "Area Estimate (GE)": 6313.213541666666,
+    "RNG Bits": 72,
+    "Toffoli": 0,
+    "Num Shares": 4,
+    "Latency": 4,
+    "Use Toffoli": true,
+    "Circuit": "circuits/skinny8.txt",
+    "RNG Cost Per Bit": 38.063151041666664,
+    "solve_time": 0.30549192428588867
+}

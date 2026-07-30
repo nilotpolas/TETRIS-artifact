@@ -1,0 +1,102 @@
+{
+   "creator": "Yosys 0.33 (git sha1 2584903a0, gcc 8.4.0-1ubuntu1~18.04 -fPIC -Os)",
+   "invocation": "stat -liberty synthesis/nangate45-pdk/stdcells.lib -json ",
+   "modules": {
+      "$paramod\\bin_REG\\W=s32'00000000000000000000000000000100": {
+         "num_wires":         8,
+         "num_wire_bits":     17,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 13,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         4,
+         "area":              18.088000,
+         "num_cells_by_type": {
+            "DFF_X1": 4
+         }
+      },
+      "\\G16_mul": {
+         "num_wires":         15,
+         "num_wire_bits":     32,
+         "num_pub_wires":     11,
+         "num_pub_wire_bits": 28,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         12,
+         "area":              12.768000,
+         "num_cells_by_type": {
+            "G4_mul": 3,
+            "G4_scl_N": 1,
+            "XOR2_X1": 8
+         }
+      },
+      "\\G4_mul": {
+         "num_wires":         12,
+         "num_wire_bits":     15,
+         "num_pub_wires":     7,
+         "num_pub_wire_bits": 10,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         7,
+         "area":              8.778000,
+         "num_cells_by_type": {
+            "NAND2_X1": 2,
+            "NOR2_X1": 1,
+            "XNOR2_X1": 4
+         }
+      },
+      "\\G4_scl_N": {
+         "num_wires":         4,
+         "num_wire_bits":     6,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 6,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1,
+         "area":              1.596000,
+         "num_cells_by_type": {
+            "XOR2_X1": 1
+         }
+      },
+      "\\MSKg16mul_hpc3": {
+         "num_wires":         214,
+         "num_wire_bits":     881,
+         "num_pub_wires":     150,
+         "num_pub_wire_bits": 817,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         224,
+         "area":              280.896000,
+         "num_cells_by_type": {
+            "$paramod\\bin_REG\\W=s32'00000000000000000000000000000100": 24,
+            "G16_mul": 24,
+            "XNOR2_X1": 64,
+            "XOR2_X1": 112
+         }
+      }
+   },
+      "design": {
+         "num_wires":         1726,
+         "num_wire_bits":     3281,
+         "num_pub_wires":     1110,
+         "num_pub_wire_bits": 2665,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         992,
+         "area":              1691.760000,
+         "num_cells_by_type": {
+            "DFF_X1": 96,
+            "NAND2_X1": 144,
+            "NOR2_X1": 72,
+            "XNOR2_X1": 352,
+            "XOR2_X1": 328
+         }
+      }
+}
+

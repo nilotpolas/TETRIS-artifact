@@ -1,0 +1,187 @@
+{
+   "creator": "Yosys 0.33 (git sha1 2584903a0, gcc 8.4.0-1ubuntu1~18.04 -fPIC -Os)",
+   "invocation": "stat -liberty synthesis/nangate45-pdk/stdcells.lib -json ",
+   "modules": {
+      "$paramod$9d3cd672c952c541a7c7c3ce44798115d550ac02\\MSKxor": {
+         "num_wires":         3,
+         "num_wire_bits":     9,
+         "num_pub_wires":     3,
+         "num_pub_wire_bits": 9,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         3,
+         "area":              4.788000,
+         "num_cells_by_type": {
+            "XOR2_X1": 3
+         }
+      },
+      "$paramod$af6c2b0f8a4ca4091f500afe356931903d98f94d\\MSKand_hpc2_cross": {
+         "num_wires":         60,
+         "num_wire_bits":     91,
+         "num_pub_wires":     45,
+         "num_pub_wire_bits": 76,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         61,
+         "area":              44.688000,
+         "num_cells_by_type": {
+            "$paramod\\bin_REG\\W=s32'00000000000000000000000000000001": 24,
+            "$paramod\\bin_REG\\W=s32'00000000000000000000000000000011": 1,
+            "AND2_X1": 9,
+            "INV_X1": 3,
+            "NOR2_X1": 6,
+            "XNOR2_X1": 12,
+            "XOR2_X1": 6
+         }
+      },
+      "$paramod\\MSKand_hpc2\\d=s32'00000000000000000000000000000011": {
+         "num_wires":         5,
+         "num_wire_bits":     13,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 13,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1,
+         "num_cells_by_type": {
+            "$paramod$af6c2b0f8a4ca4091f500afe356931903d98f94d\\MSKand_hpc2_cross": 1
+         }
+      },
+      "$paramod\\MSKand_hpc2_swapped\\d=s32'00000000000000000000000000000011": {
+         "num_wires":         5,
+         "num_wire_bits":     13,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 13,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1,
+         "num_cells_by_type": {
+            "$paramod\\MSKand_hpc2\\d=s32'00000000000000000000000000000011": 1
+         }
+      },
+      "$paramod\\MSKinv\\d=s32'00000000000000000000000000000011": {
+         "num_wires":         2,
+         "num_wire_bits":     6,
+         "num_pub_wires":     2,
+         "num_pub_wire_bits": 6,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1,
+         "area":              0.532000,
+         "num_cells_by_type": {
+            "INV_X1": 1
+         }
+      },
+      "$paramod\\MSKreg\\d=s32'00000000000000000000000000000011": {
+         "num_wires":         7,
+         "num_wire_bits":     13,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 10,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         3,
+         "area":              13.566000,
+         "num_cells_by_type": {
+            "DFF_X1": 3
+         }
+      },
+      "$paramod\\MSKxnor\\d=s32'00000000000000000000000000000011": {
+         "num_wires":         4,
+         "num_wire_bits":     12,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 12,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         2,
+         "num_cells_by_type": {
+            "$paramod$9d3cd672c952c541a7c7c3ce44798115d550ac02\\MSKxor": 1,
+            "$paramod\\MSKinv\\d=s32'00000000000000000000000000000011": 1
+         }
+      },
+      "$paramod\\MSKxor\\d=s32'00000000000000000000000000000011": {
+         "num_wires":         3,
+         "num_wire_bits":     9,
+         "num_pub_wires":     3,
+         "num_pub_wire_bits": 9,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         3,
+         "area":              4.788000,
+         "num_cells_by_type": {
+            "XOR2_X1": 3
+         }
+      },
+      "$paramod\\bin_REG\\W=s32'00000000000000000000000000000001": {
+         "num_wires":         5,
+         "num_wire_bits":     5,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 4,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1,
+         "area":              4.522000,
+         "num_cells_by_type": {
+            "DFF_X1": 1
+         }
+      },
+      "$paramod\\bin_REG\\W=s32'00000000000000000000000000000011": {
+         "num_wires":         7,
+         "num_wire_bits":     13,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 10,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         3,
+         "area":              13.566000,
+         "num_cells_by_type": {
+            "DFF_X1": 3
+         }
+      },
+      "\\aes_bp": {
+         "num_wires":         236,
+         "num_wire_bits":     793,
+         "num_pub_wires":     236,
+         "num_pub_wire_bits": 793,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         206,
+         "num_cells_by_type": {
+            "$paramod\\MSKand_hpc2\\d=s32'00000000000000000000000000000011": 24,
+            "$paramod\\MSKand_hpc2_swapped\\d=s32'00000000000000000000000000000011": 10,
+            "$paramod\\MSKreg\\d=s32'00000000000000000000000000000011": 78,
+            "$paramod\\MSKxnor\\d=s32'00000000000000000000000000000011": 4,
+            "$paramod\\MSKxor\\d=s32'00000000000000000000000000000011": 90
+         }
+      }
+   },
+      "design": {
+         "num_wires":         7666,
+         "num_wire_bits":     10913,
+         "num_pub_wires":     6004,
+         "num_pub_wire_bits": 9251,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         2662,
+         "area":              7180.936000,
+         "num_cells_by_type": {
+            "AND2_X1": 306,
+            "DFF_X1": 1152,
+            "INV_X1": 106,
+            "NOR2_X1": 204,
+            "XNOR2_X1": 408,
+            "XOR2_X1": 486
+         }
+      }
+}
+

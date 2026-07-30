@@ -1,0 +1,146 @@
+{
+  "creator": "Yosys 0.33 (git sha1 2584903a0, gcc 8.4.0-1ubuntu1~18.04 -fPIC -Os)",
+  "modules": {
+    "MSKmux": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "top": "00000000000000000000000000000001",
+        "src": "gadget_library/MSK/MSKmux.v:18.1-27.10"
+      },
+      "parameter_default_values": {
+        "count": "00000000000000000000000000000001",
+        "d": "00000000000000000000000000000101"
+      },
+      "ports": {
+        "sel": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "in_true": {
+          "direction": "input",
+          "bits": [ 3, 4, 5, 6, 7 ]
+        },
+        "in_false": {
+          "direction": "input",
+          "bits": [ 8, 9, 10, 11, 12 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 13, 14, 15, 16, 17 ]
+        }
+      },
+      "cells": {
+        "$abc$1666$auto$blifparse.cc:386:parse_blif$1667": {
+          "hide_name": 1,
+          "type": "MUX2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 8 ],
+            "B": [ 3 ],
+            "S": [ 2 ],
+            "Z": [ 13 ]
+          }
+        },
+        "$abc$1666$auto$blifparse.cc:386:parse_blif$1668": {
+          "hide_name": 1,
+          "type": "MUX2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 4 ],
+            "S": [ 2 ],
+            "Z": [ 14 ]
+          }
+        },
+        "$abc$1666$auto$blifparse.cc:386:parse_blif$1669": {
+          "hide_name": 1,
+          "type": "MUX2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 10 ],
+            "B": [ 5 ],
+            "S": [ 2 ],
+            "Z": [ 15 ]
+          }
+        },
+        "$abc$1666$auto$blifparse.cc:386:parse_blif$1670": {
+          "hide_name": 1,
+          "type": "MUX2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 6 ],
+            "S": [ 2 ],
+            "Z": [ 16 ]
+          }
+        },
+        "$abc$1666$auto$blifparse.cc:386:parse_blif$1671": {
+          "hide_name": 1,
+          "type": "MUX2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 12 ],
+            "B": [ 7 ],
+            "S": [ 2 ],
+            "Z": [ 17 ]
+          }
+        }
+      },
+      "netnames": {
+        "in_false": {
+          "hide_name": 0,
+          "bits": [ 8, 9, 10, 11, 12 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKmux.v:22.80-22.88"
+          }
+        },
+        "in_true": {
+          "hide_name": 0,
+          "bits": [ 3, 4, 5, 6, 7 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKmux.v:21.80-21.87"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 13, 14, 15, 16, 17 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKmux.v:23.80-23.83"
+          }
+        },
+        "sel": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "fv_type": "control",
+            "src": "gadget_library/MSK/MSKmux.v:20.33-20.36"
+          }
+        }
+      }
+    }
+  }
+}

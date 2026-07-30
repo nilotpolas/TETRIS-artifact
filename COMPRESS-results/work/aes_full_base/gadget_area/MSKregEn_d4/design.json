@@ -1,0 +1,388 @@
+{
+  "creator": "Yosys 0.33 (git sha1 2584903a0, gcc 8.4.0-1ubuntu1~18.04 -fPIC -Os)",
+  "modules": {
+    "$paramod$1c66fe8f8348cfde03fbce5eda2b09723557e449\\MSKmux": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "hdlname": "\\MSKmux",
+        "src": "gadget_library/MSK/MSKmux.v:18.1-27.10"
+      },
+      "parameter_default_values": {
+        "count": "00000000000000000000000000000001",
+        "d": "00000000000000000000000000000100"
+      },
+      "ports": {
+        "sel": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "in_true": {
+          "direction": "input",
+          "bits": [ 3, 4, 5, 6 ]
+        },
+        "in_false": {
+          "direction": "input",
+          "bits": [ 7, 8, 9, 10 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 11, 12, 13, 14 ]
+        }
+      },
+      "cells": {
+        "$abc$1146$auto$blifparse.cc:386:parse_blif$1147": {
+          "hide_name": 1,
+          "type": "MUX2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 3 ],
+            "S": [ 2 ],
+            "Z": [ 11 ]
+          }
+        },
+        "$abc$1146$auto$blifparse.cc:386:parse_blif$1148": {
+          "hide_name": 1,
+          "type": "MUX2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 8 ],
+            "B": [ 4 ],
+            "S": [ 2 ],
+            "Z": [ 12 ]
+          }
+        },
+        "$abc$1146$auto$blifparse.cc:386:parse_blif$1149": {
+          "hide_name": 1,
+          "type": "MUX2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 5 ],
+            "S": [ 2 ],
+            "Z": [ 13 ]
+          }
+        },
+        "$abc$1146$auto$blifparse.cc:386:parse_blif$1150": {
+          "hide_name": 1,
+          "type": "MUX2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 10 ],
+            "B": [ 6 ],
+            "S": [ 2 ],
+            "Z": [ 14 ]
+          }
+        }
+      },
+      "netnames": {
+        "in_false": {
+          "hide_name": 0,
+          "bits": [ 7, 8, 9, 10 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKmux.v:22.80-22.88"
+          }
+        },
+        "in_true": {
+          "hide_name": 0,
+          "bits": [ 3, 4, 5, 6 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKmux.v:21.80-21.87"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 11, 12, 13, 14 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKmux.v:23.80-23.83"
+          }
+        },
+        "sel": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "fv_type": "control",
+            "src": "gadget_library/MSK/MSKmux.v:20.33-20.36"
+          }
+        }
+      }
+    },
+    "$paramod$1c66fe8f8348cfde03fbce5eda2b09723557e449\\MSKreg": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "hdlname": "\\MSKreg",
+        "src": "gadget_library/MSK/MSKreg.v:18.1-31.10"
+      },
+      "parameter_default_values": {
+        "count": "00000000000000000000000000000001",
+        "d": "00000000000000000000000000000100"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "in": {
+          "direction": "input",
+          "bits": [ 3, 4, 5, 6 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 7, 8, 9, 10 ]
+        }
+      },
+      "cells": {
+        "$auto$ff.cc:266:slice$1134": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKreg.v:26.1-27.17"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 3 ],
+            "Q": [ 7 ],
+            "QN": [ 11 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$1135": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKreg.v:26.1-27.17"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 4 ],
+            "Q": [ 8 ],
+            "QN": [ 12 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$1136": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKreg.v:26.1-27.17"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 5 ],
+            "Q": [ 9 ],
+            "QN": [ 13 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$1137": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKreg.v:26.1-27.17"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 6 ],
+            "Q": [ 10 ],
+            "QN": [ 14 ]
+          }
+        }
+      },
+      "netnames": {
+        "$auto$dfflibmap.cc:381:dfflibmap$1142": {
+          "hide_name": 1,
+          "bits": [ 14 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$1143": {
+          "hide_name": 1,
+          "bits": [ 11 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$1144": {
+          "hide_name": 1,
+          "bits": [ 12 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$1145": {
+          "hide_name": 1,
+          "bits": [ 13 ],
+          "attributes": {
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "fv_type": "clock",
+            "src": "gadget_library/MSK/MSKreg.v:20.33-20.36"
+          }
+        },
+        "in": {
+          "hide_name": 0,
+          "bits": [ 3, 4, 5, 6 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKreg.v:21.80-21.82"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 7, 8, 9, 10 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000001",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKreg.v:22.80-22.83"
+          }
+        },
+        "state": {
+          "hide_name": 0,
+          "bits": [ 7, 8, 9, 10 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKreg.v:24.19-24.24"
+          }
+        }
+      }
+    },
+    "MSKregEn": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "top": "00000000000000000000000000000001",
+        "src": "gadget_library/MSK/MSKregEn.v:20.1-32.10"
+      },
+      "parameter_default_values": {
+        "count": "00000000000000000000000000000001",
+        "d": "00000000000000000000000000000100"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "en": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "in": {
+          "direction": "input",
+          "bits": [ 4, 5, 6, 7 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 8, 9, 10, 11 ]
+        }
+      },
+      "cells": {
+        "mux": {
+          "hide_name": 0,
+          "type": "$paramod$1c66fe8f8348cfde03fbce5eda2b09723557e449\\MSKmux",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKregEn.v:29.32-29.90"
+          },
+          "port_directions": {
+            "in_false": "input",
+            "in_true": "input",
+            "out": "output",
+            "sel": "input"
+          },
+          "connections": {
+            "in_false": [ 8, 9, 10, 11 ],
+            "in_true": [ 4, 5, 6, 7 ],
+            "out": [ 12, 13, 14, 15 ],
+            "sel": [ 3 ]
+          }
+        },
+        "state_reg": {
+          "hide_name": 0,
+          "type": "$paramod$1c66fe8f8348cfde03fbce5eda2b09723557e449\\MSKreg",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKregEn.v:30.32-30.77"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 12, 13, 14, 15 ],
+            "out": [ 8, 9, 10, 11 ]
+          }
+        }
+      },
+      "netnames": {
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKregEn.v:22.7-22.10"
+          }
+        },
+        "en": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKregEn.v:23.7-23.9"
+          }
+        },
+        "in": {
+          "hide_name": 0,
+          "bits": [ 4, 5, 6, 7 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKregEn.v:24.22-24.24"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 8, 9, 10, 11 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKregEn.v:25.22-25.25"
+          }
+        },
+        "reg_in": {
+          "hide_name": 0,
+          "bits": [ 12, 13, 14, 15 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKregEn.v:27.20-27.26"
+          }
+        }
+      }
+    }
+  }
+}

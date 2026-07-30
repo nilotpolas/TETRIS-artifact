@@ -1,0 +1,661 @@
+{
+  "creator": "Yosys 0.33 (git sha1 2584903a0, gcc 8.4.0-1ubuntu1~18.04 -fPIC -Os)",
+  "modules": {
+    "MSKand_ghpc": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "gadget_library/MSK/MSKand_ghpc.v:15.1-64.10"
+      },
+      "parameter_default_values": {
+        "d": "00000000000000000000000000000010"
+      },
+      "ports": {
+        "ina": {
+          "direction": "input",
+          "bits": [ 2, 3 ]
+        },
+        "inb": {
+          "direction": "input",
+          "bits": [ 4, 5 ]
+        },
+        "rnd": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "clk": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 8, 9 ]
+        }
+      },
+      "cells": {
+        "$abc$1718$auto$blifparse.cc:386:parse_blif$1719": {
+          "hide_name": 1,
+          "type": "INV_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 2 ],
+            "ZN": [ 10 ]
+          }
+        },
+        "$abc$1718$auto$blifparse.cc:386:parse_blif$1720": {
+          "hide_name": 1,
+          "type": "INV_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 6 ],
+            "ZN": [ 11 ]
+          }
+        },
+        "$abc$1718$auto$blifparse.cc:386:parse_blif$1721": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 12 ],
+            "B": [ 13 ],
+            "Z": [ 14 ]
+          }
+        },
+        "$abc$1718$auto$blifparse.cc:386:parse_blif$1722": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 15 ],
+            "B": [ 16 ],
+            "ZN": [ 17 ]
+          }
+        },
+        "$abc$1718$auto$blifparse.cc:386:parse_blif$1723": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 14 ],
+            "B": [ 17 ],
+            "ZN": [ 9 ]
+          }
+        },
+        "$abc$1718$auto$blifparse.cc:386:parse_blif$1724": {
+          "hide_name": 1,
+          "type": "NAND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 2 ],
+            "A2": [ 4 ],
+            "ZN": [ 18 ]
+          }
+        },
+        "$abc$1718$auto$blifparse.cc:386:parse_blif$1725": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 18 ],
+            "ZN": [ 19 ]
+          }
+        },
+        "$abc$1718$auto$blifparse.cc:386:parse_blif$1726": {
+          "hide_name": 1,
+          "type": "NOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 10 ],
+            "A2": [ 4 ],
+            "ZN": [ 20 ]
+          }
+        },
+        "$abc$1718$auto$blifparse.cc:386:parse_blif$1727": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 20 ],
+            "ZN": [ 21 ]
+          }
+        },
+        "$abc$1718$auto$blifparse.cc:386:parse_blif$1728": {
+          "hide_name": 1,
+          "type": "NOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 2 ],
+            "A2": [ 4 ],
+            "ZN": [ 22 ]
+          }
+        },
+        "$abc$1718$auto$blifparse.cc:386:parse_blif$1729": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 22 ],
+            "ZN": [ 23 ]
+          }
+        },
+        "$abc$1718$auto$blifparse.cc:386:parse_blif$1730": {
+          "hide_name": 1,
+          "type": "MUX2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 23 ],
+            "S": [ 18 ],
+            "Z": [ 24 ]
+          }
+        },
+        "$abc$1718$auto$blifparse.cc:386:parse_blif$1731": {
+          "hide_name": 1,
+          "type": "AND3_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 25 ],
+            "A2": [ 26 ],
+            "A3": [ 27 ],
+            "ZN": [ 28 ]
+          }
+        },
+        "$abc$1718$auto$blifparse.cc:386:parse_blif$1732": {
+          "hide_name": 1,
+          "type": "AND3_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 29 ],
+            "A2": [ 25 ],
+            "A3": [ 30 ],
+            "ZN": [ 31 ]
+          }
+        },
+        "$abc$1718$auto$blifparse.cc:386:parse_blif$1733": {
+          "hide_name": 1,
+          "type": "AND3_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 32 ],
+            "A2": [ 26 ],
+            "A3": [ 33 ],
+            "ZN": [ 34 ]
+          }
+        },
+        "$abc$1718$auto$blifparse.cc:386:parse_blif$1734": {
+          "hide_name": 1,
+          "type": "AND3_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 32 ],
+            "A2": [ 29 ],
+            "A3": [ 35 ],
+            "ZN": [ 36 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$1667": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_ghpc.v:57.1-60.4"
+          },
+          "connections": {
+            "CK": [ 7 ],
+            "D": [ 6 ],
+            "Q": [ 37 ],
+            "QN": [ 38 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$1668": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_ghpc.v:41.1-44.4"
+          },
+          "connections": {
+            "CK": [ 7 ],
+            "D": [ 5 ],
+            "Q": [ 29 ],
+            "QN": [ 26 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$1669": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_ghpc.v:41.1-44.4"
+          },
+          "connections": {
+            "CK": [ 7 ],
+            "D": [ 3 ],
+            "Q": [ 32 ],
+            "QN": [ 25 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$1670": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_ghpc.v:48.1-50.4"
+          },
+          "connections": {
+            "CK": [ 7 ],
+            "D": [ 28 ],
+            "Q": [ 12 ],
+            "QN": [ 39 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$1671": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_ghpc.v:48.1-50.4"
+          },
+          "connections": {
+            "CK": [ 7 ],
+            "D": [ 31 ],
+            "Q": [ 13 ],
+            "QN": [ 40 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$1672": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_ghpc.v:48.1-50.4"
+          },
+          "connections": {
+            "CK": [ 7 ],
+            "D": [ 34 ],
+            "Q": [ 15 ],
+            "QN": [ 41 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$1673": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_ghpc.v:48.1-50.4"
+          },
+          "connections": {
+            "CK": [ 7 ],
+            "D": [ 36 ],
+            "Q": [ 16 ],
+            "QN": [ 42 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$1674": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_ghpc.v:35.1-37.4"
+          },
+          "connections": {
+            "CK": [ 7 ],
+            "D": [ 19 ],
+            "Q": [ 27 ],
+            "QN": [ 43 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$1675": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_ghpc.v:35.1-37.4"
+          },
+          "connections": {
+            "CK": [ 7 ],
+            "D": [ 21 ],
+            "Q": [ 30 ],
+            "QN": [ 44 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$1676": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_ghpc.v:35.1-37.4"
+          },
+          "connections": {
+            "CK": [ 7 ],
+            "D": [ 24 ],
+            "Q": [ 33 ],
+            "QN": [ 45 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$1677": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_ghpc.v:35.1-37.4"
+          },
+          "connections": {
+            "CK": [ 7 ],
+            "D": [ 23 ],
+            "Q": [ 35 ],
+            "QN": [ 46 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$1678": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_ghpc.v:57.1-60.4"
+          },
+          "connections": {
+            "CK": [ 7 ],
+            "D": [ 37 ],
+            "Q": [ 8 ],
+            "QN": [ 47 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\filtered[3:0]": {
+          "hide_name": 1,
+          "bits": [ 28, 31, 34, 36 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_ghpc.v:48.1-50.4"
+          }
+        },
+        "$0\\r_fx1[3:0]": {
+          "hide_name": 1,
+          "bits": [ 19, 21, 24, 23 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_ghpc.v:35.1-37.4"
+          }
+        },
+        "$abc$1718$auto$dfflibmap.cc:381:dfflibmap$1706": {
+          "hide_name": 1,
+          "bits": [ 26 ],
+          "attributes": {
+          }
+        },
+        "$abc$1718$auto$dfflibmap.cc:381:dfflibmap$1708": {
+          "hide_name": 1,
+          "bits": [ 25 ],
+          "attributes": {
+          }
+        },
+        "$abc$1718$new_n25_": {
+          "hide_name": 1,
+          "bits": [ 10 ],
+          "attributes": {
+          }
+        },
+        "$abc$1718$new_n26_": {
+          "hide_name": 1,
+          "bits": [ 11 ],
+          "attributes": {
+          }
+        },
+        "$abc$1718$new_n27_": {
+          "hide_name": 1,
+          "bits": [ 14 ],
+          "attributes": {
+          }
+        },
+        "$abc$1718$new_n28_": {
+          "hide_name": 1,
+          "bits": [ 17 ],
+          "attributes": {
+          }
+        },
+        "$abc$1718$new_n30_": {
+          "hide_name": 1,
+          "bits": [ 18 ],
+          "attributes": {
+          }
+        },
+        "$abc$1718$new_n32_": {
+          "hide_name": 1,
+          "bits": [ 20 ],
+          "attributes": {
+          }
+        },
+        "$abc$1718$new_n34_": {
+          "hide_name": 1,
+          "bits": [ 22 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$1704": {
+          "hide_name": 1,
+          "bits": [ 47 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$1705": {
+          "hide_name": 1,
+          "bits": [ 38 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$1710": {
+          "hide_name": 1,
+          "bits": [ 39 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$1711": {
+          "hide_name": 1,
+          "bits": [ 40 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$1712": {
+          "hide_name": 1,
+          "bits": [ 41 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$1713": {
+          "hide_name": 1,
+          "bits": [ 42 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$1714": {
+          "hide_name": 1,
+          "bits": [ 43 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$1715": {
+          "hide_name": 1,
+          "bits": [ 44 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$1716": {
+          "hide_name": 1,
+          "bits": [ 45 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$1717": {
+          "hide_name": 1,
+          "bits": [ 46 ],
+          "attributes": {
+          }
+        },
+        "a0": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_ghpc.v:30.6-30.8"
+          }
+        },
+        "a1": {
+          "hide_name": 0,
+          "bits": [ 32 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_ghpc.v:40.5-40.7"
+          }
+        },
+        "b0": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_ghpc.v:31.6-31.8"
+          }
+        },
+        "b1": {
+          "hide_name": 0,
+          "bits": [ 29 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_ghpc.v:40.9-40.11"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "fv_type": "clock",
+            "src": "gadget_library/MSK/MSKand_ghpc.v:27.31-27.34"
+          }
+        },
+        "filtered": {
+          "hide_name": 0,
+          "bits": [ 12, 13, 15, 16 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_ghpc.v:47.13-47.21"
+          }
+        },
+        "ina": {
+          "hide_name": 0,
+          "bits": [ 2, 3 ],
+          "attributes": {
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKand_ghpc.v:24.56-24.59"
+          }
+        },
+        "inb": {
+          "hide_name": 0,
+          "bits": [ 4, 5 ],
+          "attributes": {
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKand_ghpc.v:25.56-25.59"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 8, 9 ],
+          "attributes": {
+            "fv_latency": "00000000000000000000000000000010",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKand_ghpc.v:28.76-28.79"
+          }
+        },
+        "r_fx1": {
+          "hide_name": 0,
+          "bits": [ 27, 30, 33, 35 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_ghpc.v:34.13-34.18"
+          }
+        },
+        "rnd": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_rnd_count_0": "00000000000000000000000000000001",
+            "fv_rnd_lat_0": "00000000000000000000000000000000",
+            "fv_type": "random",
+            "src": "gadget_library/MSK/MSKand_ghpc.v:26.84-26.87"
+          }
+        },
+        "rnd_d": {
+          "hide_name": 0,
+          "bits": [ 37 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_ghpc.v:55.5-55.10"
+          }
+        },
+        "rnd_dd": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_ghpc.v:55.12-55.18"
+          }
+        }
+      }
+    }
+  }
+}

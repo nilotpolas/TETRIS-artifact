@@ -1,0 +1,23 @@
+{
+  "algorithm": "MRLC",
+  "design": "Boyer_Peraltas_sbox",
+  "security_order_d": 4,
+  "latency_budget": 5,
+  "achieved_randomness": 370,
+  "achieved_latency": 5,
+  "hls_verified_latency": 5,
+  "synthesis": {
+    "area_ge": 23264.892,
+    "cell_count": 8111,
+    "dff_count": 3885,
+    "area_kge": 23.2649,
+    "area_kge_wo_rand": 27.0573
+  },
+  "gadget_distribution": {
+    "hpc2": 27,
+    "hpc3": 3,
+    "hpc2o": 2,
+    "hpc2o_swapped": 2
+  },
+  "dse_time_sec": 0.133
+}

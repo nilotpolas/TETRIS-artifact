@@ -1,0 +1,82 @@
+{
+  "level_1": {
+    "level_number": 1,
+    "total_nodes": 9,
+    "and_nodes": [
+      "m4_e_G4_mul0_G16_mul0_G256_inv0 = m4_ab_G4_mul0_G16_mul0_G256_inv0 & m4_cd_G4_mul0_G16_mul0_G256_inv0",
+      "temp_var_0_G4_mul0_G16_mul0_G256_inv0 = m16_tx1_G16_mul0_G256_inv0 & m16_ty1_G16_mul0_G256_inv0",
+      "temp_var_1_G4_mul0_G16_mul0_G256_inv0 = m16_tx0_G16_mul0_G256_inv0 & m16_ty0_G16_mul0_G256_inv0",
+      "m4_e_G4_mul1_G16_mul0_G256_inv0 = m4_ab_G4_mul1_G16_mul0_G256_inv0 & m4_cd_G4_mul1_G16_mul0_G256_inv0",
+      "temp_var_0_G4_mul1_G16_mul0_G256_inv0 = sb_y7 & sb_y3",
+      "temp_var_1_G4_mul1_G16_mul0_G256_inv0 = sb_y6 & sb_y2",
+      "m4_e_G4_mul2_G16_mul0_G256_inv0 = m4_ab_G4_mul2_G16_mul0_G256_inv0 & m4_cd_G4_mul2_G16_mul0_G256_inv0",
+      "temp_var_0_G4_mul2_G16_mul0_G256_inv0 = sb_y5 & sb_y1",
+      "temp_var_1_G4_mul2_G16_mul0_G256_inv0 = sb_y4 & sb_y0"
+    ],
+    "xor_nodes": [],
+    "mixed_nodes": [],
+    "count_and": 9,
+    "count_xor": 0,
+    "count_mixed": 0
+  },
+  "level_2": {
+    "level_number": 2,
+    "total_nodes": 3,
+    "and_nodes": [
+      "m4_e_G4_mul3_G16_inv0_G256_inv0 = m4_ab_G4_mul3_G16_inv0_G256_inv0 & m4_cd_G4_mul3_G16_inv0_G256_inv0",
+      "temp_var_0_G4_mul3_G16_inv0_G256_inv0 = i256_te3_G256_inv0 & i256_te1_G256_inv0",
+      "temp_var_1_G4_mul3_G16_inv0_G256_inv0 = i256_te2_G256_inv0 & i256_te0_G256_inv0"
+    ],
+    "xor_nodes": [],
+    "mixed_nodes": [],
+    "count_and": 3,
+    "count_xor": 0,
+    "count_mixed": 0
+  },
+  "level_3": {
+    "level_number": 3,
+    "total_nodes": 6,
+    "and_nodes": [
+      "m4_e_G4_mul4_G16_inv0_G256_inv0 = m4_ab_G4_mul4_G16_inv0_G256_inv0 & m4_cd_G4_mul4_G16_inv0_G256_inv0",
+      "temp_var_0_G4_mul4_G16_inv0_G256_inv0 = i16_e1_G16_inv0_G256_inv0 & i256_te1_G256_inv0",
+      "temp_var_1_G4_mul4_G16_inv0_G256_inv0 = i16_e0_G16_inv0_G256_inv0 & i256_te0_G256_inv0",
+      "m4_e_G4_mul5_G16_inv0_G256_inv0 = m4_ab_G4_mul5_G16_inv0_G256_inv0 & m4_cd_G4_mul5_G16_inv0_G256_inv0",
+      "temp_var_0_G4_mul5_G16_inv0_G256_inv0 = i16_e1_G16_inv0_G256_inv0 & i256_te3_G256_inv0",
+      "temp_var_1_G4_mul5_G16_inv0_G256_inv0 = i16_e0_G16_inv0_G256_inv0 & i256_te2_G256_inv0"
+    ],
+    "xor_nodes": [],
+    "mixed_nodes": [],
+    "count_and": 6,
+    "count_xor": 0,
+    "count_mixed": 0
+  },
+  "level_4": {
+    "level_number": 4,
+    "total_nodes": 18,
+    "and_nodes": [
+      "m4_e_G4_mul0_G16_mul1_G256_inv0 = m4_ab_G4_mul0_G16_mul1_G256_inv0 & m4_cd_G4_mul0_G16_mul1_G256_inv0",
+      "temp_var_0_G4_mul0_G16_mul1_G256_inv0 = m16_tx1_G16_mul1_G256_inv0 & m16_ty1_G16_mul1_G256_inv0",
+      "temp_var_1_G4_mul0_G16_mul1_G256_inv0 = m16_tx0_G16_mul1_G256_inv0 & m16_ty0_G16_mul1_G256_inv0",
+      "m4_e_G4_mul1_G16_mul1_G256_inv0 = m4_ab_G4_mul1_G16_mul1_G256_inv0 & m4_cd_G4_mul1_G16_mul1_G256_inv0",
+      "temp_var_0_G4_mul1_G16_mul1_G256_inv0 = i256_e3_G256_inv0 & sb_y3",
+      "temp_var_1_G4_mul1_G16_mul1_G256_inv0 = i256_e2_G256_inv0 & sb_y2",
+      "m4_e_G4_mul2_G16_mul1_G256_inv0 = m4_ab_G4_mul2_G16_mul1_G256_inv0 & m4_cd_G4_mul2_G16_mul1_G256_inv0",
+      "temp_var_0_G4_mul2_G16_mul1_G256_inv0 = i256_e1_G256_inv0 & sb_y1",
+      "temp_var_1_G4_mul2_G16_mul1_G256_inv0 = i256_e0_G256_inv0 & sb_y0",
+      "m4_e_G4_mul0_G16_mul2_G256_inv0 = m4_ab_G4_mul0_G16_mul2_G256_inv0 & m4_cd_G4_mul0_G16_mul2_G256_inv0",
+      "temp_var_0_G4_mul0_G16_mul2_G256_inv0 = m16_tx1_G16_mul2_G256_inv0 & m16_ty1_G16_mul2_G256_inv0",
+      "temp_var_1_G4_mul0_G16_mul2_G256_inv0 = m16_tx0_G16_mul2_G256_inv0 & m16_ty0_G16_mul2_G256_inv0",
+      "m4_e_G4_mul1_G16_mul2_G256_inv0 = m4_ab_G4_mul1_G16_mul2_G256_inv0 & m4_cd_G4_mul1_G16_mul2_G256_inv0",
+      "temp_var_0_G4_mul1_G16_mul2_G256_inv0 = i256_e3_G256_inv0 & sb_y7",
+      "temp_var_1_G4_mul1_G16_mul2_G256_inv0 = i256_e2_G256_inv0 & sb_y6",
+      "m4_e_G4_mul2_G16_mul2_G256_inv0 = m4_ab_G4_mul2_G16_mul2_G256_inv0 & m4_cd_G4_mul2_G16_mul2_G256_inv0",
+      "temp_var_0_G4_mul2_G16_mul2_G256_inv0 = i256_e1_G256_inv0 & sb_y5",
+      "temp_var_1_G4_mul2_G16_mul2_G256_inv0 = i256_e0_G256_inv0 & sb_y4"
+    ],
+    "xor_nodes": [],
+    "mixed_nodes": [],
+    "count_and": 18,
+    "count_xor": 0,
+    "count_mixed": 0
+  }
+}

@@ -1,0 +1,68 @@
+{
+   "creator": "Yosys 0.33 (git sha1 2584903a0, gcc 8.4.0-1ubuntu1~18.04 -fPIC -Os)",
+   "invocation": "stat -liberty synthesis/nangate45-pdk/stdcells.lib -json ",
+   "modules": {
+      "$paramod\\MSKand_hpc3o_tof\\d=s32'00000000000000000000000000000011": {
+         "num_wires":         54,
+         "num_wire_bits":     88,
+         "num_pub_wires":     36,
+         "num_pub_wire_bits": 70,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         45,
+         "area":              45.486000,
+         "num_cells_by_type": {
+            "$paramod\\bin_REG\\W=s32'00000000000000000000000000000001": 12,
+            "NAND2_X1": 9,
+            "XNOR2_X1": 9,
+            "XOR2_X1": 15
+         }
+      },
+      "$paramod\\bin_REG\\W=s32'00000000000000000000000000000001": {
+         "num_wires":         5,
+         "num_wire_bits":     5,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 4,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1,
+         "area":              4.522000,
+         "num_cells_by_type": {
+            "DFF_X1": 1
+         }
+      },
+      "\\MSKand_hpc3o_swapped_tof": {
+         "num_wires":         7,
+         "num_wire_bits":     22,
+         "num_pub_wires":     7,
+         "num_pub_wire_bits": 22,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1,
+         "num_cells_by_type": {
+            "$paramod\\MSKand_hpc3o_tof\\d=s32'00000000000000000000000000000011": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         121,
+         "num_wire_bits":     170,
+         "num_pub_wires":     91,
+         "num_pub_wire_bits": 140,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         45,
+         "area":              99.750000,
+         "num_cells_by_type": {
+            "DFF_X1": 12,
+            "NAND2_X1": 9,
+            "XNOR2_X1": 9,
+            "XOR2_X1": 15
+         }
+      }
+}
+

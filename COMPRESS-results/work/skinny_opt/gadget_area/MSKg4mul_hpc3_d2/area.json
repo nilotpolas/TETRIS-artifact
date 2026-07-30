@@ -1,0 +1,71 @@
+{
+   "creator": "Yosys 0.33 (git sha1 2584903a0, gcc 8.4.0-1ubuntu1~18.04 -fPIC -Os)",
+   "invocation": "stat -liberty synthesis/nangate45-pdk/stdcells.lib -json ",
+   "modules": {
+      "$paramod\\bin_REG\\W=s32'00000000000000000000000000000010": {
+         "num_wires":         6,
+         "num_wire_bits":     9,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 7,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         2,
+         "area":              9.044000,
+         "num_cells_by_type": {
+            "DFF_X1": 2
+         }
+      },
+      "\\G4_mul": {
+         "num_wires":         12,
+         "num_wire_bits":     15,
+         "num_pub_wires":     7,
+         "num_pub_wire_bits": 10,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         7,
+         "area":              8.778000,
+         "num_cells_by_type": {
+            "NAND2_X1": 2,
+            "NOR2_X1": 1,
+            "XNOR2_X1": 4
+         }
+      },
+      "\\MSKg4mul_hpc3": {
+         "num_wires":         39,
+         "num_wire_bits":     101,
+         "num_pub_wires":     39,
+         "num_pub_wire_bits": 101,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         20,
+         "area":              19.152000,
+         "num_cells_by_type": {
+            "$paramod\\bin_REG\\W=s32'00000000000000000000000000000010": 4,
+            "G4_mul": 4,
+            "XOR2_X1": 12
+         }
+      }
+   },
+      "design": {
+         "num_wires":         111,
+         "num_wire_bits":     197,
+         "num_pub_wires":     83,
+         "num_pub_wire_bits": 169,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         48,
+         "area":              90.440000,
+         "num_cells_by_type": {
+            "DFF_X1": 8,
+            "NAND2_X1": 8,
+            "NOR2_X1": 4,
+            "XNOR2_X1": 16,
+            "XOR2_X1": 12
+         }
+      }
+}
+

@@ -1,0 +1,85 @@
+{
+   "creator": "Yosys 0.33 (git sha1 2584903a0, gcc 8.4.0-1ubuntu1~18.04 -fPIC -Os)",
+   "invocation": "stat -liberty synthesis/nangate45-pdk/stdcells.lib -json ",
+   "modules": {
+      "$paramod\\MSKand_hpc3_cross_er\\d=s32'00000000000000000000000000000010": {
+         "num_wires":         26,
+         "num_wire_bits":     35,
+         "num_pub_wires":     20,
+         "num_pub_wire_bits": 29,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         16,
+         "area":              13.832000,
+         "num_cells_by_type": {
+            "$paramod\\bin_REG\\W=s32'00000000000000000000000000000001": 4,
+            "INV_X1": 2,
+            "NAND2_X1": 4,
+            "XNOR2_X1": 4,
+            "XOR2_X1": 2
+         }
+      },
+      "$paramod\\bin_REG\\W=s32'00000000000000000000000000000001": {
+         "num_wires":         5,
+         "num_wire_bits":     5,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 4,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1,
+         "area":              4.522000,
+         "num_cells_by_type": {
+            "DFF_X1": 1
+         }
+      },
+      "$paramod\\bin_REG\\W=s32'00000000000000000000000000000010": {
+         "num_wires":         6,
+         "num_wire_bits":     9,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 7,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         2,
+         "area":              9.044000,
+         "num_cells_by_type": {
+            "DFF_X1": 2
+         }
+      },
+      "\\MSKand_hpc3_cross": {
+         "num_wires":         6,
+         "num_wire_bits":     11,
+         "num_pub_wires":     6,
+         "num_pub_wire_bits": 11,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         2,
+         "num_cells_by_type": {
+            "$paramod\\MSKand_hpc3_cross_er\\d=s32'00000000000000000000000000000010": 1,
+            "$paramod\\bin_REG\\W=s32'00000000000000000000000000000010": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         58,
+         "num_wire_bits":     75,
+         "num_pub_wires":     46,
+         "num_pub_wire_bits": 63,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         18,
+         "area":              40.964000,
+         "num_cells_by_type": {
+            "DFF_X1": 6,
+            "INV_X1": 2,
+            "NAND2_X1": 4,
+            "XNOR2_X1": 4,
+            "XOR2_X1": 2
+         }
+      }
+}
+

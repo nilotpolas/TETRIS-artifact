@@ -1,0 +1,1107 @@
+// === GADGET DEFINITIONS ===
+
+// --- hpc3 ---
+
+void hpc3_same_shares_1_order(_Bool a_share, _Bool b_share, _Bool * u_share) {
+    * u_share  = a_share & b_share;
+}
+
+void hpc3_v_1_order(_Bool a_share, _Bool b_share, _Bool * v_share, _Bool rand){
+    _Bool temp;
+    temp = reg(b_share ^ rand);
+    *v_share = temp & a_share;
+}
+
+void hpc3_w_1_order(_Bool a_share, _Bool rand, _Bool prand, _Bool * w_share){
+    _Bool temp;
+    _Bool a_share_neg;
+    a_share_neg = !(a_share);
+    temp = a_share_neg & rand;
+    *w_share = reg(temp ^ prand);
+}
+
+void hpc3_xor_vw_1_order(_Bool v_share, _Bool w_share, _Bool * u_share){
+    *u_share = v_share ^ w_share;
+}
+
+void HPC3(_Bool a0, _Bool a1, _Bool b0, _Bool b1, _Bool* c0, _Bool* c1, _Bool r01, _Bool p01)
+{
+	_Bool u00, u01, u10, u11;
+	_Bool v01, v10;
+	_Bool w01, w10;
+
+	hpc3_same_shares_1_order(a0, b0, &u00);
+
+	hpc3_v_1_order(a0, b1, &v01 , r01);
+	hpc3_w_1_order(a0, r01, p01, &w01);
+	hpc3_xor_vw_1_order(v01, w01, &u01);
+
+	hpc3_v_1_order(a1, b0, &v10 , r01);
+	hpc3_w_1_order(a1, r01, p01, &w10);
+	hpc3_xor_vw_1_order(v10, w10, &u10);
+
+	hpc3_same_shares_1_order(a1, b1, &u11);
+
+	*c0 = u00 ^ u01;
+	*c1 = u10 ^ u11;
+}
+
+
+// --- hpc2 ---
+
+void hpc2_same_shares_1_order(_Bool a_share, _Bool b_share, _Bool * u_share) {
+    * u_share  = a_share & b_share;
+}
+
+void hpc2_v_1_order(_Bool a_share, _Bool b_share, _Bool * v_share, _Bool rand){
+    _Bool temp; 
+    temp = reg(b_share ^ rand);
+    *v_share = reg(temp & a_share);
+}
+
+void hpc2_w_1_order(_Bool a_share, _Bool rand, _Bool * w_share){
+    _Bool a_neg;
+    a_neg = !(a_share);
+    *w_share = reg(a_neg & rand);
+}
+
+void hpc2_xor_vw_1_order(_Bool v_share, _Bool w_share, _Bool * u_share){
+    *u_share = v_share ^ w_share;
+}
+
+void HPC2(_Bool a0, _Bool a1, _Bool b0, _Bool b1, _Bool * c0, _Bool * c1, _Bool rand_01)
+{
+	_Bool u00, u01, u10, u11;
+	_Bool v01, v10;
+
+	_Bool w01, w10;
+
+	hpc2_same_shares_1_order(a0, b0, &u00);
+	hpc2_v_1_order(a0, b1, &v01 , rand_01);
+	hpc2_w_1_order(a0, rand_01, &w01);
+	hpc2_xor_vw_1_order(v01, w01, &u01);
+
+	hpc2_v_1_order(a1, b0, &v10 , rand_01);
+	hpc2_w_1_order(a1, rand_01, &w10);
+	hpc2_xor_vw_1_order(v10, w10, &u10);
+
+	hpc2_same_shares_1_order(a1, b1, &u11);
+	*c0 = u00 ^ u01;
+	*c1 = u10 ^ u11;
+}
+
+
+// --- hpc2_swapped ---
+
+void hpc2sw_same_shares_1_order(_Bool a_share, _Bool b_share, _Bool * u_share) {
+    *u_share = a_share & b_share;
+}
+
+void hpc2sw_v_1_order(_Bool a_share, _Bool b_share, _Bool * v_share, _Bool rand) {
+    _Bool temp;
+    temp = reg(b_share ^ rand);
+    *v_share = reg(temp & a_share);
+}
+
+void hpc2sw_w_1_order(_Bool a_share, _Bool rand, _Bool * w_share) {
+    _Bool a_neg;
+    a_neg = !(a_share);
+    *w_share = reg(a_neg & rand);
+}
+
+void hpc2sw_xor_vw_1_order(_Bool v_share, _Bool w_share, _Bool * u_share) {
+    *u_share = v_share ^ w_share;
+}
+
+void HPC2_swapped(_Bool a0, _Bool a1, _Bool b0, _Bool b1, _Bool * c0, _Bool * c1, _Bool rand_01)
+{
+	_Bool u00, u01, u10, u11;
+	_Bool v01, v10;
+
+	_Bool w01, w10;
+
+	hpc2sw_same_shares_1_order(a0, b0, &u00);
+	hpc2sw_v_1_order(b0, a1, &v01, rand_01);
+	hpc2sw_w_1_order(b0, rand_01, &w01);
+	hpc2sw_xor_vw_1_order(v01, w01, &u01);
+
+	hpc2sw_v_1_order(b1, a0, &v10, rand_01);
+	hpc2sw_w_1_order(b1, rand_01, &w10);
+	hpc2sw_xor_vw_1_order(v10, w10, &u10);
+
+	hpc2sw_same_shares_1_order(a1, b1, &u11);
+	*c0 = u00 ^ u01;
+	*c1 = u10 ^ u11;
+}
+
+
+// --- hpc2o ---
+
+void hpc2o_first_half_1_order(_Bool a_share, _Bool b_share, _Bool w_share, _Bool rand, _Bool *out_share) {
+    _Bool temp_ab;
+    _Bool a_neg;
+    _Bool temp_ar;
+    _Bool xor_step1;
+    _Bool xor_step2;
+
+    temp_ab = a_share & b_share;
+    a_neg = !a_share;
+    temp_ar = a_neg & rand;
+    
+    xor_step1 = w_share ^ temp_ab;
+    xor_step2 = xor_step1 ^ temp_ar;
+    
+    *out_share = reg(xor_step2);
+}
+
+void hpc2o_v_1_order(_Bool a_share, _Bool b_share, _Bool *v_share, _Bool rand) {
+    _Bool xor_br;
+    _Bool temp;
+    _Bool and_ta;
+
+    xor_br = b_share ^ rand;
+    temp = reg(xor_br); // This remains an R register in Algo 6
+    
+    and_ta = temp & a_share;
+    *v_share = reg(and_ta);
+}
+
+void hpc2o_w_1_order(_Bool a_share, _Bool rand, _Bool *w_share) {
+    _Bool a_neg;
+    _Bool and_ar;
+
+    a_neg = !a_share;
+    
+    and_ar = a_neg & rand;
+    *w_share = reg(and_ar);
+}
+
+void hpc2o_xor_vw_1_order(_Bool v_share, _Bool w_share, _Bool *u_share) {
+    *u_share = v_share ^ w_share;
+}
+
+void hpc2o_or_vw_1_order(_Bool v_share, _Bool w_share, _Bool *u_share) {
+    *u_share = v_share | w_share;
+}
+void HPC2o(_Bool a0, _Bool a1, _Bool b0, _Bool b1, _Bool w0, _Bool w1, _Bool * c0, _Bool * c1, _Bool rand_01)
+{
+	_Bool u01, u10;
+	_Bool v01, v10;
+	_Bool w01, w10;
+
+	hpc2o_first_half_1_order(a0, b0, w0, rand_01, &w01);
+	hpc2o_v_1_order(a0, b1, &v01, rand_01);
+	hpc2o_xor_vw_1_order(v01, w01, &u01);
+
+	hpc2o_first_half_1_order(a1, b1, w1, rand_01, &w10);
+	hpc2o_v_1_order(a1, b0, &v10, rand_01);
+	hpc2o_xor_vw_1_order(v10, w10, &u10);
+
+	*c0 = u01;
+	*c1 = u10;
+}
+
+
+// --- hpc2o_swapped ---
+
+void hpc2osw_first_half_1_order(_Bool a_share, _Bool b_share, _Bool w_share, _Bool rand, _Bool *out_share) {
+    _Bool temp_ab;
+    _Bool a_neg;
+    _Bool temp_ar;
+    _Bool xor_step1;
+    _Bool xor_step2;
+
+    temp_ab = a_share & b_share;
+    a_neg = !a_share;
+    temp_ar = a_neg & rand;
+
+    xor_step1 = w_share ^ temp_ab;
+    xor_step2 = xor_step1 ^ temp_ar;
+
+    *out_share = reg(xor_step2);
+}
+
+void hpc2osw_v_1_order(_Bool a_share, _Bool b_share, _Bool *v_share, _Bool rand) {
+    _Bool xor_br;
+    _Bool temp;
+    _Bool and_ta;
+
+    xor_br = b_share ^ rand;
+    temp = reg(xor_br);
+
+    and_ta = temp & a_share;
+    *v_share = reg(and_ta);
+}
+
+void hpc2osw_w_1_order(_Bool a_share, _Bool rand, _Bool *w_share) {
+    _Bool a_neg;
+    _Bool and_ar;
+
+    a_neg = !a_share;
+
+    and_ar = a_neg & rand;
+    *w_share = reg(and_ar);
+}
+
+void hpc2osw_xor_vw_1_order(_Bool v_share, _Bool w_share, _Bool *u_share) {
+    *u_share = v_share ^ w_share;
+}
+
+void hpc2osw_or_vw_1_order(_Bool v_share, _Bool w_share, _Bool *u_share) {
+    *u_share = v_share | w_share;
+}
+void HPC2o_swapped(_Bool a0, _Bool a1, _Bool b0, _Bool b1, _Bool w0, _Bool w1, _Bool * c0, _Bool * c1, _Bool rand_01)
+{
+	_Bool u01, u10;
+	_Bool v01, v10;
+	_Bool w01, w10;
+
+	hpc2osw_first_half_1_order(b0, a0, w0, rand_01, &w01);
+	hpc2osw_v_1_order(b0, a1, &v01, rand_01);
+	hpc2osw_xor_vw_1_order(v01, w01, &u01);
+
+	hpc2osw_first_half_1_order(b1, a1, w1, rand_01, &w10);
+	hpc2osw_v_1_order(b1, a0, &v10, rand_01);
+	hpc2osw_xor_vw_1_order(v10, w10, &u10);
+
+	*c0 = u01;
+	*c1 = u10;
+}
+
+
+// --- hpc3o ---
+
+void hpc3o_first_half_1_order(_Bool a_share, _Bool b_share, _Bool w_share, _Bool rand, _Bool rand_prime, _Bool *out_share) {
+    _Bool xor_br;
+    _Bool and_ar;
+    _Bool xor_step1;
+    _Bool xor_step2;
+
+    xor_br = b_share ^ rand;
+    and_ar = a_share & xor_br;
+    xor_step1 = w_share ^ and_ar;
+    xor_step2 = xor_step1 ^ rand_prime;
+    
+    *out_share = reg(xor_step2);
+}
+
+void hpc3o_v_1_order(_Bool a_share, _Bool b_share, _Bool *v_share, _Bool rand) {
+    _Bool xor_br;
+    _Bool temp;
+    _Bool and_ta;
+
+    xor_br = b_share ^ rand;
+    temp = reg(xor_br); // This remains an R register in Algo 7
+    
+    and_ta = a_share & temp;
+    *v_share = and_ta; // Notice: NO outer reg() here for HPC3o!
+}
+
+void hpc3o_w_1_order(_Bool a_share, _Bool rand, _Bool rand_prime, _Bool *w_share) {
+    _Bool and_ar;
+    _Bool xor_step1;
+
+    // Notice: Algo 7 does not negate a_share in the else branch
+    and_ar = a_share & rand;
+    xor_step1 = and_ar ^ rand_prime;
+    
+    *w_share = reg(xor_step1);
+}
+
+void hpc3o_xor_vw_1_order(_Bool v_share, _Bool w_share, _Bool *u_share) {
+    *u_share = v_share ^ w_share;
+}
+void HPC3o(_Bool a0, _Bool a1, _Bool b0, _Bool b1, _Bool w0, _Bool w1, _Bool * c0, _Bool * c1, _Bool rand_01, _Bool rand_prime_01)
+{
+	_Bool u01, u10;
+	_Bool v01, v10;
+	_Bool w01, w10;
+
+	hpc3o_first_half_1_order(a0, b0, w0, rand_01, rand_prime_01, &w01);
+	hpc3o_v_1_order(a0, b1, &v01, rand_01);
+	hpc3o_xor_vw_1_order(v01, w01, &u01);
+
+	hpc3o_first_half_1_order(a1, b1, w1, rand_01, rand_prime_01, &w10);
+	hpc3o_v_1_order(a1, b0, &v10, rand_01);
+	hpc3o_xor_vw_1_order(v10, w10, &u10);
+
+	*c0 = u01;
+	*c1 = u10;
+}
+
+void sbox(_Bool sb_n0_0, _Bool sb_n0_1, _Bool sb_n1_0, _Bool sb_n1_1, _Bool sb_n2_0, _Bool sb_n2_1, _Bool sb_n3_0, _Bool sb_n3_1, _Bool sb_n4_0, _Bool sb_n4_1, _Bool sb_n5_0, _Bool sb_n5_1, _Bool sb_n6_0, _Bool sb_n6_1, _Bool sb_n7_0, _Bool sb_n7_1, _Bool *sb_o0_0, _Bool *sb_o0_1, _Bool *sb_o1_0, _Bool *sb_o1_1, _Bool *sb_o2_0, _Bool *sb_o2_1, _Bool *sb_o3_0, _Bool *sb_o3_1, _Bool *sb_o4_0, _Bool *sb_o4_1, _Bool *sb_o5_0, _Bool *sb_o5_1, _Bool *sb_o6_0, _Bool *sb_o6_1, _Bool *sb_o7_0, _Bool *sb_o7_1, int dec_1, int rand_6, int rand_21, int rand_38, int rand_8, int rand_22, int rand_7, int rand_23, int rand_41, int rand_9, int rand_24, int rand_42, int rand_20, int rand_10, int rand_31, int rand_37, int rand_40, int rand_11, int rand_25, int rand_12, int rand_43, int rand_13, int rand_28, int rand_14, int rand_46, int rand_15, int rand_16, int rand_32, int rand_17, int rand_1, int rand_33, int rand_2, int rand_18, int rand_3, int rand_19, int rand_34, int rand_4, int rand_5)
+{
+  _Bool sb_y0_0;
+  _Bool sb_y0_1;
+  _Bool sb_y1_0;
+  _Bool sb_y1_1;
+  _Bool sb_y2_0;
+  _Bool sb_y2_1;
+  _Bool sb_y3_0;
+  _Bool sb_y3_1;
+  _Bool sb_y4_0;
+  _Bool sb_y4_1;
+  _Bool sb_y5_0;
+  _Bool sb_y5_1;
+  _Bool sb_y6_0;
+  _Bool sb_y6_1;
+  _Bool sb_y7_0;
+  _Bool sb_y7_1;
+  _Bool sb_i0_0;
+  _Bool sb_i0_1;
+  _Bool sb_i1_0;
+  _Bool sb_i1_1;
+  _Bool sb_i2_0;
+  _Bool sb_i2_1;
+  _Bool sb_i3_0;
+  _Bool sb_i3_1;
+  _Bool sb_i4_0;
+  _Bool sb_i4_1;
+  _Bool sb_i5_0;
+  _Bool sb_i5_1;
+  _Bool sb_i6_0;
+  _Bool sb_i6_1;
+  _Bool sb_i7_0;
+  _Bool sb_i7_1;
+  _Bool fy0_0;
+  _Bool fy0_1;
+  _Bool fy1_0;
+  _Bool fy1_1;
+  _Bool fy2_0;
+  _Bool fy2_1;
+  _Bool fy3_0;
+  _Bool fy3_1;
+  _Bool fy4_0;
+  _Bool fy4_1;
+  _Bool fy5_0;
+  _Bool fy5_1;
+  _Bool fy6_0;
+  _Bool fy6_1;
+  _Bool fy7_0;
+  _Bool fy7_1;
+  _Bool temp_var_0_0;
+  _Bool temp_var_0_1;
+  temp_var_0_0 = sb_n0_0 ^ sb_n1_0;
+  temp_var_0_1 = sb_n0_1 ^ sb_n1_1;
+  _Bool temp_var_1_0;
+  _Bool temp_var_1_1;
+  temp_var_1_0 = temp_var_0_0 ^ sb_n2_0;
+  temp_var_1_1 = temp_var_0_1 ^ sb_n2_1;
+  _Bool temp_var_2_0;
+  _Bool temp_var_2_1;
+  temp_var_2_0 = temp_var_1_0 ^ sb_n3_0;
+  temp_var_2_1 = temp_var_1_1 ^ sb_n3_1;
+  sb_y0_0 = temp_var_2_0 ^ sb_n6_0;
+  sb_y0_1 = temp_var_2_1 ^ sb_n6_1;
+  _Bool temp_var_3_0;
+  _Bool temp_var_3_1;
+  temp_var_3_0 = sb_n0_0 ^ sb_n5_0;
+  temp_var_3_1 = sb_n0_1 ^ sb_n5_1;
+  sb_y1_0 = temp_var_3_0 ^ sb_n6_0;
+  sb_y1_1 = temp_var_3_1 ^ sb_n6_1;
+  sb_y2_0 = sb_n0_0;
+  sb_y2_1 = sb_n0_1;
+  _Bool temp_var_4_0;
+  _Bool temp_var_4_1;
+  temp_var_4_0 = sb_n0_0 ^ sb_n1_0;
+  temp_var_4_1 = sb_n0_1 ^ sb_n1_1;
+  _Bool temp_var_5_0;
+  _Bool temp_var_5_1;
+  temp_var_5_0 = temp_var_4_0 ^ sb_n3_0;
+  temp_var_5_1 = temp_var_4_1 ^ sb_n3_1;
+  _Bool temp_var_6_0;
+  _Bool temp_var_6_1;
+  temp_var_6_0 = temp_var_5_0 ^ sb_n4_0;
+  temp_var_6_1 = temp_var_5_1 ^ sb_n4_1;
+  sb_y3_0 = temp_var_6_0 ^ sb_n7_0;
+  sb_y3_1 = temp_var_6_1 ^ sb_n7_1;
+  _Bool temp_var_7_0;
+  _Bool temp_var_7_1;
+  temp_var_7_0 = sb_n0_0 ^ sb_n5_0;
+  temp_var_7_1 = sb_n0_1 ^ sb_n5_1;
+  _Bool temp_var_8_0;
+  _Bool temp_var_8_1;
+  temp_var_8_0 = temp_var_7_0 ^ sb_n6_0;
+  temp_var_8_1 = temp_var_7_1 ^ sb_n6_1;
+  sb_y4_0 = temp_var_8_0 ^ sb_n7_0;
+  sb_y4_1 = temp_var_8_1 ^ sb_n7_1;
+  _Bool temp_var_9_0;
+  _Bool temp_var_9_1;
+  temp_var_9_0 = sb_n0_0 ^ sb_n1_0;
+  temp_var_9_1 = sb_n0_1 ^ sb_n1_1;
+  _Bool temp_var_10_0;
+  _Bool temp_var_10_1;
+  temp_var_10_0 = temp_var_9_0 ^ sb_n5_0;
+  temp_var_10_1 = temp_var_9_1 ^ sb_n5_1;
+  sb_y5_0 = temp_var_10_0 ^ sb_n6_0;
+  sb_y5_1 = temp_var_10_1 ^ sb_n6_1;
+  _Bool temp_var_11_0;
+  _Bool temp_var_11_1;
+  temp_var_11_0 = sb_n0_0 ^ sb_n4_0;
+  temp_var_11_1 = sb_n0_1 ^ sb_n4_1;
+  _Bool temp_var_12_0;
+  _Bool temp_var_12_1;
+  temp_var_12_0 = temp_var_11_0 ^ sb_n5_0;
+  temp_var_12_1 = temp_var_11_1 ^ sb_n5_1;
+  sb_y6_0 = temp_var_12_0 ^ sb_n6_0;
+  sb_y6_1 = temp_var_12_1 ^ sb_n6_1;
+  _Bool temp_var_13_0;
+  _Bool temp_var_13_1;
+  temp_var_13_0 = sb_n0_0 ^ sb_n1_0;
+  temp_var_13_1 = sb_n0_1 ^ sb_n1_1;
+  _Bool temp_var_14_0;
+  _Bool temp_var_14_1;
+  temp_var_14_0 = temp_var_13_0 ^ sb_n2_0;
+  temp_var_14_1 = temp_var_13_1 ^ sb_n2_1;
+  _Bool temp_var_15_0;
+  _Bool temp_var_15_1;
+  temp_var_15_0 = temp_var_14_0 ^ sb_n5_0;
+  temp_var_15_1 = temp_var_14_1 ^ sb_n5_1;
+  _Bool temp_var_16_0;
+  _Bool temp_var_16_1;
+  temp_var_16_0 = temp_var_15_0 ^ sb_n6_0;
+  temp_var_16_1 = temp_var_15_1 ^ sb_n6_1;
+  sb_y7_0 = temp_var_16_0 ^ sb_n7_0;
+  sb_y7_1 = temp_var_16_1 ^ sb_n7_1;
+  _Bool i256_tx0_G256_inv0_0;
+  _Bool i256_tx0_G256_inv0_1;
+  _Bool i256_tx1_G256_inv0_0;
+  _Bool i256_tx1_G256_inv0_1;
+  _Bool i256_tx2_G256_inv0_0;
+  _Bool i256_tx2_G256_inv0_1;
+  _Bool i256_tx3_G256_inv0_0;
+  _Bool i256_tx3_G256_inv0_1;
+  _Bool i256_c0_G256_inv0_0;
+  _Bool i256_c0_G256_inv0_1;
+  _Bool i256_c1_G256_inv0_0;
+  _Bool i256_c1_G256_inv0_1;
+  _Bool i256_c2_G256_inv0_0;
+  _Bool i256_c2_G256_inv0_1;
+  _Bool i256_c3_G256_inv0_0;
+  _Bool i256_c3_G256_inv0_1;
+  _Bool i256_d0_G256_inv0_0;
+  _Bool i256_d0_G256_inv0_1;
+  _Bool i256_d1_G256_inv0_0;
+  _Bool i256_d1_G256_inv0_1;
+  _Bool i256_d2_G256_inv0_0;
+  _Bool i256_d2_G256_inv0_1;
+  _Bool i256_d3_G256_inv0_0;
+  _Bool i256_d3_G256_inv0_1;
+  _Bool i256_te0_G256_inv0_0;
+  _Bool i256_te0_G256_inv0_1;
+  _Bool i256_te1_G256_inv0_0;
+  _Bool i256_te1_G256_inv0_1;
+  _Bool i256_te2_G256_inv0_0;
+  _Bool i256_te2_G256_inv0_1;
+  _Bool i256_te3_G256_inv0_0;
+  _Bool i256_te3_G256_inv0_1;
+  _Bool i256_e0_G256_inv0_0;
+  _Bool i256_e0_G256_inv0_1;
+  _Bool i256_e1_G256_inv0_0;
+  _Bool i256_e1_G256_inv0_1;
+  _Bool i256_e2_G256_inv0_0;
+  _Bool i256_e2_G256_inv0_1;
+  _Bool i256_e3_G256_inv0_0;
+  _Bool i256_e3_G256_inv0_1;
+  _Bool i256_ph0_G256_inv0_0;
+  _Bool i256_ph0_G256_inv0_1;
+  _Bool i256_ph1_G256_inv0_0;
+  _Bool i256_ph1_G256_inv0_1;
+  _Bool i256_ph2_G256_inv0_0;
+  _Bool i256_ph2_G256_inv0_1;
+  _Bool i256_ph3_G256_inv0_0;
+  _Bool i256_ph3_G256_inv0_1;
+  _Bool i256_ql0_G256_inv0_0;
+  _Bool i256_ql0_G256_inv0_1;
+  _Bool i256_ql1_G256_inv0_0;
+  _Bool i256_ql1_G256_inv0_1;
+  _Bool i256_ql2_G256_inv0_0;
+  _Bool i256_ql2_G256_inv0_1;
+  _Bool i256_ql3_G256_inv0_0;
+  _Bool i256_ql3_G256_inv0_1;
+  _Bool ss16_tx0_G16_sq_scl0_G256_inv0_0;
+  _Bool ss16_tx0_G16_sq_scl0_G256_inv0_1;
+  _Bool ss16_tx1_G16_sq_scl0_G256_inv0_0;
+  _Bool ss16_tx1_G16_sq_scl0_G256_inv0_1;
+  _Bool ss16_ph0_G16_sq_scl0_G256_inv0_0;
+  _Bool ss16_ph0_G16_sq_scl0_G256_inv0_1;
+  _Bool ss16_ph1_G16_sq_scl0_G256_inv0_0;
+  _Bool ss16_ph1_G16_sq_scl0_G256_inv0_1;
+  _Bool ss16_ql0_s1_G16_sq_scl0_G256_inv0_0;
+  _Bool ss16_ql0_s1_G16_sq_scl0_G256_inv0_1;
+  _Bool ss16_ql1_s1_G16_sq_scl0_G256_inv0_0;
+  _Bool ss16_ql1_s1_G16_sq_scl0_G256_inv0_1;
+  _Bool ss16_ql0_s2_G16_sq_scl0_G256_inv0_0;
+  _Bool ss16_ql0_s2_G16_sq_scl0_G256_inv0_1;
+  _Bool ss16_ql1_s2_G16_sq_scl0_G256_inv0_0;
+  _Bool ss16_ql1_s2_G16_sq_scl0_G256_inv0_1;
+  _Bool m16_tx0_G16_mul0_G256_inv0_0;
+  _Bool m16_tx0_G16_mul0_G256_inv0_1;
+  _Bool m16_tx1_G16_mul0_G256_inv0_0;
+  _Bool m16_tx1_G16_mul0_G256_inv0_1;
+  _Bool m16_ty0_G16_mul0_G256_inv0_0;
+  _Bool m16_ty0_G16_mul0_G256_inv0_1;
+  _Bool m16_ty1_G16_mul0_G256_inv0_0;
+  _Bool m16_ty1_G16_mul0_G256_inv0_1;
+  _Bool m16_e0_s1_G16_mul0_G256_inv0_0;
+  _Bool m16_e0_s1_G16_mul0_G256_inv0_1;
+  _Bool m16_e1_s1_G16_mul0_G256_inv0_0;
+  _Bool m16_e1_s1_G16_mul0_G256_inv0_1;
+  _Bool m16_e0_s2_G16_mul0_G256_inv0_0;
+  _Bool m16_e0_s2_G16_mul0_G256_inv0_1;
+  _Bool m16_e1_s2_G16_mul0_G256_inv0_0;
+  _Bool m16_e1_s2_G16_mul0_G256_inv0_1;
+  _Bool m16_ph0_G16_mul0_G256_inv0_0;
+  _Bool m16_ph0_G16_mul0_G256_inv0_1;
+  _Bool m16_ph1_G16_mul0_G256_inv0_0;
+  _Bool m16_ph1_G16_mul0_G256_inv0_1;
+  _Bool m16_ql0_G16_mul0_G256_inv0_0;
+  _Bool m16_ql0_G16_mul0_G256_inv0_1;
+  _Bool m16_ql1_G16_mul0_G256_inv0_0;
+  _Bool m16_ql1_G16_mul0_G256_inv0_1;
+  _Bool m4_ab_G4_mul0_G16_mul0_G256_inv0_0;
+  _Bool m4_ab_G4_mul0_G16_mul0_G256_inv0_1;
+  _Bool m4_cd_G4_mul0_G16_mul0_G256_inv0_0;
+  _Bool m4_cd_G4_mul0_G16_mul0_G256_inv0_1;
+  _Bool m4_e_G4_mul0_G16_mul0_G256_inv0_0;
+  _Bool m4_e_G4_mul0_G16_mul0_G256_inv0_1;
+  _Bool temp_var_0_G4_mul0_G16_mul0_G256_inv0_0;
+  _Bool temp_var_0_G4_mul0_G16_mul0_G256_inv0_1;
+  _Bool temp_var_1_G4_mul0_G16_mul0_G256_inv0_0;
+  _Bool temp_var_1_G4_mul0_G16_mul0_G256_inv0_1;
+  _Bool m4_ab_G4_mul1_G16_mul0_G256_inv0_0;
+  _Bool m4_ab_G4_mul1_G16_mul0_G256_inv0_1;
+  _Bool m4_cd_G4_mul1_G16_mul0_G256_inv0_0;
+  _Bool m4_cd_G4_mul1_G16_mul0_G256_inv0_1;
+  _Bool m4_e_G4_mul1_G16_mul0_G256_inv0_0;
+  _Bool m4_e_G4_mul1_G16_mul0_G256_inv0_1;
+  _Bool temp_var_0_G4_mul1_G16_mul0_G256_inv0_0;
+  _Bool temp_var_0_G4_mul1_G16_mul0_G256_inv0_1;
+  _Bool temp_var_1_G4_mul1_G16_mul0_G256_inv0_0;
+  _Bool temp_var_1_G4_mul1_G16_mul0_G256_inv0_1;
+  _Bool m4_ab_G4_mul2_G16_mul0_G256_inv0_0;
+  _Bool m4_ab_G4_mul2_G16_mul0_G256_inv0_1;
+  _Bool m4_cd_G4_mul2_G16_mul0_G256_inv0_0;
+  _Bool m4_cd_G4_mul2_G16_mul0_G256_inv0_1;
+  _Bool m4_e_G4_mul2_G16_mul0_G256_inv0_0;
+  _Bool m4_e_G4_mul2_G16_mul0_G256_inv0_1;
+  _Bool temp_var_0_G4_mul2_G16_mul0_G256_inv0_0;
+  _Bool temp_var_0_G4_mul2_G16_mul0_G256_inv0_1;
+  _Bool temp_var_1_G4_mul2_G16_mul0_G256_inv0_0;
+  _Bool temp_var_1_G4_mul2_G16_mul0_G256_inv0_1;
+  _Bool i16_tx0_G16_inv0_G256_inv0_0;
+  _Bool i16_tx0_G16_inv0_G256_inv0_1;
+  _Bool i16_tx1_G16_inv0_G256_inv0_0;
+  _Bool i16_tx1_G16_inv0_G256_inv0_1;
+  _Bool i16_c0_s1_G16_inv0_G256_inv0_0;
+  _Bool i16_c0_s1_G16_inv0_G256_inv0_1;
+  _Bool i16_c1_s1_G16_inv0_G256_inv0_0;
+  _Bool i16_c1_s1_G16_inv0_G256_inv0_1;
+  _Bool i16_c0_s2_G16_inv0_G256_inv0_0;
+  _Bool i16_c0_s2_G16_inv0_G256_inv0_1;
+  _Bool i16_c1_s2_G16_inv0_G256_inv0_0;
+  _Bool i16_c1_s2_G16_inv0_G256_inv0_1;
+  _Bool i16_d0_G16_inv0_G256_inv0_0;
+  _Bool i16_d0_G16_inv0_G256_inv0_1;
+  _Bool i16_d1_G16_inv0_G256_inv0_0;
+  _Bool i16_d1_G16_inv0_G256_inv0_1;
+  _Bool i16_te0_G16_inv0_G256_inv0_0;
+  _Bool i16_te0_G16_inv0_G256_inv0_1;
+  _Bool i16_te1_G16_inv0_G256_inv0_0;
+  _Bool i16_te1_G16_inv0_G256_inv0_1;
+  _Bool i16_e0_G16_inv0_G256_inv0_0;
+  _Bool i16_e0_G16_inv0_G256_inv0_1;
+  _Bool i16_e1_G16_inv0_G256_inv0_0;
+  _Bool i16_e1_G16_inv0_G256_inv0_1;
+  _Bool i16_ph0_G16_inv0_G256_inv0_0;
+  _Bool i16_ph0_G16_inv0_G256_inv0_1;
+  _Bool i16_ph1_G16_inv0_G256_inv0_0;
+  _Bool i16_ph1_G16_inv0_G256_inv0_1;
+  _Bool i16_ql0_G16_inv0_G256_inv0_0;
+  _Bool i16_ql0_G16_inv0_G256_inv0_1;
+  _Bool i16_ql1_G16_inv0_G256_inv0_0;
+  _Bool i16_ql1_G16_inv0_G256_inv0_1;
+  _Bool m4_ab_G4_mul3_G16_inv0_G256_inv0_0;
+  _Bool m4_ab_G4_mul3_G16_inv0_G256_inv0_1;
+  _Bool m4_cd_G4_mul3_G16_inv0_G256_inv0_0;
+  _Bool m4_cd_G4_mul3_G16_inv0_G256_inv0_1;
+  _Bool m4_e_G4_mul3_G16_inv0_G256_inv0_0;
+  _Bool m4_e_G4_mul3_G16_inv0_G256_inv0_1;
+  _Bool temp_var_0_G4_mul3_G16_inv0_G256_inv0_0;
+  _Bool temp_var_0_G4_mul3_G16_inv0_G256_inv0_1;
+  _Bool temp_var_1_G4_mul3_G16_inv0_G256_inv0_0;
+  _Bool temp_var_1_G4_mul3_G16_inv0_G256_inv0_1;
+  _Bool m4_ab_G4_mul4_G16_inv0_G256_inv0_0;
+  _Bool m4_ab_G4_mul4_G16_inv0_G256_inv0_1;
+  _Bool m4_cd_G4_mul4_G16_inv0_G256_inv0_0;
+  _Bool m4_cd_G4_mul4_G16_inv0_G256_inv0_1;
+  _Bool m4_e_G4_mul4_G16_inv0_G256_inv0_0;
+  _Bool m4_e_G4_mul4_G16_inv0_G256_inv0_1;
+  _Bool temp_var_0_G4_mul4_G16_inv0_G256_inv0_0;
+  _Bool temp_var_0_G4_mul4_G16_inv0_G256_inv0_1;
+  _Bool temp_var_1_G4_mul4_G16_inv0_G256_inv0_0;
+  _Bool temp_var_1_G4_mul4_G16_inv0_G256_inv0_1;
+  _Bool m4_ab_G4_mul5_G16_inv0_G256_inv0_0;
+  _Bool m4_ab_G4_mul5_G16_inv0_G256_inv0_1;
+  _Bool m4_cd_G4_mul5_G16_inv0_G256_inv0_0;
+  _Bool m4_cd_G4_mul5_G16_inv0_G256_inv0_1;
+  _Bool m4_e_G4_mul5_G16_inv0_G256_inv0_0;
+  _Bool m4_e_G4_mul5_G16_inv0_G256_inv0_1;
+  _Bool temp_var_0_G4_mul5_G16_inv0_G256_inv0_0;
+  _Bool temp_var_0_G4_mul5_G16_inv0_G256_inv0_1;
+  _Bool temp_var_1_G4_mul5_G16_inv0_G256_inv0_0;
+  _Bool temp_var_1_G4_mul5_G16_inv0_G256_inv0_1;
+  _Bool m16_tx0_G16_mul1_G256_inv0_0;
+  _Bool m16_tx0_G16_mul1_G256_inv0_1;
+  _Bool m16_tx1_G16_mul1_G256_inv0_0;
+  _Bool m16_tx1_G16_mul1_G256_inv0_1;
+  _Bool m16_ty0_G16_mul1_G256_inv0_0;
+  _Bool m16_ty0_G16_mul1_G256_inv0_1;
+  _Bool m16_ty1_G16_mul1_G256_inv0_0;
+  _Bool m16_ty1_G16_mul1_G256_inv0_1;
+  _Bool m16_e0_s1_G16_mul1_G256_inv0_0;
+  _Bool m16_e0_s1_G16_mul1_G256_inv0_1;
+  _Bool m16_e1_s1_G16_mul1_G256_inv0_0;
+  _Bool m16_e1_s1_G16_mul1_G256_inv0_1;
+  _Bool m16_e0_s2_G16_mul1_G256_inv0_0;
+  _Bool m16_e0_s2_G16_mul1_G256_inv0_1;
+  _Bool m16_e1_s2_G16_mul1_G256_inv0_0;
+  _Bool m16_e1_s2_G16_mul1_G256_inv0_1;
+  _Bool m16_ph0_G16_mul1_G256_inv0_0;
+  _Bool m16_ph0_G16_mul1_G256_inv0_1;
+  _Bool m16_ph1_G16_mul1_G256_inv0_0;
+  _Bool m16_ph1_G16_mul1_G256_inv0_1;
+  _Bool m16_ql0_G16_mul1_G256_inv0_0;
+  _Bool m16_ql0_G16_mul1_G256_inv0_1;
+  _Bool m16_ql1_G16_mul1_G256_inv0_0;
+  _Bool m16_ql1_G16_mul1_G256_inv0_1;
+  _Bool m4_ab_G4_mul0_G16_mul1_G256_inv0_0;
+  _Bool m4_ab_G4_mul0_G16_mul1_G256_inv0_1;
+  _Bool m4_cd_G4_mul0_G16_mul1_G256_inv0_0;
+  _Bool m4_cd_G4_mul0_G16_mul1_G256_inv0_1;
+  _Bool m4_e_G4_mul0_G16_mul1_G256_inv0_0;
+  _Bool m4_e_G4_mul0_G16_mul1_G256_inv0_1;
+  _Bool temp_var_0_G4_mul0_G16_mul1_G256_inv0_0;
+  _Bool temp_var_0_G4_mul0_G16_mul1_G256_inv0_1;
+  _Bool temp_var_1_G4_mul0_G16_mul1_G256_inv0_0;
+  _Bool temp_var_1_G4_mul0_G16_mul1_G256_inv0_1;
+  _Bool m4_ab_G4_mul1_G16_mul1_G256_inv0_0;
+  _Bool m4_ab_G4_mul1_G16_mul1_G256_inv0_1;
+  _Bool m4_cd_G4_mul1_G16_mul1_G256_inv0_0;
+  _Bool m4_cd_G4_mul1_G16_mul1_G256_inv0_1;
+  _Bool m4_e_G4_mul1_G16_mul1_G256_inv0_0;
+  _Bool m4_e_G4_mul1_G16_mul1_G256_inv0_1;
+  _Bool temp_var_0_G4_mul1_G16_mul1_G256_inv0_0;
+  _Bool temp_var_0_G4_mul1_G16_mul1_G256_inv0_1;
+  _Bool temp_var_1_G4_mul1_G16_mul1_G256_inv0_0;
+  _Bool temp_var_1_G4_mul1_G16_mul1_G256_inv0_1;
+  _Bool m4_ab_G4_mul2_G16_mul1_G256_inv0_0;
+  _Bool m4_ab_G4_mul2_G16_mul1_G256_inv0_1;
+  _Bool m4_cd_G4_mul2_G16_mul1_G256_inv0_0;
+  _Bool m4_cd_G4_mul2_G16_mul1_G256_inv0_1;
+  _Bool m4_e_G4_mul2_G16_mul1_G256_inv0_0;
+  _Bool m4_e_G4_mul2_G16_mul1_G256_inv0_1;
+  _Bool temp_var_0_G4_mul2_G16_mul1_G256_inv0_0;
+  _Bool temp_var_0_G4_mul2_G16_mul1_G256_inv0_1;
+  _Bool temp_var_1_G4_mul2_G16_mul1_G256_inv0_0;
+  _Bool temp_var_1_G4_mul2_G16_mul1_G256_inv0_1;
+  _Bool m16_tx0_G16_mul2_G256_inv0_0;
+  _Bool m16_tx0_G16_mul2_G256_inv0_1;
+  _Bool m16_tx1_G16_mul2_G256_inv0_0;
+  _Bool m16_tx1_G16_mul2_G256_inv0_1;
+  _Bool m16_ty0_G16_mul2_G256_inv0_0;
+  _Bool m16_ty0_G16_mul2_G256_inv0_1;
+  _Bool m16_ty1_G16_mul2_G256_inv0_0;
+  _Bool m16_ty1_G16_mul2_G256_inv0_1;
+  _Bool m16_e0_s1_G16_mul2_G256_inv0_0;
+  _Bool m16_e0_s1_G16_mul2_G256_inv0_1;
+  _Bool m16_e1_s1_G16_mul2_G256_inv0_0;
+  _Bool m16_e1_s1_G16_mul2_G256_inv0_1;
+  _Bool m16_e0_s2_G16_mul2_G256_inv0_0;
+  _Bool m16_e0_s2_G16_mul2_G256_inv0_1;
+  _Bool m16_e1_s2_G16_mul2_G256_inv0_0;
+  _Bool m16_e1_s2_G16_mul2_G256_inv0_1;
+  _Bool m16_ph0_G16_mul2_G256_inv0_0;
+  _Bool m16_ph0_G16_mul2_G256_inv0_1;
+  _Bool m16_ph1_G16_mul2_G256_inv0_0;
+  _Bool m16_ph1_G16_mul2_G256_inv0_1;
+  _Bool m16_ql0_G16_mul2_G256_inv0_0;
+  _Bool m16_ql0_G16_mul2_G256_inv0_1;
+  _Bool m16_ql1_G16_mul2_G256_inv0_0;
+  _Bool m16_ql1_G16_mul2_G256_inv0_1;
+  _Bool m4_ab_G4_mul0_G16_mul2_G256_inv0_0;
+  _Bool m4_ab_G4_mul0_G16_mul2_G256_inv0_1;
+  _Bool m4_cd_G4_mul0_G16_mul2_G256_inv0_0;
+  _Bool m4_cd_G4_mul0_G16_mul2_G256_inv0_1;
+  _Bool m4_e_G4_mul0_G16_mul2_G256_inv0_0;
+  _Bool m4_e_G4_mul0_G16_mul2_G256_inv0_1;
+  _Bool temp_var_0_G4_mul0_G16_mul2_G256_inv0_0;
+  _Bool temp_var_0_G4_mul0_G16_mul2_G256_inv0_1;
+  _Bool temp_var_1_G4_mul0_G16_mul2_G256_inv0_0;
+  _Bool temp_var_1_G4_mul0_G16_mul2_G256_inv0_1;
+  _Bool m4_ab_G4_mul1_G16_mul2_G256_inv0_0;
+  _Bool m4_ab_G4_mul1_G16_mul2_G256_inv0_1;
+  _Bool m4_cd_G4_mul1_G16_mul2_G256_inv0_0;
+  _Bool m4_cd_G4_mul1_G16_mul2_G256_inv0_1;
+  _Bool m4_e_G4_mul1_G16_mul2_G256_inv0_0;
+  _Bool m4_e_G4_mul1_G16_mul2_G256_inv0_1;
+  _Bool temp_var_0_G4_mul1_G16_mul2_G256_inv0_0;
+  _Bool temp_var_0_G4_mul1_G16_mul2_G256_inv0_1;
+  _Bool temp_var_1_G4_mul1_G16_mul2_G256_inv0_0;
+  _Bool temp_var_1_G4_mul1_G16_mul2_G256_inv0_1;
+  _Bool m4_ab_G4_mul2_G16_mul2_G256_inv0_0;
+  _Bool m4_ab_G4_mul2_G16_mul2_G256_inv0_1;
+  _Bool m4_cd_G4_mul2_G16_mul2_G256_inv0_0;
+  _Bool m4_cd_G4_mul2_G16_mul2_G256_inv0_1;
+  _Bool m4_e_G4_mul2_G16_mul2_G256_inv0_0;
+  _Bool m4_e_G4_mul2_G16_mul2_G256_inv0_1;
+  _Bool temp_var_0_G4_mul2_G16_mul2_G256_inv0_0;
+  _Bool temp_var_0_G4_mul2_G16_mul2_G256_inv0_1;
+  _Bool temp_var_1_G4_mul2_G16_mul2_G256_inv0_0;
+  _Bool temp_var_1_G4_mul2_G16_mul2_G256_inv0_1;
+  i256_tx0_G256_inv0_0 = sb_y4_0 ^ sb_y0_0;
+  i256_tx0_G256_inv0_1 = sb_y4_1 ^ sb_y0_1;
+  i256_tx1_G256_inv0_0 = sb_y5_0 ^ sb_y1_0;
+  i256_tx1_G256_inv0_1 = sb_y5_1 ^ sb_y1_1;
+  i256_tx2_G256_inv0_0 = sb_y6_0 ^ sb_y2_0;
+  i256_tx2_G256_inv0_1 = sb_y6_1 ^ sb_y2_1;
+  i256_tx3_G256_inv0_0 = sb_y7_0 ^ sb_y3_0;
+  i256_tx3_G256_inv0_1 = sb_y7_1 ^ sb_y3_1;
+  ss16_tx0_G16_sq_scl0_G256_inv0_0 = i256_tx2_G256_inv0_0 ^ i256_tx0_G256_inv0_0;
+  ss16_tx0_G16_sq_scl0_G256_inv0_1 = i256_tx2_G256_inv0_1 ^ i256_tx0_G256_inv0_1;
+  ss16_tx1_G16_sq_scl0_G256_inv0_0 = i256_tx3_G256_inv0_0 ^ i256_tx1_G256_inv0_0;
+  ss16_tx1_G16_sq_scl0_G256_inv0_1 = i256_tx3_G256_inv0_1 ^ i256_tx1_G256_inv0_1;
+  ss16_ph1_G16_sq_scl0_G256_inv0_0 = ss16_tx0_G16_sq_scl0_G256_inv0_0;
+  ss16_ph1_G16_sq_scl0_G256_inv0_1 = ss16_tx0_G16_sq_scl0_G256_inv0_1;
+  ss16_ph0_G16_sq_scl0_G256_inv0_0 = ss16_tx1_G16_sq_scl0_G256_inv0_0;
+  ss16_ph0_G16_sq_scl0_G256_inv0_1 = ss16_tx1_G16_sq_scl0_G256_inv0_1;
+  ss16_ql1_s1_G16_sq_scl0_G256_inv0_0 = i256_tx0_G256_inv0_0;
+  ss16_ql1_s1_G16_sq_scl0_G256_inv0_1 = i256_tx0_G256_inv0_1;
+  ss16_ql0_s1_G16_sq_scl0_G256_inv0_0 = i256_tx1_G256_inv0_0;
+  ss16_ql0_s1_G16_sq_scl0_G256_inv0_1 = i256_tx1_G256_inv0_1;
+  ss16_ql1_s2_G16_sq_scl0_G256_inv0_0 = ss16_ql1_s1_G16_sq_scl0_G256_inv0_0 ^ ss16_ql0_s1_G16_sq_scl0_G256_inv0_0;
+  ss16_ql1_s2_G16_sq_scl0_G256_inv0_1 = ss16_ql1_s1_G16_sq_scl0_G256_inv0_1 ^ ss16_ql0_s1_G16_sq_scl0_G256_inv0_1;
+  ss16_ql0_s2_G16_sq_scl0_G256_inv0_0 = ss16_ql1_s1_G16_sq_scl0_G256_inv0_0;
+  ss16_ql0_s2_G16_sq_scl0_G256_inv0_1 = ss16_ql1_s1_G16_sq_scl0_G256_inv0_1;
+  i256_c3_G256_inv0_0 = ss16_ph1_G16_sq_scl0_G256_inv0_0;
+  i256_c3_G256_inv0_1 = ss16_ph1_G16_sq_scl0_G256_inv0_1;
+  i256_c2_G256_inv0_0 = ss16_ph0_G16_sq_scl0_G256_inv0_0;
+  i256_c2_G256_inv0_1 = ss16_ph0_G16_sq_scl0_G256_inv0_1;
+  i256_c1_G256_inv0_0 = ss16_ql1_s2_G16_sq_scl0_G256_inv0_0;
+  i256_c1_G256_inv0_1 = ss16_ql1_s2_G16_sq_scl0_G256_inv0_1;
+  i256_c0_G256_inv0_0 = ss16_ql0_s2_G16_sq_scl0_G256_inv0_0;
+  i256_c0_G256_inv0_1 = ss16_ql0_s2_G16_sq_scl0_G256_inv0_1;
+  m16_tx0_G16_mul0_G256_inv0_0 = sb_y6_0 ^ sb_y4_0;
+  m16_tx0_G16_mul0_G256_inv0_1 = sb_y6_1 ^ sb_y4_1;
+  m16_tx1_G16_mul0_G256_inv0_0 = sb_y7_0 ^ sb_y5_0;
+  m16_tx1_G16_mul0_G256_inv0_1 = sb_y7_1 ^ sb_y5_1;
+  m16_ty0_G16_mul0_G256_inv0_0 = sb_y2_0 ^ sb_y0_0;
+  m16_ty0_G16_mul0_G256_inv0_1 = sb_y2_1 ^ sb_y0_1;
+  m16_ty1_G16_mul0_G256_inv0_0 = sb_y3_0 ^ sb_y1_0;
+  m16_ty1_G16_mul0_G256_inv0_1 = sb_y3_1 ^ sb_y1_1;
+  m4_ab_G4_mul0_G16_mul0_G256_inv0_0 = m16_tx1_G16_mul0_G256_inv0_0 ^ m16_tx0_G16_mul0_G256_inv0_0;
+  m4_ab_G4_mul0_G16_mul0_G256_inv0_1 = m16_tx1_G16_mul0_G256_inv0_1 ^ m16_tx0_G16_mul0_G256_inv0_1;
+  m4_cd_G4_mul0_G16_mul0_G256_inv0_0 = m16_ty1_G16_mul0_G256_inv0_0 ^ m16_ty0_G16_mul0_G256_inv0_0;
+  m4_cd_G4_mul0_G16_mul0_G256_inv0_1 = m16_ty1_G16_mul0_G256_inv0_1 ^ m16_ty0_G16_mul0_G256_inv0_1;
+  HPC3(m4_ab_G4_mul0_G16_mul0_G256_inv0_0, m4_ab_G4_mul0_G16_mul0_G256_inv0_1, m4_cd_G4_mul0_G16_mul0_G256_inv0_0, m4_cd_G4_mul0_G16_mul0_G256_inv0_1, &m4_e_G4_mul0_G16_mul0_G256_inv0_0, &m4_e_G4_mul0_G16_mul0_G256_inv0_1, rand_1, rand_2);
+  HPC3(m16_tx1_G16_mul0_G256_inv0_0, m16_tx1_G16_mul0_G256_inv0_1, m16_ty1_G16_mul0_G256_inv0_0, m16_ty1_G16_mul0_G256_inv0_1, &temp_var_0_G4_mul0_G16_mul0_G256_inv0_0, &temp_var_0_G4_mul0_G16_mul0_G256_inv0_1, rand_3, rand_4);
+  m16_e1_s1_G16_mul0_G256_inv0_0 = temp_var_0_G4_mul0_G16_mul0_G256_inv0_0 ^ m4_e_G4_mul0_G16_mul0_G256_inv0_0;
+  m16_e1_s1_G16_mul0_G256_inv0_1 = temp_var_0_G4_mul0_G16_mul0_G256_inv0_1 ^ m4_e_G4_mul0_G16_mul0_G256_inv0_1;
+  HPC3(m16_tx0_G16_mul0_G256_inv0_0, m16_tx0_G16_mul0_G256_inv0_1, m16_ty0_G16_mul0_G256_inv0_0, m16_ty0_G16_mul0_G256_inv0_1, &temp_var_1_G4_mul0_G16_mul0_G256_inv0_0, &temp_var_1_G4_mul0_G16_mul0_G256_inv0_1, rand_5, rand_6);
+  m16_e0_s1_G16_mul0_G256_inv0_0 = temp_var_1_G4_mul0_G16_mul0_G256_inv0_0 ^ m4_e_G4_mul0_G16_mul0_G256_inv0_0;
+  m16_e0_s1_G16_mul0_G256_inv0_1 = temp_var_1_G4_mul0_G16_mul0_G256_inv0_1 ^ m4_e_G4_mul0_G16_mul0_G256_inv0_1;
+  m16_e1_s2_G16_mul0_G256_inv0_0 = m16_e0_s1_G16_mul0_G256_inv0_0;
+  m16_e1_s2_G16_mul0_G256_inv0_1 = m16_e0_s1_G16_mul0_G256_inv0_1;
+  m16_e0_s2_G16_mul0_G256_inv0_0 = m16_e1_s1_G16_mul0_G256_inv0_0 ^ m16_e0_s1_G16_mul0_G256_inv0_0;
+  m16_e0_s2_G16_mul0_G256_inv0_1 = m16_e1_s1_G16_mul0_G256_inv0_1 ^ m16_e0_s1_G16_mul0_G256_inv0_1;
+  m4_ab_G4_mul1_G16_mul0_G256_inv0_0 = sb_y7_0 ^ sb_y6_0;
+  m4_ab_G4_mul1_G16_mul0_G256_inv0_1 = sb_y7_1 ^ sb_y6_1;
+  m4_cd_G4_mul1_G16_mul0_G256_inv0_0 = sb_y3_0 ^ sb_y2_0;
+  m4_cd_G4_mul1_G16_mul0_G256_inv0_1 = sb_y3_1 ^ sb_y2_1;
+  HPC3(m4_ab_G4_mul1_G16_mul0_G256_inv0_0, m4_ab_G4_mul1_G16_mul0_G256_inv0_1, m4_cd_G4_mul1_G16_mul0_G256_inv0_0, m4_cd_G4_mul1_G16_mul0_G256_inv0_1, &m4_e_G4_mul1_G16_mul0_G256_inv0_0, &m4_e_G4_mul1_G16_mul0_G256_inv0_1, rand_7, rand_8);
+  HPC3(sb_y7_0, sb_y7_1, sb_y3_0, sb_y3_1, &temp_var_0_G4_mul1_G16_mul0_G256_inv0_0, &temp_var_0_G4_mul1_G16_mul0_G256_inv0_1, rand_9, rand_10);
+  m16_ph1_G16_mul0_G256_inv0_0 = temp_var_0_G4_mul1_G16_mul0_G256_inv0_0 ^ m4_e_G4_mul1_G16_mul0_G256_inv0_0;
+  m16_ph1_G16_mul0_G256_inv0_1 = temp_var_0_G4_mul1_G16_mul0_G256_inv0_1 ^ m4_e_G4_mul1_G16_mul0_G256_inv0_1;
+  HPC3(sb_y6_0, sb_y6_1, sb_y2_0, sb_y2_1, &temp_var_1_G4_mul1_G16_mul0_G256_inv0_0, &temp_var_1_G4_mul1_G16_mul0_G256_inv0_1, rand_11, rand_12);
+  m16_ph0_G16_mul0_G256_inv0_0 = temp_var_1_G4_mul1_G16_mul0_G256_inv0_0 ^ m4_e_G4_mul1_G16_mul0_G256_inv0_0;
+  m16_ph0_G16_mul0_G256_inv0_1 = temp_var_1_G4_mul1_G16_mul0_G256_inv0_1 ^ m4_e_G4_mul1_G16_mul0_G256_inv0_1;
+  m4_ab_G4_mul2_G16_mul0_G256_inv0_0 = sb_y5_0 ^ sb_y4_0;
+  m4_ab_G4_mul2_G16_mul0_G256_inv0_1 = sb_y5_1 ^ sb_y4_1;
+  m4_cd_G4_mul2_G16_mul0_G256_inv0_0 = sb_y1_0 ^ sb_y0_0;
+  m4_cd_G4_mul2_G16_mul0_G256_inv0_1 = sb_y1_1 ^ sb_y0_1;
+  HPC3(m4_ab_G4_mul2_G16_mul0_G256_inv0_0, m4_ab_G4_mul2_G16_mul0_G256_inv0_1, m4_cd_G4_mul2_G16_mul0_G256_inv0_0, m4_cd_G4_mul2_G16_mul0_G256_inv0_1, &m4_e_G4_mul2_G16_mul0_G256_inv0_0, &m4_e_G4_mul2_G16_mul0_G256_inv0_1, rand_13, rand_14);
+  HPC3(sb_y5_0, sb_y5_1, sb_y1_0, sb_y1_1, &temp_var_0_G4_mul2_G16_mul0_G256_inv0_0, &temp_var_0_G4_mul2_G16_mul0_G256_inv0_1, rand_15, rand_16);
+  m16_ql1_G16_mul0_G256_inv0_0 = temp_var_0_G4_mul2_G16_mul0_G256_inv0_0 ^ m4_e_G4_mul2_G16_mul0_G256_inv0_0;
+  m16_ql1_G16_mul0_G256_inv0_1 = temp_var_0_G4_mul2_G16_mul0_G256_inv0_1 ^ m4_e_G4_mul2_G16_mul0_G256_inv0_1;
+  HPC3(sb_y4_0, sb_y4_1, sb_y0_0, sb_y0_1, &temp_var_1_G4_mul2_G16_mul0_G256_inv0_0, &temp_var_1_G4_mul2_G16_mul0_G256_inv0_1, rand_17, rand_18);
+  m16_ql0_G16_mul0_G256_inv0_0 = temp_var_1_G4_mul2_G16_mul0_G256_inv0_0 ^ m4_e_G4_mul2_G16_mul0_G256_inv0_0;
+  m16_ql0_G16_mul0_G256_inv0_1 = temp_var_1_G4_mul2_G16_mul0_G256_inv0_1 ^ m4_e_G4_mul2_G16_mul0_G256_inv0_1;
+  i256_d3_G256_inv0_0 = m16_ph1_G16_mul0_G256_inv0_0 ^ m16_e1_s2_G16_mul0_G256_inv0_0;
+  i256_d3_G256_inv0_1 = m16_ph1_G16_mul0_G256_inv0_1 ^ m16_e1_s2_G16_mul0_G256_inv0_1;
+  i256_d2_G256_inv0_0 = m16_ph0_G16_mul0_G256_inv0_0 ^ m16_e0_s2_G16_mul0_G256_inv0_0;
+  i256_d2_G256_inv0_1 = m16_ph0_G16_mul0_G256_inv0_1 ^ m16_e0_s2_G16_mul0_G256_inv0_1;
+  i256_d1_G256_inv0_0 = m16_ql1_G16_mul0_G256_inv0_0 ^ m16_e1_s2_G16_mul0_G256_inv0_0;
+  i256_d1_G256_inv0_1 = m16_ql1_G16_mul0_G256_inv0_1 ^ m16_e1_s2_G16_mul0_G256_inv0_1;
+  i256_d0_G256_inv0_0 = m16_ql0_G16_mul0_G256_inv0_0 ^ m16_e0_s2_G16_mul0_G256_inv0_0;
+  i256_d0_G256_inv0_1 = m16_ql0_G16_mul0_G256_inv0_1 ^ m16_e0_s2_G16_mul0_G256_inv0_1;
+  i256_te0_G256_inv0_0 = i256_c0_G256_inv0_0 ^ i256_d0_G256_inv0_0;
+  i256_te0_G256_inv0_1 = i256_c0_G256_inv0_1 ^ i256_d0_G256_inv0_1;
+  i256_te1_G256_inv0_0 = i256_c1_G256_inv0_0 ^ i256_d1_G256_inv0_0;
+  i256_te1_G256_inv0_1 = i256_c1_G256_inv0_1 ^ i256_d1_G256_inv0_1;
+  i256_te2_G256_inv0_0 = i256_c2_G256_inv0_0 ^ i256_d2_G256_inv0_0;
+  i256_te2_G256_inv0_1 = i256_c2_G256_inv0_1 ^ i256_d2_G256_inv0_1;
+  i256_te3_G256_inv0_0 = i256_c3_G256_inv0_0 ^ i256_d3_G256_inv0_0;
+  i256_te3_G256_inv0_1 = i256_c3_G256_inv0_1 ^ i256_d3_G256_inv0_1;
+  i16_tx0_G16_inv0_G256_inv0_0 = i256_te2_G256_inv0_0 ^ i256_te0_G256_inv0_0;
+  i16_tx0_G16_inv0_G256_inv0_1 = i256_te2_G256_inv0_1 ^ i256_te0_G256_inv0_1;
+  i16_tx1_G16_inv0_G256_inv0_0 = i256_te3_G256_inv0_0 ^ i256_te1_G256_inv0_0;
+  i16_tx1_G16_inv0_G256_inv0_1 = i256_te3_G256_inv0_1 ^ i256_te1_G256_inv0_1;
+  i16_c1_s1_G16_inv0_G256_inv0_0 = i16_tx0_G16_inv0_G256_inv0_0;
+  i16_c1_s1_G16_inv0_G256_inv0_1 = i16_tx0_G16_inv0_G256_inv0_1;
+  i16_c0_s1_G16_inv0_G256_inv0_0 = i16_tx1_G16_inv0_G256_inv0_0;
+  i16_c0_s1_G16_inv0_G256_inv0_1 = i16_tx1_G16_inv0_G256_inv0_1;
+  i16_c1_s2_G16_inv0_G256_inv0_0 = i16_c0_s1_G16_inv0_G256_inv0_0;
+  i16_c1_s2_G16_inv0_G256_inv0_1 = i16_c0_s1_G16_inv0_G256_inv0_1;
+  i16_c0_s2_G16_inv0_G256_inv0_0 = i16_c1_s1_G16_inv0_G256_inv0_0 ^ i16_c0_s1_G16_inv0_G256_inv0_0;
+  i16_c0_s2_G16_inv0_G256_inv0_1 = i16_c1_s1_G16_inv0_G256_inv0_1 ^ i16_c0_s1_G16_inv0_G256_inv0_1;
+  m4_ab_G4_mul3_G16_inv0_G256_inv0_0 = i256_te3_G256_inv0_0 ^ i256_te2_G256_inv0_0;
+  m4_ab_G4_mul3_G16_inv0_G256_inv0_1 = i256_te3_G256_inv0_1 ^ i256_te2_G256_inv0_1;
+  m4_cd_G4_mul3_G16_inv0_G256_inv0_0 = i256_te1_G256_inv0_0 ^ i256_te0_G256_inv0_0;
+  m4_cd_G4_mul3_G16_inv0_G256_inv0_1 = i256_te1_G256_inv0_1 ^ i256_te0_G256_inv0_1;
+  HPC3(m4_ab_G4_mul3_G16_inv0_G256_inv0_0, m4_ab_G4_mul3_G16_inv0_G256_inv0_1, m4_cd_G4_mul3_G16_inv0_G256_inv0_0, m4_cd_G4_mul3_G16_inv0_G256_inv0_1, &m4_e_G4_mul3_G16_inv0_G256_inv0_0, &m4_e_G4_mul3_G16_inv0_G256_inv0_1, rand_19, rand_20);
+  HPC3(i256_te3_G256_inv0_0, i256_te3_G256_inv0_1, i256_te1_G256_inv0_0, i256_te1_G256_inv0_1, &temp_var_0_G4_mul3_G16_inv0_G256_inv0_0, &temp_var_0_G4_mul3_G16_inv0_G256_inv0_1, rand_21, rand_22);
+  i16_d1_G16_inv0_G256_inv0_0 = temp_var_0_G4_mul3_G16_inv0_G256_inv0_0 ^ m4_e_G4_mul3_G16_inv0_G256_inv0_0;
+  i16_d1_G16_inv0_G256_inv0_1 = temp_var_0_G4_mul3_G16_inv0_G256_inv0_1 ^ m4_e_G4_mul3_G16_inv0_G256_inv0_1;
+  HPC3(i256_te2_G256_inv0_0, i256_te2_G256_inv0_1, i256_te0_G256_inv0_0, i256_te0_G256_inv0_1, &temp_var_1_G4_mul3_G16_inv0_G256_inv0_0, &temp_var_1_G4_mul3_G16_inv0_G256_inv0_1, rand_23, rand_24);
+  i16_d0_G16_inv0_G256_inv0_0 = temp_var_1_G4_mul3_G16_inv0_G256_inv0_0 ^ m4_e_G4_mul3_G16_inv0_G256_inv0_0;
+  i16_d0_G16_inv0_G256_inv0_1 = temp_var_1_G4_mul3_G16_inv0_G256_inv0_1 ^ m4_e_G4_mul3_G16_inv0_G256_inv0_1;
+  i16_te0_G16_inv0_G256_inv0_0 = i16_c0_s2_G16_inv0_G256_inv0_0 ^ i16_d0_G16_inv0_G256_inv0_0;
+  i16_te0_G16_inv0_G256_inv0_1 = i16_c0_s2_G16_inv0_G256_inv0_1 ^ i16_d0_G16_inv0_G256_inv0_1;
+  i16_te1_G16_inv0_G256_inv0_0 = i16_c1_s2_G16_inv0_G256_inv0_0 ^ i16_d1_G16_inv0_G256_inv0_0;
+  i16_te1_G16_inv0_G256_inv0_1 = i16_c1_s2_G16_inv0_G256_inv0_1 ^ i16_d1_G16_inv0_G256_inv0_1;
+  i16_e1_G16_inv0_G256_inv0_0 = i16_te0_G16_inv0_G256_inv0_0;
+  i16_e1_G16_inv0_G256_inv0_1 = i16_te0_G16_inv0_G256_inv0_1;
+  i16_e0_G16_inv0_G256_inv0_0 = i16_te1_G16_inv0_G256_inv0_0;
+  i16_e0_G16_inv0_G256_inv0_1 = i16_te1_G16_inv0_G256_inv0_1;
+  m4_ab_G4_mul4_G16_inv0_G256_inv0_0 = i16_e1_G16_inv0_G256_inv0_0 ^ i16_e0_G16_inv0_G256_inv0_0;
+  m4_ab_G4_mul4_G16_inv0_G256_inv0_1 = i16_e1_G16_inv0_G256_inv0_1 ^ i16_e0_G16_inv0_G256_inv0_1;
+  m4_cd_G4_mul4_G16_inv0_G256_inv0_0 = i256_te1_G256_inv0_0 ^ i256_te0_G256_inv0_0;
+  m4_cd_G4_mul4_G16_inv0_G256_inv0_1 = i256_te1_G256_inv0_1 ^ i256_te0_G256_inv0_1;
+  HPC2(m4_ab_G4_mul4_G16_inv0_G256_inv0_0, m4_ab_G4_mul4_G16_inv0_G256_inv0_1, m4_cd_G4_mul4_G16_inv0_G256_inv0_0, m4_cd_G4_mul4_G16_inv0_G256_inv0_1, &m4_e_G4_mul4_G16_inv0_G256_inv0_0, &m4_e_G4_mul4_G16_inv0_G256_inv0_1, rand_25);
+  HPC2(i16_e1_G16_inv0_G256_inv0_0, i16_e1_G16_inv0_G256_inv0_1, i256_te1_G256_inv0_0, i256_te1_G256_inv0_1, &temp_var_0_G4_mul4_G16_inv0_G256_inv0_0, &temp_var_0_G4_mul4_G16_inv0_G256_inv0_1, rand_22);
+  i16_ph1_G16_inv0_G256_inv0_0 = temp_var_0_G4_mul4_G16_inv0_G256_inv0_0 ^ m4_e_G4_mul4_G16_inv0_G256_inv0_0;
+  i16_ph1_G16_inv0_G256_inv0_1 = temp_var_0_G4_mul4_G16_inv0_G256_inv0_1 ^ m4_e_G4_mul4_G16_inv0_G256_inv0_1;
+  HPC2(i16_e0_G16_inv0_G256_inv0_0, i16_e0_G16_inv0_G256_inv0_1, i256_te0_G256_inv0_0, i256_te0_G256_inv0_1, &temp_var_1_G4_mul4_G16_inv0_G256_inv0_0, &temp_var_1_G4_mul4_G16_inv0_G256_inv0_1, rand_24);
+  i16_ph0_G16_inv0_G256_inv0_0 = temp_var_1_G4_mul4_G16_inv0_G256_inv0_0 ^ m4_e_G4_mul4_G16_inv0_G256_inv0_0;
+  i16_ph0_G16_inv0_G256_inv0_1 = temp_var_1_G4_mul4_G16_inv0_G256_inv0_1 ^ m4_e_G4_mul4_G16_inv0_G256_inv0_1;
+  m4_ab_G4_mul5_G16_inv0_G256_inv0_0 = i16_e1_G16_inv0_G256_inv0_0 ^ i16_e0_G16_inv0_G256_inv0_0;
+  m4_ab_G4_mul5_G16_inv0_G256_inv0_1 = i16_e1_G16_inv0_G256_inv0_1 ^ i16_e0_G16_inv0_G256_inv0_1;
+  m4_cd_G4_mul5_G16_inv0_G256_inv0_0 = i256_te3_G256_inv0_0 ^ i256_te2_G256_inv0_0;
+  m4_cd_G4_mul5_G16_inv0_G256_inv0_1 = i256_te3_G256_inv0_1 ^ i256_te2_G256_inv0_1;
+  HPC2(m4_ab_G4_mul5_G16_inv0_G256_inv0_0, m4_ab_G4_mul5_G16_inv0_G256_inv0_1, m4_cd_G4_mul5_G16_inv0_G256_inv0_0, m4_cd_G4_mul5_G16_inv0_G256_inv0_1, &m4_e_G4_mul5_G16_inv0_G256_inv0_0, &m4_e_G4_mul5_G16_inv0_G256_inv0_1, rand_28);
+  HPC2(i16_e1_G16_inv0_G256_inv0_0, i16_e1_G16_inv0_G256_inv0_1, i256_te3_G256_inv0_0, i256_te3_G256_inv0_1, &temp_var_0_G4_mul5_G16_inv0_G256_inv0_0, &temp_var_0_G4_mul5_G16_inv0_G256_inv0_1, rand_22);
+  i16_ql1_G16_inv0_G256_inv0_0 = temp_var_0_G4_mul5_G16_inv0_G256_inv0_0 ^ m4_e_G4_mul5_G16_inv0_G256_inv0_0;
+  i16_ql1_G16_inv0_G256_inv0_1 = temp_var_0_G4_mul5_G16_inv0_G256_inv0_1 ^ m4_e_G4_mul5_G16_inv0_G256_inv0_1;
+  HPC2(i16_e0_G16_inv0_G256_inv0_0, i16_e0_G16_inv0_G256_inv0_1, i256_te2_G256_inv0_0, i256_te2_G256_inv0_1, &temp_var_1_G4_mul5_G16_inv0_G256_inv0_0, &temp_var_1_G4_mul5_G16_inv0_G256_inv0_1, rand_24);
+  i16_ql0_G16_inv0_G256_inv0_0 = temp_var_1_G4_mul5_G16_inv0_G256_inv0_0 ^ m4_e_G4_mul5_G16_inv0_G256_inv0_0;
+  i16_ql0_G16_inv0_G256_inv0_1 = temp_var_1_G4_mul5_G16_inv0_G256_inv0_1 ^ m4_e_G4_mul5_G16_inv0_G256_inv0_1;
+  i256_e3_G256_inv0_0 = i16_ph1_G16_inv0_G256_inv0_0;
+  i256_e3_G256_inv0_1 = i16_ph1_G16_inv0_G256_inv0_1;
+  i256_e2_G256_inv0_0 = i16_ph0_G16_inv0_G256_inv0_0;
+  i256_e2_G256_inv0_1 = i16_ph0_G16_inv0_G256_inv0_1;
+  i256_e1_G256_inv0_0 = i16_ql1_G16_inv0_G256_inv0_0;
+  i256_e1_G256_inv0_1 = i16_ql1_G16_inv0_G256_inv0_1;
+  i256_e0_G256_inv0_0 = i16_ql0_G16_inv0_G256_inv0_0;
+  i256_e0_G256_inv0_1 = i16_ql0_G16_inv0_G256_inv0_1;
+  m16_tx0_G16_mul1_G256_inv0_0 = i256_e2_G256_inv0_0 ^ i256_e0_G256_inv0_0;
+  m16_tx0_G16_mul1_G256_inv0_1 = i256_e2_G256_inv0_1 ^ i256_e0_G256_inv0_1;
+  m16_tx1_G16_mul1_G256_inv0_0 = i256_e3_G256_inv0_0 ^ i256_e1_G256_inv0_0;
+  m16_tx1_G16_mul1_G256_inv0_1 = i256_e3_G256_inv0_1 ^ i256_e1_G256_inv0_1;
+  m16_ty0_G16_mul1_G256_inv0_0 = sb_y2_0 ^ sb_y0_0;
+  m16_ty0_G16_mul1_G256_inv0_1 = sb_y2_1 ^ sb_y0_1;
+  m16_ty1_G16_mul1_G256_inv0_0 = sb_y3_0 ^ sb_y1_0;
+  m16_ty1_G16_mul1_G256_inv0_1 = sb_y3_1 ^ sb_y1_1;
+  m4_ab_G4_mul0_G16_mul1_G256_inv0_0 = m16_tx1_G16_mul1_G256_inv0_0 ^ m16_tx0_G16_mul1_G256_inv0_0;
+  m4_ab_G4_mul0_G16_mul1_G256_inv0_1 = m16_tx1_G16_mul1_G256_inv0_1 ^ m16_tx0_G16_mul1_G256_inv0_1;
+  m4_cd_G4_mul0_G16_mul1_G256_inv0_0 = m16_ty1_G16_mul1_G256_inv0_0 ^ m16_ty0_G16_mul1_G256_inv0_0;
+  m4_cd_G4_mul0_G16_mul1_G256_inv0_1 = m16_ty1_G16_mul1_G256_inv0_1 ^ m16_ty0_G16_mul1_G256_inv0_1;
+  HPC2(m4_ab_G4_mul0_G16_mul1_G256_inv0_0, m4_ab_G4_mul0_G16_mul1_G256_inv0_1, m4_cd_G4_mul0_G16_mul1_G256_inv0_0, m4_cd_G4_mul0_G16_mul1_G256_inv0_1, &m4_e_G4_mul0_G16_mul1_G256_inv0_0, &m4_e_G4_mul0_G16_mul1_G256_inv0_1, rand_31);
+  HPC2(m16_tx1_G16_mul1_G256_inv0_0, m16_tx1_G16_mul1_G256_inv0_1, m16_ty1_G16_mul1_G256_inv0_0, m16_ty1_G16_mul1_G256_inv0_1, &temp_var_0_G4_mul0_G16_mul1_G256_inv0_0, &temp_var_0_G4_mul0_G16_mul1_G256_inv0_1, rand_32);
+  m16_e1_s1_G16_mul1_G256_inv0_0 = temp_var_0_G4_mul0_G16_mul1_G256_inv0_0 ^ m4_e_G4_mul0_G16_mul1_G256_inv0_0;
+  m16_e1_s1_G16_mul1_G256_inv0_1 = temp_var_0_G4_mul0_G16_mul1_G256_inv0_1 ^ m4_e_G4_mul0_G16_mul1_G256_inv0_1;
+  HPC2(m16_tx0_G16_mul1_G256_inv0_0, m16_tx0_G16_mul1_G256_inv0_1, m16_ty0_G16_mul1_G256_inv0_0, m16_ty0_G16_mul1_G256_inv0_1, &temp_var_1_G4_mul0_G16_mul1_G256_inv0_0, &temp_var_1_G4_mul0_G16_mul1_G256_inv0_1, rand_33);
+  m16_e0_s1_G16_mul1_G256_inv0_0 = temp_var_1_G4_mul0_G16_mul1_G256_inv0_0 ^ m4_e_G4_mul0_G16_mul1_G256_inv0_0;
+  m16_e0_s1_G16_mul1_G256_inv0_1 = temp_var_1_G4_mul0_G16_mul1_G256_inv0_1 ^ m4_e_G4_mul0_G16_mul1_G256_inv0_1;
+  m16_e1_s2_G16_mul1_G256_inv0_0 = m16_e0_s1_G16_mul1_G256_inv0_0;
+  m16_e1_s2_G16_mul1_G256_inv0_1 = m16_e0_s1_G16_mul1_G256_inv0_1;
+  m16_e0_s2_G16_mul1_G256_inv0_0 = m16_e1_s1_G16_mul1_G256_inv0_0 ^ m16_e0_s1_G16_mul1_G256_inv0_0;
+  m16_e0_s2_G16_mul1_G256_inv0_1 = m16_e1_s1_G16_mul1_G256_inv0_1 ^ m16_e0_s1_G16_mul1_G256_inv0_1;
+  m4_ab_G4_mul1_G16_mul1_G256_inv0_0 = i256_e3_G256_inv0_0 ^ i256_e2_G256_inv0_0;
+  m4_ab_G4_mul1_G16_mul1_G256_inv0_1 = i256_e3_G256_inv0_1 ^ i256_e2_G256_inv0_1;
+  m4_cd_G4_mul1_G16_mul1_G256_inv0_0 = sb_y3_0 ^ sb_y2_0;
+  m4_cd_G4_mul1_G16_mul1_G256_inv0_1 = sb_y3_1 ^ sb_y2_1;
+  HPC2(m4_ab_G4_mul1_G16_mul1_G256_inv0_0, m4_ab_G4_mul1_G16_mul1_G256_inv0_1, m4_cd_G4_mul1_G16_mul1_G256_inv0_0, m4_cd_G4_mul1_G16_mul1_G256_inv0_1, &m4_e_G4_mul1_G16_mul1_G256_inv0_0, &m4_e_G4_mul1_G16_mul1_G256_inv0_1, rand_34);
+  HPC2(i256_e3_G256_inv0_0, i256_e3_G256_inv0_1, sb_y3_0, sb_y3_1, &temp_var_0_G4_mul1_G16_mul1_G256_inv0_0, &temp_var_0_G4_mul1_G16_mul1_G256_inv0_1, rand_10);
+  m16_ph1_G16_mul1_G256_inv0_0 = temp_var_0_G4_mul1_G16_mul1_G256_inv0_0 ^ m4_e_G4_mul1_G16_mul1_G256_inv0_0;
+  m16_ph1_G16_mul1_G256_inv0_1 = temp_var_0_G4_mul1_G16_mul1_G256_inv0_1 ^ m4_e_G4_mul1_G16_mul1_G256_inv0_1;
+  HPC2(i256_e2_G256_inv0_0, i256_e2_G256_inv0_1, sb_y2_0, sb_y2_1, &temp_var_1_G4_mul1_G16_mul1_G256_inv0_0, &temp_var_1_G4_mul1_G16_mul1_G256_inv0_1, rand_12);
+  m16_ph0_G16_mul1_G256_inv0_0 = temp_var_1_G4_mul1_G16_mul1_G256_inv0_0 ^ m4_e_G4_mul1_G16_mul1_G256_inv0_0;
+  m16_ph0_G16_mul1_G256_inv0_1 = temp_var_1_G4_mul1_G16_mul1_G256_inv0_1 ^ m4_e_G4_mul1_G16_mul1_G256_inv0_1;
+  m4_ab_G4_mul2_G16_mul1_G256_inv0_0 = i256_e1_G256_inv0_0 ^ i256_e0_G256_inv0_0;
+  m4_ab_G4_mul2_G16_mul1_G256_inv0_1 = i256_e1_G256_inv0_1 ^ i256_e0_G256_inv0_1;
+  m4_cd_G4_mul2_G16_mul1_G256_inv0_0 = sb_y1_0 ^ sb_y0_0;
+  m4_cd_G4_mul2_G16_mul1_G256_inv0_1 = sb_y1_1 ^ sb_y0_1;
+  HPC2(m4_ab_G4_mul2_G16_mul1_G256_inv0_0, m4_ab_G4_mul2_G16_mul1_G256_inv0_1, m4_cd_G4_mul2_G16_mul1_G256_inv0_0, m4_cd_G4_mul2_G16_mul1_G256_inv0_1, &m4_e_G4_mul2_G16_mul1_G256_inv0_0, &m4_e_G4_mul2_G16_mul1_G256_inv0_1, rand_37);
+  HPC2(i256_e1_G256_inv0_0, i256_e1_G256_inv0_1, sb_y1_0, sb_y1_1, &temp_var_0_G4_mul2_G16_mul1_G256_inv0_0, &temp_var_0_G4_mul2_G16_mul1_G256_inv0_1, rand_16);
+  m16_ql1_G16_mul1_G256_inv0_0 = temp_var_0_G4_mul2_G16_mul1_G256_inv0_0 ^ m4_e_G4_mul2_G16_mul1_G256_inv0_0;
+  m16_ql1_G16_mul1_G256_inv0_1 = temp_var_0_G4_mul2_G16_mul1_G256_inv0_1 ^ m4_e_G4_mul2_G16_mul1_G256_inv0_1;
+  HPC2(i256_e0_G256_inv0_0, i256_e0_G256_inv0_1, sb_y0_0, sb_y0_1, &temp_var_1_G4_mul2_G16_mul1_G256_inv0_0, &temp_var_1_G4_mul2_G16_mul1_G256_inv0_1, rand_18);
+  m16_ql0_G16_mul1_G256_inv0_0 = temp_var_1_G4_mul2_G16_mul1_G256_inv0_0 ^ m4_e_G4_mul2_G16_mul1_G256_inv0_0;
+  m16_ql0_G16_mul1_G256_inv0_1 = temp_var_1_G4_mul2_G16_mul1_G256_inv0_1 ^ m4_e_G4_mul2_G16_mul1_G256_inv0_1;
+  i256_ph3_G256_inv0_0 = m16_ph1_G16_mul1_G256_inv0_0 ^ m16_e1_s2_G16_mul1_G256_inv0_0;
+  i256_ph3_G256_inv0_1 = m16_ph1_G16_mul1_G256_inv0_1 ^ m16_e1_s2_G16_mul1_G256_inv0_1;
+  i256_ph2_G256_inv0_0 = m16_ph0_G16_mul1_G256_inv0_0 ^ m16_e0_s2_G16_mul1_G256_inv0_0;
+  i256_ph2_G256_inv0_1 = m16_ph0_G16_mul1_G256_inv0_1 ^ m16_e0_s2_G16_mul1_G256_inv0_1;
+  i256_ph1_G256_inv0_0 = m16_ql1_G16_mul1_G256_inv0_0 ^ m16_e1_s2_G16_mul1_G256_inv0_0;
+  i256_ph1_G256_inv0_1 = m16_ql1_G16_mul1_G256_inv0_1 ^ m16_e1_s2_G16_mul1_G256_inv0_1;
+  i256_ph0_G256_inv0_0 = m16_ql0_G16_mul1_G256_inv0_0 ^ m16_e0_s2_G16_mul1_G256_inv0_0;
+  i256_ph0_G256_inv0_1 = m16_ql0_G16_mul1_G256_inv0_1 ^ m16_e0_s2_G16_mul1_G256_inv0_1;
+  m16_tx0_G16_mul2_G256_inv0_0 = i256_e2_G256_inv0_0 ^ i256_e0_G256_inv0_0;
+  m16_tx0_G16_mul2_G256_inv0_1 = i256_e2_G256_inv0_1 ^ i256_e0_G256_inv0_1;
+  m16_tx1_G16_mul2_G256_inv0_0 = i256_e3_G256_inv0_0 ^ i256_e1_G256_inv0_0;
+  m16_tx1_G16_mul2_G256_inv0_1 = i256_e3_G256_inv0_1 ^ i256_e1_G256_inv0_1;
+  m16_ty0_G16_mul2_G256_inv0_0 = sb_y6_0 ^ sb_y4_0;
+  m16_ty0_G16_mul2_G256_inv0_1 = sb_y6_1 ^ sb_y4_1;
+  m16_ty1_G16_mul2_G256_inv0_0 = sb_y7_0 ^ sb_y5_0;
+  m16_ty1_G16_mul2_G256_inv0_1 = sb_y7_1 ^ sb_y5_1;
+  m4_ab_G4_mul0_G16_mul2_G256_inv0_0 = m16_tx1_G16_mul2_G256_inv0_0 ^ m16_tx0_G16_mul2_G256_inv0_0;
+  m4_ab_G4_mul0_G16_mul2_G256_inv0_1 = m16_tx1_G16_mul2_G256_inv0_1 ^ m16_tx0_G16_mul2_G256_inv0_1;
+  m4_cd_G4_mul0_G16_mul2_G256_inv0_0 = m16_ty1_G16_mul2_G256_inv0_0 ^ m16_ty0_G16_mul2_G256_inv0_0;
+  m4_cd_G4_mul0_G16_mul2_G256_inv0_1 = m16_ty1_G16_mul2_G256_inv0_1 ^ m16_ty0_G16_mul2_G256_inv0_1;
+  HPC2(m4_ab_G4_mul0_G16_mul2_G256_inv0_0, m4_ab_G4_mul0_G16_mul2_G256_inv0_1, m4_cd_G4_mul0_G16_mul2_G256_inv0_0, m4_cd_G4_mul0_G16_mul2_G256_inv0_1, &m4_e_G4_mul0_G16_mul2_G256_inv0_0, &m4_e_G4_mul0_G16_mul2_G256_inv0_1, rand_40);
+  HPC2(m16_tx1_G16_mul2_G256_inv0_0, m16_tx1_G16_mul2_G256_inv0_1, m16_ty1_G16_mul2_G256_inv0_0, m16_ty1_G16_mul2_G256_inv0_1, &temp_var_0_G4_mul0_G16_mul2_G256_inv0_0, &temp_var_0_G4_mul0_G16_mul2_G256_inv0_1, rand_41);
+  m16_e1_s1_G16_mul2_G256_inv0_0 = temp_var_0_G4_mul0_G16_mul2_G256_inv0_0 ^ m4_e_G4_mul0_G16_mul2_G256_inv0_0;
+  m16_e1_s1_G16_mul2_G256_inv0_1 = temp_var_0_G4_mul0_G16_mul2_G256_inv0_1 ^ m4_e_G4_mul0_G16_mul2_G256_inv0_1;
+  HPC2(m16_tx0_G16_mul2_G256_inv0_0, m16_tx0_G16_mul2_G256_inv0_1, m16_ty0_G16_mul2_G256_inv0_0, m16_ty0_G16_mul2_G256_inv0_1, &temp_var_1_G4_mul0_G16_mul2_G256_inv0_0, &temp_var_1_G4_mul0_G16_mul2_G256_inv0_1, rand_42);
+  m16_e0_s1_G16_mul2_G256_inv0_0 = temp_var_1_G4_mul0_G16_mul2_G256_inv0_0 ^ m4_e_G4_mul0_G16_mul2_G256_inv0_0;
+  m16_e0_s1_G16_mul2_G256_inv0_1 = temp_var_1_G4_mul0_G16_mul2_G256_inv0_1 ^ m4_e_G4_mul0_G16_mul2_G256_inv0_1;
+  m16_e1_s2_G16_mul2_G256_inv0_0 = m16_e0_s1_G16_mul2_G256_inv0_0;
+  m16_e1_s2_G16_mul2_G256_inv0_1 = m16_e0_s1_G16_mul2_G256_inv0_1;
+  m16_e0_s2_G16_mul2_G256_inv0_0 = m16_e1_s1_G16_mul2_G256_inv0_0 ^ m16_e0_s1_G16_mul2_G256_inv0_0;
+  m16_e0_s2_G16_mul2_G256_inv0_1 = m16_e1_s1_G16_mul2_G256_inv0_1 ^ m16_e0_s1_G16_mul2_G256_inv0_1;
+  m4_ab_G4_mul1_G16_mul2_G256_inv0_0 = i256_e3_G256_inv0_0 ^ i256_e2_G256_inv0_0;
+  m4_ab_G4_mul1_G16_mul2_G256_inv0_1 = i256_e3_G256_inv0_1 ^ i256_e2_G256_inv0_1;
+  m4_cd_G4_mul1_G16_mul2_G256_inv0_0 = sb_y7_0 ^ sb_y6_0;
+  m4_cd_G4_mul1_G16_mul2_G256_inv0_1 = sb_y7_1 ^ sb_y6_1;
+  HPC2(m4_ab_G4_mul1_G16_mul2_G256_inv0_0, m4_ab_G4_mul1_G16_mul2_G256_inv0_1, m4_cd_G4_mul1_G16_mul2_G256_inv0_0, m4_cd_G4_mul1_G16_mul2_G256_inv0_1, &m4_e_G4_mul1_G16_mul2_G256_inv0_0, &m4_e_G4_mul1_G16_mul2_G256_inv0_1, rand_43);
+  HPC2(i256_e3_G256_inv0_0, i256_e3_G256_inv0_1, sb_y7_0, sb_y7_1, &temp_var_0_G4_mul1_G16_mul2_G256_inv0_0, &temp_var_0_G4_mul1_G16_mul2_G256_inv0_1, rand_10);
+  m16_ph1_G16_mul2_G256_inv0_0 = temp_var_0_G4_mul1_G16_mul2_G256_inv0_0 ^ m4_e_G4_mul1_G16_mul2_G256_inv0_0;
+  m16_ph1_G16_mul2_G256_inv0_1 = temp_var_0_G4_mul1_G16_mul2_G256_inv0_1 ^ m4_e_G4_mul1_G16_mul2_G256_inv0_1;
+  HPC2(i256_e2_G256_inv0_0, i256_e2_G256_inv0_1, sb_y6_0, sb_y6_1, &temp_var_1_G4_mul1_G16_mul2_G256_inv0_0, &temp_var_1_G4_mul1_G16_mul2_G256_inv0_1, rand_12);
+  m16_ph0_G16_mul2_G256_inv0_0 = temp_var_1_G4_mul1_G16_mul2_G256_inv0_0 ^ m4_e_G4_mul1_G16_mul2_G256_inv0_0;
+  m16_ph0_G16_mul2_G256_inv0_1 = temp_var_1_G4_mul1_G16_mul2_G256_inv0_1 ^ m4_e_G4_mul1_G16_mul2_G256_inv0_1;
+  m4_ab_G4_mul2_G16_mul2_G256_inv0_0 = i256_e1_G256_inv0_0 ^ i256_e0_G256_inv0_0;
+  m4_ab_G4_mul2_G16_mul2_G256_inv0_1 = i256_e1_G256_inv0_1 ^ i256_e0_G256_inv0_1;
+  m4_cd_G4_mul2_G16_mul2_G256_inv0_0 = sb_y5_0 ^ sb_y4_0;
+  m4_cd_G4_mul2_G16_mul2_G256_inv0_1 = sb_y5_1 ^ sb_y4_1;
+  HPC2(m4_ab_G4_mul2_G16_mul2_G256_inv0_0, m4_ab_G4_mul2_G16_mul2_G256_inv0_1, m4_cd_G4_mul2_G16_mul2_G256_inv0_0, m4_cd_G4_mul2_G16_mul2_G256_inv0_1, &m4_e_G4_mul2_G16_mul2_G256_inv0_0, &m4_e_G4_mul2_G16_mul2_G256_inv0_1, rand_46);
+  HPC2(i256_e1_G256_inv0_0, i256_e1_G256_inv0_1, sb_y5_0, sb_y5_1, &temp_var_0_G4_mul2_G16_mul2_G256_inv0_0, &temp_var_0_G4_mul2_G16_mul2_G256_inv0_1, rand_16);
+  m16_ql1_G16_mul2_G256_inv0_0 = temp_var_0_G4_mul2_G16_mul2_G256_inv0_0 ^ m4_e_G4_mul2_G16_mul2_G256_inv0_0;
+  m16_ql1_G16_mul2_G256_inv0_1 = temp_var_0_G4_mul2_G16_mul2_G256_inv0_1 ^ m4_e_G4_mul2_G16_mul2_G256_inv0_1;
+  HPC2(i256_e0_G256_inv0_0, i256_e0_G256_inv0_1, sb_y4_0, sb_y4_1, &temp_var_1_G4_mul2_G16_mul2_G256_inv0_0, &temp_var_1_G4_mul2_G16_mul2_G256_inv0_1, rand_18);
+  m16_ql0_G16_mul2_G256_inv0_0 = temp_var_1_G4_mul2_G16_mul2_G256_inv0_0 ^ m4_e_G4_mul2_G16_mul2_G256_inv0_0;
+  m16_ql0_G16_mul2_G256_inv0_1 = temp_var_1_G4_mul2_G16_mul2_G256_inv0_1 ^ m4_e_G4_mul2_G16_mul2_G256_inv0_1;
+  i256_ql3_G256_inv0_0 = m16_ph1_G16_mul2_G256_inv0_0 ^ m16_e1_s2_G16_mul2_G256_inv0_0;
+  i256_ql3_G256_inv0_1 = m16_ph1_G16_mul2_G256_inv0_1 ^ m16_e1_s2_G16_mul2_G256_inv0_1;
+  i256_ql2_G256_inv0_0 = m16_ph0_G16_mul2_G256_inv0_0 ^ m16_e0_s2_G16_mul2_G256_inv0_0;
+  i256_ql2_G256_inv0_1 = m16_ph0_G16_mul2_G256_inv0_1 ^ m16_e0_s2_G16_mul2_G256_inv0_1;
+  i256_ql1_G256_inv0_0 = m16_ql1_G16_mul2_G256_inv0_0 ^ m16_e1_s2_G16_mul2_G256_inv0_0;
+  i256_ql1_G256_inv0_1 = m16_ql1_G16_mul2_G256_inv0_1 ^ m16_e1_s2_G16_mul2_G256_inv0_1;
+  i256_ql0_G256_inv0_0 = m16_ql0_G16_mul2_G256_inv0_0 ^ m16_e0_s2_G16_mul2_G256_inv0_0;
+  i256_ql0_G256_inv0_1 = m16_ql0_G16_mul2_G256_inv0_1 ^ m16_e0_s2_G16_mul2_G256_inv0_1;
+  sb_i7_0 = i256_ph3_G256_inv0_0;
+  sb_i7_1 = i256_ph3_G256_inv0_1;
+  sb_i6_0 = i256_ph2_G256_inv0_0;
+  sb_i6_1 = i256_ph2_G256_inv0_1;
+  sb_i5_0 = i256_ph1_G256_inv0_0;
+  sb_i5_1 = i256_ph1_G256_inv0_1;
+  sb_i4_0 = i256_ph0_G256_inv0_0;
+  sb_i4_1 = i256_ph0_G256_inv0_1;
+  sb_i3_0 = i256_ql3_G256_inv0_0;
+  sb_i3_1 = i256_ql3_G256_inv0_1;
+  sb_i2_0 = i256_ql2_G256_inv0_0;
+  sb_i2_1 = i256_ql2_G256_inv0_1;
+  sb_i1_0 = i256_ql1_G256_inv0_0;
+  sb_i1_1 = i256_ql1_G256_inv0_1;
+  sb_i0_0 = i256_ql0_G256_inv0_0;
+  sb_i0_1 = i256_ql0_G256_inv0_1;
+  _Bool temp_var_17_0;
+  _Bool temp_var_17_1;
+  temp_var_17_0 = sb_i1_0 ^ sb_i4_0;
+  temp_var_17_1 = sb_i1_1 ^ sb_i4_1;
+  fy0_0 = temp_var_17_0 ^ sb_i6_0;
+  fy0_1 = temp_var_17_1 ^ sb_i6_1;
+  _Bool temp_var_18_0;
+  _Bool temp_var_18_1;
+  temp_var_18_0 = sb_i1_0 ^ sb_i4_0;
+  temp_var_18_1 = sb_i1_1 ^ sb_i4_1;
+  fy1_0 = temp_var_18_0 ^ sb_i5_0;
+  fy1_1 = temp_var_18_1 ^ sb_i5_1;
+  _Bool temp_var_19_0;
+  _Bool temp_var_19_1;
+  temp_var_19_0 = sb_i0_0 ^ sb_i2_0;
+  temp_var_19_1 = sb_i0_1 ^ sb_i2_1;
+  _Bool temp_var_20_0;
+  _Bool temp_var_20_1;
+  temp_var_20_0 = temp_var_19_0 ^ sb_i3_0;
+  temp_var_20_1 = temp_var_19_1 ^ sb_i3_1;
+  _Bool temp_var_21_0;
+  _Bool temp_var_21_1;
+  temp_var_21_0 = temp_var_20_0 ^ sb_i5_0;
+  temp_var_21_1 = temp_var_20_1 ^ sb_i5_1;
+  fy2_0 = temp_var_21_0 ^ sb_i6_0;
+  fy2_1 = temp_var_21_1 ^ sb_i6_1;
+  _Bool temp_var_22_0;
+  _Bool temp_var_22_1;
+  temp_var_22_0 = sb_i3_0 ^ sb_i4_0;
+  temp_var_22_1 = sb_i3_1 ^ sb_i4_1;
+  _Bool temp_var_23_0;
+  _Bool temp_var_23_1;
+  temp_var_23_0 = temp_var_22_0 ^ sb_i5_0;
+  temp_var_23_1 = temp_var_22_1 ^ sb_i5_1;
+  _Bool temp_var_24_0;
+  _Bool temp_var_24_1;
+  temp_var_24_0 = temp_var_23_0 ^ sb_i6_0;
+  temp_var_24_1 = temp_var_23_1 ^ sb_i6_1;
+  fy3_0 = temp_var_24_0 ^ sb_i7_0;
+  fy3_1 = temp_var_24_1 ^ sb_i7_1;
+  _Bool temp_var_25_0;
+  _Bool temp_var_25_1;
+  temp_var_25_0 = sb_i3_0 ^ sb_i5_0;
+  temp_var_25_1 = sb_i3_1 ^ sb_i5_1;
+  fy4_0 = temp_var_25_0 ^ sb_i7_0;
+  fy4_1 = temp_var_25_1 ^ sb_i7_1;
+  fy5_0 = sb_i0_0 ^ sb_i6_0;
+  fy5_1 = sb_i0_1 ^ sb_i6_1;
+  fy6_0 = sb_i3_0 ^ sb_i7_0;
+  fy6_1 = sb_i3_1 ^ sb_i7_1;
+  fy7_0 = sb_i3_0 ^ sb_i5_0;
+  fy7_1 = sb_i3_1 ^ sb_i5_1;
+  *sb_o0_0 = fy0_0;
+  *sb_o0_1 = !fy0_1;
+  *sb_o1_0 = fy1_0;
+  *sb_o1_1 = !fy1_1;
+  *sb_o2_0 = fy2_0;
+  *sb_o2_1 = fy2_1;
+  *sb_o3_0 = fy3_0;
+  *sb_o3_1 = fy3_1;
+  *sb_o4_0 = fy4_0;
+  *sb_o4_1 = fy4_1;
+  *sb_o5_0 = fy5_0;
+  *sb_o5_1 = !fy5_1;
+  *sb_o6_0 = fy6_0;
+  *sb_o6_1 = !fy6_1;
+  *sb_o7_0 = fy7_0;
+  *sb_o7_1 = fy7_1;
+}
+

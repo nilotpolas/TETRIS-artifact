@@ -1,0 +1,117 @@
+{
+   "creator": "Yosys 0.33 (git sha1 2584903a0, gcc 8.4.0-1ubuntu1~18.04 -fPIC -Os)",
+   "invocation": "stat -liberty synthesis/nangate45-pdk/stdcells.lib -json ",
+   "modules": {
+      "$paramod\\MSKg16mul_dom\\d=s32'00000000000000000000000000000101": {
+         "num_wires":         279,
+         "num_wire_bits":     981,
+         "num_pub_wires":     119,
+         "num_pub_wire_bits": 821,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         285,
+         "area":              707.560000,
+         "num_cells_by_type": {
+            "DFF_X1": 100,
+            "G16_mul": 25,
+            "XNOR2_X1": 80,
+            "XOR2_X1": 80
+         }
+      },
+      "$paramod\\MSKref_sni\\d=s32'00000000000000000000000000000101": {
+         "num_wires":         18,
+         "num_wire_bits":     46,
+         "num_pub_wires":     6,
+         "num_pub_wire_bits": 26,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         20,
+         "area":              61.180000,
+         "num_cells_by_type": {
+            "DFF_X1": 10,
+            "XOR2_X1": 10
+         }
+      },
+      "\\G16_mul": {
+         "num_wires":         15,
+         "num_wire_bits":     32,
+         "num_pub_wires":     11,
+         "num_pub_wire_bits": 28,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         12,
+         "area":              12.768000,
+         "num_cells_by_type": {
+            "G4_mul": 3,
+            "G4_scl_N": 1,
+            "XOR2_X1": 8
+         }
+      },
+      "\\G4_mul": {
+         "num_wires":         12,
+         "num_wire_bits":     15,
+         "num_pub_wires":     7,
+         "num_pub_wire_bits": 10,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         7,
+         "area":              8.778000,
+         "num_cells_by_type": {
+            "NAND2_X1": 2,
+            "NOR2_X1": 1,
+            "XNOR2_X1": 4
+         }
+      },
+      "\\G4_scl_N": {
+         "num_wires":         4,
+         "num_wire_bits":     6,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 6,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1,
+         "area":              1.596000,
+         "num_cells_by_type": {
+            "XOR2_X1": 1
+         }
+      },
+      "\\MSKg16mul_hpc1": {
+         "num_wires":         19,
+         "num_wire_bits":     141,
+         "num_pub_wires":     19,
+         "num_pub_wire_bits": 141,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         5,
+         "num_cells_by_type": {
+            "$paramod\\MSKg16mul_dom\\d=s32'00000000000000000000000000000101": 1,
+            "$paramod\\MSKref_sni\\d=s32'00000000000000000000000000000101": 4
+         }
+      }
+   },
+      "design": {
+         "num_wires":         1745,
+         "num_wire_bits":     3381,
+         "num_pub_wires":     1062,
+         "num_pub_wire_bits": 2666,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1090,
+         "area":              1969.730000,
+         "num_cells_by_type": {
+            "DFF_X1": 140,
+            "NAND2_X1": 150,
+            "NOR2_X1": 75,
+            "XNOR2_X1": 380,
+            "XOR2_X1": 345
+         }
+      }
+}
+

@@ -1,0 +1,72 @@
+{
+   "creator": "Yosys 0.33 (git sha1 2584903a0, gcc 8.4.0-1ubuntu1~18.04 -fPIC -Os)",
+   "invocation": "stat -liberty synthesis/nangate45-pdk/stdcells.lib -json ",
+   "modules": {
+      "$paramod\\MSKand_dom\\d=s32'00000000000000000000000000000010": {
+         "num_wires":         21,
+         "num_wire_bits":     28,
+         "num_pub_wires":     15,
+         "num_pub_wire_bits": 22,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         12,
+         "area":              28.196000,
+         "num_cells_by_type": {
+            "AND2_X1": 2,
+            "DFF_X1": 4,
+            "NAND2_X1": 2,
+            "XNOR2_X1": 2,
+            "XOR2_X1": 2
+         }
+      },
+      "$paramod\\MSKref_sni\\d=s32'00000000000000000000000000000010": {
+         "num_wires":         8,
+         "num_wire_bits":     12,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 8,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         4,
+         "area":              12.236000,
+         "num_cells_by_type": {
+            "DFF_X1": 2,
+            "XOR2_X1": 2
+         }
+      },
+      "\\MSKand_hpc1": {
+         "num_wires":         8,
+         "num_wire_bits":     13,
+         "num_pub_wires":     8,
+         "num_pub_wire_bits": 13,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         2,
+         "num_cells_by_type": {
+            "$paramod\\MSKand_dom\\d=s32'00000000000000000000000000000010": 1,
+            "$paramod\\MSKref_sni\\d=s32'00000000000000000000000000000010": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         37,
+         "num_wire_bits":     53,
+         "num_pub_wires":     28,
+         "num_pub_wire_bits": 43,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         16,
+         "area":              40.432000,
+         "num_cells_by_type": {
+            "AND2_X1": 2,
+            "DFF_X1": 6,
+            "NAND2_X1": 2,
+            "XNOR2_X1": 2,
+            "XOR2_X1": 4
+         }
+      }
+}
+

@@ -1,0 +1,48 @@
+{
+  "creator": "Yosys 0.33 (git sha1 2584903a0, gcc 8.4.0-1ubuntu1~18.04 -fPIC -Os)",
+  "modules": {
+    "MSKcst": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "top": "00000000000000000000000000000001",
+        "src": "gadget_library/MSK/MSKcst.v:18.1-28.10"
+      },
+      "parameter_default_values": {
+        "count": "00000000000000000000000000000001",
+        "d": "00000000000000000000000000000010"
+      },
+      "ports": {
+        "cst": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 2, "0" ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "cst": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "fv_type": "control",
+            "src": "gadget_library/MSK/MSKcst.v:20.51-20.54"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 2, "0" ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKcst.v:21.82-21.85"
+          }
+        }
+      }
+    }
+  }
+}

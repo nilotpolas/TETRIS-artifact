@@ -1,0 +1,6 @@
+{
+    "inputFile": "/home/tapish08/Desktop/DSE-Framework/TestFiles/TAC_files/output.c",
+    "inlinerOutput": "/home/tapish08/Desktop/DSE-Framework/TestFiles/inlined_output/output.c",
+    "topModule": "sbox",
+    "turn": 1
+}

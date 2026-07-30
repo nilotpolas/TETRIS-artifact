@@ -1,0 +1,64 @@
+{
+   "creator": "Yosys 0.33 (git sha1 2584903a0, gcc 8.4.0-1ubuntu1~18.04 -fPIC -Os)",
+   "invocation": "stat -liberty synthesis/nangate45-pdk/stdcells.lib -json ",
+   "modules": {
+      "$paramod$2589394551ed5df03e31ad3b9ee102c6002b20f4\\MSKmux": {
+         "num_wires":         4,
+         "num_wire_bits":     16,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 16,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         5,
+         "area":              9.310000,
+         "num_cells_by_type": {
+            "MUX2_X1": 5
+         }
+      },
+      "$paramod$2589394551ed5df03e31ad3b9ee102c6002b20f4\\MSKreg": {
+         "num_wires":         9,
+         "num_wire_bits":     21,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 16,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         5,
+         "area":              22.610000,
+         "num_cells_by_type": {
+            "DFF_X1": 5
+         }
+      },
+      "\\MSKregEn": {
+         "num_wires":         5,
+         "num_wire_bits":     17,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 17,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         2,
+         "num_cells_by_type": {
+            "$paramod$2589394551ed5df03e31ad3b9ee102c6002b20f4\\MSKmux": 1,
+            "$paramod$2589394551ed5df03e31ad3b9ee102c6002b20f4\\MSKreg": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         18,
+         "num_wire_bits":     54,
+         "num_pub_wires":     13,
+         "num_pub_wire_bits": 49,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         10,
+         "area":              31.920000,
+         "num_cells_by_type": {
+            "DFF_X1": 5,
+            "MUX2_X1": 5
+         }
+      }
+}
+

@@ -1,0 +1,1606 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.33 (git sha1 2584903a0, gcc 8.4.0-1ubuntu1~18.04 -fPIC -Os)
+
+1. Executing Verilog-2005 frontend: gadget_library/BIN/bin_REG.v
+Parsing Verilog input from `gadget_library/BIN/bin_REG.v' to AST representation.
+Generating RTLIL representation for module `\bin_REG'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: gadget_library/MSK/G16_mul.v
+Parsing Verilog input from `gadget_library/MSK/G16_mul.v' to AST representation.
+Generating RTLIL representation for module `\G4_scl_N'.
+Generating RTLIL representation for module `\G16_mul'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: gadget_library/MSK/G4_mul.v
+Parsing Verilog input from `gadget_library/MSK/G4_mul.v' to AST representation.
+Generating RTLIL representation for module `\G4_mul'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: gadget_library/MSK/MSKand_dom.v
+Parsing Verilog input from `gadget_library/MSK/MSKand_dom.v' to AST representation.
+Generating RTLIL representation for module `\MSKand_dom'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: gadget_library/MSK/MSKand_ghpc.v
+Parsing Verilog input from `gadget_library/MSK/MSKand_ghpc.v' to AST representation.
+Generating RTLIL representation for module `\MSKand_ghpc'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: gadget_library/MSK/MSKand_ghpcll.v
+Parsing Verilog input from `gadget_library/MSK/MSKand_ghpcll.v' to AST representation.
+Generating RTLIL representation for module `\MSKand_ghpcll'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: gadget_library/MSK/MSKand_hpc1.v
+Parsing Verilog input from `gadget_library/MSK/MSKand_hpc1.v' to AST representation.
+Generating RTLIL representation for module `\MSKand_hpc1'.
+Successfully finished Verilog frontend.
+
+8. Executing Verilog-2005 frontend: gadget_library/MSK/MSKand_hpc2.v
+Parsing Verilog input from `gadget_library/MSK/MSKand_hpc2.v' to AST representation.
+Generating RTLIL representation for module `\MSKand_hpc2'.
+Successfully finished Verilog frontend.
+
+9. Executing Verilog-2005 frontend: gadget_library/MSK/MSKand_hpc2_cross.v
+Parsing Verilog input from `gadget_library/MSK/MSKand_hpc2_cross.v' to AST representation.
+Generating RTLIL representation for module `\MSKand_hpc2_cross'.
+Successfully finished Verilog frontend.
+
+10. Executing Verilog-2005 frontend: gadget_library/MSK/MSKand_hpc2_cross_swapped.v
+Parsing Verilog input from `gadget_library/MSK/MSKand_hpc2_cross_swapped.v' to AST representation.
+Generating RTLIL representation for module `\MSKand_hpc2_cross_swapped'.
+Successfully finished Verilog frontend.
+
+11. Executing Verilog-2005 frontend: gadget_library/MSK/MSKand_hpc2_swapped.v
+Parsing Verilog input from `gadget_library/MSK/MSKand_hpc2_swapped.v' to AST representation.
+Generating RTLIL representation for module `\MSKand_hpc2_swapped'.
+Successfully finished Verilog frontend.
+
+12. Executing Verilog-2005 frontend: gadget_library/MSK/MSKand_hpc2o.v
+Parsing Verilog input from `gadget_library/MSK/MSKand_hpc2o.v' to AST representation.
+Generating RTLIL representation for module `\MSKand_hpc2o'.
+Successfully finished Verilog frontend.
+
+13. Executing Verilog-2005 frontend: gadget_library/MSK/MSKand_hpc2o_cross.v
+Parsing Verilog input from `gadget_library/MSK/MSKand_hpc2o_cross.v' to AST representation.
+Generating RTLIL representation for module `\MSKand_hpc2o_cross'.
+Successfully finished Verilog frontend.
+
+14. Executing Verilog-2005 frontend: gadget_library/MSK/MSKand_hpc2o_cross_swapped.v
+Parsing Verilog input from `gadget_library/MSK/MSKand_hpc2o_cross_swapped.v' to AST representation.
+Generating RTLIL representation for module `\MSKand_hpc2o_cross_swapped'.
+Successfully finished Verilog frontend.
+
+15. Executing Verilog-2005 frontend: gadget_library/MSK/MSKand_hpc2o_swapped.v
+Parsing Verilog input from `gadget_library/MSK/MSKand_hpc2o_swapped.v' to AST representation.
+Generating RTLIL representation for module `\MSKand_hpc2o_swapped'.
+Successfully finished Verilog frontend.
+
+16. Executing Verilog-2005 frontend: gadget_library/MSK/MSKand_hpc2o_swapped_tof.v
+Parsing Verilog input from `gadget_library/MSK/MSKand_hpc2o_swapped_tof.v' to AST representation.
+Generating RTLIL representation for module `\MSKand_hpc2o_swapped_tof'.
+Successfully finished Verilog frontend.
+
+17. Executing Verilog-2005 frontend: gadget_library/MSK/MSKand_hpc2o_tof.v
+Parsing Verilog input from `gadget_library/MSK/MSKand_hpc2o_tof.v' to AST representation.
+Generating RTLIL representation for module `\MSKand_hpc2o_tof'.
+Successfully finished Verilog frontend.
+
+18. Executing Verilog-2005 frontend: gadget_library/MSK/MSKand_hpc3.v
+Parsing Verilog input from `gadget_library/MSK/MSKand_hpc3.v' to AST representation.
+Generating RTLIL representation for module `\MSKand_hpc3'.
+Successfully finished Verilog frontend.
+
+19. Executing Verilog-2005 frontend: gadget_library/MSK/MSKand_hpc3_cross.v
+Parsing Verilog input from `gadget_library/MSK/MSKand_hpc3_cross.v' to AST representation.
+Generating RTLIL representation for module `\MSKand_hpc3_cross'.
+Successfully finished Verilog frontend.
+
+20. Executing Verilog-2005 frontend: gadget_library/MSK/MSKand_hpc3_cross_er.v
+Parsing Verilog input from `gadget_library/MSK/MSKand_hpc3_cross_er.v' to AST representation.
+Generating RTLIL representation for module `\MSKand_hpc3_cross_er'.
+Successfully finished Verilog frontend.
+
+21. Executing Verilog-2005 frontend: gadget_library/MSK/MSKand_hpc3_cross_er_swapped.v
+Parsing Verilog input from `gadget_library/MSK/MSKand_hpc3_cross_er_swapped.v' to AST representation.
+Generating RTLIL representation for module `\MSKand_hpc3_cross_er_swapped'.
+Successfully finished Verilog frontend.
+
+22. Executing Verilog-2005 frontend: gadget_library/MSK/MSKand_hpc3o.v
+Parsing Verilog input from `gadget_library/MSK/MSKand_hpc3o.v' to AST representation.
+Generating RTLIL representation for module `\MSKand_hpc3o'.
+Successfully finished Verilog frontend.
+
+23. Executing Verilog-2005 frontend: gadget_library/MSK/MSKand_hpc3o_swapped.v
+Parsing Verilog input from `gadget_library/MSK/MSKand_hpc3o_swapped.v' to AST representation.
+Generating RTLIL representation for module `\MSKand_hpc3o_swapped'.
+Successfully finished Verilog frontend.
+
+24. Executing Verilog-2005 frontend: gadget_library/MSK/MSKand_hpc3o_swapped_tof.v
+Parsing Verilog input from `gadget_library/MSK/MSKand_hpc3o_swapped_tof.v' to AST representation.
+Generating RTLIL representation for module `\MSKand_hpc3o_swapped_tof'.
+Successfully finished Verilog frontend.
+
+25. Executing Verilog-2005 frontend: gadget_library/MSK/MSKand_hpc3o_tof.v
+Parsing Verilog input from `gadget_library/MSK/MSKand_hpc3o_tof.v' to AST representation.
+Generating RTLIL representation for module `\MSKand_hpc3o_tof'.
+Successfully finished Verilog frontend.
+
+26. Executing Verilog-2005 frontend: gadget_library/MSK/MSKand_sharewise.v
+Parsing Verilog input from `gadget_library/MSK/MSKand_sharewise.v' to AST representation.
+Generating RTLIL representation for module `\MSKand_sharewise'.
+Successfully finished Verilog frontend.
+
+27. Executing Verilog-2005 frontend: gadget_library/MSK/MSKcst.v
+Parsing Verilog input from `gadget_library/MSK/MSKcst.v' to AST representation.
+Generating RTLIL representation for module `\MSKcst'.
+Successfully finished Verilog frontend.
+
+28. Executing Verilog-2005 frontend: gadget_library/MSK/MSKg16mul_dom.v
+Parsing Verilog input from `gadget_library/MSK/MSKg16mul_dom.v' to AST representation.
+Generating RTLIL representation for module `\MSKg16mul_dom'.
+Successfully finished Verilog frontend.
+
+29. Executing Verilog-2005 frontend: gadget_library/MSK/MSKg16mul_hpc1.v
+Parsing Verilog input from `gadget_library/MSK/MSKg16mul_hpc1.v' to AST representation.
+Generating RTLIL representation for module `\MSKg16mul_hpc1'.
+Successfully finished Verilog frontend.
+
+30. Executing Verilog-2005 frontend: gadget_library/MSK/MSKg16mul_hpc3.v
+Parsing Verilog input from `gadget_library/MSK/MSKg16mul_hpc3.v' to AST representation.
+Generating RTLIL representation for module `\MSKg16mul_hpc3'.
+Successfully finished Verilog frontend.
+
+31. Executing Verilog-2005 frontend: gadget_library/MSK/MSKg4mul_dom.v
+Parsing Verilog input from `gadget_library/MSK/MSKg4mul_dom.v' to AST representation.
+Generating RTLIL representation for module `\MSKg4mul_dom'.
+Successfully finished Verilog frontend.
+
+32. Executing Verilog-2005 frontend: gadget_library/MSK/MSKg4mul_hpc1.v
+Parsing Verilog input from `gadget_library/MSK/MSKg4mul_hpc1.v' to AST representation.
+Generating RTLIL representation for module `\MSKg4mul_hpc1'.
+Successfully finished Verilog frontend.
+
+33. Executing Verilog-2005 frontend: gadget_library/MSK/MSKg4mul_hpc3.v
+Parsing Verilog input from `gadget_library/MSK/MSKg4mul_hpc3.v' to AST representation.
+Generating RTLIL representation for module `\MSKg4mul_hpc3'.
+Successfully finished Verilog frontend.
+
+34. Executing Verilog-2005 frontend: gadget_library/MSK/MSKinv.v
+Parsing Verilog input from `gadget_library/MSK/MSKinv.v' to AST representation.
+Generating RTLIL representation for module `\MSKinv'.
+Successfully finished Verilog frontend.
+
+35. Executing Verilog-2005 frontend: gadget_library/MSK/MSKmux.v
+Parsing Verilog input from `gadget_library/MSK/MSKmux.v' to AST representation.
+Generating RTLIL representation for module `\MSKmux'.
+Successfully finished Verilog frontend.
+
+36. Executing Verilog-2005 frontend: gadget_library/MSK/MSKnor_hpc2.v
+Parsing Verilog input from `gadget_library/MSK/MSKnor_hpc2.v' to AST representation.
+Generating RTLIL representation for module `\MSKnor_hpc2'.
+Successfully finished Verilog frontend.
+
+37. Executing Verilog-2005 frontend: gadget_library/MSK/MSKref_sni.v
+Parsing Verilog input from `gadget_library/MSK/MSKref_sni.v' to AST representation.
+Generating RTLIL representation for module `\MSKref_sni'.
+Successfully finished Verilog frontend.
+
+38. Executing Verilog-2005 frontend: gadget_library/MSK/MSKreg.v
+Parsing Verilog input from `gadget_library/MSK/MSKreg.v' to AST representation.
+Generating RTLIL representation for module `\MSKreg'.
+Successfully finished Verilog frontend.
+
+39. Executing Verilog-2005 frontend: gadget_library/MSK/MSKregEn.v
+Parsing Verilog input from `gadget_library/MSK/MSKregEn.v' to AST representation.
+Generating RTLIL representation for module `\MSKregEn'.
+Successfully finished Verilog frontend.
+
+40. Executing Verilog-2005 frontend: gadget_library/MSK/MSKscanReg.v
+Parsing Verilog input from `gadget_library/MSK/MSKscanReg.v' to AST representation.
+Generating RTLIL representation for module `\MSKscanReg'.
+Successfully finished Verilog frontend.
+
+41. Executing Verilog-2005 frontend: gadget_library/MSK/MSKxnor.v
+Parsing Verilog input from `gadget_library/MSK/MSKxnor.v' to AST representation.
+Generating RTLIL representation for module `\MSKxnor'.
+Successfully finished Verilog frontend.
+
+42. Executing Verilog-2005 frontend: gadget_library/MSK/MSKxor.v
+Parsing Verilog input from `gadget_library/MSK/MSKxor.v' to AST representation.
+Generating RTLIL representation for module `\MSKxor'.
+Successfully finished Verilog frontend.
+
+43. Executing Verilog-2005 frontend: gadget_library/RNG/trivium/prng_top.v
+Parsing Verilog input from `gadget_library/RNG/trivium/prng_top.v' to AST representation.
+Generating RTLIL representation for module `\prng_top'.
+Successfully finished Verilog frontend.
+
+44. Executing Verilog-2005 frontend: gadget_library/RNG/trivium/trivium_prng.v
+Parsing Verilog input from `gadget_library/RNG/trivium/trivium_prng.v' to AST representation.
+Generating RTLIL representation for module `\trivium_prng'.
+Successfully finished Verilog frontend.
+
+45. Executing HIERARCHY pass (managing design hierarchy).
+
+45.1. Analyzing design hierarchy..
+Top module:  \MSKg16mul_dom
+Used module:     \G16_mul
+Used module:         \G4_mul
+Used module:         \G4_scl_N
+
+45.2. Analyzing design hierarchy..
+Top module:  \MSKg16mul_dom
+Used module:     \G16_mul
+Used module:         \G4_mul
+Used module:         \G4_scl_N
+Removing unused module `\trivium_prng'.
+Removing unused module `\prng_top'.
+Removing unused module `\MSKxor'.
+Removing unused module `\MSKxnor'.
+Removing unused module `\MSKscanReg'.
+Removing unused module `\MSKregEn'.
+Removing unused module `\MSKreg'.
+Removing unused module `\MSKref_sni'.
+Removing unused module `\MSKnor_hpc2'.
+Removing unused module `\MSKmux'.
+Removing unused module `\MSKinv'.
+Removing unused module `\MSKg4mul_hpc3'.
+Removing unused module `\MSKg4mul_hpc1'.
+Removing unused module `\MSKg4mul_dom'.
+Removing unused module `\MSKg16mul_hpc3'.
+Removing unused module `\MSKg16mul_hpc1'.
+Removing unused module `\MSKcst'.
+Removing unused module `\MSKand_sharewise'.
+Removing unused module `\MSKand_hpc3o_tof'.
+Removing unused module `\MSKand_hpc3o_swapped_tof'.
+Removing unused module `\MSKand_hpc3o_swapped'.
+Removing unused module `\MSKand_hpc3o'.
+Removing unused module `\MSKand_hpc3_cross_er_swapped'.
+Removing unused module `\MSKand_hpc3_cross_er'.
+Removing unused module `\MSKand_hpc3_cross'.
+Removing unused module `\MSKand_hpc3'.
+Removing unused module `\MSKand_hpc2o_tof'.
+Removing unused module `\MSKand_hpc2o_swapped_tof'.
+Removing unused module `\MSKand_hpc2o_swapped'.
+Removing unused module `\MSKand_hpc2o_cross_swapped'.
+Removing unused module `\MSKand_hpc2o_cross'.
+Removing unused module `\MSKand_hpc2o'.
+Removing unused module `\MSKand_hpc2_swapped'.
+Removing unused module `\MSKand_hpc2_cross_swapped'.
+Removing unused module `\MSKand_hpc2_cross'.
+Removing unused module `\MSKand_hpc2'.
+Removing unused module `\MSKand_hpc1'.
+Removing unused module `\MSKand_ghpcll'.
+Removing unused module `\MSKand_ghpc'.
+Removing unused module `\MSKand_dom'.
+Removing unused module `\bin_REG'.
+Removed 41 unused modules.
+
+46. Executing PROC pass (convert processes to netlists).
+
+46.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+46.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+46.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 135 assignments to connections.
+
+46.4. Executing PROC_INIT pass (extract init attributes).
+
+46.5. Executing PROC_ARST pass (detect async resets in processes).
+
+46.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+46.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$1002'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$1001'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$1000'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$999'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$998'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$997'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$996'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$995'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$994'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$993'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$957'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$955'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$953'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$951'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$949'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$943'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$941'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$939'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$937'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$935'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$929'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$927'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$925'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$923'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$921'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$915'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$913'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$911'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$909'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$907'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$901'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$899'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$897'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$895'.
+Creating decoders for process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$893'.
+
+46.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\MSKg16mul_dom.\igen[3].jgen[4].offset' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$1002'.
+No latch inferred for signal `\MSKg16mul_dom.\igen[2].jgen[4].offset' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$1001'.
+No latch inferred for signal `\MSKg16mul_dom.\igen[2].jgen[3].offset' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$1000'.
+No latch inferred for signal `\MSKg16mul_dom.\igen[1].jgen[4].offset' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$999'.
+No latch inferred for signal `\MSKg16mul_dom.\igen[1].jgen[3].offset' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$998'.
+No latch inferred for signal `\MSKg16mul_dom.\igen[1].jgen[2].offset' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$997'.
+No latch inferred for signal `\MSKg16mul_dom.\igen[0].jgen[4].offset' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$996'.
+No latch inferred for signal `\MSKg16mul_dom.\igen[0].jgen[3].offset' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$995'.
+No latch inferred for signal `\MSKg16mul_dom.\igen[0].jgen[2].offset' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$994'.
+No latch inferred for signal `\MSKg16mul_dom.\igen[0].jgen[1].offset' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$993'.
+No latch inferred for signal `\MSKg16mul_dom.\rnd_mat[0]' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+No latch inferred for signal `\MSKg16mul_dom.\rnd_mat[1]' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+No latch inferred for signal `\MSKg16mul_dom.\rnd_mat[2]' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+No latch inferred for signal `\MSKg16mul_dom.\rnd_mat[3]' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+No latch inferred for signal `\MSKg16mul_dom.\rnd_mat[4]' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+No latch inferred for signal `\MSKg16mul_dom.\rnd_mat[5]' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+No latch inferred for signal `\MSKg16mul_dom.\rnd_mat[6]' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+No latch inferred for signal `\MSKg16mul_dom.\rnd_mat[7]' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+No latch inferred for signal `\MSKg16mul_dom.\rnd_mat[8]' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+No latch inferred for signal `\MSKg16mul_dom.\rnd_mat[9]' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+No latch inferred for signal `\MSKg16mul_dom.\rnd_mat[10]' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+No latch inferred for signal `\MSKg16mul_dom.\rnd_mat[11]' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+No latch inferred for signal `\MSKg16mul_dom.\rnd_mat[12]' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+No latch inferred for signal `\MSKg16mul_dom.\rnd_mat[13]' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+No latch inferred for signal `\MSKg16mul_dom.\rnd_mat[14]' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+No latch inferred for signal `\MSKg16mul_dom.\rnd_mat[15]' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+No latch inferred for signal `\MSKg16mul_dom.\rnd_mat[16]' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+No latch inferred for signal `\MSKg16mul_dom.\rnd_mat[17]' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+No latch inferred for signal `\MSKg16mul_dom.\rnd_mat[18]' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+No latch inferred for signal `\MSKg16mul_dom.\rnd_mat[19]' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+No latch inferred for signal `\MSKg16mul_dom.\rnd_mat[20]' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+No latch inferred for signal `\MSKg16mul_dom.\rnd_mat[21]' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+No latch inferred for signal `\MSKg16mul_dom.\rnd_mat[22]' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+No latch inferred for signal `\MSKg16mul_dom.\rnd_mat[23]' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+No latch inferred for signal `\MSKg16mul_dom.\rnd_mat[24]' from process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+
+46.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\MSKg16mul_dom.\ParProdI[4].rfrsh_reg0 [4]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$957'.
+  created $dff cell `$procdff$1584' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[4].rfrsh_reg1 [4]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$957'.
+  created $dff cell `$procdff$1585' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[4].rfrsh_reg2 [4]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$957'.
+  created $dff cell `$procdff$1586' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[4].rfrsh_reg3 [4]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$957'.
+  created $dff cell `$procdff$1587' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[4].rfrsh_reg0 [3]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$955'.
+  created $dff cell `$procdff$1588' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[4].rfrsh_reg1 [3]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$955'.
+  created $dff cell `$procdff$1589' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[4].rfrsh_reg2 [3]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$955'.
+  created $dff cell `$procdff$1590' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[4].rfrsh_reg3 [3]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$955'.
+  created $dff cell `$procdff$1591' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[4].rfrsh_reg0 [2]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$953'.
+  created $dff cell `$procdff$1592' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[4].rfrsh_reg1 [2]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$953'.
+  created $dff cell `$procdff$1593' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[4].rfrsh_reg2 [2]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$953'.
+  created $dff cell `$procdff$1594' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[4].rfrsh_reg3 [2]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$953'.
+  created $dff cell `$procdff$1595' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[4].rfrsh_reg0 [1]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$951'.
+  created $dff cell `$procdff$1596' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[4].rfrsh_reg1 [1]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$951'.
+  created $dff cell `$procdff$1597' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[4].rfrsh_reg2 [1]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$951'.
+  created $dff cell `$procdff$1598' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[4].rfrsh_reg3 [1]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$951'.
+  created $dff cell `$procdff$1599' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[4].rfrsh_reg0 [0]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$949'.
+  created $dff cell `$procdff$1600' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[4].rfrsh_reg1 [0]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$949'.
+  created $dff cell `$procdff$1601' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[4].rfrsh_reg2 [0]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$949'.
+  created $dff cell `$procdff$1602' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[4].rfrsh_reg3 [0]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$949'.
+  created $dff cell `$procdff$1603' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[3].rfrsh_reg0 [4]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$943'.
+  created $dff cell `$procdff$1604' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[3].rfrsh_reg1 [4]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$943'.
+  created $dff cell `$procdff$1605' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[3].rfrsh_reg2 [4]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$943'.
+  created $dff cell `$procdff$1606' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[3].rfrsh_reg3 [4]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$943'.
+  created $dff cell `$procdff$1607' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[3].rfrsh_reg0 [3]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$941'.
+  created $dff cell `$procdff$1608' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[3].rfrsh_reg1 [3]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$941'.
+  created $dff cell `$procdff$1609' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[3].rfrsh_reg2 [3]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$941'.
+  created $dff cell `$procdff$1610' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[3].rfrsh_reg3 [3]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$941'.
+  created $dff cell `$procdff$1611' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[3].rfrsh_reg0 [2]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$939'.
+  created $dff cell `$procdff$1612' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[3].rfrsh_reg1 [2]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$939'.
+  created $dff cell `$procdff$1613' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[3].rfrsh_reg2 [2]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$939'.
+  created $dff cell `$procdff$1614' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[3].rfrsh_reg3 [2]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$939'.
+  created $dff cell `$procdff$1615' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[3].rfrsh_reg0 [1]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$937'.
+  created $dff cell `$procdff$1616' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[3].rfrsh_reg1 [1]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$937'.
+  created $dff cell `$procdff$1617' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[3].rfrsh_reg2 [1]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$937'.
+  created $dff cell `$procdff$1618' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[3].rfrsh_reg3 [1]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$937'.
+  created $dff cell `$procdff$1619' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[3].rfrsh_reg0 [0]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$935'.
+  created $dff cell `$procdff$1620' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[3].rfrsh_reg1 [0]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$935'.
+  created $dff cell `$procdff$1621' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[3].rfrsh_reg2 [0]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$935'.
+  created $dff cell `$procdff$1622' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[3].rfrsh_reg3 [0]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$935'.
+  created $dff cell `$procdff$1623' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[2].rfrsh_reg0 [4]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$929'.
+  created $dff cell `$procdff$1624' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[2].rfrsh_reg1 [4]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$929'.
+  created $dff cell `$procdff$1625' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[2].rfrsh_reg2 [4]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$929'.
+  created $dff cell `$procdff$1626' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[2].rfrsh_reg3 [4]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$929'.
+  created $dff cell `$procdff$1627' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[2].rfrsh_reg0 [3]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$927'.
+  created $dff cell `$procdff$1628' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[2].rfrsh_reg1 [3]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$927'.
+  created $dff cell `$procdff$1629' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[2].rfrsh_reg2 [3]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$927'.
+  created $dff cell `$procdff$1630' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[2].rfrsh_reg3 [3]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$927'.
+  created $dff cell `$procdff$1631' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[2].rfrsh_reg0 [2]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$925'.
+  created $dff cell `$procdff$1632' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[2].rfrsh_reg1 [2]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$925'.
+  created $dff cell `$procdff$1633' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[2].rfrsh_reg2 [2]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$925'.
+  created $dff cell `$procdff$1634' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[2].rfrsh_reg3 [2]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$925'.
+  created $dff cell `$procdff$1635' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[2].rfrsh_reg0 [1]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$923'.
+  created $dff cell `$procdff$1636' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[2].rfrsh_reg1 [1]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$923'.
+  created $dff cell `$procdff$1637' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[2].rfrsh_reg2 [1]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$923'.
+  created $dff cell `$procdff$1638' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[2].rfrsh_reg3 [1]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$923'.
+  created $dff cell `$procdff$1639' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[2].rfrsh_reg0 [0]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$921'.
+  created $dff cell `$procdff$1640' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[2].rfrsh_reg1 [0]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$921'.
+  created $dff cell `$procdff$1641' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[2].rfrsh_reg2 [0]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$921'.
+  created $dff cell `$procdff$1642' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[2].rfrsh_reg3 [0]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$921'.
+  created $dff cell `$procdff$1643' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[1].rfrsh_reg0 [4]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$915'.
+  created $dff cell `$procdff$1644' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[1].rfrsh_reg1 [4]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$915'.
+  created $dff cell `$procdff$1645' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[1].rfrsh_reg2 [4]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$915'.
+  created $dff cell `$procdff$1646' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[1].rfrsh_reg3 [4]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$915'.
+  created $dff cell `$procdff$1647' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[1].rfrsh_reg0 [3]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$913'.
+  created $dff cell `$procdff$1648' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[1].rfrsh_reg1 [3]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$913'.
+  created $dff cell `$procdff$1649' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[1].rfrsh_reg2 [3]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$913'.
+  created $dff cell `$procdff$1650' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[1].rfrsh_reg3 [3]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$913'.
+  created $dff cell `$procdff$1651' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[1].rfrsh_reg0 [2]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$911'.
+  created $dff cell `$procdff$1652' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[1].rfrsh_reg1 [2]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$911'.
+  created $dff cell `$procdff$1653' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[1].rfrsh_reg2 [2]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$911'.
+  created $dff cell `$procdff$1654' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[1].rfrsh_reg3 [2]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$911'.
+  created $dff cell `$procdff$1655' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[1].rfrsh_reg0 [1]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$909'.
+  created $dff cell `$procdff$1656' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[1].rfrsh_reg1 [1]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$909'.
+  created $dff cell `$procdff$1657' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[1].rfrsh_reg2 [1]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$909'.
+  created $dff cell `$procdff$1658' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[1].rfrsh_reg3 [1]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$909'.
+  created $dff cell `$procdff$1659' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[1].rfrsh_reg0 [0]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$907'.
+  created $dff cell `$procdff$1660' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[1].rfrsh_reg1 [0]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$907'.
+  created $dff cell `$procdff$1661' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[1].rfrsh_reg2 [0]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$907'.
+  created $dff cell `$procdff$1662' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[1].rfrsh_reg3 [0]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$907'.
+  created $dff cell `$procdff$1663' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[0].rfrsh_reg0 [4]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$901'.
+  created $dff cell `$procdff$1664' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[0].rfrsh_reg1 [4]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$901'.
+  created $dff cell `$procdff$1665' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[0].rfrsh_reg2 [4]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$901'.
+  created $dff cell `$procdff$1666' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[0].rfrsh_reg3 [4]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$901'.
+  created $dff cell `$procdff$1667' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[0].rfrsh_reg0 [3]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$899'.
+  created $dff cell `$procdff$1668' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[0].rfrsh_reg1 [3]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$899'.
+  created $dff cell `$procdff$1669' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[0].rfrsh_reg2 [3]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$899'.
+  created $dff cell `$procdff$1670' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[0].rfrsh_reg3 [3]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$899'.
+  created $dff cell `$procdff$1671' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[0].rfrsh_reg0 [2]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$897'.
+  created $dff cell `$procdff$1672' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[0].rfrsh_reg1 [2]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$897'.
+  created $dff cell `$procdff$1673' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[0].rfrsh_reg2 [2]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$897'.
+  created $dff cell `$procdff$1674' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[0].rfrsh_reg3 [2]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$897'.
+  created $dff cell `$procdff$1675' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[0].rfrsh_reg0 [1]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$895'.
+  created $dff cell `$procdff$1676' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[0].rfrsh_reg1 [1]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$895'.
+  created $dff cell `$procdff$1677' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[0].rfrsh_reg2 [1]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$895'.
+  created $dff cell `$procdff$1678' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[0].rfrsh_reg3 [1]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$895'.
+  created $dff cell `$procdff$1679' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[0].rfrsh_reg0 [0]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$893'.
+  created $dff cell `$procdff$1680' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[0].rfrsh_reg1 [0]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$893'.
+  created $dff cell `$procdff$1681' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[0].rfrsh_reg2 [0]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$893'.
+  created $dff cell `$procdff$1682' with positive edge clock.
+Creating register for signal `\MSKg16mul_dom.\ParProdI[0].rfrsh_reg3 [0]' using process `\MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$893'.
+  created $dff cell `$procdff$1683' with positive edge clock.
+
+46.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+46.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$1002'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$1001'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$1000'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$999'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$998'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$997'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$996'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$995'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$994'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:50$993'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:0$962'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$957'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$955'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$953'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$951'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$949'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$943'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$941'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$939'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$937'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$935'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$929'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$927'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$925'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$923'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$921'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$915'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$913'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$911'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$909'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$907'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$901'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$899'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$897'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$895'.
+Removing empty process `MSKg16mul_dom.$proc$gadget_library/MSK/MSKg16mul_dom.v:68$893'.
+Cleaned up 0 empty switches.
+
+46.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module G4_mul.
+Optimizing module G16_mul.
+Optimizing module G4_scl_N.
+Optimizing module MSKg16mul_dom.
+<suppressed ~35 debug messages>
+
+47. Executing OPT pass (performing simple optimizations).
+
+47.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module G4_mul.
+Optimizing module G16_mul.
+Optimizing module G4_scl_N.
+Optimizing module MSKg16mul_dom.
+
+47.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\G4_mul'.
+Finding identical cells in module `\G16_mul'.
+Finding identical cells in module `\G4_scl_N'.
+Finding identical cells in module `\MSKg16mul_dom'.
+Removed a total of 0 cells.
+
+47.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \G4_mul..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \G16_mul..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \G4_scl_N..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \MSKg16mul_dom..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+47.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \G4_mul.
+  Optimizing cells in module \G16_mul.
+  Optimizing cells in module \G4_scl_N.
+  Optimizing cells in module \MSKg16mul_dom.
+Performed a total of 0 changes.
+
+47.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\G4_mul'.
+Finding identical cells in module `\G16_mul'.
+Finding identical cells in module `\G4_scl_N'.
+Finding identical cells in module `\MSKg16mul_dom'.
+Removed a total of 0 cells.
+
+47.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+47.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \G4_mul..
+Finding unused cells or wires in module \G16_mul..
+Finding unused cells or wires in module \G4_scl_N..
+Finding unused cells or wires in module \MSKg16mul_dom..
+Removed 0 unused cells and 216 unused wires.
+<suppressed ~4 debug messages>
+
+47.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module G16_mul.
+Optimizing module G4_mul.
+Optimizing module G4_scl_N.
+Optimizing module MSKg16mul_dom.
+
+47.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+47.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \G16_mul..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \G4_mul..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \G4_scl_N..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \MSKg16mul_dom..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+47.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \G16_mul.
+  Optimizing cells in module \G4_mul.
+  Optimizing cells in module \G4_scl_N.
+  Optimizing cells in module \MSKg16mul_dom.
+Performed a total of 0 changes.
+
+47.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\G16_mul'.
+Finding identical cells in module `\G4_mul'.
+Finding identical cells in module `\G4_scl_N'.
+Finding identical cells in module `\MSKg16mul_dom'.
+Removed a total of 0 cells.
+
+47.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+47.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \G16_mul..
+Finding unused cells or wires in module \G4_mul..
+Finding unused cells or wires in module \G4_scl_N..
+Finding unused cells or wires in module \MSKg16mul_dom..
+
+47.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module G16_mul.
+Optimizing module G4_mul.
+Optimizing module G4_scl_N.
+Optimizing module MSKg16mul_dom.
+
+47.16. Finished OPT passes. (There is nothing left to do.)
+
+48. Executing FSM pass (extract and optimize FSM).
+
+48.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+48.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+48.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+48.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \G16_mul..
+Finding unused cells or wires in module \G4_mul..
+Finding unused cells or wires in module \G4_scl_N..
+Finding unused cells or wires in module \MSKg16mul_dom..
+
+48.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+48.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+48.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+48.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+49. Executing OPT pass (performing simple optimizations).
+
+49.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module G16_mul.
+Optimizing module G4_mul.
+Optimizing module G4_scl_N.
+Optimizing module MSKg16mul_dom.
+
+49.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\G16_mul'.
+Finding identical cells in module `\G4_mul'.
+Finding identical cells in module `\G4_scl_N'.
+Finding identical cells in module `\MSKg16mul_dom'.
+Removed a total of 0 cells.
+
+49.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \G16_mul..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \G4_mul..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \G4_scl_N..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \MSKg16mul_dom..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+49.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \G16_mul.
+  Optimizing cells in module \G4_mul.
+  Optimizing cells in module \G4_scl_N.
+  Optimizing cells in module \MSKg16mul_dom.
+Performed a total of 0 changes.
+
+49.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\G16_mul'.
+Finding identical cells in module `\G4_mul'.
+Finding identical cells in module `\G4_scl_N'.
+Finding identical cells in module `\MSKg16mul_dom'.
+Removed a total of 0 cells.
+
+49.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+49.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \G16_mul..
+Finding unused cells or wires in module \G4_mul..
+Finding unused cells or wires in module \G4_scl_N..
+Finding unused cells or wires in module \MSKg16mul_dom..
+
+49.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module G16_mul.
+Optimizing module G4_mul.
+Optimizing module G4_scl_N.
+Optimizing module MSKg16mul_dom.
+
+49.9. Finished OPT passes. (There is nothing left to do.)
+
+50. Executing MEMORY pass.
+
+50.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+50.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+50.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+50.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+50.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+50.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \G16_mul..
+Finding unused cells or wires in module \G4_mul..
+Finding unused cells or wires in module \G4_scl_N..
+Finding unused cells or wires in module \MSKg16mul_dom..
+
+50.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+50.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+50.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \G16_mul..
+Finding unused cells or wires in module \G4_mul..
+Finding unused cells or wires in module \G4_scl_N..
+Finding unused cells or wires in module \MSKg16mul_dom..
+
+50.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+50.11. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+51. Executing OPT pass (performing simple optimizations).
+
+51.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module G16_mul.
+Optimizing module G4_mul.
+Optimizing module G4_scl_N.
+Optimizing module MSKg16mul_dom.
+
+51.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\G16_mul'.
+Finding identical cells in module `\G4_mul'.
+Finding identical cells in module `\G4_scl_N'.
+Finding identical cells in module `\MSKg16mul_dom'.
+Removed a total of 0 cells.
+
+51.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \G16_mul..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \G4_mul..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \G4_scl_N..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \MSKg16mul_dom..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+51.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \G16_mul.
+  Optimizing cells in module \G4_mul.
+  Optimizing cells in module \G4_scl_N.
+  Optimizing cells in module \MSKg16mul_dom.
+Performed a total of 0 changes.
+
+51.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\G16_mul'.
+Finding identical cells in module `\G4_mul'.
+Finding identical cells in module `\G4_scl_N'.
+Finding identical cells in module `\MSKg16mul_dom'.
+Removed a total of 0 cells.
+
+51.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+51.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \G16_mul..
+Finding unused cells or wires in module \G4_mul..
+Finding unused cells or wires in module \G4_scl_N..
+Finding unused cells or wires in module \MSKg16mul_dom..
+
+51.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module G16_mul.
+Optimizing module G4_mul.
+Optimizing module G4_scl_N.
+Optimizing module MSKg16mul_dom.
+
+51.9. Finished OPT passes. (There is nothing left to do.)
+
+52. Executing TECHMAP pass (map to technology primitives).
+
+52.1. Executing Verilog-2005 frontend: /home/nilotpola/.local/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/home/nilotpola/.local/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+52.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $dff.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $reduce_xor.
+Using extmapper simplemap for cells of type $and.
+No more expansions possible.
+<suppressed ~225 debug messages>
+
+53. Executing OPT pass (performing simple optimizations).
+
+53.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module G16_mul.
+Optimizing module G4_mul.
+Optimizing module G4_scl_N.
+Optimizing module MSKg16mul_dom.
+
+53.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\G16_mul'.
+Finding identical cells in module `\G4_mul'.
+Finding identical cells in module `\G4_scl_N'.
+Finding identical cells in module `\MSKg16mul_dom'.
+Removed a total of 0 cells.
+
+53.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \G16_mul..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \G4_mul..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \G4_scl_N..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \MSKg16mul_dom..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+53.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \G16_mul.
+  Optimizing cells in module \G4_mul.
+  Optimizing cells in module \G4_scl_N.
+  Optimizing cells in module \MSKg16mul_dom.
+Performed a total of 0 changes.
+
+53.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\G16_mul'.
+Finding identical cells in module `\G4_mul'.
+Finding identical cells in module `\G4_scl_N'.
+Finding identical cells in module `\MSKg16mul_dom'.
+Removed a total of 0 cells.
+
+53.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+53.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \G16_mul..
+Finding unused cells or wires in module \G4_mul..
+Finding unused cells or wires in module \G4_scl_N..
+Finding unused cells or wires in module \MSKg16mul_dom..
+Removed 0 unused cells and 20 unused wires.
+<suppressed ~1 debug messages>
+
+53.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module G16_mul.
+Optimizing module G4_mul.
+Optimizing module G4_scl_N.
+Optimizing module MSKg16mul_dom.
+
+53.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+53.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \G16_mul..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \G4_mul..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \G4_scl_N..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \MSKg16mul_dom..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+53.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \G16_mul.
+  Optimizing cells in module \G4_mul.
+  Optimizing cells in module \G4_scl_N.
+  Optimizing cells in module \MSKg16mul_dom.
+Performed a total of 0 changes.
+
+53.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\G16_mul'.
+Finding identical cells in module `\G4_mul'.
+Finding identical cells in module `\G4_scl_N'.
+Finding identical cells in module `\MSKg16mul_dom'.
+Removed a total of 0 cells.
+
+53.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+53.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \G16_mul..
+Finding unused cells or wires in module \G4_mul..
+Finding unused cells or wires in module \G4_scl_N..
+Finding unused cells or wires in module \MSKg16mul_dom..
+
+53.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module G16_mul.
+Optimizing module G4_mul.
+Optimizing module G4_scl_N.
+Optimizing module MSKg16mul_dom.
+
+53.16. Finished OPT passes. (There is nothing left to do.)
+
+54. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+  cell DFF_X1 (noninv, pins=4, area=4.52) is a direct match for cell type $_DFF_P_.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+  cell DFFR_X1 (noninv, pins=5, area=5.32) is a direct match for cell type $_DFF_PN0_.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+  cell DFFS_X1 (noninv, pins=5, area=5.32) is a direct match for cell type $_DFF_PN1_.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+  cell DFFRS_X1 (noninv, pins=6, area=6.38) is a direct match for cell type $_DFFSR_PNN_.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \DFF_X1 _DFF_P_ (.CK( C), .D( D), .Q( Q), .QN(~Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \DFFR_X1 _DFF_PN0_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .RN( R));
+    \DFFS_X1 _DFF_PN1_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .SN( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFSR_NNN_
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    \DFFRS_X1 _DFFSR_PNN_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .RN( R), .SN( S));
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+54.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\G16_mul':
+Mapping DFF cells in module `\G4_mul':
+Mapping DFF cells in module `\G4_scl_N':
+Mapping DFF cells in module `\MSKg16mul_dom':
+  mapped 100 $_DFF_P_ cells to \DFF_X1 cells.
+
+55. Executing ABC pass (technology mapping using ABC).
+
+55.1. Extracting gate netlist of module `\G16_mul' to `<abc-temp-dir>/input.blif'..
+Extracted 8 gates and 22 wires to a netlist network with 14 inputs and 8 outputs.
+
+55.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /home/nilotpola/Downloads/TETRIS-artefact/COMPRESS-results/compress/synthesis/nangate45-pdk/stdcells.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.05 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "ANTENNA_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATETST_X1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATETST_X2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATETST_X4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATETST_X8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATE_X1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATE_X2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATE_X4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATE_X8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFRS_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFRS_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFR_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFR_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFS_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFS_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFF_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFF_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DLH_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DLH_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DLL_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DLL_X2".
+ABC: Scl_LibertyReadGenlib() skipped cell "WELLTAP_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X2" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X4" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X8" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X16" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X32" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "LOGIC0_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "LOGIC1_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFRS_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFRS_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFR_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFR_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFS_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFS_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFF_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFF_X2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X16".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TINV_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "TLAT_X1".
+ABC: Library "NangateOpenCellLibrary" from "/home/nilotpola/Downloads/TETRIS-artefact/COMPRESS-results/compress/synthesis/nangate45-pdk/stdcells.lib" has 90 cells (35 skipped: 21 seq; 6 tri-state; 8 no func; 10 dont_use).  Time =     0.07 sec
+ABC: Memory =   11.38 MB. Time =     0.07 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "FA_X1").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+55.1.2. Re-integrating ABC results.
+ABC RESULTS:           XOR2_X1 cells:        8
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:       14
+ABC RESULTS:          output signals:        8
+Removing temp directory.
+
+55.2. Extracting gate netlist of module `\G4_mul' to `<abc-temp-dir>/input.blif'..
+Extracted 7 gates and 11 wires to a netlist network with 4 inputs and 2 outputs.
+
+55.2.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /home/nilotpola/Downloads/TETRIS-artefact/COMPRESS-results/compress/synthesis/nangate45-pdk/stdcells.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.04 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "ANTENNA_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATETST_X1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATETST_X2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATETST_X4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATETST_X8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATE_X1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATE_X2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATE_X4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATE_X8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFRS_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFRS_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFR_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFR_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFS_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFS_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFF_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFF_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DLH_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DLH_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DLL_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DLL_X2".
+ABC: Scl_LibertyReadGenlib() skipped cell "WELLTAP_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X2" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X4" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X8" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X16" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X32" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "LOGIC0_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "LOGIC1_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFRS_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFRS_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFR_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFR_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFS_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFS_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFF_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFF_X2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X16".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TINV_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "TLAT_X1".
+ABC: Library "NangateOpenCellLibrary" from "/home/nilotpola/Downloads/TETRIS-artefact/COMPRESS-results/compress/synthesis/nangate45-pdk/stdcells.lib" has 90 cells (35 skipped: 21 seq; 6 tri-state; 8 no func; 10 dont_use).  Time =     0.07 sec
+ABC: Memory =   11.38 MB. Time =     0.07 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "FA_X1").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+55.2.2. Re-integrating ABC results.
+ABC RESULTS:           NOR2_X1 cells:        1
+ABC RESULTS:          NAND2_X1 cells:        2
+ABC RESULTS:          XNOR2_X1 cells:        4
+ABC RESULTS:        internal signals:        5
+ABC RESULTS:           input signals:        4
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+55.3. Extracting gate netlist of module `\G4_scl_N' to `<abc-temp-dir>/input.blif'..
+Extracted 1 gates and 3 wires to a netlist network with 2 inputs and 1 outputs.
+
+55.3.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /home/nilotpola/Downloads/TETRIS-artefact/COMPRESS-results/compress/synthesis/nangate45-pdk/stdcells.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.05 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "ANTENNA_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATETST_X1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATETST_X2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATETST_X4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATETST_X8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATE_X1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATE_X2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATE_X4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATE_X8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFRS_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFRS_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFR_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFR_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFS_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFS_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFF_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFF_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DLH_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DLH_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DLL_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DLL_X2".
+ABC: Scl_LibertyReadGenlib() skipped cell "WELLTAP_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X2" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X4" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X8" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X16" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X32" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "LOGIC0_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "LOGIC1_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFRS_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFRS_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFR_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFR_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFS_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFS_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFF_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFF_X2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X16".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TINV_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "TLAT_X1".
+ABC: Library "NangateOpenCellLibrary" from "/home/nilotpola/Downloads/TETRIS-artefact/COMPRESS-results/compress/synthesis/nangate45-pdk/stdcells.lib" has 90 cells (35 skipped: 21 seq; 6 tri-state; 8 no func; 10 dont_use).  Time =     0.07 sec
+ABC: Memory =   11.38 MB. Time =     0.07 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "FA_X1").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+55.3.2. Re-integrating ABC results.
+ABC RESULTS:           XOR2_X1 cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        2
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+
+55.4. Extracting gate netlist of module `\MSKg16mul_dom' to `<abc-temp-dir>/input.blif'..
+Extracted 160 gates and 380 wires to a netlist network with 220 inputs and 100 outputs.
+
+55.4.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /home/nilotpola/Downloads/TETRIS-artefact/COMPRESS-results/compress/synthesis/nangate45-pdk/stdcells.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.04 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "ANTENNA_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATETST_X1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATETST_X2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATETST_X4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATETST_X8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATE_X1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATE_X2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATE_X4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATE_X8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFRS_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFRS_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFR_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFR_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFS_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFS_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFF_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFF_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DLH_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DLH_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DLL_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DLL_X2".
+ABC: Scl_LibertyReadGenlib() skipped cell "WELLTAP_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X2" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X4" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X8" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X16" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X32" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "LOGIC0_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "LOGIC1_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFRS_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFRS_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFR_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFR_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFS_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFS_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFF_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFF_X2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X16".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TINV_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "TLAT_X1".
+ABC: Library "NangateOpenCellLibrary" from "/home/nilotpola/Downloads/TETRIS-artefact/COMPRESS-results/compress/synthesis/nangate45-pdk/stdcells.lib" has 90 cells (35 skipped: 21 seq; 6 tri-state; 8 no func; 10 dont_use).  Time =     0.07 sec
+ABC: Memory =   11.38 MB. Time =     0.07 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "FA_X1").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+55.4.2. Re-integrating ABC results.
+ABC RESULTS:          XNOR2_X1 cells:       80
+ABC RESULTS:           XOR2_X1 cells:       80
+ABC RESULTS:        internal signals:       60
+ABC RESULTS:           input signals:      220
+ABC RESULTS:          output signals:      100
+Removing temp directory.
+Removed 0 unused cells and 394 unused wires.
+
+56. Executing Verilog backend.
+
+56.1. Executing BMUXMAP pass.
+
+56.2. Executing DEMUXMAP pass.
+Dumping module `\G16_mul'.
+Dumping module `\G4_mul'.
+Dumping module `\G4_scl_N'.
+Dumping module `\MSKg16mul_dom'.
+{
+   "creator": "Yosys 0.33 (git sha1 2584903a0, gcc 8.4.0-1ubuntu1~18.04 -fPIC -Os)",
+   "invocation": "stat -liberty synthesis/nangate45-pdk/stdcells.lib -json ",
+   "modules": {
+      "\\G16_mul": {
+         "num_wires":         15,
+         "num_wire_bits":     32,
+         "num_pub_wires":     11,
+         "num_pub_wire_bits": 28,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         12,
+         "area":              12.768000,
+         "num_cells_by_type": {
+            "G4_mul": 3,
+            "G4_scl_N": 1,
+            "XOR2_X1": 8
+         }
+      },
+      "\\G4_mul": {
+         "num_wires":         12,
+         "num_wire_bits":     15,
+         "num_pub_wires":     7,
+         "num_pub_wire_bits": 10,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         7,
+         "area":              8.778000,
+         "num_cells_by_type": {
+            "NAND2_X1": 2,
+            "NOR2_X1": 1,
+            "XNOR2_X1": 4
+         }
+      },
+      "\\G4_scl_N": {
+         "num_wires":         4,
+         "num_wire_bits":     6,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 6,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1,
+         "area":              1.596000,
+         "num_cells_by_type": {
+            "XOR2_X1": 1
+         }
+      },
+      "\\MSKg16mul_dom": {
+         "num_wires":         279,
+         "num_wire_bits":     981,
+         "num_pub_wires":     119,
+         "num_pub_wire_bits": 821,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         285,
+         "area":              707.560000,
+         "num_cells_by_type": {
+            "DFF_X1": 100,
+            "G16_mul": 25,
+            "XNOR2_X1": 80,
+            "XOR2_X1": 80
+         }
+      }
+   },
+      "design": {
+         "num_wires":         1654,
+         "num_wire_bits":     3056,
+         "num_pub_wires":     1019,
+         "num_pub_wire_bits": 2421,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1010,
+         "area":              1725.010000,
+         "num_cells_by_type": {
+            "DFF_X1": 100,
+            "NAND2_X1": 150,
+            "NOR2_X1": 75,
+            "XNOR2_X1": 380,
+            "XOR2_X1": 305
+         }
+      }
+}
+
+57. Executing JSON backend.
+
+Warnings: 8 unique messages, 72 total
+End of script. Logfile hash: 8bc34dadfa, CPU: user 0.50s system 0.01s, MEM: 33.55 MB peak
+Yosys 0.33 (git sha1 2584903a0, gcc 8.4.0-1ubuntu1~18.04 -fPIC -Os)
+Time spent: 50% 1x abc (0 sec), 20% 48x read_verilog (0 sec), ...

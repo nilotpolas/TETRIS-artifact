@@ -1,0 +1,13 @@
+n possible toffoli: 4
+Status: ExitStatus.OPTIMAL (0.107180542 seconds)
+solution found.
+MSKxor: 90
+MSKxnor: 4
+MSKinv: 0
+MSKand_hpc2: 20
+MSKand_hpc2_swapped: 2
+MSKand_hpc3: 12
+MSKreg: 45
+Approx. area cost (GE): 39400.049479166664
+#RNG bits 460
+Toffoli: 0

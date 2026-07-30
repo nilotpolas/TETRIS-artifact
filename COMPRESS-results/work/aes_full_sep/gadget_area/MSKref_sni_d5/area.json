@@ -1,0 +1,37 @@
+{
+   "creator": "Yosys 0.33 (git sha1 2584903a0, gcc 8.4.0-1ubuntu1~18.04 -fPIC -Os)",
+   "invocation": "stat -liberty synthesis/nangate45-pdk/stdcells.lib -json ",
+   "modules": {
+      "\\MSKref_sni": {
+         "num_wires":         18,
+         "num_wire_bits":     46,
+         "num_pub_wires":     6,
+         "num_pub_wire_bits": 26,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         20,
+         "area":              61.180000,
+         "num_cells_by_type": {
+            "DFF_X1": 10,
+            "XOR2_X1": 10
+         }
+      }
+   },
+      "design": {
+         "num_wires":         18,
+         "num_wire_bits":     46,
+         "num_pub_wires":     6,
+         "num_pub_wire_bits": 26,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         20,
+         "area":              61.180000,
+         "num_cells_by_type": {
+            "DFF_X1": 10,
+            "XOR2_X1": 10
+         }
+      }
+}
+

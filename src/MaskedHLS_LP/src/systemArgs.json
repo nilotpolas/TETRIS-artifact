@@ -1,0 +1,12 @@
+{
+    "topModule": "sbox",
+    "inputFile": "/home/nilotpola/Downloads/TETRIS-artefact/src/TestFiles/share_output/output.c",
+    "generatedRtl": "skinny_sbox_nor_d4_lat6.v",
+    "bitWidth": 1,
+    "mode": 0,
+    "inlinerOutput": "./tempFiles/inlinerOut.c",
+    "retimedOutput": "./tempFiles/retimedOut.c",
+    "postProcessorOutput": "./tempFiles/postProcessedOut.c",
+    "checkBalancing": 0,
+    "turn": 1
+}

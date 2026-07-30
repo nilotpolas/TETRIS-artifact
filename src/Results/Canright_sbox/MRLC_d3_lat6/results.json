@@ -1,0 +1,20 @@
+{
+  "algorithm": "MRLC",
+  "design": "Canright_sbox",
+  "security_order_d": 3,
+  "latency_budget": 6,
+  "achieved_randomness": 216,
+  "achieved_latency": 6,
+  "hls_verified_latency": 6,
+  "synthesis": {
+    "area_ge": 17631.544,
+    "cell_count": 5908,
+    "dff_count": 3056,
+    "area_kge": 17.6315,
+    "area_kge_wo_rand": 20.8707
+  },
+  "gadget_distribution": {
+    "hpc2": 36
+  },
+  "dse_time_sec": 0.183
+}

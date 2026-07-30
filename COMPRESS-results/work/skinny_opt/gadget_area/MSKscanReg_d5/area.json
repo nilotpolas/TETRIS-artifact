@@ -1,0 +1,78 @@
+{
+   "creator": "Yosys 0.33 (git sha1 2584903a0, gcc 8.4.0-1ubuntu1~18.04 -fPIC -Os)",
+   "invocation": "stat -liberty synthesis/nangate45-pdk/stdcells.lib -json ",
+   "modules": {
+      "$paramod$035aa081bb2d7eeb37ed77358af1487c0b349075\\MSKmux": {
+         "num_wires":         4,
+         "num_wire_bits":     4,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 4,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1,
+         "area":              1.862000,
+         "num_cells_by_type": {
+            "MUX2_X1": 1
+         }
+      },
+      "$paramod$035aa081bb2d7eeb37ed77358af1487c0b349075\\MSKreg": {
+         "num_wires":         5,
+         "num_wire_bits":     5,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 4,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1,
+         "area":              4.522000,
+         "num_cells_by_type": {
+            "DFF_X1": 1
+         }
+      },
+      "$paramod$035aa081bb2d7eeb37ed77358af1487c0b349075\\MSKregEn": {
+         "num_wires":         5,
+         "num_wire_bits":     5,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 5,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         2,
+         "num_cells_by_type": {
+            "$paramod$035aa081bb2d7eeb37ed77358af1487c0b349075\\MSKmux": 1,
+            "$paramod$035aa081bb2d7eeb37ed77358af1487c0b349075\\MSKreg": 1
+         }
+      },
+      "\\MSKscanReg": {
+         "num_wires":         7,
+         "num_wire_bits":     7,
+         "num_pub_wires":     7,
+         "num_pub_wire_bits": 7,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         2,
+         "num_cells_by_type": {
+            "$paramod$035aa081bb2d7eeb37ed77358af1487c0b349075\\MSKmux": 1,
+            "$paramod$035aa081bb2d7eeb37ed77358af1487c0b349075\\MSKregEn": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         25,
+         "num_wire_bits":     25,
+         "num_pub_wires":     24,
+         "num_pub_wire_bits": 24,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         3,
+         "area":              8.246000,
+         "num_cells_by_type": {
+            "DFF_X1": 1,
+            "MUX2_X1": 2
+         }
+      }
+}
+

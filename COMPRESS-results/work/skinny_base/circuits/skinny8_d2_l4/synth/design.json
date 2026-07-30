@@ -1,0 +1,3901 @@
+{
+  "creator": "Yosys 0.33 (git sha1 2584903a0, gcc 8.4.0-1ubuntu1~18.04 -fPIC -Os)",
+  "modules": {
+    "$paramod$f1cb87fdbf2a2877c623f38e22388930432ffb9c\\MSKand_hpc2_cross": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "hdlname": "\\MSKand_hpc2_cross",
+        "src": "gadget_library/MSK/MSKand_hpc2_cross.v:18.1-103.10"
+      },
+      "parameter_default_values": {
+        "d": "00000000000000000000000000000010",
+        "have_inner": "00000000000000000000000000000001"
+      },
+      "ports": {
+        "ina": {
+          "direction": "input",
+          "bits": [ 2, 3 ]
+        },
+        "inb": {
+          "direction": "input",
+          "bits": [ 4, 5 ]
+        },
+        "rnd": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "clk": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 8, 9 ]
+        }
+      },
+      "cells": {
+        "$abc$517$auto$blifparse.cc:386:parse_blif$518": {
+          "hide_name": 1,
+          "type": "INV_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 10 ],
+            "ZN": [ 11 ]
+          }
+        },
+        "$abc$517$auto$blifparse.cc:386:parse_blif$519": {
+          "hide_name": 1,
+          "type": "AND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 2 ],
+            "A2": [ 12 ],
+            "ZN": [ 13 ]
+          }
+        },
+        "$abc$517$auto$blifparse.cc:386:parse_blif$520": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 14 ],
+            "B": [ 15 ],
+            "ZN": [ 16 ]
+          }
+        },
+        "$abc$517$auto$blifparse.cc:386:parse_blif$521": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 17 ],
+            "B": [ 16 ],
+            "ZN": [ 8 ]
+          }
+        },
+        "$abc$517$auto$blifparse.cc:386:parse_blif$522": {
+          "hide_name": 1,
+          "type": "NOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 2 ],
+            "A2": [ 11 ],
+            "ZN": [ 18 ]
+          }
+        },
+        "$abc$517$auto$blifparse.cc:386:parse_blif$523": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 5 ],
+            "B": [ 6 ],
+            "Z": [ 19 ]
+          }
+        },
+        "$abc$517$auto$blifparse.cc:386:parse_blif$524": {
+          "hide_name": 1,
+          "type": "AND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 2 ],
+            "A2": [ 20 ],
+            "ZN": [ 21 ]
+          }
+        },
+        "$abc$517$auto$blifparse.cc:386:parse_blif$525": {
+          "hide_name": 1,
+          "type": "AND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 3 ],
+            "A2": [ 22 ],
+            "ZN": [ 23 ]
+          }
+        },
+        "$abc$517$auto$blifparse.cc:386:parse_blif$526": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 24 ],
+            "B": [ 25 ],
+            "ZN": [ 26 ]
+          }
+        },
+        "$abc$517$auto$blifparse.cc:386:parse_blif$527": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 27 ],
+            "B": [ 26 ],
+            "ZN": [ 9 ]
+          }
+        },
+        "$abc$517$auto$blifparse.cc:386:parse_blif$528": {
+          "hide_name": 1,
+          "type": "NOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 3 ],
+            "A2": [ 11 ],
+            "ZN": [ 28 ]
+          }
+        },
+        "$abc$517$auto$blifparse.cc:386:parse_blif$529": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 4 ],
+            "Z": [ 29 ]
+          }
+        },
+        "$abc$517$auto$blifparse.cc:386:parse_blif$530": {
+          "hide_name": 1,
+          "type": "AND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 3 ],
+            "A2": [ 30 ],
+            "ZN": [ 31 ]
+          }
+        },
+        "ParProdI[0].ParProdJ[1].NotEq.REGin_u": {
+          "hide_name": 0,
+          "type": "$paramod\\bin_REG\\W=s32'00000000000000000000000000000001",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:81.30-85.14"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 7 ],
+            "in": [ 18 ],
+            "out": [ 15 ]
+          }
+        },
+        "ParProdI[0].ParProdJ[1].NotEq.REGin_v": {
+          "hide_name": 0,
+          "type": "$paramod\\bin_REG\\W=s32'00000000000000000000000000000001",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:88.30-92.14"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 7 ],
+            "in": [ 19 ],
+            "out": [ 20 ]
+          }
+        },
+        "ParProdI[0].ParProdJ[1].NotEq.REGin_w": {
+          "hide_name": 0,
+          "type": "$paramod\\bin_REG\\W=s32'00000000000000000000000000000001",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:94.30-98.14"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 7 ],
+            "in": [ 21 ],
+            "out": [ 17 ]
+          }
+        },
+        "ParProdI[0].genblk1.REGin_aibi": {
+          "hide_name": 0,
+          "type": "$paramod\\bin_REG\\W=s32'00000000000000000000000000000001",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:67.26-71.10"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 7 ],
+            "in": [ 13 ],
+            "out": [ 14 ]
+          }
+        },
+        "ParProdI[0].genblk1.REGin_inb_prev": {
+          "hide_name": 0,
+          "type": "$paramod\\bin_REG\\W=s32'00000000000000000000000000000001",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:62.26-66.10"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 7 ],
+            "in": [ 4 ],
+            "out": [ 12 ]
+          }
+        },
+        "ParProdI[1].ParProdJ[0].NotEq.REGin_u": {
+          "hide_name": 0,
+          "type": "$paramod\\bin_REG\\W=s32'00000000000000000000000000000001",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:81.30-85.14"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 7 ],
+            "in": [ 28 ],
+            "out": [ 25 ]
+          }
+        },
+        "ParProdI[1].ParProdJ[0].NotEq.REGin_v": {
+          "hide_name": 0,
+          "type": "$paramod\\bin_REG\\W=s32'00000000000000000000000000000001",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:88.30-92.14"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 7 ],
+            "in": [ 29 ],
+            "out": [ 30 ]
+          }
+        },
+        "ParProdI[1].ParProdJ[0].NotEq.REGin_w": {
+          "hide_name": 0,
+          "type": "$paramod\\bin_REG\\W=s32'00000000000000000000000000000001",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:94.30-98.14"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 7 ],
+            "in": [ 31 ],
+            "out": [ 27 ]
+          }
+        },
+        "ParProdI[1].genblk1.REGin_aibi": {
+          "hide_name": 0,
+          "type": "$paramod\\bin_REG\\W=s32'00000000000000000000000000000001",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:67.26-71.10"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 7 ],
+            "in": [ 23 ],
+            "out": [ 24 ]
+          }
+        },
+        "ParProdI[1].genblk1.REGin_inb_prev": {
+          "hide_name": 0,
+          "type": "$paramod\\bin_REG\\W=s32'00000000000000000000000000000001",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:62.26-66.10"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 7 ],
+            "in": [ 5 ],
+            "out": [ 22 ]
+          }
+        },
+        "REGin_rnd_prev": {
+          "hide_name": 0,
+          "type": "$paramod\\bin_REG\\W=s32'00000000000000000000000000000001",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:33.24-37.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 7 ],
+            "in": [ 6 ],
+            "out": [ 10 ]
+          }
+        }
+      },
+      "netnames": {
+        "$abc$517$and$gadget_library/MSK/MSKand_hpc2_cross.v:69$349_Y": {
+          "hide_name": 1,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:69.17-69.34"
+          }
+        },
+        "$abc$517$and$gadget_library/MSK/MSKand_hpc2_cross.v:69$358_Y": {
+          "hide_name": 1,
+          "bits": [ 23 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:69.17-69.34"
+          }
+        },
+        "$abc$517$new_n27_": {
+          "hide_name": 1,
+          "bits": [ 11 ],
+          "attributes": {
+          }
+        },
+        "$abc$517$new_n29_": {
+          "hide_name": 1,
+          "bits": [ 16 ],
+          "attributes": {
+          }
+        },
+        "$abc$517$new_n35_": {
+          "hide_name": 1,
+          "bits": [ 26 ],
+          "attributes": {
+          }
+        },
+        "ParProdI[0].ParProdJ[1].NotEq.u_comb": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:80.18-80.24"
+          }
+        },
+        "ParProdI[0].ParProdJ[1].NotEq.v_comb": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:87.18-87.24"
+          }
+        },
+        "ParProdI[0].ParProdJ[1].NotEq.w_comb": {
+          "hide_name": 0,
+          "bits": [ 21 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:93.18-93.24"
+          }
+        },
+        "ParProdI[0].genblk1.aibi": {
+          "hide_name": 0,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:61.24-61.28"
+          }
+        },
+        "ParProdI[0].genblk1.inb_prev": {
+          "hide_name": 0,
+          "bits": [ 12 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:61.14-61.22"
+          }
+        },
+        "ParProdI[0].u": {
+          "hide_name": 0,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:59.18-59.19"
+          }
+        },
+        "ParProdI[0].v": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:59.21-59.22"
+          }
+        },
+        "ParProdI[0].w": {
+          "hide_name": 0,
+          "bits": [ 17 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:59.24-59.25"
+          }
+        },
+        "ParProdI[1].ParProdJ[0].NotEq.u_comb": {
+          "hide_name": 0,
+          "bits": [ 28 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:80.18-80.24"
+          }
+        },
+        "ParProdI[1].ParProdJ[0].NotEq.v_comb": {
+          "hide_name": 0,
+          "bits": [ 29 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:87.18-87.24"
+          }
+        },
+        "ParProdI[1].ParProdJ[0].NotEq.w_comb": {
+          "hide_name": 0,
+          "bits": [ 31 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:93.18-93.24"
+          }
+        },
+        "ParProdI[1].genblk1.aibi": {
+          "hide_name": 0,
+          "bits": [ 24 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:61.24-61.28"
+          }
+        },
+        "ParProdI[1].genblk1.inb_prev": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:61.14-61.22"
+          }
+        },
+        "ParProdI[1].u": {
+          "hide_name": 0,
+          "bits": [ 25 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:59.18-59.19"
+          }
+        },
+        "ParProdI[1].v": {
+          "hide_name": 0,
+          "bits": [ 30 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:59.21-59.22"
+          }
+        },
+        "ParProdI[1].w": {
+          "hide_name": 0,
+          "bits": [ 27 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:59.24-59.25"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "fv_type": "clock",
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:25.31-25.34"
+          }
+        },
+        "ina": {
+          "hide_name": 0,
+          "bits": [ 2, 3 ],
+          "attributes": {
+            "fv_latency": "00000000000000000000000000000001",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:22.58-22.61"
+          }
+        },
+        "inb": {
+          "hide_name": 0,
+          "bits": [ 4, 5 ],
+          "attributes": {
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:23.58-23.61"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 8, 9 ],
+          "attributes": {
+            "fv_latency": "00000000000000000000000000000010",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:26.78-26.81"
+          }
+        },
+        "rnd": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_rnd_count_0": "00000000000000000000000000000001",
+            "fv_rnd_lat_0": "00000000000000000000000000000000",
+            "fv_type": "random",
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:24.104-24.107"
+          }
+        },
+        "rnd_mat[0]": {
+          "hide_name": 0,
+          "bits": [ "0", 6 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:39.14-39.21"
+          }
+        },
+        "rnd_mat[1]": {
+          "hide_name": 0,
+          "bits": [ 6, "0" ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:39.14-39.21"
+          }
+        },
+        "rnd_mat_prev[0]": {
+          "hide_name": 0,
+          "bits": [ "0", 10 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:40.14-40.26"
+          }
+        },
+        "rnd_mat_prev[1]": {
+          "hide_name": 0,
+          "bits": [ 10, "0" ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:40.14-40.26"
+          }
+        },
+        "rnd_prev": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_cross.v:32.20-32.28"
+          }
+        }
+      }
+    },
+    "$paramod$f1cb87fdbf2a2877c623f38e22388930432ffb9c\\MSKand_hpc3_cross_er": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "hdlname": "\\MSKand_hpc3_cross_er",
+        "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:18.1-87.10"
+      },
+      "parameter_default_values": {
+        "d": "00000000000000000000000000000010",
+        "have_inner": "00000000000000000000000000000001"
+      },
+      "ports": {
+        "ina": {
+          "direction": "input",
+          "bits": [ 2, 3 ]
+        },
+        "ina_prev": {
+          "direction": "input",
+          "bits": [ 4, 5 ]
+        },
+        "inb": {
+          "direction": "input",
+          "bits": [ 6, 7 ]
+        },
+        "rnd": {
+          "direction": "input",
+          "bits": [ 8, 9 ]
+        },
+        "clk": {
+          "direction": "input",
+          "bits": [ 10 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 11, 12 ]
+        }
+      },
+      "cells": {
+        "$abc$531$auto$blifparse.cc:386:parse_blif$532": {
+          "hide_name": 1,
+          "type": "INV_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 2 ],
+            "ZN": [ 13 ]
+          }
+        },
+        "$abc$531$auto$blifparse.cc:386:parse_blif$533": {
+          "hide_name": 1,
+          "type": "INV_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 3 ],
+            "ZN": [ 14 ]
+          }
+        },
+        "$abc$531$auto$blifparse.cc:386:parse_blif$534": {
+          "hide_name": 1,
+          "type": "AND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 2 ],
+            "A2": [ 6 ],
+            "ZN": [ 15 ]
+          }
+        },
+        "$abc$531$auto$blifparse.cc:386:parse_blif$535": {
+          "hide_name": 1,
+          "type": "NAND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 4 ],
+            "A2": [ 16 ],
+            "ZN": [ 17 ]
+          }
+        },
+        "$abc$531$auto$blifparse.cc:386:parse_blif$536": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 18 ],
+            "B": [ 17 ],
+            "Z": [ 19 ]
+          }
+        },
+        "$abc$531$auto$blifparse.cc:386:parse_blif$537": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 20 ],
+            "B": [ 19 ],
+            "ZN": [ 11 ]
+          }
+        },
+        "$abc$531$auto$blifparse.cc:386:parse_blif$538": {
+          "hide_name": 1,
+          "type": "NAND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 13 ],
+            "A2": [ 8 ],
+            "ZN": [ 21 ]
+          }
+        },
+        "$abc$531$auto$blifparse.cc:386:parse_blif$539": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 21 ],
+            "ZN": [ 22 ]
+          }
+        },
+        "$abc$531$auto$blifparse.cc:386:parse_blif$540": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 8 ],
+            "B": [ 7 ],
+            "Z": [ 23 ]
+          }
+        },
+        "$abc$531$auto$blifparse.cc:386:parse_blif$541": {
+          "hide_name": 1,
+          "type": "AND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 3 ],
+            "A2": [ 7 ],
+            "ZN": [ 24 ]
+          }
+        },
+        "$abc$531$auto$blifparse.cc:386:parse_blif$542": {
+          "hide_name": 1,
+          "type": "NAND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 5 ],
+            "A2": [ 25 ],
+            "ZN": [ 26 ]
+          }
+        },
+        "$abc$531$auto$blifparse.cc:386:parse_blif$543": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 27 ],
+            "B": [ 26 ],
+            "Z": [ 28 ]
+          }
+        },
+        "$abc$531$auto$blifparse.cc:386:parse_blif$544": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 29 ],
+            "B": [ 28 ],
+            "ZN": [ 12 ]
+          }
+        },
+        "$abc$531$auto$blifparse.cc:386:parse_blif$545": {
+          "hide_name": 1,
+          "type": "NAND2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A1": [ 14 ],
+            "A2": [ 8 ],
+            "ZN": [ 30 ]
+          }
+        },
+        "$abc$531$auto$blifparse.cc:386:parse_blif$546": {
+          "hide_name": 1,
+          "type": "XNOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 30 ],
+            "ZN": [ 31 ]
+          }
+        },
+        "$abc$531$auto$blifparse.cc:386:parse_blif$547": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 8 ],
+            "Z": [ 32 ]
+          }
+        },
+        "ParProdI[0].ParProdJ[1].NotEq.REGin_u": {
+          "hide_name": 0,
+          "type": "$paramod\\bin_REG\\W=s32'00000000000000000000000000000001",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:69.30-73.14"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 10 ],
+            "in": [ 22 ],
+            "out": [ 18 ]
+          }
+        },
+        "ParProdI[0].ParProdJ[1].NotEq.REGin_v2": {
+          "hide_name": 0,
+          "type": "$paramod\\bin_REG\\W=s32'00000000000000000000000000000001",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:77.30-81.14"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 10 ],
+            "in": [ 23 ],
+            "out": [ 16 ]
+          }
+        },
+        "ParProdI[0].genblk1.REGin_aibi": {
+          "hide_name": 0,
+          "type": "$paramod\\bin_REG\\W=s32'00000000000000000000000000000001",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:55.26-59.10"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 10 ],
+            "in": [ 15 ],
+            "out": [ 20 ]
+          }
+        },
+        "ParProdI[1].ParProdJ[0].NotEq.REGin_u": {
+          "hide_name": 0,
+          "type": "$paramod\\bin_REG\\W=s32'00000000000000000000000000000001",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:69.30-73.14"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 10 ],
+            "in": [ 31 ],
+            "out": [ 27 ]
+          }
+        },
+        "ParProdI[1].ParProdJ[0].NotEq.REGin_v2": {
+          "hide_name": 0,
+          "type": "$paramod\\bin_REG\\W=s32'00000000000000000000000000000001",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:77.30-81.14"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 10 ],
+            "in": [ 32 ],
+            "out": [ 25 ]
+          }
+        },
+        "ParProdI[1].genblk1.REGin_aibi": {
+          "hide_name": 0,
+          "type": "$paramod\\bin_REG\\W=s32'00000000000000000000000000000001",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:55.26-59.10"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 10 ],
+            "in": [ 24 ],
+            "out": [ 29 ]
+          }
+        }
+      },
+      "netnames": {
+        "$abc$531$and$gadget_library/MSK/MSKand_hpc3_cross_er.v:57$369_Y": {
+          "hide_name": 1,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:57.17-57.32"
+          }
+        },
+        "$abc$531$and$gadget_library/MSK/MSKand_hpc3_cross_er.v:57$379_Y": {
+          "hide_name": 1,
+          "bits": [ 24 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:57.17-57.32"
+          }
+        },
+        "$abc$531$new_n23_": {
+          "hide_name": 1,
+          "bits": [ 13 ],
+          "attributes": {
+          }
+        },
+        "$abc$531$new_n24_": {
+          "hide_name": 1,
+          "bits": [ 14 ],
+          "attributes": {
+          }
+        },
+        "$abc$531$new_n26_": {
+          "hide_name": 1,
+          "bits": [ 17 ],
+          "attributes": {
+          }
+        },
+        "$abc$531$new_n27_": {
+          "hide_name": 1,
+          "bits": [ 19 ],
+          "attributes": {
+          }
+        },
+        "$abc$531$new_n29_": {
+          "hide_name": 1,
+          "bits": [ 21 ],
+          "attributes": {
+          }
+        },
+        "$abc$531$new_n33_": {
+          "hide_name": 1,
+          "bits": [ 26 ],
+          "attributes": {
+          }
+        },
+        "$abc$531$new_n34_": {
+          "hide_name": 1,
+          "bits": [ 28 ],
+          "attributes": {
+          }
+        },
+        "$abc$531$new_n36_": {
+          "hide_name": 1,
+          "bits": [ 30 ],
+          "attributes": {
+          }
+        },
+        "ParProdI[0].ParProdJ[1].NotEq.u_comb": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:68.18-68.24"
+          }
+        },
+        "ParProdI[0].ParProdJ[1].NotEq.v_comb": {
+          "hide_name": 0,
+          "bits": [ 23 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:75.18-75.24"
+          }
+        },
+        "ParProdI[0].ParProdJ[1].NotEq.v_j2": {
+          "hide_name": 0,
+          "bits": [ 16 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:76.18-76.22"
+          }
+        },
+        "ParProdI[0].genblk1.aibi": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:54.14-54.18"
+          }
+        },
+        "ParProdI[0].u": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:52.18-52.19"
+          }
+        },
+        "ParProdI[1].ParProdJ[0].NotEq.u_comb": {
+          "hide_name": 0,
+          "bits": [ 31 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:68.18-68.24"
+          }
+        },
+        "ParProdI[1].ParProdJ[0].NotEq.v_comb": {
+          "hide_name": 0,
+          "bits": [ 32 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:75.18-75.24"
+          }
+        },
+        "ParProdI[1].ParProdJ[0].NotEq.v_j2": {
+          "hide_name": 0,
+          "bits": [ 25 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:76.18-76.22"
+          }
+        },
+        "ParProdI[1].genblk1.aibi": {
+          "hide_name": 0,
+          "bits": [ 29 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:54.14-54.18"
+          }
+        },
+        "ParProdI[1].u": {
+          "hide_name": 0,
+          "bits": [ 27 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:52.18-52.19"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "fv_type": "clock",
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:27.31-27.34"
+          }
+        },
+        "ina": {
+          "hide_name": 0,
+          "bits": [ 2, 3 ],
+          "attributes": {
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:23.58-23.61"
+          }
+        },
+        "ina_prev": {
+          "hide_name": 0,
+          "bits": [ 4, 5 ],
+          "attributes": {
+            "fv_latency": "00000000000000000000000000000001",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:24.58-24.66"
+          }
+        },
+        "inb": {
+          "hide_name": 0,
+          "bits": [ 6, 7 ],
+          "attributes": {
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:25.58-25.61"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 11, 12 ],
+          "attributes": {
+            "fv_latency": "00000000000000000000000000000001",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:28.58-28.61"
+          }
+        },
+        "rnd": {
+          "hide_name": 0,
+          "bits": [ 8, 9 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_rnd_count_0": "00000000000000000000000000000010",
+            "fv_rnd_lat_0": "00000000000000000000000000000000",
+            "fv_type": "random",
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:26.104-26.107"
+          }
+        },
+        "rnd0": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:33.20-33.24"
+          }
+        },
+        "rnd1": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:34.20-34.24"
+          }
+        },
+        "rnd_mat0[0]": {
+          "hide_name": 0,
+          "bits": [ "0", 8 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:35.14-35.22"
+          }
+        },
+        "rnd_mat0[1]": {
+          "hide_name": 0,
+          "bits": [ 8, "0" ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:35.14-35.22"
+          }
+        },
+        "rnd_mat1[0]": {
+          "hide_name": 0,
+          "bits": [ "0", 9 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:36.14-36.22"
+          }
+        },
+        "rnd_mat1[1]": {
+          "hide_name": 0,
+          "bits": [ 9, "0" ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3_cross_er.v:36.14-36.22"
+          }
+        }
+      }
+    },
+    "$paramod\\MSKand_hpc2\\d=s32'00000000000000000000000000000010": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "hdlname": "\\MSKand_hpc2",
+        "src": "gadget_library/MSK/MSKand_hpc2.v:18.1-30.10"
+      },
+      "parameter_default_values": {
+        "d": "00000000000000000000000000000010"
+      },
+      "ports": {
+        "ina": {
+          "direction": "input",
+          "bits": [ 2, 3 ]
+        },
+        "inb": {
+          "direction": "input",
+          "bits": [ 4, 5 ]
+        },
+        "rnd": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "clk": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 8, 9 ]
+        }
+      },
+      "cells": {
+        "inner": {
+          "hide_name": 0,
+          "type": "$paramod$f1cb87fdbf2a2877c623f38e22388930432ffb9c\\MSKand_hpc2_cross",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2.v:28.44-28.74"
+          },
+          "port_directions": {
+            "clk": "input",
+            "ina": "input",
+            "inb": "input",
+            "out": "output",
+            "rnd": "input"
+          },
+          "connections": {
+            "clk": [ 7 ],
+            "ina": [ 2, 3 ],
+            "inb": [ 4, 5 ],
+            "out": [ 8, 9 ],
+            "rnd": [ 6 ]
+          }
+        }
+      },
+      "netnames": {
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "fv_type": "clock",
+            "src": "gadget_library/MSK/MSKand_hpc2.v:25.31-25.34"
+          }
+        },
+        "ina": {
+          "hide_name": 0,
+          "bits": [ 2, 3 ],
+          "attributes": {
+            "fv_latency": "00000000000000000000000000000001",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKand_hpc2.v:22.58-22.61"
+          }
+        },
+        "inb": {
+          "hide_name": 0,
+          "bits": [ 4, 5 ],
+          "attributes": {
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKand_hpc2.v:23.58-23.61"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 8, 9 ],
+          "attributes": {
+            "fv_latency": "00000000000000000000000000000010",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKand_hpc2.v:26.78-26.81"
+          }
+        },
+        "rnd": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_rnd_count_0": "00000000000000000000000000000001",
+            "fv_rnd_lat_0": "00000000000000000000000000000000",
+            "fv_type": "random",
+            "src": "gadget_library/MSK/MSKand_hpc2.v:24.104-24.107"
+          }
+        }
+      }
+    },
+    "$paramod\\MSKand_hpc2_swapped\\d=s32'00000000000000000000000000000010": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "hdlname": "\\MSKand_hpc2_swapped",
+        "src": "gadget_library/MSK/MSKand_hpc2_swapped.v:18.1-36.10"
+      },
+      "parameter_default_values": {
+        "d": "00000000000000000000000000000010"
+      },
+      "ports": {
+        "ina": {
+          "direction": "input",
+          "bits": [ 2, 3 ]
+        },
+        "inb": {
+          "direction": "input",
+          "bits": [ 4, 5 ]
+        },
+        "rnd": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "clk": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 8, 9 ]
+        }
+      },
+      "cells": {
+        "inner": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKand_hpc2\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc2_swapped.v:28.22-34.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "ina": "input",
+            "inb": "input",
+            "out": "output",
+            "rnd": "input"
+          },
+          "connections": {
+            "clk": [ 7 ],
+            "ina": [ 4, 5 ],
+            "inb": [ 2, 3 ],
+            "out": [ 8, 9 ],
+            "rnd": [ 6 ]
+          }
+        }
+      },
+      "netnames": {
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "fv_type": "clock",
+            "src": "gadget_library/MSK/MSKand_hpc2_swapped.v:25.31-25.34"
+          }
+        },
+        "ina": {
+          "hide_name": 0,
+          "bits": [ 2, 3 ],
+          "attributes": {
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKand_hpc2_swapped.v:22.58-22.61"
+          }
+        },
+        "inb": {
+          "hide_name": 0,
+          "bits": [ 4, 5 ],
+          "attributes": {
+            "fv_latency": "00000000000000000000000000000001",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKand_hpc2_swapped.v:23.58-23.61"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 8, 9 ],
+          "attributes": {
+            "fv_latency": "00000000000000000000000000000010",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKand_hpc2_swapped.v:26.58-26.61"
+          }
+        },
+        "rnd": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_rnd_count_0": "00000000000000000000000000000001",
+            "fv_rnd_lat_0": "00000000000000000000000000000000",
+            "fv_type": "random",
+            "src": "gadget_library/MSK/MSKand_hpc2_swapped.v:24.104-24.107"
+          }
+        }
+      }
+    },
+    "$paramod\\MSKand_hpc3\\d=s32'00000000000000000000000000000010": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "hdlname": "\\MSKand_hpc3",
+        "src": "gadget_library/MSK/MSKand_hpc3.v:18.1-40.10"
+      },
+      "parameter_default_values": {
+        "d": "00000000000000000000000000000010"
+      },
+      "ports": {
+        "ina": {
+          "direction": "input",
+          "bits": [ 2, 3 ]
+        },
+        "inb": {
+          "direction": "input",
+          "bits": [ 4, 5 ]
+        },
+        "rnd": {
+          "direction": "input",
+          "bits": [ 6, 7 ]
+        },
+        "clk": {
+          "direction": "input",
+          "bits": [ 8 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 9, 10 ]
+        }
+      },
+      "cells": {
+        "REGin_ina_prev": {
+          "hide_name": 0,
+          "type": "$paramod\\bin_REG\\W=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3.v:32.18-36.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 8 ],
+            "in": [ 2, 3 ],
+            "out": [ 11, 12 ]
+          }
+        },
+        "inner": {
+          "hide_name": 0,
+          "type": "$paramod$f1cb87fdbf2a2877c623f38e22388930432ffb9c\\MSKand_hpc3_cross_er",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3.v:38.47-38.87"
+          },
+          "port_directions": {
+            "clk": "input",
+            "ina": "input",
+            "ina_prev": "input",
+            "inb": "input",
+            "out": "output",
+            "rnd": "input"
+          },
+          "connections": {
+            "clk": [ 8 ],
+            "ina": [ 2, 3 ],
+            "ina_prev": [ 11, 12 ],
+            "inb": [ 4, 5 ],
+            "out": [ 9, 10 ],
+            "rnd": [ 6, 7 ]
+          }
+        }
+      },
+      "netnames": {
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "fv_type": "clock",
+            "src": "gadget_library/MSK/MSKand_hpc3.v:26.31-26.34"
+          }
+        },
+        "ina": {
+          "hide_name": 0,
+          "bits": [ 2, 3 ],
+          "attributes": {
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKand_hpc3.v:23.58-23.61"
+          }
+        },
+        "ina_prev": {
+          "hide_name": 0,
+          "bits": [ 11, 12 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKand_hpc3.v:31.14-31.22"
+          }
+        },
+        "inb": {
+          "hide_name": 0,
+          "bits": [ 4, 5 ],
+          "attributes": {
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKand_hpc3.v:24.58-24.61"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 9, 10 ],
+          "attributes": {
+            "fv_latency": "00000000000000000000000000000001",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKand_hpc3.v:27.78-27.81"
+          }
+        },
+        "rnd": {
+          "hide_name": 0,
+          "bits": [ 6, 7 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_rnd_count_0": "00000000000000000000000000000010",
+            "fv_rnd_lat_0": "00000000000000000000000000000000",
+            "fv_type": "random",
+            "src": "gadget_library/MSK/MSKand_hpc3.v:25.104-25.107"
+          }
+        }
+      }
+    },
+    "$paramod\\MSKinv\\d=s32'00000000000000000000000000000010": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "hdlname": "\\MSKinv",
+        "src": "gadget_library/MSK/MSKinv.v:18.1-34.10"
+      },
+      "parameter_default_values": {
+        "count": "00000000000000000000000000000001",
+        "d": "00000000000000000000000000000010"
+      },
+      "ports": {
+        "in": {
+          "direction": "input",
+          "bits": [ 2, 3 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 4, 3 ]
+        }
+      },
+      "cells": {
+        "$abc$551$auto$blifparse.cc:386:parse_blif$552": {
+          "hide_name": 1,
+          "type": "INV_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 2 ],
+            "ZN": [ 4 ]
+          }
+        }
+      },
+      "netnames": {
+        "in": {
+          "hide_name": 0,
+          "bits": [ 2, 3 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKinv.v:21.80-21.82"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 4, 3 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKinv.v:22.80-22.83"
+          }
+        }
+      }
+    },
+    "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "hdlname": "\\MSKreg",
+        "src": "gadget_library/MSK/MSKreg.v:18.1-31.10"
+      },
+      "parameter_default_values": {
+        "count": "00000000000000000000000000000001",
+        "d": "00000000000000000000000000000010"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "in": {
+          "direction": "input",
+          "bits": [ 3, 4 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 5, 6 ]
+        }
+      },
+      "cells": {
+        "$auto$ff.cc:266:slice$479": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKreg.v:26.1-27.17"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 3 ],
+            "Q": [ 5 ],
+            "QN": [ 7 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$480": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/MSK/MSKreg.v:26.1-27.17"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 4 ],
+            "Q": [ 6 ],
+            "QN": [ 8 ]
+          }
+        }
+      },
+      "netnames": {
+        "$auto$dfflibmap.cc:381:dfflibmap$512": {
+          "hide_name": 1,
+          "bits": [ 8 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$513": {
+          "hide_name": 1,
+          "bits": [ 7 ],
+          "attributes": {
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "fv_type": "clock",
+            "src": "gadget_library/MSK/MSKreg.v:20.33-20.36"
+          }
+        },
+        "in": {
+          "hide_name": 0,
+          "bits": [ 3, 4 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKreg.v:21.80-21.82"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 5, 6 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000001",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKreg.v:22.80-22.83"
+          }
+        },
+        "state": {
+          "hide_name": 0,
+          "bits": [ 5, 6 ],
+          "attributes": {
+            "src": "gadget_library/MSK/MSKreg.v:24.19-24.24"
+          }
+        }
+      }
+    },
+    "$paramod\\MSKxor\\d=s32'00000000000000000000000000000010": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "hdlname": "\\MSKxor",
+        "src": "gadget_library/MSK/MSKxor.v:18.1-25.10"
+      },
+      "parameter_default_values": {
+        "count": "00000000000000000000000000000001",
+        "d": "00000000000000000000000000000010"
+      },
+      "ports": {
+        "ina": {
+          "direction": "input",
+          "bits": [ 2, 3 ]
+        },
+        "inb": {
+          "direction": "input",
+          "bits": [ 4, 5 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 6, 7 ]
+        }
+      },
+      "cells": {
+        "$abc$554$auto$blifparse.cc:386:parse_blif$555": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 4 ],
+            "Z": [ 6 ]
+          }
+        },
+        "$abc$554$auto$blifparse.cc:386:parse_blif$556": {
+          "hide_name": 1,
+          "type": "XOR2_X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 3 ],
+            "B": [ 5 ],
+            "Z": [ 7 ]
+          }
+        }
+      },
+      "netnames": {
+        "ina": {
+          "hide_name": 0,
+          "bits": [ 2, 3 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKxor.v:20.80-20.83"
+          }
+        },
+        "inb": {
+          "hide_name": 0,
+          "bits": [ 4, 5 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKxor.v:20.85-20.88"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 6, 7 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "gadget_library/MSK/MSKxor.v:21.80-21.83"
+          }
+        }
+      }
+    },
+    "$paramod\\bin_REG\\W=s32'00000000000000000000000000000001": {
+      "attributes": {
+        "keep_hierarchy": "yes",
+        "hdlname": "\\bin_REG",
+        "dynports": "00000000000000000000000000000001",
+        "DONT_TOUCH": "yes",
+        "src": "gadget_library/BIN/bin_REG.v:13.1-30.10"
+      },
+      "parameter_default_values": {
+        "W": "00000000000000000000000000000001"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "in": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 4 ]
+        }
+      },
+      "cells": {
+        "$auto$ff.cc:266:slice$476": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/BIN/bin_REG.v:25.1-26.16"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 3 ],
+            "Q": [ 4 ],
+            "QN": [ 5 ]
+          }
+        }
+      },
+      "netnames": {
+        "$auto$dfflibmap.cc:381:dfflibmap$514": {
+          "hide_name": 1,
+          "bits": [ 5 ],
+          "attributes": {
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "gadget_library/BIN/bin_REG.v:19.11-19.14"
+          }
+        },
+        "in": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "gadget_library/BIN/bin_REG.v:20.19-20.21"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "gadget_library/BIN/bin_REG.v:21.20-21.23"
+          }
+        },
+        "regi": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "gadget_library/BIN/bin_REG.v:24.13-24.17"
+          }
+        }
+      }
+    },
+    "$paramod\\bin_REG\\W=s32'00000000000000000000000000000010": {
+      "attributes": {
+        "keep_hierarchy": "yes",
+        "hdlname": "\\bin_REG",
+        "dynports": "00000000000000000000000000000001",
+        "DONT_TOUCH": "yes",
+        "src": "gadget_library/BIN/bin_REG.v:13.1-30.10"
+      },
+      "parameter_default_values": {
+        "W": "00000000000000000000000000000010"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "in": {
+          "direction": "input",
+          "bits": [ 3, 4 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 5, 6 ]
+        }
+      },
+      "cells": {
+        "$auto$ff.cc:266:slice$474": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/BIN/bin_REG.v:25.1-26.16"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 3 ],
+            "Q": [ 5 ],
+            "QN": [ 7 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$475": {
+          "hide_name": 1,
+          "type": "DFF_X1",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "gadget_library/BIN/bin_REG.v:25.1-26.16"
+          },
+          "connections": {
+            "CK": [ 2 ],
+            "D": [ 4 ],
+            "Q": [ 6 ],
+            "QN": [ 8 ]
+          }
+        }
+      },
+      "netnames": {
+        "$auto$dfflibmap.cc:381:dfflibmap$515": {
+          "hide_name": 1,
+          "bits": [ 8 ],
+          "attributes": {
+          }
+        },
+        "$auto$dfflibmap.cc:381:dfflibmap$516": {
+          "hide_name": 1,
+          "bits": [ 7 ],
+          "attributes": {
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "gadget_library/BIN/bin_REG.v:19.11-19.14"
+          }
+        },
+        "in": {
+          "hide_name": 0,
+          "bits": [ 3, 4 ],
+          "attributes": {
+            "src": "gadget_library/BIN/bin_REG.v:20.19-20.21"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 5, 6 ],
+          "attributes": {
+            "src": "gadget_library/BIN/bin_REG.v:21.20-21.23"
+          }
+        },
+        "regi": {
+          "hide_name": 0,
+          "bits": [ 5, 6 ],
+          "attributes": {
+            "src": "gadget_library/BIN/bin_REG.v:24.13-24.17"
+          }
+        }
+      }
+    },
+    "skinny8": {
+      "attributes": {
+        "dynports": "00000000000000000000000000000001",
+        "top": "00000000000000000000000000000001",
+        "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:10.1-462.10"
+      },
+      "parameter_default_values": {
+        "d": "00000000000000000000000000000010"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "i0": {
+          "direction": "input",
+          "bits": [ 3, 4 ]
+        },
+        "i1": {
+          "direction": "input",
+          "bits": [ 5, 6 ]
+        },
+        "i2": {
+          "direction": "input",
+          "bits": [ 7, 8 ]
+        },
+        "i3": {
+          "direction": "input",
+          "bits": [ 9, 10 ]
+        },
+        "i4": {
+          "direction": "input",
+          "bits": [ 11, 12 ]
+        },
+        "i5": {
+          "direction": "input",
+          "bits": [ 13, 14 ]
+        },
+        "i6": {
+          "direction": "input",
+          "bits": [ 15, 16 ]
+        },
+        "i7": {
+          "direction": "input",
+          "bits": [ 17, 18 ]
+        },
+        "o0": {
+          "direction": "output",
+          "bits": [ 19, 20 ]
+        },
+        "o1": {
+          "direction": "output",
+          "bits": [ 21, 22 ]
+        },
+        "o2": {
+          "direction": "output",
+          "bits": [ 23, 24 ]
+        },
+        "o3": {
+          "direction": "output",
+          "bits": [ 25, 26 ]
+        },
+        "o4": {
+          "direction": "output",
+          "bits": [ 27, 28 ]
+        },
+        "o5": {
+          "direction": "output",
+          "bits": [ 29, 30 ]
+        },
+        "o6": {
+          "direction": "output",
+          "bits": [ 31, 32 ]
+        },
+        "o7": {
+          "direction": "output",
+          "bits": [ 33, 34 ]
+        },
+        "rnd_0": {
+          "direction": "input",
+          "bits": [ 35, 36, 37, 38, 39, 40, 41 ]
+        },
+        "rnd_1": {
+          "direction": "input",
+          "bits": [ 42, 43, 44, 45 ]
+        },
+        "rnd_2": {
+          "direction": "input",
+          "bits": [ 46 ]
+        }
+      },
+      "cells": {
+        "comp_n1_0": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKinv\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:162.17-165.2"
+          },
+          "port_directions": {
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "in": [ 5, 6 ],
+            "out": [ 47, 48 ]
+          }
+        },
+        "comp_n2_0": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKinv\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:166.17-169.2"
+          },
+          "port_directions": {
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "in": [ 7, 8 ],
+            "out": [ 49, 50 ]
+          }
+        },
+        "comp_n3_0": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKinv\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:170.17-173.2"
+          },
+          "port_directions": {
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "in": [ 9, 10 ],
+            "out": [ 51, 52 ]
+          }
+        },
+        "comp_n6_0": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKinv\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:174.17-177.2"
+          },
+          "port_directions": {
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "in": [ 15, 16 ],
+            "out": [ 53, 54 ]
+          }
+        },
+        "comp_n7_0": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKinv\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:178.17-181.2"
+          },
+          "port_directions": {
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "in": [ 17, 18 ],
+            "out": [ 55, 56 ]
+          }
+        },
+        "comp_nt0_1": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKinv\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:203.17-206.2"
+          },
+          "port_directions": {
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "in": [ 57, 58 ],
+            "out": [ 59, 60 ]
+          }
+        },
+        "comp_nt1_1": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKinv\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:207.17-210.2"
+          },
+          "port_directions": {
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "in": [ 61, 62 ],
+            "out": [ 63, 64 ]
+          }
+        },
+        "comp_nt2_1": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKinv\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:211.17-214.2"
+          },
+          "port_directions": {
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "in": [ 65, 66 ],
+            "out": [ 67, 68 ]
+          }
+        },
+        "comp_nt3_2": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKinv\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:229.17-232.2"
+          },
+          "port_directions": {
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "in": [ 69, 70 ],
+            "out": [ 71, 72 ]
+          }
+        },
+        "comp_nt4_2": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKinv\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:240.17-243.2"
+          },
+          "port_directions": {
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "in": [ 73, 74 ],
+            "out": [ 75, 76 ]
+          }
+        },
+        "comp_nt5_3": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKinv\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:244.17-247.2"
+          },
+          "port_directions": {
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "in": [ 77, 78 ],
+            "out": [ 79, 80 ]
+          }
+        },
+        "comp_o0_4": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKxor\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:282.17-286.2"
+          },
+          "port_directions": {
+            "ina": "input",
+            "inb": "input",
+            "out": "output"
+          },
+          "connections": {
+            "ina": [ 81, 82 ],
+            "inb": [ 83, 84 ],
+            "out": [ 19, 20 ]
+          }
+        },
+        "comp_o1_3": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKxor\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:292.17-296.2"
+          },
+          "port_directions": {
+            "ina": "input",
+            "inb": "input",
+            "out": "output"
+          },
+          "connections": {
+            "ina": [ 77, 78 ],
+            "inb": [ 85, 86 ],
+            "out": [ 87, 88 ]
+          }
+        },
+        "comp_o2_1": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKxor\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:272.17-276.2"
+          },
+          "port_directions": {
+            "ina": "input",
+            "inb": "input",
+            "out": "output"
+          },
+          "connections": {
+            "ina": [ 65, 66 ],
+            "inb": [ 89, 90 ],
+            "out": [ 91, 92 ]
+          }
+        },
+        "comp_o3_2": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKxor\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:297.17-301.2"
+          },
+          "port_directions": {
+            "ina": "input",
+            "inb": "input",
+            "out": "output"
+          },
+          "connections": {
+            "ina": [ 73, 74 ],
+            "inb": [ 93, 94 ],
+            "out": [ 95, 96 ]
+          }
+        },
+        "comp_o4_3": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKxor\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:287.17-291.2"
+          },
+          "port_directions": {
+            "ina": "input",
+            "inb": "input",
+            "out": "output"
+          },
+          "connections": {
+            "ina": [ 97, 98 ],
+            "inb": [ 99, 100 ],
+            "out": [ 101, 102 ]
+          }
+        },
+        "comp_o5_1": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKxor\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:267.17-271.2"
+          },
+          "port_directions": {
+            "ina": "input",
+            "inb": "input",
+            "out": "output"
+          },
+          "connections": {
+            "ina": [ 61, 62 ],
+            "inb": [ 103, 104 ],
+            "out": [ 105, 106 ]
+          }
+        },
+        "comp_o6_1": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKxor\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:262.17-266.2"
+          },
+          "port_directions": {
+            "ina": "input",
+            "inb": "input",
+            "out": "output"
+          },
+          "connections": {
+            "ina": [ 57, 58 ],
+            "inb": [ 107, 108 ],
+            "out": [ 109, 110 ]
+          }
+        },
+        "comp_o7_2": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKxor\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:277.17-281.2"
+          },
+          "port_directions": {
+            "ina": "input",
+            "inb": "input",
+            "out": "output"
+          },
+          "connections": {
+            "ina": [ 69, 70 ],
+            "inb": [ 111, 112 ],
+            "out": [ 113, 114 ]
+          }
+        },
+        "comp_t0_1": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKand_hpc3\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:182.22-188.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "ina": "input",
+            "inb": "input",
+            "out": "output",
+            "rnd": "input"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "ina": [ 53, 54 ],
+            "inb": [ 55, 56 ],
+            "out": [ 57, 58 ],
+            "rnd": [ 35, 36 ]
+          }
+        },
+        "comp_t1_1": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKand_hpc3\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:189.22-195.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "ina": "input",
+            "inb": "input",
+            "out": "output",
+            "rnd": "input"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "ina": [ 51, 52 ],
+            "inb": [ 49, 50 ],
+            "out": [ 61, 62 ],
+            "rnd": [ 37, 38 ]
+          }
+        },
+        "comp_t2_1": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKand_hpc3\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:196.22-202.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "ina": "input",
+            "inb": "input",
+            "out": "output",
+            "rnd": "input"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "ina": [ 49, 50 ],
+            "inb": [ 47, 48 ],
+            "out": [ 65, 66 ],
+            "rnd": [ 39, 40 ]
+          }
+        },
+        "comp_t3_2": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKand_hpc3\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:215.22-221.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "ina": "input",
+            "inb": "input",
+            "out": "output",
+            "rnd": "input"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "ina": [ 59, 60 ],
+            "inb": [ 63, 64 ],
+            "out": [ 69, 70 ],
+            "rnd": [ 42, 43 ]
+          }
+        },
+        "comp_t4_2": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKand_hpc2\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:222.22-228.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "ina": "input",
+            "inb": "input",
+            "out": "output",
+            "rnd": "input"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "ina": [ 63, 64 ],
+            "inb": [ 51, 52 ],
+            "out": [ 73, 74 ],
+            "rnd": [ 41 ]
+          }
+        },
+        "comp_t5_3": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKand_hpc2_swapped\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:233.30-239.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "ina": "input",
+            "inb": "input",
+            "out": "output",
+            "rnd": "input"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "ina": [ 67, 68 ],
+            "inb": [ 71, 72 ],
+            "out": [ 77, 78 ],
+            "rnd": [ 44 ]
+          }
+        },
+        "comp_t6_3": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKand_hpc2\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:248.22-254.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "ina": "input",
+            "inb": "input",
+            "out": "output",
+            "rnd": "input"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "ina": [ 71, 72 ],
+            "inb": [ 59, 60 ],
+            "out": [ 97, 98 ],
+            "rnd": [ 45 ]
+          }
+        },
+        "comp_t7_4": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKand_hpc2_swapped\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:255.30-261.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "ina": "input",
+            "inb": "input",
+            "out": "output",
+            "rnd": "input"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "ina": [ 75, 76 ],
+            "inb": [ 79, 80 ],
+            "out": [ 81, 82 ],
+            "rnd": [ 46 ]
+          }
+        },
+        "reg_i0_0": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:302.17-306.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 3, 4 ],
+            "out": [ 103, 104 ]
+          }
+        },
+        "reg_i1_0": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:337.17-341.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 5, 6 ],
+            "out": [ 115, 116 ]
+          }
+        },
+        "reg_i1_1": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:342.17-346.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 115, 116 ],
+            "out": [ 93, 94 ]
+          }
+        },
+        "reg_i2_0": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:407.17-411.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 7, 8 ],
+            "out": [ 117, 118 ]
+          }
+        },
+        "reg_i2_1": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:412.17-416.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 117, 118 ],
+            "out": [ 119, 120 ]
+          }
+        },
+        "reg_i2_2": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:417.17-421.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 119, 120 ],
+            "out": [ 121, 122 ]
+          }
+        },
+        "reg_i2_3": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:422.17-426.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 121, 122 ],
+            "out": [ 83, 84 ]
+          }
+        },
+        "reg_i3_0": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:377.17-381.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 9, 10 ],
+            "out": [ 123, 124 ]
+          }
+        },
+        "reg_i3_1": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:382.17-386.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 123, 124 ],
+            "out": [ 125, 126 ]
+          }
+        },
+        "reg_i3_2": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:387.17-391.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 125, 126 ],
+            "out": [ 99, 100 ]
+          }
+        },
+        "reg_i4_0": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:307.17-311.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 11, 12 ],
+            "out": [ 107, 108 ]
+          }
+        },
+        "reg_i5_0": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:312.17-316.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 13, 14 ],
+            "out": [ 127, 128 ]
+          }
+        },
+        "reg_i5_1": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:317.17-321.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 127, 128 ],
+            "out": [ 111, 112 ]
+          }
+        },
+        "reg_i6_0": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:457.17-461.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 15, 16 ],
+            "out": [ 89, 90 ]
+          }
+        },
+        "reg_i7_0": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:322.17-326.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 17, 18 ],
+            "out": [ 129, 130 ]
+          }
+        },
+        "reg_i7_1": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:327.17-331.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 129, 130 ],
+            "out": [ 131, 132 ]
+          }
+        },
+        "reg_i7_2": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:332.17-336.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 131, 132 ],
+            "out": [ 85, 86 ]
+          }
+        },
+        "reg_o1_3": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:347.17-351.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 87, 88 ],
+            "out": [ 21, 22 ]
+          }
+        },
+        "reg_o2_1": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:362.17-366.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 91, 92 ],
+            "out": [ 133, 134 ]
+          }
+        },
+        "reg_o2_2": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:367.17-371.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 133, 134 ],
+            "out": [ 135, 136 ]
+          }
+        },
+        "reg_o2_3": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:372.17-376.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 135, 136 ],
+            "out": [ 23, 24 ]
+          }
+        },
+        "reg_o3_2": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:352.17-356.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 95, 96 ],
+            "out": [ 137, 138 ]
+          }
+        },
+        "reg_o3_3": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:357.17-361.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 137, 138 ],
+            "out": [ 25, 26 ]
+          }
+        },
+        "reg_o4_3": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:427.17-431.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 101, 102 ],
+            "out": [ 27, 28 ]
+          }
+        },
+        "reg_o5_1": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:432.17-436.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 105, 106 ],
+            "out": [ 139, 140 ]
+          }
+        },
+        "reg_o5_2": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:437.17-441.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 139, 140 ],
+            "out": [ 141, 142 ]
+          }
+        },
+        "reg_o5_3": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:442.17-446.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 141, 142 ],
+            "out": [ 29, 30 ]
+          }
+        },
+        "reg_o6_1": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:392.17-396.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 109, 110 ],
+            "out": [ 143, 144 ]
+          }
+        },
+        "reg_o6_2": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:397.17-401.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 143, 144 ],
+            "out": [ 145, 146 ]
+          }
+        },
+        "reg_o6_3": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:402.17-406.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 145, 146 ],
+            "out": [ 31, 32 ]
+          }
+        },
+        "reg_o7_2": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:447.17-451.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 113, 114 ],
+            "out": [ 147, 148 ]
+          }
+        },
+        "reg_o7_3": {
+          "hide_name": 0,
+          "type": "$paramod\\MSKreg\\d=s32'00000000000000000000000000000010",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:452.17-456.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "in": [ 147, 148 ],
+            "out": [ 33, 34 ]
+          }
+        }
+      },
+      "netnames": {
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "fv_type": "clock",
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:36.7-36.10"
+          }
+        },
+        "i0": {
+          "hide_name": 0,
+          "bits": [ 3, 4 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:38.15-38.17"
+          }
+        },
+        "i0_0": {
+          "hide_name": 0,
+          "bits": [ 3, 4 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:75.14-75.18"
+          }
+        },
+        "i0_1": {
+          "hide_name": 0,
+          "bits": [ 103, 104 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:76.14-76.18"
+          }
+        },
+        "i1": {
+          "hide_name": 0,
+          "bits": [ 5, 6 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:40.15-40.17"
+          }
+        },
+        "i1_0": {
+          "hide_name": 0,
+          "bits": [ 5, 6 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:77.14-77.18"
+          }
+        },
+        "i1_1": {
+          "hide_name": 0,
+          "bits": [ 115, 116 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:78.14-78.18"
+          }
+        },
+        "i1_2": {
+          "hide_name": 0,
+          "bits": [ 93, 94 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:79.14-79.18"
+          }
+        },
+        "i2": {
+          "hide_name": 0,
+          "bits": [ 7, 8 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:42.15-42.17"
+          }
+        },
+        "i2_0": {
+          "hide_name": 0,
+          "bits": [ 7, 8 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:80.14-80.18"
+          }
+        },
+        "i2_1": {
+          "hide_name": 0,
+          "bits": [ 117, 118 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:81.14-81.18"
+          }
+        },
+        "i2_2": {
+          "hide_name": 0,
+          "bits": [ 119, 120 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:82.14-82.18"
+          }
+        },
+        "i2_3": {
+          "hide_name": 0,
+          "bits": [ 121, 122 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:83.14-83.18"
+          }
+        },
+        "i2_4": {
+          "hide_name": 0,
+          "bits": [ 83, 84 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:84.14-84.18"
+          }
+        },
+        "i3": {
+          "hide_name": 0,
+          "bits": [ 9, 10 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:44.15-44.17"
+          }
+        },
+        "i3_0": {
+          "hide_name": 0,
+          "bits": [ 9, 10 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:85.14-85.18"
+          }
+        },
+        "i3_1": {
+          "hide_name": 0,
+          "bits": [ 123, 124 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:86.14-86.18"
+          }
+        },
+        "i3_2": {
+          "hide_name": 0,
+          "bits": [ 125, 126 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:87.14-87.18"
+          }
+        },
+        "i3_3": {
+          "hide_name": 0,
+          "bits": [ 99, 100 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:88.14-88.18"
+          }
+        },
+        "i4": {
+          "hide_name": 0,
+          "bits": [ 11, 12 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:46.15-46.17"
+          }
+        },
+        "i4_0": {
+          "hide_name": 0,
+          "bits": [ 11, 12 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:89.14-89.18"
+          }
+        },
+        "i4_1": {
+          "hide_name": 0,
+          "bits": [ 107, 108 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:90.14-90.18"
+          }
+        },
+        "i5": {
+          "hide_name": 0,
+          "bits": [ 13, 14 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:48.15-48.17"
+          }
+        },
+        "i5_0": {
+          "hide_name": 0,
+          "bits": [ 13, 14 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:91.14-91.18"
+          }
+        },
+        "i5_1": {
+          "hide_name": 0,
+          "bits": [ 127, 128 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:92.14-92.18"
+          }
+        },
+        "i5_2": {
+          "hide_name": 0,
+          "bits": [ 111, 112 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:93.14-93.18"
+          }
+        },
+        "i6": {
+          "hide_name": 0,
+          "bits": [ 15, 16 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:50.15-50.17"
+          }
+        },
+        "i6_0": {
+          "hide_name": 0,
+          "bits": [ 15, 16 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:94.14-94.18"
+          }
+        },
+        "i6_1": {
+          "hide_name": 0,
+          "bits": [ 89, 90 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:95.14-95.18"
+          }
+        },
+        "i7": {
+          "hide_name": 0,
+          "bits": [ 17, 18 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000000",
+            "fv_type": "sharing",
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:52.15-52.17"
+          }
+        },
+        "i7_0": {
+          "hide_name": 0,
+          "bits": [ 17, 18 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:96.14-96.18"
+          }
+        },
+        "i7_1": {
+          "hide_name": 0,
+          "bits": [ 129, 130 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:97.14-97.18"
+          }
+        },
+        "i7_2": {
+          "hide_name": 0,
+          "bits": [ 131, 132 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:98.14-98.18"
+          }
+        },
+        "i7_3": {
+          "hide_name": 0,
+          "bits": [ 85, 86 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:99.14-99.18"
+          }
+        },
+        "n1_0": {
+          "hide_name": 0,
+          "bits": [ 47, 48 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:100.14-100.18"
+          }
+        },
+        "n2_0": {
+          "hide_name": 0,
+          "bits": [ 49, 50 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:101.14-101.18"
+          }
+        },
+        "n3_0": {
+          "hide_name": 0,
+          "bits": [ 51, 52 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:102.14-102.18"
+          }
+        },
+        "n6_0": {
+          "hide_name": 0,
+          "bits": [ 53, 54 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:103.14-103.18"
+          }
+        },
+        "n7_0": {
+          "hide_name": 0,
+          "bits": [ 55, 56 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:104.14-104.18"
+          }
+        },
+        "nt0_1": {
+          "hide_name": 0,
+          "bits": [ 59, 60 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:105.14-105.19"
+          }
+        },
+        "nt1_1": {
+          "hide_name": 0,
+          "bits": [ 63, 64 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:106.14-106.19"
+          }
+        },
+        "nt2_1": {
+          "hide_name": 0,
+          "bits": [ 67, 68 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:107.14-107.19"
+          }
+        },
+        "nt3_2": {
+          "hide_name": 0,
+          "bits": [ 71, 72 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:108.14-108.19"
+          }
+        },
+        "nt4_2": {
+          "hide_name": 0,
+          "bits": [ 75, 76 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:109.14-109.19"
+          }
+        },
+        "nt5_3": {
+          "hide_name": 0,
+          "bits": [ 79, 80 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:110.14-110.19"
+          }
+        },
+        "o0": {
+          "hide_name": 0,
+          "bits": [ 19, 20 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000100",
+            "fv_type": "sharing",
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:54.16-54.18"
+          }
+        },
+        "o0_4": {
+          "hide_name": 0,
+          "bits": [ 19, 20 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:111.14-111.18"
+          }
+        },
+        "o1": {
+          "hide_name": 0,
+          "bits": [ 21, 22 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000100",
+            "fv_type": "sharing",
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:56.16-56.18"
+          }
+        },
+        "o1_3": {
+          "hide_name": 0,
+          "bits": [ 87, 88 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:112.14-112.18"
+          }
+        },
+        "o1_4": {
+          "hide_name": 0,
+          "bits": [ 21, 22 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:113.14-113.18"
+          }
+        },
+        "o2": {
+          "hide_name": 0,
+          "bits": [ 23, 24 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000100",
+            "fv_type": "sharing",
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:58.16-58.18"
+          }
+        },
+        "o2_1": {
+          "hide_name": 0,
+          "bits": [ 91, 92 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:114.14-114.18"
+          }
+        },
+        "o2_2": {
+          "hide_name": 0,
+          "bits": [ 133, 134 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:115.14-115.18"
+          }
+        },
+        "o2_3": {
+          "hide_name": 0,
+          "bits": [ 135, 136 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:116.14-116.18"
+          }
+        },
+        "o2_4": {
+          "hide_name": 0,
+          "bits": [ 23, 24 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:117.14-117.18"
+          }
+        },
+        "o3": {
+          "hide_name": 0,
+          "bits": [ 25, 26 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000100",
+            "fv_type": "sharing",
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:60.16-60.18"
+          }
+        },
+        "o3_2": {
+          "hide_name": 0,
+          "bits": [ 95, 96 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:118.14-118.18"
+          }
+        },
+        "o3_3": {
+          "hide_name": 0,
+          "bits": [ 137, 138 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:119.14-119.18"
+          }
+        },
+        "o3_4": {
+          "hide_name": 0,
+          "bits": [ 25, 26 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:120.14-120.18"
+          }
+        },
+        "o4": {
+          "hide_name": 0,
+          "bits": [ 27, 28 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000100",
+            "fv_type": "sharing",
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:62.16-62.18"
+          }
+        },
+        "o4_3": {
+          "hide_name": 0,
+          "bits": [ 101, 102 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:121.14-121.18"
+          }
+        },
+        "o4_4": {
+          "hide_name": 0,
+          "bits": [ 27, 28 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:122.14-122.18"
+          }
+        },
+        "o5": {
+          "hide_name": 0,
+          "bits": [ 29, 30 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000100",
+            "fv_type": "sharing",
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:64.16-64.18"
+          }
+        },
+        "o5_1": {
+          "hide_name": 0,
+          "bits": [ 105, 106 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:123.14-123.18"
+          }
+        },
+        "o5_2": {
+          "hide_name": 0,
+          "bits": [ 139, 140 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:124.14-124.18"
+          }
+        },
+        "o5_3": {
+          "hide_name": 0,
+          "bits": [ 141, 142 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:125.14-125.18"
+          }
+        },
+        "o5_4": {
+          "hide_name": 0,
+          "bits": [ 29, 30 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:126.14-126.18"
+          }
+        },
+        "o6": {
+          "hide_name": 0,
+          "bits": [ 31, 32 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000100",
+            "fv_type": "sharing",
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:66.16-66.18"
+          }
+        },
+        "o6_1": {
+          "hide_name": 0,
+          "bits": [ 109, 110 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:127.14-127.18"
+          }
+        },
+        "o6_2": {
+          "hide_name": 0,
+          "bits": [ 143, 144 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:128.14-128.18"
+          }
+        },
+        "o6_3": {
+          "hide_name": 0,
+          "bits": [ 145, 146 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:129.14-129.18"
+          }
+        },
+        "o6_4": {
+          "hide_name": 0,
+          "bits": [ 31, 32 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:130.14-130.18"
+          }
+        },
+        "o7": {
+          "hide_name": 0,
+          "bits": [ 33, 34 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_latency": "00000000000000000000000000000100",
+            "fv_type": "sharing",
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:68.16-68.18"
+          }
+        },
+        "o7_2": {
+          "hide_name": 0,
+          "bits": [ 113, 114 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:131.14-131.18"
+          }
+        },
+        "o7_3": {
+          "hide_name": 0,
+          "bits": [ 147, 148 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:132.14-132.18"
+          }
+        },
+        "o7_4": {
+          "hide_name": 0,
+          "bits": [ 33, 34 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:133.14-133.18"
+          }
+        },
+        "rnd_0": {
+          "hide_name": 0,
+          "bits": [ 35, 36, 37, 38, 39, 40, 41 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_rnd_count_0": "00000000000000000000000000000111",
+            "fv_rnd_lat_0": "00000000000000000000000000000000",
+            "fv_type": "random",
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:70.43-70.48"
+          }
+        },
+        "rnd_1": {
+          "hide_name": 0,
+          "bits": [ 42, 43, 44, 45 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_rnd_count_0": "00000000000000000000000000000100",
+            "fv_rnd_lat_0": "00000000000000000000000000000001",
+            "fv_type": "random",
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:72.43-72.48"
+          }
+        },
+        "rnd_2": {
+          "hide_name": 0,
+          "bits": [ 46 ],
+          "attributes": {
+            "fv_count": "00000000000000000000000000000001",
+            "fv_rnd_count_0": "00000000000000000000000000000001",
+            "fv_rnd_lat_0": "00000000000000000000000000000010",
+            "fv_type": "random",
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:74.29-74.34"
+          }
+        },
+        "t0_1": {
+          "hide_name": 0,
+          "bits": [ 57, 58 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:134.14-134.18"
+          }
+        },
+        "t1_1": {
+          "hide_name": 0,
+          "bits": [ 61, 62 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:135.14-135.18"
+          }
+        },
+        "t2_1": {
+          "hide_name": 0,
+          "bits": [ 65, 66 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:136.14-136.18"
+          }
+        },
+        "t3_2": {
+          "hide_name": 0,
+          "bits": [ 69, 70 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:137.14-137.18"
+          }
+        },
+        "t4_2": {
+          "hide_name": 0,
+          "bits": [ 73, 74 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:138.14-138.18"
+          }
+        },
+        "t5_3": {
+          "hide_name": 0,
+          "bits": [ 77, 78 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:139.14-139.18"
+          }
+        },
+        "t6_3": {
+          "hide_name": 0,
+          "bits": [ 97, 98 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:140.14-140.18"
+          }
+        },
+        "t7_4": {
+          "hide_name": 0,
+          "bits": [ 81, 82 ],
+          "attributes": {
+            "src": "../work/skinny_base/circuits/skinny8_d2_l4/design.v:141.14-141.18"
+          }
+        }
+      }
+    }
+  }
+}

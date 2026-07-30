@@ -1,0 +1,64 @@
+{
+   "creator": "Yosys 0.33 (git sha1 2584903a0, gcc 8.4.0-1ubuntu1~18.04 -fPIC -Os)",
+   "invocation": "stat -liberty synthesis/nangate45-pdk/stdcells.lib -json ",
+   "modules": {
+      "$paramod$9d3cd672c952c541a7c7c3ce44798115d550ac02\\MSKxor": {
+         "num_wires":         3,
+         "num_wire_bits":     9,
+         "num_pub_wires":     3,
+         "num_pub_wire_bits": 9,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         3,
+         "area":              4.788000,
+         "num_cells_by_type": {
+            "XOR2_X1": 3
+         }
+      },
+      "$paramod\\MSKinv\\d=s32'00000000000000000000000000000011": {
+         "num_wires":         2,
+         "num_wire_bits":     6,
+         "num_pub_wires":     2,
+         "num_pub_wire_bits": 6,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1,
+         "area":              0.532000,
+         "num_cells_by_type": {
+            "INV_X1": 1
+         }
+      },
+      "\\MSKxnor": {
+         "num_wires":         4,
+         "num_wire_bits":     12,
+         "num_pub_wires":     4,
+         "num_pub_wire_bits": 12,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         2,
+         "num_cells_by_type": {
+            "$paramod$9d3cd672c952c541a7c7c3ce44798115d550ac02\\MSKxor": 1,
+            "$paramod\\MSKinv\\d=s32'00000000000000000000000000000011": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         9,
+         "num_wire_bits":     27,
+         "num_pub_wires":     9,
+         "num_pub_wire_bits": 27,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         4,
+         "area":              5.320000,
+         "num_cells_by_type": {
+            "INV_X1": 1,
+            "XOR2_X1": 3
+         }
+      }
+}
+
