@@ -114,6 +114,6 @@ Results appear under `work/<mode>/circuits/<config>/stats.json`. These are the s
 
 ## License
 
-COMPRESS is Apache 2.0. See `compress_source/LICENSE.txt` for the full license text.
+COMPRESS is Apache 2.0. See `https://github.com/cassiersg/compress_artifact/blob/main/LICENSE.txt` for the full license text.
 
 Both the cached JSON files in `compress_logs/` and the source code in `compress_source/` are redistributed under Apache 2.0.
