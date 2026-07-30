@@ -48,7 +48,7 @@ python3 parse_compress_logs.py --csv all_compress.csv   # export as CSV
 
 ### Compare TETRIS vs COMPRESS
 
-Requires TETRIS results to exist under `../Results/`. Run TETRIS first:
+Requires TETRIS results to exist under `../src/Results/`. Run TETRIS first:
 
 ```bash
 cd ..
@@ -73,14 +73,17 @@ d-1  Lat  T:RNG  T:Area  T:DSE(s)  C:Base RNG/Solve  C:Sep RNG/Solve  C:Opt RNG/
 ...
 ```
 
-The last column is the wall-clock speedup TETRIS achieves over COMPRESS:Opt at the same randomness budget.
+The last column is the speedup TETRIS achieves over COMPRESS:Opt at the same randomness budget.
 
 ### Re-run COMPRESS from scratch (optional)
 
 If you want to verify the cached numbers by re-running COMPRESS itself:
 
 ```bash
-cd compress_source
+cd comparision
+bash setup.sh # link the NanGate45 library from TETRIS
+cd ..
+cd compress
 # 1. Set up Python 3.10 environment
 python3.10 -m venv venv
 source venv/bin/activate
@@ -111,14 +114,6 @@ COMPRESS uses `Num Shares` (2, 3, 4, 5). The TETRIS paper uses `d-1` (1, 2, 3, 4
 - etc.
 
 This mapping is applied automatically by both scripts.
-
-## What's NOT included
-
-- **NanGate45 PDK** (~6.5 MB) — TETRIS ships this library elsewhere; symlink or download from the COMPRESS repo as needed. See `compress_source/synthesis/README_pdk.md`.
-- **Verilog outputs** (~977 MB in the original archive) — regeneratable from the source + stats. Reviewers rarely need this.
-- **Solver pickles** — internal state of COMPRESS's CP-SAT solver; not needed for validation.
-
-If a reviewer needs the full 1.3 GB archive, contact the authors.
 
 ## License
 
