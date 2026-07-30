@@ -71,33 +71,12 @@ Our TETRIS DSE runtime numbers, area (via Yosys), latency (in cycles), and rando
 
 ## How to run
 
-Two options: **Docker (recommended for reviewers)** or **native install**.
-
-### Option A: Docker (recommended)
-
-The Docker image bundles Ubuntu 22.04, Python 3.10, Yosys 0.33, Icarus Verilog, Graphviz, and all Python dependencies. Total build time: ~15 minutes (dominated by Yosys build from source).
+### Native install
 
 ```bash
-git clone https://github.com/nilotpolas/TETRIS.git
-cd TETRIS
-docker build -t tetris-artifact .
-
-# Interactive session inside the container:
-docker run -it --rm tetris-artifact
-
-# One-shot commands:
-docker run --rm tetris-artifact make mrlc
-docker run --rm tetris-artifact make all
-
-# To persist Results/ to your host:
-docker run --rm -v $(pwd)/Results:/artifact/Results tetris-artifact make all-synth
-```
-
-### Option B: Native install
-
-```bash
-git clone https://github.com/nilotpolas/TETRIS.git
-cd TETRIS
+git clone https://github.com/nilotpolas/TETRIS-artifact.git
+cd TETRIS-artifact
+cd src
 python3.10 -m venv myenv
 source myenv/bin/activate
 pip install -r requirement.txt
