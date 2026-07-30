@@ -1,0 +1,75 @@
+{
+    "type":
+    {
+        "clock": ["clk"],
+        "refresh": ["rand_1", "rand_2", "rand_3", "rand_4", "rand_5", "rand_6", "rand_7", "rand_8", "rand_9", "rand_10",
+                    "rand_11", "rand_12", "rand_13", "rand_14", "rand_15", "rand_16", "rand_17", "rand_18", "rand_19", "rand_20",
+                    "rand_21", "rand_22", "rand_23", "rand_24", "rand_25", "rand_26", "rand_27", "rand_28", "rand_29", "rand_30",
+                    "rand_31", "rand_32", "rand_33", "rand_34", "rand_35", "rand_36", "rand_37", "rand_38", "rand_39", "rand_40", 
+                    "rand_41", "rand_42", "rand_43", "rand_44", "rand_45", "rand_46", "rand_47", "rand_48", "rand_49", "rand_50", 
+                    "rand_51", "rand_52", "rand_53", "rand_54", "rand_55", "rand_56", "rand_57", "rand_58", "rand_59", "rand_60",
+                    "rand_61", "rand_62", "rand_63", "rand_64", "rand_65", "rand_66", "rand_67", "rand_68", "rand_69", "rand_70",
+                    "rand_71", "rand_72", "rand_73", "rand_74", "rand_75", "rand_76", "rand_77", "rand_78", "rand_79", "rand_80", 
+                    "rand_81", "rand_82", "rand_83", "rand_84", "rand_85", "rand_86", "rand_87", "rand_88", "rand_89", "rand_90",
+                    "rand_91", "rand_92", "rand_93", "rand_94", "rand_95", "rand_96", "rand_97", "rand_98", "rand_99", "rand_100",
+                    "rand_101", "rand_102", "rand_103", "rand_104", "rand_105", "rand_106", "rand_107", "rand_108", "rand_109", "rand_110",
+                    "rand_111", "rand_112", "rand_113", "rand_114", "rand_115", "rand_116", "rand_117", "rand_118", "rand_119", "rand_120",
+                    "rand_121", "rand_122", "rand_123", "rand_124", "rand_125", "rand_126", "rand_127", "rand_128", "rand_129", "rand_130",
+                    "rand_131", "rand_132", "rand_133", "rand_134", "rand_135", "rand_136", "rand_137", "rand_138"],
+        "control": [],
+        "error_flag": []
+    },
+    "primary_input_identifier": {},
+    "share_domain":
+    {
+        "input":
+        {
+            "0": ["X0_0", "X1_0", "X2_0", "X3_0", "X4_0", "X5_0", "X6_0", "X7_0"],
+            "1": ["X0_1", "X1_1", "X2_1", "X3_1", "X4_1", "X5_1", "X6_1", "X7_1"],
+            "2": ["X0_2", "X1_2", "X2_2", "X3_2", "X4_2", "X5_2", "X6_2", "X7_2"]
+        },
+        "output":
+        {
+            "0": ["Y0_0", "Y1_0", "Y2_0", "Y3_0", "Y4_0", "Y5_0", "Y6_0", "Y7_0"],
+            "1": ["Y0_1", "Y1_1", "Y2_1", "Y3_1", "Y4_1", "Y5_1", "Y6_1", "Y7_1"],
+            "2": ["Y0_2", "Y1_2", "Y2_2", "Y3_2", "Y4_2", "Y5_2", "Y6_2", "Y7_2"]
+        }
+        
+    },
+    "share_index":
+    {
+        
+        "input":
+        {
+            "0": ["X0_0", "X0_1", "X0_2"],
+            "1": ["X1_0", "X1_1", "X1_2"],
+            "2": ["X2_0", "X2_1", "X2_2"],
+            "3": ["X3_0", "X3_1", "X3_2"],
+            "4": ["X4_0", "X4_1", "X4_2"],
+            "5": ["X5_0", "X5_1", "X5_2"],
+            "6": ["X6_0", "X6_1", "X6_2"],
+            "7": ["X7_0", "X7_1", "X7_2"]
+        },
+        "output":
+        {
+            "0": ["Y0_0", "Y0_1", "Y0_2"],
+            "1": ["Y1_0", "Y1_1", "Y1_2"],
+            "2": ["Y2_0", "Y2_1", "Y2_2"],
+            "3": ["Y3_0", "Y3_1", "Y3_2"],
+            "4": ["Y4_0", "Y4_1", "Y4_2"],
+            "5": ["Y5_0", "Y5_1", "Y5_2"],
+            "6": ["Y6_0", "Y6_1", "Y6_2"],
+            "7": ["Y7_0", "Y7_1", "Y7_2"]
+        }
+    },
+    "fault_domain":
+    {
+        "input": {},
+        "output": {}
+    },
+    "secret_index":
+    {
+        "input": {},
+        "output": {}
+    }
+}

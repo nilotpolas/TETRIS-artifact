@@ -1,0 +1,92 @@
+{
+    "type":
+    {
+        "clock": ["clk"],
+        "refresh": ["rand_16", "rand_39", "rand_143", "rand_164", "rand_158", "rand_13", "rand_25", "rand_106", 
+        "rand_173", "rand_82", "rand_131", "rand_145", "rand_11", "rand_168", "rand_73", 
+        "rand_76", "rand_132", "rand_146", "rand_59", "rand_71", "rand_101", "rand_109", 
+        "rand_3", "rand_56", "rand_165", "rand_8", "rand_74", "rand_152", "rand_14", "rand_42", 
+        "rand_104", "rand_122", "rand_10", "rand_87", "rand_197", "rand_38", " rand_136", 
+        "rand_159", "rand_63", "rand_75", "rand_161", "rand_171", "rand_41", "rand_99", 
+        "rand_105", "rand_192", "rand_6", "rand_15", "rand_110", "rand_2", "rand_117", 
+        "rand_148", "rand_5", "rand_139", "rand_47", "rand_107", "rand_154", "rand_17", 
+        "rand_103", "rand_116", "rand_89", "rand_125", "rand_72", "rand_166", "rand_196", 
+        "rand_85", "rand_203", "rand_57", "rand_86", "rand_195", "rand_24", "rand_187", 
+        "rand_191", "rand_27", "rand_80", "rand_102", "rand_140", "rand_45", "rand_129", 
+        "rand_141", "rand_19", "rand_21", "rand_115", "rand_52", "rand_124", "rand_163", 
+        "rand_1", "rand_138", "rand_150", "rand_96", "rand_130", "rand_204", "rand_55", 
+        "rand_66", "rand_114", "rand_153", "rand_43", "rand_88", "rand_108", "rand_188", 
+        "rand_179", "rand_68", "rand_167", "rand_172", "rand_32", "rand_67", "rand_181", 
+        "rand_69", "rand_83", "rand_113", "rand_170", "rand_81", "rand_123", "rand_160", 
+        "rand_48", "rand_51", "rand_23", "rand_93", "rand_128", "rand_162", "rand_28", 
+        "rand_54", "rand_135", "rand_199", "rand_18", "rand_70", "rand_100", "rand_126", 
+        "rand_53", "rand_147", "rand_176", "rand_31", "rand_94", "rand_127", "rand_151", 
+        "rand_65", "rand_90", "rand_9", "rand_7", "rand_190", "rand_12", "rand_64", "rand_137", 
+        "rand_144", "rand_61", "rand_183", "rand_91", "rand_120", "rand_33", "rand_97", 
+        "rand_194", "rand_4", "rand_36", "rand_133", "rand_202", "rand_50", "rand_78", 
+        "rand_184", "rand_26", "rand_46", "rand_118", "rand_200", "rand_40", "rand_58", 
+        "rand_121", "rand_180", "rand_84", "rand_142", "rand_175", "rand_35", "rand_44", 
+        "rand_149", "rand_186", "rand_37", "rand_60", "rand_112", "rand_30", "rand_157", 
+        "rand_189", "rand_20", "rand_34", "rand_174", "rand_177", "rand_95", "rand_155", 
+        "rand_182", "rand_22", "rand_111", "rand_198", "rand_49", "rand_134", "rand_156", 
+        "rand_29", "rand_92", "rand_169", "rand_178", "rand_62", "rand_98", "rand_119", 
+        "rand_185", "rand_79", "rand_193", "rand_201", "rand_77"],
+        "control": [],
+        "error_flag": []
+    },
+    "primary_input_identifier": {},
+    "share_domain":
+    {
+        "input":
+        {
+            "0": ["X0_0", "X1_0", "X2_0", "X3_0", "X4_0", "X5_0", "X6_0", "X7_0"],
+            "1": ["X0_1", "X1_1", "X2_1", "X3_1", "X4_1", "X5_1", "X6_1", "X7_1"],
+            "2": ["X0_2", "X1_2", "X2_2", "X3_2", "X4_2", "X5_2", "X6_2", "X7_2"],
+            "3": ["X0_3", "X1_3", "X2_3", "X3_3", "X4_3", "X5_3", "X6_3", "X7_3"]
+        },
+        "output":
+        {
+            "0": ["Y0_0", "Y1_0", "Y2_0", "Y3_0", "Y4_0", "Y5_0", "Y6_0", "Y7_0"],
+            "1": ["Y0_1", "Y1_1", "Y2_1", "Y3_1", "Y4_1", "Y5_1", "Y6_1", "Y7_1"],
+            "2": ["Y0_2", "Y1_2", "Y2_2", "Y3_2", "Y4_2", "Y5_2", "Y6_2", "Y7_2"],
+            "3": ["Y0_3", "Y1_3", "Y2_3", "Y3_3", "Y4_3", "Y5_3", "Y6_3", "Y7_3"]
+        }
+        
+    },
+    "share_index":
+    {
+        
+        "input":
+        {
+            "0": ["X0_0", "X0_1", "X0_2", "X0_3"],
+            "1": ["X1_0", "X1_1", "X1_2", "X1_3"],
+            "2": ["X2_0", "X2_1", "X2_2", "X2_3"],
+            "3": ["X3_0", "X3_1", "X3_2", "X3_3"],
+            "4": ["X4_0", "X4_1", "X4_2", "X4_3"],
+            "5": ["X5_0", "X5_1", "X5_2", "X5_3"],
+            "6": ["X6_0", "X6_1", "X6_2", "X6_3"],
+            "7": ["X7_0", "X7_1", "X7_2", "X7_3"]
+        },
+        "output":
+        {
+            "0": ["Y0_0", "Y0_1", "Y0_2", "Y0_3"],
+            "1": ["Y1_0", "Y1_1", "Y1_2", "Y1_3"],
+            "2": ["Y2_0", "Y2_1", "Y2_2", "Y2_3"],
+            "3": ["Y3_0", "Y3_1", "Y3_2", "Y3_3"],
+            "4": ["Y4_0", "Y4_1", "Y4_2", "Y4_3"],
+            "5": ["Y5_0", "Y5_1", "Y5_2", "Y5_3"],
+            "6": ["Y6_0", "Y6_1", "Y6_2", "Y6_3"],
+            "7": ["Y7_0", "Y7_1", "Y7_2", "Y7_3"]
+        }
+    },
+    "fault_domain":
+    {
+        "input": {},
+        "output": {}
+    },
+    "secret_index":
+    {
+        "input": {},
+        "output": {}
+    }
+}

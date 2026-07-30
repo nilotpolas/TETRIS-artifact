@@ -1,0 +1,574 @@
+module sbox(
+    clk,
+    i0_0,
+    i0_1,
+    i1_0,
+    i1_1,
+    i2_0,
+    i2_1,
+    i3_0,
+    i3_1,
+    i4_0,
+    i4_1,
+    i5_0,
+    i5_1,
+    i6_0,
+    i6_1,
+    i7_0,
+    i7_1,
+    rand_1,
+    rand_11,
+    rand_12,
+    rand_8,
+    rand_6,
+    rand_7,
+    rand_9,
+    rand_2,
+    rand_3,
+    rand_5,
+    rand_10,
+    rand_4,
+    o0_0,
+    o0_1,
+    o1_0,
+    o1_1,
+    o2_0,
+    o2_1,
+    o3_0,
+    o3_1,
+    o4_0,
+    o4_1,
+    o5_0,
+    o5_1,
+    o6_0,
+    o6_1,
+    o7_0,
+    o7_1
+);
+//INPUTS
+    input clk;
+    input  i0_0;
+    input  i0_1;
+    input  i1_0;
+    input  i1_1;
+    input  i2_0;
+    input  i2_1;
+    input  i3_0;
+    input  i3_1;
+    input  i4_0;
+    input  i4_1;
+    input  i5_0;
+    input  i5_1;
+    input  i6_0;
+    input  i6_1;
+    input  i7_0;
+    input  i7_1;
+    input  rand_1;
+    input  rand_11;
+    input  rand_12;
+    input  rand_8;
+    input  rand_6;
+    input  rand_7;
+    input  rand_9;
+    input  rand_2;
+    input  rand_3;
+    input  rand_5;
+    input  rand_10;
+    input  rand_4;
+//OUTPUTS
+    output reg  o0_0;
+    output reg  o0_1;
+    output reg  o1_0;
+    output reg  o1_1;
+    output reg  o2_0;
+    output reg  o2_1;
+    output reg  o3_0;
+    output reg  o3_1;
+    output reg  o4_0;
+    output reg  o4_1;
+    output reg  o5_0;
+    output reg  o5_1;
+    output reg  o6_0;
+    output reg  o6_1;
+    output reg  o7_0;
+    output reg  o7_1;
+//Intermediate values
+    wire n1_0;
+    wire n1_1;
+    wire n2_0;
+    wire n2_1;
+    wire n3_0;
+    wire n3_1;
+    wire n6_0;
+    wire n6_1;
+    wire n7_0;
+    wire n7_1;
+    wire u00_HPC30;
+    reg temp_hpc3_v_1_order0_HPC30;
+    reg n6_0_reg;
+    wire v01_HPC30;
+    wire a_share_neg_hpc3_w_1_order0_HPC30;
+    wire temp_hpc3_w_1_order0_HPC30;
+    reg w01_HPC30;
+    wire u01_HPC30;
+    reg temp_hpc3_v_1_order1_HPC30;
+    reg n6_1_reg;
+    wire v10_HPC30;
+    wire a_share_neg_hpc3_w_1_order1_HPC30;
+    wire temp_hpc3_w_1_order1_HPC30;
+    reg w10_HPC30;
+    wire u10_HPC30;
+    wire u11_HPC30;
+    reg u00_HPC30_reg;
+    wire t0_0;
+    reg u11_HPC30_reg;
+    wire t0_1;
+    wire u00_HPC31;
+    reg temp_hpc3_v_1_order0_HPC31;
+    reg n3_0_reg;
+    wire v01_HPC31;
+    wire a_share_neg_hpc3_w_1_order0_HPC31;
+    wire temp_hpc3_w_1_order0_HPC31;
+    reg w01_HPC31;
+    wire u01_HPC31;
+    reg temp_hpc3_v_1_order1_HPC31;
+    reg n3_1_reg;
+    wire v10_HPC31;
+    wire a_share_neg_hpc3_w_1_order1_HPC31;
+    wire temp_hpc3_w_1_order1_HPC31;
+    reg w10_HPC31;
+    wire u10_HPC31;
+    wire u11_HPC31;
+    reg u00_HPC31_reg;
+    wire t1_0;
+    reg u11_HPC31_reg;
+    wire t1_1;
+    wire u00_HPC32;
+    reg temp_hpc3_v_1_order0_HPC32;
+    reg n2_0_reg;
+    wire v01_HPC32;
+    wire a_share_neg_hpc3_w_1_order0_HPC32;
+    wire temp_hpc3_w_1_order0_HPC32;
+    reg w01_HPC32;
+    wire u01_HPC32;
+    reg temp_hpc3_v_1_order1_HPC32;
+    reg n2_1_reg;
+    wire v10_HPC32;
+    wire a_share_neg_hpc3_w_1_order1_HPC32;
+    wire temp_hpc3_w_1_order1_HPC32;
+    reg w10_HPC32;
+    wire u10_HPC32;
+    wire u11_HPC32;
+    reg u00_HPC32_reg;
+    wire t2_0;
+    reg u11_HPC32_reg;
+    wire t2_1;
+    wire nt0_0;
+    wire nt0_1;
+    wire nt1_0;
+    wire nt1_1;
+    wire nt2_0;
+    wire nt2_1;
+    wire u00_HPC33;
+    reg temp_hpc3_v_1_order0_HPC33;
+    reg nt0_0_reg;
+    wire v01_HPC33;
+    wire a_share_neg_hpc3_w_1_order0_HPC33;
+    wire temp_hpc3_w_1_order0_HPC33;
+    reg w01_HPC33;
+    wire u01_HPC33;
+    reg temp_hpc3_v_1_order1_HPC33;
+    reg nt0_1_reg;
+    wire v10_HPC33;
+    wire a_share_neg_hpc3_w_1_order1_HPC33;
+    wire temp_hpc3_w_1_order1_HPC33;
+    reg w10_HPC33;
+    wire u10_HPC33;
+    wire u11_HPC33;
+    reg u00_HPC33_reg;
+    wire t3_0;
+    reg u11_HPC33_reg;
+    wire t3_1;
+    wire u00_HPC24;
+    reg temp_hpc2_v_1_order0_HPC24;
+    reg v01_HPC24;
+    wire a_neg_hpc2_w_1_order0_HPC24;
+    reg w01_HPC24;
+    wire u01_HPC24;
+    reg temp_hpc2_v_1_order1_HPC24;
+    reg v10_HPC24;
+    wire a_neg_hpc2_w_1_order1_HPC24;
+    reg w10_HPC24;
+    wire u10_HPC24;
+    wire u11_HPC24;
+    reg u00_HPC24_reg;
+    wire t4_0;
+    reg u11_HPC24_reg;
+    wire t4_1;
+    wire nt3_0;
+    wire nt3_1;
+    reg nt2_0_reg;
+    wire u00_HPC2_swapped5;
+    reg temp_hpc2sw_v_1_order0_HPC2_swapped5;
+    reg v01_HPC2_swapped5;
+    wire a_neg_hpc2sw_w_1_order0_HPC2_swapped5;
+    reg w01_HPC2_swapped5;
+    wire u01_HPC2_swapped5;
+    reg temp_hpc2sw_v_1_order1_HPC2_swapped5;
+    reg v10_HPC2_swapped5;
+    wire a_neg_hpc2sw_w_1_order1_HPC2_swapped5;
+    reg w10_HPC2_swapped5;
+    wire u10_HPC2_swapped5;
+    reg nt2_1_reg;
+    wire u11_HPC2_swapped5;
+    reg u00_HPC2_swapped5_reg;
+    wire t5_0;
+    reg u11_HPC2_swapped5_reg;
+    wire t5_1;
+    wire nt4_0;
+    wire nt4_1;
+    wire nt5_0;
+    wire nt5_1;
+    wire temp_ab_hpc2o_first_half_1_order0_HPC2o6;
+    wire a_neg_hpc2o_first_half_1_order0_HPC2o6;
+    wire temp_ar_hpc2o_first_half_1_order0_HPC2o6;
+    wire xor_step1_hpc2o_first_half_1_order0_HPC2o6;
+    wire xor_step2_hpc2o_first_half_1_order0_HPC2o6;
+    reg w01_HPC2o6;
+    wire xor_br_hpc2o_v_1_order0_HPC2o6;
+    reg temp_hpc2o_v_1_order0_HPC2o6;
+    wire and_ta_hpc2o_v_1_order0_HPC2o6;
+    reg v01_HPC2o6;
+    wire u01_HPC2o6;
+    wire temp_ab_hpc2o_first_half_1_order1_HPC2o6;
+    wire a_neg_hpc2o_first_half_1_order1_HPC2o6;
+    wire temp_ar_hpc2o_first_half_1_order1_HPC2o6;
+    wire xor_step1_hpc2o_first_half_1_order1_HPC2o6;
+    wire xor_step2_hpc2o_first_half_1_order1_HPC2o6;
+    reg w10_HPC2o6;
+    wire xor_br_hpc2o_v_1_order1_HPC2o6;
+    reg temp_hpc2o_v_1_order1_HPC2o6;
+    wire and_ta_hpc2o_v_1_order1_HPC2o6;
+    reg v10_HPC2o6;
+    wire u10_HPC2o6;
+    wire t6_0;
+    wire t6_1;
+    reg nt4_0_reg;
+    wire temp_ab_hpc2osw_first_half_1_order0_HPC2o_swapped7;
+    wire a_neg_hpc2osw_first_half_1_order0_HPC2o_swapped7;
+    wire temp_ar_hpc2osw_first_half_1_order0_HPC2o_swapped7;
+    wire xor_step1_hpc2osw_first_half_1_order0_HPC2o_swapped7;
+    wire xor_step2_hpc2osw_first_half_1_order0_HPC2o_swapped7;
+    reg w01_HPC2o_swapped7;
+    wire xor_br_hpc2osw_v_1_order0_HPC2o_swapped7;
+    reg temp_hpc2osw_v_1_order0_HPC2o_swapped7;
+    wire and_ta_hpc2osw_v_1_order0_HPC2o_swapped7;
+    reg v01_HPC2o_swapped7;
+    wire u01_HPC2o_swapped7;
+    reg nt4_1_reg;
+    wire temp_ab_hpc2osw_first_half_1_order1_HPC2o_swapped7;
+    wire a_neg_hpc2osw_first_half_1_order1_HPC2o_swapped7;
+    wire temp_ar_hpc2osw_first_half_1_order1_HPC2o_swapped7;
+    wire xor_step1_hpc2osw_first_half_1_order1_HPC2o_swapped7;
+    wire xor_step2_hpc2osw_first_half_1_order1_HPC2o_swapped7;
+    reg w10_HPC2o_swapped7;
+    wire xor_br_hpc2osw_v_1_order1_HPC2o_swapped7;
+    reg temp_hpc2osw_v_1_order1_HPC2o_swapped7;
+    wire and_ta_hpc2osw_v_1_order1_HPC2o_swapped7;
+    reg v10_HPC2o_swapped7;
+    wire u10_HPC2o_swapped7;
+    wire t7_0;
+    wire t7_1;
+    wire o6_val_0;
+    wire o6_val_1;
+    wire o5_val_0;
+    wire o5_val_1;
+    wire o2_val_0;
+    wire o2_val_1;
+    wire o7_val_0;
+    wire o7_val_1;
+    wire o0_val_0;
+    wire o0_val_1;
+    wire o4_val_0;
+    wire o4_val_1;
+    wire o1_val_0;
+    wire o1_val_1;
+    wire o3_val_0;
+    wire o3_val_1;
+    wire z753_assgn753;
+    reg z753_assgn7530;
+    reg z753_assgn7531;
+    wire z755_assgn755;
+    reg z755_assgn7550;
+    reg z755_assgn7551;
+    wire z757_assgn757;
+    reg z757_assgn7570;
+    wire z759_assgn759;
+    reg z759_assgn7590;
+    wire z765_assgn765;
+    reg z765_assgn7650;
+    reg z765_assgn7651;
+    wire z767_assgn767;
+    reg z767_assgn7670;
+    reg z767_assgn7671;
+    wire z769_assgn769;
+    reg z769_assgn7690;
+    reg z769_assgn7691;
+    wire z771_assgn771;
+    reg z771_assgn7710;
+    reg z771_assgn7711;
+    wire z773_assgn773;
+    reg z773_assgn7730;
+    wire z775_assgn775;
+    reg z775_assgn7750;
+
+    assign n1_0 = i1_0;
+    assign n1_1 = !i1_1;
+    assign n2_0 = i2_0;
+    assign n2_1 = !i2_1;
+    assign n3_0 = i3_0;
+    assign n3_1 = !i3_1;
+    assign n6_0 = i6_0;
+    assign n6_1 = !i6_1;
+    assign n7_0 = i7_0;
+    assign n7_1 = !i7_1;
+    assign u00_HPC30 = (n6_0 & n7_0);
+    assign v01_HPC30 = (temp_hpc3_v_1_order0_HPC30 & n6_0_reg);
+    assign a_share_neg_hpc3_w_1_order0_HPC30 = !n6_0;
+    assign temp_hpc3_w_1_order0_HPC30 = (a_share_neg_hpc3_w_1_order0_HPC30 & rand_1);
+    assign u01_HPC30 = (v01_HPC30 ^ w01_HPC30);
+    assign v10_HPC30 = (temp_hpc3_v_1_order1_HPC30 & n6_1_reg);
+    assign a_share_neg_hpc3_w_1_order1_HPC30 = !n6_1;
+    assign temp_hpc3_w_1_order1_HPC30 = (a_share_neg_hpc3_w_1_order1_HPC30 & rand_1);
+    assign u10_HPC30 = (v10_HPC30 ^ w10_HPC30);
+    assign u11_HPC30 = (n6_1 & n7_1);
+    assign t0_0 = (u00_HPC30_reg ^ u01_HPC30);
+    assign t0_1 = (u10_HPC30 ^ u11_HPC30_reg);
+    assign u00_HPC31 = (n3_0 & n2_0);
+    assign v01_HPC31 = (temp_hpc3_v_1_order0_HPC31 & n3_0_reg);
+    assign a_share_neg_hpc3_w_1_order0_HPC31 = !n3_0;
+    assign temp_hpc3_w_1_order0_HPC31 = (a_share_neg_hpc3_w_1_order0_HPC31 & rand_3);
+    assign u01_HPC31 = (v01_HPC31 ^ w01_HPC31);
+    assign v10_HPC31 = (temp_hpc3_v_1_order1_HPC31 & n3_1_reg);
+    assign a_share_neg_hpc3_w_1_order1_HPC31 = !n3_1;
+    assign temp_hpc3_w_1_order1_HPC31 = (a_share_neg_hpc3_w_1_order1_HPC31 & rand_3);
+    assign u10_HPC31 = (v10_HPC31 ^ w10_HPC31);
+    assign u11_HPC31 = (n3_1 & n2_1);
+    assign t1_0 = (u00_HPC31_reg ^ u01_HPC31);
+    assign t1_1 = (u10_HPC31 ^ u11_HPC31_reg);
+    assign u00_HPC32 = (n2_0 & n1_0);
+    assign v01_HPC32 = (temp_hpc3_v_1_order0_HPC32 & n2_0_reg);
+    assign a_share_neg_hpc3_w_1_order0_HPC32 = !n2_0;
+    assign temp_hpc3_w_1_order0_HPC32 = (a_share_neg_hpc3_w_1_order0_HPC32 & rand_5);
+    assign u01_HPC32 = (v01_HPC32 ^ w01_HPC32);
+    assign v10_HPC32 = (temp_hpc3_v_1_order1_HPC32 & n2_1_reg);
+    assign a_share_neg_hpc3_w_1_order1_HPC32 = !n2_1;
+    assign temp_hpc3_w_1_order1_HPC32 = (a_share_neg_hpc3_w_1_order1_HPC32 & rand_5);
+    assign u10_HPC32 = (v10_HPC32 ^ w10_HPC32);
+    assign u11_HPC32 = (n2_1 & n1_1);
+    assign t2_0 = (u00_HPC32_reg ^ u01_HPC32);
+    assign t2_1 = (u10_HPC32 ^ u11_HPC32_reg);
+    assign nt0_0 = t0_0;
+    assign nt0_1 = !t0_1;
+    assign nt1_0 = t1_0;
+    assign nt1_1 = !t1_1;
+    assign nt2_0 = t2_0;
+    assign nt2_1 = !t2_1;
+    assign u00_HPC33 = (nt0_0 & nt1_0);
+    assign v01_HPC33 = (temp_hpc3_v_1_order0_HPC33 & nt0_0_reg);
+    assign a_share_neg_hpc3_w_1_order0_HPC33 = !nt0_0;
+    assign temp_hpc3_w_1_order0_HPC33 = (a_share_neg_hpc3_w_1_order0_HPC33 & rand_7);
+    assign u01_HPC33 = (v01_HPC33 ^ w01_HPC33);
+    assign v10_HPC33 = (temp_hpc3_v_1_order1_HPC33 & nt0_1_reg);
+    assign a_share_neg_hpc3_w_1_order1_HPC33 = !nt0_1;
+    assign temp_hpc3_w_1_order1_HPC33 = (a_share_neg_hpc3_w_1_order1_HPC33 & rand_7);
+    assign u10_HPC33 = (v10_HPC33 ^ w10_HPC33);
+    assign u11_HPC33 = (nt0_1 & nt1_1);
+    assign t3_0 = (u00_HPC33_reg ^ u01_HPC33);
+    assign t3_1 = (u10_HPC33 ^ u11_HPC33_reg);
+    assign u00_HPC24 = (nt1_0 & n3_0_reg);
+    assign a_neg_hpc2_w_1_order0_HPC24 = !nt1_0;
+    assign u01_HPC24 = (v01_HPC24 ^ w01_HPC24);
+    assign a_neg_hpc2_w_1_order1_HPC24 = !nt1_1;
+    assign u10_HPC24 = (v10_HPC24 ^ w10_HPC24);
+    assign u11_HPC24 = (nt1_1 & n3_1_reg);
+    assign t4_0 = (u00_HPC24_reg ^ u01_HPC24);
+    assign t4_1 = (u10_HPC24 ^ u11_HPC24_reg);
+    assign nt3_0 = t3_0;
+    assign nt3_1 = !t3_1;
+    assign u00_HPC2_swapped5 = (nt2_0_reg & nt3_0);
+    assign a_neg_hpc2sw_w_1_order0_HPC2_swapped5 = !nt3_0;
+    assign u01_HPC2_swapped5 = (v01_HPC2_swapped5 ^ w01_HPC2_swapped5);
+    assign a_neg_hpc2sw_w_1_order1_HPC2_swapped5 = !nt3_1;
+    assign u10_HPC2_swapped5 = (v10_HPC2_swapped5 ^ w10_HPC2_swapped5);
+    assign u11_HPC2_swapped5 = (nt2_1_reg & nt3_1);
+    assign t5_0 = (u00_HPC2_swapped5_reg ^ u01_HPC2_swapped5);
+    assign t5_1 = (u10_HPC2_swapped5 ^ u11_HPC2_swapped5_reg);
+    assign nt4_0 = t4_0;
+    assign nt4_1 = !t4_1;
+    assign nt5_0 = t5_0;
+    assign nt5_1 = !t5_1;
+    assign temp_ab_hpc2o_first_half_1_order0_HPC2o6 = (nt3_0 & nt0_0_reg);
+    assign a_neg_hpc2o_first_half_1_order0_HPC2o6 = !nt3_0;
+    assign temp_ar_hpc2o_first_half_1_order0_HPC2o6 = (a_neg_hpc2o_first_half_1_order0_HPC2o6 & rand_11);
+    assign xor_step1_hpc2o_first_half_1_order0_HPC2o6 = (o4_val_0 ^ temp_ab_hpc2o_first_half_1_order0_HPC2o6);
+    assign xor_step2_hpc2o_first_half_1_order0_HPC2o6 = (xor_step1_hpc2o_first_half_1_order0_HPC2o6 ^ temp_ar_hpc2o_first_half_1_order0_HPC2o6);
+    assign xor_br_hpc2o_v_1_order0_HPC2o6 = (nt0_1 ^ rand_11);
+    assign and_ta_hpc2o_v_1_order0_HPC2o6 = (temp_hpc2o_v_1_order0_HPC2o6 & nt3_0);
+    assign u01_HPC2o6 = (v01_HPC2o6 ^ w01_HPC2o6);
+    assign temp_ab_hpc2o_first_half_1_order1_HPC2o6 = (nt3_1 & nt0_1_reg);
+    assign a_neg_hpc2o_first_half_1_order1_HPC2o6 = !nt3_1;
+    assign temp_ar_hpc2o_first_half_1_order1_HPC2o6 = (a_neg_hpc2o_first_half_1_order1_HPC2o6 & rand_11);
+    assign xor_step1_hpc2o_first_half_1_order1_HPC2o6 = (o4_val_1 ^ temp_ab_hpc2o_first_half_1_order1_HPC2o6);
+    assign xor_step2_hpc2o_first_half_1_order1_HPC2o6 = (xor_step1_hpc2o_first_half_1_order1_HPC2o6 ^ temp_ar_hpc2o_first_half_1_order1_HPC2o6);
+    assign xor_br_hpc2o_v_1_order1_HPC2o6 = (nt0_0 ^ rand_11);
+    assign and_ta_hpc2o_v_1_order1_HPC2o6 = (temp_hpc2o_v_1_order1_HPC2o6 & nt3_1);
+    assign u10_HPC2o6 = (v10_HPC2o6 ^ w10_HPC2o6);
+    assign t6_0 = u01_HPC2o6;
+    assign t6_1 = u10_HPC2o6;
+    assign temp_ab_hpc2osw_first_half_1_order0_HPC2o_swapped7 = (nt5_0 & nt4_0_reg);
+    assign a_neg_hpc2osw_first_half_1_order0_HPC2o_swapped7 = !nt5_0;
+    assign temp_ar_hpc2osw_first_half_1_order0_HPC2o_swapped7 = (a_neg_hpc2osw_first_half_1_order0_HPC2o_swapped7 & rand_12);
+    assign xor_step1_hpc2osw_first_half_1_order0_HPC2o_swapped7 = (o0_val_0 ^ temp_ab_hpc2osw_first_half_1_order0_HPC2o_swapped7);
+    assign xor_step2_hpc2osw_first_half_1_order0_HPC2o_swapped7 = (xor_step1_hpc2osw_first_half_1_order0_HPC2o_swapped7 ^ temp_ar_hpc2osw_first_half_1_order0_HPC2o_swapped7);
+    assign xor_br_hpc2osw_v_1_order0_HPC2o_swapped7 = (nt4_1 ^ rand_12);
+    assign and_ta_hpc2osw_v_1_order0_HPC2o_swapped7 = (temp_hpc2osw_v_1_order0_HPC2o_swapped7 & nt5_0);
+    assign u01_HPC2o_swapped7 = (v01_HPC2o_swapped7 ^ w01_HPC2o_swapped7);
+    assign temp_ab_hpc2osw_first_half_1_order1_HPC2o_swapped7 = (nt5_1 & nt4_1_reg);
+    assign a_neg_hpc2osw_first_half_1_order1_HPC2o_swapped7 = !nt5_1;
+    assign temp_ar_hpc2osw_first_half_1_order1_HPC2o_swapped7 = (a_neg_hpc2osw_first_half_1_order1_HPC2o_swapped7 & rand_12);
+    assign xor_step1_hpc2osw_first_half_1_order1_HPC2o_swapped7 = (o0_val_1 ^ temp_ab_hpc2osw_first_half_1_order1_HPC2o_swapped7);
+    assign xor_step2_hpc2osw_first_half_1_order1_HPC2o_swapped7 = (xor_step1_hpc2osw_first_half_1_order1_HPC2o_swapped7 ^ temp_ar_hpc2osw_first_half_1_order1_HPC2o_swapped7);
+    assign xor_br_hpc2osw_v_1_order1_HPC2o_swapped7 = (nt4_0 ^ rand_12);
+    assign and_ta_hpc2osw_v_1_order1_HPC2o_swapped7 = (temp_hpc2osw_v_1_order1_HPC2o_swapped7 & nt5_1);
+    assign u10_HPC2o_swapped7 = (v10_HPC2o_swapped7 ^ w10_HPC2o_swapped7);
+    assign t7_0 = u01_HPC2o_swapped7;
+    assign t7_1 = u10_HPC2o_swapped7;
+    assign o6_val_0 = (t0_0 ^ i4_0);
+    assign o6_val_1 = (t0_1 ^ i4_1);
+    assign o5_val_0 = (t1_0 ^ i0_0);
+    assign o5_val_1 = (t1_1 ^ i0_1);
+    assign o2_val_0 = (t2_0 ^ i6_0);
+    assign o2_val_1 = (t2_1 ^ i6_1);
+    assign o7_val_0 = (t3_0 ^ i5_0);
+    assign o7_val_1 = (t3_1 ^ i5_1);
+    assign o0_val_0 = (t7_0 ^ i2_0);
+    assign o0_val_1 = (t7_1 ^ i2_1);
+    assign o4_val_0 = (t6_0 ^ i3_0);
+    assign o4_val_1 = (t6_1 ^ i3_1);
+    assign o1_val_0 = (t5_0 ^ i7_0);
+    assign o1_val_1 = (t5_1 ^ i7_1);
+    assign o3_val_0 = (t4_0 ^ i1_0);
+    assign o3_val_1 = (t4_1 ^ i1_1);
+    assign z753_assgn753 = o2_val_0;
+    assign z755_assgn755 = o2_val_1;
+    assign z757_assgn757 = o3_val_0;
+    assign z759_assgn759 = o3_val_1;
+    assign z765_assgn765 = o5_val_0;
+    assign z767_assgn767 = o5_val_1;
+    assign z769_assgn769 = o6_val_0;
+    assign z771_assgn771 = o6_val_1;
+    assign z773_assgn773 = o7_val_0;
+    assign z775_assgn775 = o7_val_1;
+
+    always @(posedge clk) begin
+        temp_hpc3_v_1_order0_HPC30 <= (n7_1 ^ rand_1);
+        n6_0_reg <= n6_0;
+        w01_HPC30 <= (temp_hpc3_w_1_order0_HPC30 ^ rand_2);
+        temp_hpc3_v_1_order1_HPC30 <= (n7_0 ^ rand_1);
+        n6_1_reg <= n6_1;
+        w10_HPC30 <= (temp_hpc3_w_1_order1_HPC30 ^ rand_2);
+        u00_HPC30_reg <= u00_HPC30;
+        u11_HPC30_reg <= u11_HPC30;
+        temp_hpc3_v_1_order0_HPC31 <= (n2_1 ^ rand_3);
+        n3_0_reg <= n3_0;
+        w01_HPC31 <= (temp_hpc3_w_1_order0_HPC31 ^ rand_4);
+        temp_hpc3_v_1_order1_HPC31 <= (n2_0 ^ rand_3);
+        n3_1_reg <= n3_1;
+        w10_HPC31 <= (temp_hpc3_w_1_order1_HPC31 ^ rand_4);
+        u00_HPC31_reg <= u00_HPC31;
+        u11_HPC31_reg <= u11_HPC31;
+        temp_hpc3_v_1_order0_HPC32 <= (n1_1 ^ rand_5);
+        n2_0_reg <= n2_0;
+        w01_HPC32 <= (temp_hpc3_w_1_order0_HPC32 ^ rand_6);
+        temp_hpc3_v_1_order1_HPC32 <= (n1_0 ^ rand_5);
+        n2_1_reg <= n2_1;
+        w10_HPC32 <= (temp_hpc3_w_1_order1_HPC32 ^ rand_6);
+        u00_HPC32_reg <= u00_HPC32;
+        u11_HPC32_reg <= u11_HPC32;
+        temp_hpc3_v_1_order0_HPC33 <= (nt1_1 ^ rand_7);
+        nt0_0_reg <= nt0_0;
+        w01_HPC33 <= (temp_hpc3_w_1_order0_HPC33 ^ rand_8);
+        temp_hpc3_v_1_order1_HPC33 <= (nt1_0 ^ rand_7);
+        nt0_1_reg <= nt0_1;
+        w10_HPC33 <= (temp_hpc3_w_1_order1_HPC33 ^ rand_8);
+        u00_HPC33_reg <= u00_HPC33;
+        u11_HPC33_reg <= u11_HPC33;
+        temp_hpc2_v_1_order0_HPC24 <= (n3_1 ^ rand_9);
+        v01_HPC24 <= (temp_hpc2_v_1_order0_HPC24 & nt1_0);
+        w01_HPC24 <= (a_neg_hpc2_w_1_order0_HPC24 & rand_9);
+        temp_hpc2_v_1_order1_HPC24 <= (n3_0 ^ rand_9);
+        v10_HPC24 <= (temp_hpc2_v_1_order1_HPC24 & nt1_1);
+        w10_HPC24 <= (a_neg_hpc2_w_1_order1_HPC24 & rand_9);
+        u00_HPC24_reg <= u00_HPC24;
+        u11_HPC24_reg <= u11_HPC24;
+        nt2_0_reg <= nt2_0;
+        temp_hpc2sw_v_1_order0_HPC2_swapped5 <= (nt2_1 ^ rand_10);
+        v01_HPC2_swapped5 <= (temp_hpc2sw_v_1_order0_HPC2_swapped5 & nt3_0);
+        w01_HPC2_swapped5 <= (a_neg_hpc2sw_w_1_order0_HPC2_swapped5 & rand_10);
+        temp_hpc2sw_v_1_order1_HPC2_swapped5 <= (nt2_0 ^ rand_10);
+        v10_HPC2_swapped5 <= (temp_hpc2sw_v_1_order1_HPC2_swapped5 & nt3_1);
+        w10_HPC2_swapped5 <= (a_neg_hpc2sw_w_1_order1_HPC2_swapped5 & rand_10);
+        nt2_1_reg <= nt2_1;
+        u00_HPC2_swapped5_reg <= u00_HPC2_swapped5;
+        u11_HPC2_swapped5_reg <= u11_HPC2_swapped5;
+        w01_HPC2o6 <= xor_step2_hpc2o_first_half_1_order0_HPC2o6;
+        temp_hpc2o_v_1_order0_HPC2o6 <= xor_br_hpc2o_v_1_order0_HPC2o6;
+        v01_HPC2o6 <= and_ta_hpc2o_v_1_order0_HPC2o6;
+        w10_HPC2o6 <= xor_step2_hpc2o_first_half_1_order1_HPC2o6;
+        temp_hpc2o_v_1_order1_HPC2o6 <= xor_br_hpc2o_v_1_order1_HPC2o6;
+        v10_HPC2o6 <= and_ta_hpc2o_v_1_order1_HPC2o6;
+        nt4_0_reg <= nt4_0;
+        w01_HPC2o_swapped7 <= xor_step2_hpc2osw_first_half_1_order0_HPC2o_swapped7;
+        temp_hpc2osw_v_1_order0_HPC2o_swapped7 <= xor_br_hpc2osw_v_1_order0_HPC2o_swapped7;
+        v01_HPC2o_swapped7 <= and_ta_hpc2osw_v_1_order0_HPC2o_swapped7;
+        nt4_1_reg <= nt4_1;
+        w10_HPC2o_swapped7 <= xor_step2_hpc2osw_first_half_1_order1_HPC2o_swapped7;
+        temp_hpc2osw_v_1_order1_HPC2o_swapped7 <= xor_br_hpc2osw_v_1_order1_HPC2o_swapped7;
+        v10_HPC2o_swapped7 <= and_ta_hpc2osw_v_1_order1_HPC2o_swapped7;
+        o0_0 <= o0_val_0;
+        o0_1 <= o0_val_1;
+        o1_0 <= o1_val_0;
+        o1_1 <= o1_val_1;
+        z753_assgn7530 <= z753_assgn753;
+        z753_assgn7531 <= z753_assgn7530;
+        o2_0 <= z753_assgn7531;
+        z755_assgn7550 <= z755_assgn755;
+        z755_assgn7551 <= z755_assgn7550;
+        o2_1 <= z755_assgn7551;
+        z757_assgn7570 <= z757_assgn757;
+        o3_0 <= z757_assgn7570;
+        z759_assgn7590 <= z759_assgn759;
+        o3_1 <= z759_assgn7590;
+        o4_0 <= o4_val_0;
+        o4_1 <= o4_val_1;
+        z765_assgn7650 <= z765_assgn765;
+        z765_assgn7651 <= z765_assgn7650;
+        o5_0 <= z765_assgn7651;
+        z767_assgn7670 <= z767_assgn767;
+        z767_assgn7671 <= z767_assgn7670;
+        o5_1 <= z767_assgn7671;
+        z769_assgn7690 <= z769_assgn769;
+        z769_assgn7691 <= z769_assgn7690;
+        o6_0 <= z769_assgn7691;
+        z771_assgn7710 <= z771_assgn771;
+        z771_assgn7711 <= z771_assgn7710;
+        o6_1 <= z771_assgn7711;
+        z773_assgn7730 <= z773_assgn773;
+        o7_0 <= z773_assgn7730;
+        z775_assgn7750 <= z775_assgn775;
+        o7_1 <= z775_assgn7750;
+    end
+
+endmodule
+

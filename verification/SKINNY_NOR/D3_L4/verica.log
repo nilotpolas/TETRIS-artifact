@@ -1,0 +1,125 @@
+ckarfa@ckarfa-HP-Z2-G8-Tower-Workstation-Desktop-PC:~/Desktop/nilotpola/VERICA/VERICA-main$ bin/release/verica -c config/skinny.json 
+----------------------------------------------------------------------------------------------------
+                             VERICA -- VERIFICATION OF COMBINED ATTACKS                             
+
+                      Ruhr-Universität Bochum, Chair for Security Engineering                      
+                        Jan Richter-Brockmann (jan.richter-brockmann@rub.de),                       
+                              Pascal Sasdrich (pascal.sasdrich@rub.de)                              
+
+                                         Copyright (c) 2022,                                        
+                                       Jan Richter-Brockmann,                                       
+                                           Pascal Sasdrich                                          
+
+                                        All rights reserved.                                        
+----------------------------------------------------------------------------------------------------
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO: CELL LIBRARY
+----------------------------------------------------------------------------------------------------
+     0.001    PARSER           CELLLIB               source: cell/nang45.txt
+     0.002    PARSER           CELLLIB               Parsed cell library with 14 gate type(s). 
+----------------------------------------------------------------------------------------------------
+     0.002    PARSER           CELLLIB               SUCCESS
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO: DESIGN UNDER TEST
+----------------------------------------------------------------------------------------------------
+     0.086    PARSER           VERILOG               source: /home/ckarfa/Desktop/nilotpola/VERICA/VERICA-main/test/TETRIS/SKINNY_WO_NOR/D3_L4/dc_output.v
+     0.086    PARSER           VERILOG                  module(s) : 1
+     0.086    PARSER           VERILOG                  gate(s)   : 546
+     0.086    PARSER           VERILOG                   - comb.  : 330
+     0.086    PARSER           VERILOG                   - seq.   : 216
+     0.086    PARSER           VERILOG                  wire(s)   : 610
+     0.086    PARSER           VERILOG                  pin(s)    : 1918
+     0.086    PARSER           VERILOG               WARNING: detected 216 unconnected pins!
+----------------------------------------------------------------------------------------------------
+     0.086    PARSER           VERILOG               SUCCESS
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO: ANNOTATIONS
+----------------------------------------------------------------------------------------------------
+     0.087    PREPROCESSOR     ANNOTATION            1 input wire was tagged as clock input.
+     0.087    PREPROCESSOR     ANNOTATION            0 input wires were tagged as control inputs.
+     0.087    PREPROCESSOR     ANNOTATION            39 input wires were tagged as refresh inputs.
+     0.088    PREPROCESSOR     ANNOTATION            0 output wires were tagged as error flags.
+     0.088    PREPROCESSOR     ANNOTATION            0 input wires were tagged with PIIDs.
+     0.088    PREPROCESSOR     ANNOTATION            48 wires were tagged with a share domain.
+     0.088    PREPROCESSOR     ANNOTATION            48 wires were tagged with a share index.
+     0.088    PREPROCESSOR     ANNOTATION            0 wires were tagged with a fault domain.
+     0.088    PREPROCESSOR     ANNOTATION            0 wires were tagged with a secret index.
+----------------------------------------------------------------------------------------------------
+     0.088    PREPROCESSOR     ANNOTATION            SUCCESS
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO: FILTERING
+----------------------------------------------------------------------------------------------------
+     0.088    PREPROCESSOR     FILTERING             Filtering for side-channel verification is disabled!
+     0.088    PREPROCESSOR     FILTERING             Filtering for fault-injection verification is disabled!
+----------------------------------------------------------------------------------------------------
+     0.088    PREPROCESSOR     FILTERING             SUCCESS
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO
+----------------------------------------------------------------------------------------------------
+     0.338    PREPROCESSOR     MULTI-THREADING       cores: 8
+     0.338    PREPROCESSOR     MULTI-THREADING       memory: 128 GB
+----------------------------------------------------------------------------------------------------
+     0.338    PREPROCESSOR     MULTI-THREADING       SUCCESS
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO: MODEL POSTPROCESSING
+----------------------------------------------------------------------------------------------------
+     0.339    PREPROCESSOR     MODEL POSTPROCESSING  Removed clock tree from netlist (1 wire was removed).
+     0.339    PREPROCESSOR     MODEL POSTPROCESSING  No control signals were found.
+     0.339    PREPROCESSOR     MODEL POSTPROCESSING  Removed 216 unconnected pins.
+     0.339    PREPROCESSOR     MODEL POSTPROCESSING  Removed 0 unconnected wires.
+----------------------------------------------------------------------------------------------------
+     0.339    PREPROCESSOR     MODEL POSTPROCESSING  SUCCESS
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO
+----------------------------------------------------------------------------------------------------
+     0.351    PREPROCESSOR     ELABORATE             stage(s): 
+     0.351    PREPROCESSOR     ELABORATE                logic    : 5
+     0.351    PREPROCESSOR     ELABORATE                register : 5
+----------------------------------------------------------------------------------------------------
+     0.351    PREPROCESSOR     ELABORATE             SUCCESS
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO: Configure FIA
+----------------------------------------------------------------------------------------------------
+     0.351    PREPROCESSOR     FIA                   FIA preprocessor is disabled!
+----------------------------------------------------------------------------------------------------
+     0.351    PREPROCESSOR     FIA                   SUCCESS
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO: Configure SCA
+----------------------------------------------------------------------------------------------------
+     0.351    PREPROCESSOR     SCA                   Disabled auto-dynamic reordering for BDDs.
+     0.351    PREPROCESSOR     SCA                   Determined 8 shared inputs.
+     0.351    PREPROCESSOR     SCA                      Minimum number of shares: 3
+     0.351    PREPROCESSOR     SCA                   Determined 303 probe positions.
+     0.351    PREPROCESSOR     SCA                   Determined 0 probe combinations.
+----------------------------------------------------------------------------------------------------
+     0.351    PREPROCESSOR     SCA                   SUCCESS
+ 
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO: ANALYSIS REPORT
+----------------------------------------------------------------------------------------------------
+   393.417    ANALYZER         PROBING               model parameters:
+   393.417    ANALYZER         PROBING                  glitches    : yes
+   393.417    ANALYZER         PROBING                  transitions : no
+   393.417    ANALYZER         PROBING                  couplings   : no
+   393.417    ANALYZER         PROBING               verification:
+   393.417    ANALYZER         PROBING                  assuming : d ≤ 2
+   393.417    ANALYZER         PROBING                  verified : d ≤ 2
+   393.417    ANALYZER         PROBING               failing probe combinations:
+   393.417    ANALYZER         PROBING                  total : 0
+   393.417    ANALYZER         PROBING                  first : - 
+----------------------------------------------------------------------------------------------------
+   393.417    ANALYZER         PROBING               SUCCESS
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO
+----------------------------------------------------------------------------------------------------
+   393.417    VERICA           SCA                   DONE!

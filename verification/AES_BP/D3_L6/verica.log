@@ -1,0 +1,126 @@
+ckarfa@ckarfa-HP-Z2-G8-Tower-Workstation-Desktop-PC:~/Desktop/nilotpola/VERICA/VERICA-main$ bin/release/verica -c config/aes_bp_d2_l4.json
+----------------------------------------------------------------------------------------------------
+                             VERICA -- VERIFICATION OF COMBINED ATTACKS                             
+
+                      Ruhr-Universität Bochum, Chair for Security Engineering                      
+                        Jan Richter-Brockmann (jan.richter-brockmann@rub.de),                       
+                              Pascal Sasdrich (pascal.sasdrich@rub.de)                              
+
+                                         Copyright (c) 2022,                                        
+                                       Jan Richter-Brockmann,                                       
+                                           Pascal Sasdrich                                          
+
+                                        All rights reserved.                                        
+----------------------------------------------------------------------------------------------------
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO: CELL LIBRARY
+----------------------------------------------------------------------------------------------------
+     0.001    PARSER           CELLLIB               source: cell/nang45.txt
+     0.002    PARSER           CELLLIB               Parsed cell library with 14 gate type(s). 
+----------------------------------------------------------------------------------------------------
+     0.002    PARSER           CELLLIB               SUCCESS
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO: DESIGN UNDER TEST
+----------------------------------------------------------------------------------------------------
+     2.496    PARSER           VERILOG               source: /home/ckarfa/Desktop/nilotpola/VERICA/VERICA-main/test/TETRIS/AES_BP/D3_L6/aes_bp_d3_l6.v
+     2.496    PARSER           VERILOG                  module(s) : 1
+     2.496    PARSER           VERILOG                  gate(s)   : 3333
+     2.496    PARSER           VERILOG                   - comb.  : 1602
+     2.496    PARSER           VERILOG                   - seq.   : 1731
+     2.496    PARSER           VERILOG                  wire(s)   : 3490
+     2.496    PARSER           VERILOG                  pin(s)    : 11748
+     2.496    PARSER           VERILOG               WARNING: detected 1701 unconnected pins!
+----------------------------------------------------------------------------------------------------
+     2.496    PARSER           VERILOG               SUCCESS
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO: ANNOTATIONS
+----------------------------------------------------------------------------------------------------
+     2.509    PREPROCESSOR     ANNOTATION            1 input wire was tagged as clock input.
+     2.509    PREPROCESSOR     ANNOTATION            0 input wires were tagged as control inputs.
+     2.509    PREPROCESSOR     ANNOTATION            102 input wires were tagged as refresh inputs.
+     2.509    PREPROCESSOR     ANNOTATION            0 output wires were tagged as error flags.
+     2.509    PREPROCESSOR     ANNOTATION            0 input wires were tagged with PIIDs.
+     2.509    PREPROCESSOR     ANNOTATION            48 wires were tagged with a share domain.
+     2.509    PREPROCESSOR     ANNOTATION            48 wires were tagged with a share index.
+     2.509    PREPROCESSOR     ANNOTATION            0 wires were tagged with a fault domain.
+     2.509    PREPROCESSOR     ANNOTATION            0 wires were tagged with a secret index.
+----------------------------------------------------------------------------------------------------
+     2.509    PREPROCESSOR     ANNOTATION            SUCCESS
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO: FILTERING
+----------------------------------------------------------------------------------------------------
+     2.511    PREPROCESSOR     FILTERING             Filtering for side-channel verification is disabled!
+     2.511    PREPROCESSOR     FILTERING             Filtering for fault-injection verification is disabled!
+----------------------------------------------------------------------------------------------------
+     2.512    PREPROCESSOR     FILTERING             SUCCESS
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO
+----------------------------------------------------------------------------------------------------
+     2.776    PREPROCESSOR     MULTI-THREADING       cores: 8
+     2.776    PREPROCESSOR     MULTI-THREADING       memory: 128 GB
+----------------------------------------------------------------------------------------------------
+     2.776    PREPROCESSOR     MULTI-THREADING       SUCCESS
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO: MODEL POSTPROCESSING
+----------------------------------------------------------------------------------------------------
+     2.782    PREPROCESSOR     MODEL POSTPROCESSING  Removed clock tree from netlist (1 wire was removed).
+     2.782    PREPROCESSOR     MODEL POSTPROCESSING  No control signals were found.
+     2.782    PREPROCESSOR     MODEL POSTPROCESSING  Removed 1701 unconnected pins.
+     2.782    PREPROCESSOR     MODEL POSTPROCESSING  Removed 0 unconnected wires.
+----------------------------------------------------------------------------------------------------
+     2.782    PREPROCESSOR     MODEL POSTPROCESSING  SUCCESS
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO
+----------------------------------------------------------------------------------------------------
+     2.816    PREPROCESSOR     ELABORATE             stage(s): 
+     2.816    PREPROCESSOR     ELABORATE                logic    : 3
+     2.816    PREPROCESSOR     ELABORATE                register : 6
+----------------------------------------------------------------------------------------------------
+     2.816    PREPROCESSOR     ELABORATE             SUCCESS
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO: Configure FIA
+----------------------------------------------------------------------------------------------------
+     2.816    PREPROCESSOR     FIA                   FIA preprocessor is disabled!
+----------------------------------------------------------------------------------------------------
+     2.816    PREPROCESSOR     FIA                   SUCCESS
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO: Configure SCA
+----------------------------------------------------------------------------------------------------
+     2.816    PREPROCESSOR     SCA                   Disabled auto-dynamic reordering for BDDs.
+     2.816    PREPROCESSOR     SCA                   Determined 8 shared inputs.
+     2.816    PREPROCESSOR     SCA                      Minimum number of shares: 3
+     2.816    PREPROCESSOR     SCA                   Determined 1251 probe positions.
+     2.816    PREPROCESSOR     SCA                   Determined 0 probe combinations.
+----------------------------------------------------------------------------------------------------
+     2.816    PREPROCESSOR     SCA                   SUCCESS
+ 
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO: ANALYSIS REPORT
+----------------------------------------------------------------------------------------------------
+     4.751    ANALYZER         PROBING               model parameters:
+     4.751    ANALYZER         PROBING                  glitches    : yes
+     4.751    ANALYZER         PROBING                  transitions : no
+     4.751    ANALYZER         PROBING                  couplings   : no
+     4.751    ANALYZER         PROBING               verification:
+     4.751    ANALYZER         PROBING                  assuming : d ≤ 2
+     4.751    ANALYZER         PROBING                  verified : d ≤ 2
+     4.751    ANALYZER         PROBING               failing probe combinations:
+     4.751    ANALYZER         PROBING                  total : 0
+     4.751    ANALYZER         PROBING                  first : - 
+----------------------------------------------------------------------------------------------------
+     4.751    ANALYZER         PROBING               SUCCESS
+
+cuddGarbageCollect: problem in constants=================>                                                         ] 42 %
+  dead count != deleted
+  This problem is often due to a missing call to Cudd_Ref
+  or to an extra call to Cudd_RecursiveDeref.
+  See the CUDD Programmer's Guide for additional details.Aborted (core dumped)

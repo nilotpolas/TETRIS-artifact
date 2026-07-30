@@ -1,0 +1,55 @@
+{
+    "type": {
+        "clock": ["clk"],
+        "refresh": ["rand_1", "rand_2", "rand_3", "rand_4", "rand_5", "rand_6", "rand_7", "rand_8", "rand_9", "rand_10", "rand_11", "rand_12", "rand_13", "rand_14", "rand_15", "rand_16", "rand_17", "rand_18", "rand_19", "rand_20", "rand_21", "rand_22", "rand_23", "rand_24", "rand_25", "rand_26", "rand_27", "rand_28", "rand_29", "rand_30", "rand_31", "rand_32", "rand_33", "rand_34", "rand_35", "rand_36", "rand_37", "rand_38", "rand_39", "rand_40", "rand_41", "rand_42", "rand_43", "rand_44", "rand_45", "rand_46", "rand_47", "rand_48", "rand_49", "rand_50", "rand_51", "rand_52", "rand_53", "rand_54", "rand_55", "rand_56", "rand_57", "rand_58", "rand_59", "rand_60", "rand_61", "rand_62", "rand_63", "rand_64", "rand_65", "rand_66", "rand_67", "rand_68", "rand_69", "rand_70", "rand_71", "rand_72", "rand_73", "rand_74", "rand_75", "rand_76", "rand_77", "rand_78", "rand_79", "rand_80", "rand_81", "rand_82", "rand_83", "rand_84", "rand_85", "rand_86", "rand_87", "rand_88", "rand_89", "rand_90", "rand_91", "rand_92", "rand_93", "rand_94", "rand_95", "rand_96", "rand_97", "rand_98", "rand_99", "rand_100", "rand_101", "rand_102", "rand_103", "rand_104", "rand_105", "rand_106", "rand_107", "rand_108", "rand_109", "rand_110", "rand_111", "rand_112", "rand_113", "rand_114", "rand_115", "rand_116", "rand_117", "rand_118", "rand_119", "rand_120", "rand_121", "rand_122", "rand_123", "rand_124", "rand_125", "rand_126", "rand_127", "rand_128", "rand_129", "rand_130", "rand_131", "rand_132", "rand_133", "rand_134", "rand_135", "rand_136", "rand_137", "rand_138", "rand_139", "rand_140", "rand_141", "rand_142", "rand_143", "rand_144", "rand_145", "rand_146", "rand_147", "rand_148", "rand_149", "rand_150", "rand_151", "rand_152", "rand_153", "rand_154", "rand_155", "rand_156", "rand_157", "rand_158", "rand_159", "rand_160", "rand_161", "rand_162", "rand_163", "rand_164", "rand_165", "rand_166", "rand_167", "rand_168", "rand_169", "rand_170", "rand_171", "rand_172", "rand_173", "rand_174", "rand_175", "rand_176", "rand_177", "rand_178", "rand_179", "rand_180", "rand_181", "rand_182", "rand_183", "rand_184", "rand_185", "rand_186", "rand_187", "rand_188", "rand_189", "rand_190", "rand_191", "rand_192", "rand_193", "rand_194", "rand_195", "rand_196", "rand_197", "rand_198", "rand_199", "rand_200", "rand_201", "rand_202", "rand_203", "rand_204", "rand_205", "rand_206", "rand_207", "rand_208", "rand_209", "rand_210", "rand_211", "rand_212", "rand_213", "rand_214", "rand_215", "rand_216", "rand_217", "rand_218", "rand_219", "rand_220", "rand_221", "rand_222", "rand_223", "rand_224", "rand_225", "rand_226", "rand_227", "rand_228", "rand_229", "rand_230", "rand_231", "rand_232", "rand_233", "rand_234", "rand_235", "rand_236", "rand_237", "rand_238", "rand_239", "rand_240", "rand_241", "rand_242", "rand_243", "rand_244", "rand_245", "rand_246", "rand_247", "rand_248", "rand_249", "rand_250", "rand_251", "rand_252", "rand_253", "rand_254", "rand_255", "rand_256", "rand_257", "rand_258", "rand_259", "rand_260", "rand_261", "rand_262", "rand_263", "rand_264", "rand_265", "rand_266", "rand_267", "rand_268", "rand_269", "rand_270", "rand_271", "rand_272", "rand_273", "rand_274", "rand_275", "rand_276", "rand_277", "rand_278", "rand_279", "rand_280", "rand_281", "rand_282", "rand_283", "rand_284", "rand_285", "rand_286", "rand_287", "rand_288", "rand_289", "rand_290", "rand_291", "rand_292", "rand_293", "rand_294", "rand_295", "rand_296", "rand_297", "rand_298", "rand_299", "rand_300", "rand_301", "rand_302", "rand_303", "rand_304", "rand_305", "rand_306", "rand_307", "rand_308", "rand_309", "rand_310", "rand_311", "rand_312", "rand_313", "rand_314", "rand_315", "rand_316", "rand_317", "rand_318", "rand_319", "rand_320", "rand_321", "rand_322", "rand_323", "rand_324", "rand_325", "rand_326", "rand_327", "rand_328", "rand_329", "rand_330", "rand_331", "rand_332", "rand_333", "rand_334", "rand_335", "rand_336", "rand_337", "rand_338", "rand_339", "rand_340", "rand_341", "rand_342", "rand_343", "rand_344", "rand_345", "rand_346", "rand_347", "rand_348", "rand_349", "rand_350", "rand_351", "rand_352", "rand_353", "rand_354", "rand_355", "rand_356", "rand_357", "rand_358", "rand_359", "rand_360", "rand_361", "rand_362", "rand_363", "rand_364", "rand_365", "rand_366", "rand_367", "rand_368", "rand_369", "rand_370", "rand_371", "rand_372", "rand_373", "rand_374", "rand_375", "rand_376", "rand_377", "rand_378", "rand_379", "rand_380", "rand_381", "rand_382", "rand_383", "rand_384", "rand_385", "rand_386", "rand_387", "rand_388", "rand_389", "rand_390", "rand_391", "rand_392", "rand_393", "rand_394", "rand_395", "rand_396", "rand_397", "rand_398", "rand_399", "rand_400", "rand_401", "rand_402", "rand_403", "rand_404", "rand_405", "rand_406", "rand_407", "rand_408", "rand_409", "rand_410", "rand_411", "rand_412", "rand_413", "rand_414", "rand_415", "rand_416", "rand_417", "rand_418", "rand_419", "rand_420", "rand_421", "rand_422", "rand_423", "rand_424", "rand_425", "rand_426", "rand_427", "rand_428", "rand_429", "rand_430", "rand_431", "rand_432", "rand_433", "rand_434", "rand_435", "rand_436", "rand_437", "rand_438", "rand_439", "rand_440", "rand_441", "rand_442", "rand_443", "rand_444", "rand_445", "rand_446", "rand_447", "rand_448", "rand_449", "rand_450", "rand_451", "rand_452", "rand_453", "rand_454", "rand_455", "rand_456", "rand_457", "rand_458", "rand_459", "rand_460", "rand_461", "rand_462", "rand_463", "rand_464", "rand_465", "rand_466", "rand_467", "rand_468", "rand_469", "rand_470", "rand_471", "rand_472", "rand_473", "rand_474", "rand_475", "rand_476", "rand_477", "rand_478", "rand_479", "rand_480"],
+        "control": ["dec_1"],
+        "error_flag": []
+    },
+    "primary_input_identifier": {},
+    "share_domain": {
+        "input": {
+            "0": ["sb_n0_0", "sb_n1_0", "sb_n2_0", "sb_n3_0", "sb_n4_0", "sb_n5_0", "sb_n6_0", "sb_n7_0"],
+            "1": ["sb_n0_1", "sb_n1_1", "sb_n2_1", "sb_n3_1", "sb_n4_1", "sb_n5_1", "sb_n6_1", "sb_n7_1"],
+            "2": ["sb_n0_2", "sb_n1_2", "sb_n2_2", "sb_n3_2", "sb_n4_2", "sb_n5_2", "sb_n6_2", "sb_n7_2"],
+            "3": ["sb_n0_3", "sb_n1_3", "sb_n2_3", "sb_n3_3", "sb_n4_3", "sb_n5_3", "sb_n6_3", "sb_n7_3"],
+            "4": ["sb_n0_4", "sb_n1_4", "sb_n2_4", "sb_n3_4", "sb_n4_4", "sb_n5_4", "sb_n6_4", "sb_n7_4"]
+        },
+        "output": {
+            "0": ["sb_o0_0", "sb_o1_0", "sb_o2_0", "sb_o3_0", "sb_o4_0", "sb_o5_0", "sb_o6_0", "sb_o7_0"],
+            "1": ["sb_o0_1", "sb_o1_1", "sb_o2_1", "sb_o3_1", "sb_o4_1", "sb_o5_1", "sb_o6_1", "sb_o7_1"],
+            "2": ["sb_o0_2", "sb_o1_2", "sb_o2_2", "sb_o3_2", "sb_o4_2", "sb_o5_2", "sb_o6_2", "sb_o7_2"],
+            "3": ["sb_o0_3", "sb_o1_3", "sb_o2_3", "sb_o3_3", "sb_o4_3", "sb_o5_3", "sb_o6_3", "sb_o7_3"],
+            "4": ["sb_o0_4", "sb_o1_4", "sb_o2_4", "sb_o3_4", "sb_o4_4", "sb_o5_4", "sb_o6_4", "sb_o7_4"]
+        }
+    },
+    "share_index": {
+        "input": {
+            "0": ["sb_n0_0", "sb_n0_1", "sb_n0_2", "sb_n0_3", "sb_n0_4"],
+            "1": ["sb_n1_0", "sb_n1_1", "sb_n1_2", "sb_n1_3", "sb_n1_4"],
+            "2": ["sb_n2_0", "sb_n2_1", "sb_n2_2", "sb_n2_3", "sb_n2_4"],
+            "3": ["sb_n3_0", "sb_n3_1", "sb_n3_2", "sb_n3_3", "sb_n3_4"],
+            "4": ["sb_n4_0", "sb_n4_1", "sb_n4_2", "sb_n4_3", "sb_n4_4"],
+            "5": ["sb_n5_0", "sb_n5_1", "sb_n5_2", "sb_n5_3", "sb_n5_4"],
+            "6": ["sb_n6_0", "sb_n6_1", "sb_n6_2", "sb_n6_3", "sb_n6_4"],
+            "7": ["sb_n7_0", "sb_n7_1", "sb_n7_2", "sb_n7_3", "sb_n7_4"]
+        },
+        "output": {
+            "0": ["sb_o0_0", "sb_o0_1", "sb_o0_2", "sb_o0_3", "sb_o0_4"],
+            "1": ["sb_o1_0", "sb_o1_1", "sb_o1_2", "sb_o1_3", "sb_o1_4"],
+            "2": ["sb_o2_0", "sb_o2_1", "sb_o2_2", "sb_o2_3", "sb_o2_4"],
+            "3": ["sb_o3_0", "sb_o3_1", "sb_o3_2", "sb_o3_3", "sb_o3_4"],
+            "4": ["sb_o4_0", "sb_o4_1", "sb_o4_2", "sb_o4_3", "sb_o4_4"],
+            "5": ["sb_o5_0", "sb_o5_1", "sb_o5_2", "sb_o5_3", "sb_o5_4"],
+            "6": ["sb_o6_0", "sb_o6_1", "sb_o6_2", "sb_o6_3", "sb_o6_4"],
+            "7": ["sb_o7_0", "sb_o7_1", "sb_o7_2", "sb_o7_3", "sb_o7_4"]
+        }
+    },
+    "fault_domain": {
+        "input": {},
+        "output": {}
+    },
+    "secret_index": {
+        "input": {},
+        "output": {}
+    }
+}

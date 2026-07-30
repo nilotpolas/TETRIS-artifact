@@ -1,0 +1,109 @@
+ckarfa@ckarfa-HP-Z2-G8-Tower-Workstation-Desktop-PC:~/Desktop/nilotpola/VERICA/VERICA-main$ bin/release/verica -c config/aes_bp_d4_l6.json 
+----------------------------------------------------------------------------------------------------
+                             VERICA -- VERIFICATION OF COMBINED ATTACKS                             
+
+                      Ruhr-Universität Bochum, Chair for Security Engineering                      
+                        Jan Richter-Brockmann (jan.richter-brockmann@rub.de),                       
+                              Pascal Sasdrich (pascal.sasdrich@rub.de)                              
+
+                                         Copyright (c) 2022,                                        
+                                       Jan Richter-Brockmann,                                       
+                                           Pascal Sasdrich                                          
+
+                                        All rights reserved.                                        
+----------------------------------------------------------------------------------------------------
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO: CELL LIBRARY
+----------------------------------------------------------------------------------------------------
+     0.001    PARSER           CELLLIB               source: cell/nang45.txt
+     0.001    PARSER           CELLLIB               Parsed cell library with 14 gate type(s). 
+----------------------------------------------------------------------------------------------------
+     0.001    PARSER           CELLLIB               SUCCESS
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO: DESIGN UNDER TEST
+----------------------------------------------------------------------------------------------------
+    12.587    PARSER           VERILOG               source: /home/ckarfa/Desktop/nilotpola/VERICA/VERICA-main/test/TETRIS/AES_BP/D4_L6/aes_bp_d4_l6.v
+    12.588    PARSER           VERILOG                  module(s) : 1
+    12.588    PARSER           VERILOG                  gate(s)   : 6008
+    12.589    PARSER           VERILOG                   - comb.  : 2876
+    12.589    PARSER           VERILOG                   - seq.   : 3132
+    12.589    PARSER           VERILOG                  wire(s)   : 6285
+    12.590    PARSER           VERILOG                  pin(s)    : 21193
+    12.590    PARSER           VERILOG               WARNING: detected 3092 unconnected pins!
+----------------------------------------------------------------------------------------------------
+    12.590    PARSER           VERILOG               SUCCESS
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO: ANNOTATIONS
+----------------------------------------------------------------------------------------------------
+    12.668    PREPROCESSOR     ANNOTATION            1 input wire was tagged as clock input.
+    12.668    PREPROCESSOR     ANNOTATION            0 input wires were tagged as control inputs.
+    12.668    PREPROCESSOR     ANNOTATION            204 input wires were tagged as refresh inputs.
+    12.668    PREPROCESSOR     ANNOTATION            0 output wires were tagged as error flags.
+    12.668    PREPROCESSOR     ANNOTATION            0 input wires were tagged with PIIDs.
+    12.668    PREPROCESSOR     ANNOTATION            64 wires were tagged with a share domain.
+    12.668    PREPROCESSOR     ANNOTATION            64 wires were tagged with a share index.
+    12.668    PREPROCESSOR     ANNOTATION            0 wires were tagged with a fault domain.
+    12.668    PREPROCESSOR     ANNOTATION            0 wires were tagged with a secret index.
+----------------------------------------------------------------------------------------------------
+    12.668    PREPROCESSOR     ANNOTATION            SUCCESS
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO: FILTERING
+----------------------------------------------------------------------------------------------------
+    12.673    PREPROCESSOR     FILTERING             Filtering for side-channel verification is disabled!
+    12.673    PREPROCESSOR     FILTERING             Filtering for fault-injection verification is disabled!
+----------------------------------------------------------------------------------------------------
+    12.673    PREPROCESSOR     FILTERING             SUCCESS
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO
+----------------------------------------------------------------------------------------------------
+    13.089    PREPROCESSOR     MULTI-THREADING       cores: 8
+    13.090    PREPROCESSOR     MULTI-THREADING       memory: 128 GB
+----------------------------------------------------------------------------------------------------
+    13.090    PREPROCESSOR     MULTI-THREADING       SUCCESS
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO: MODEL POSTPROCESSING
+----------------------------------------------------------------------------------------------------
+    13.124    PREPROCESSOR     MODEL POSTPROCESSING  Removed clock tree from netlist (1 wire was removed).
+    13.124    PREPROCESSOR     MODEL POSTPROCESSING  No control signals were found.
+    13.124    PREPROCESSOR     MODEL POSTPROCESSING  Removed 3092 unconnected pins.
+    13.124    PREPROCESSOR     MODEL POSTPROCESSING  Removed 0 unconnected wires.
+----------------------------------------------------------------------------------------------------
+    13.124    PREPROCESSOR     MODEL POSTPROCESSING  SUCCESS
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO
+----------------------------------------------------------------------------------------------------
+    13.313    PREPROCESSOR     ELABORATE             stage(s): 
+    13.313    PREPROCESSOR     ELABORATE                logic    : 3
+    13.313    PREPROCESSOR     ELABORATE                register : 6
+----------------------------------------------------------------------------------------------------
+    13.313    PREPROCESSOR     ELABORATE             SUCCESS
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO: Configure FIA
+----------------------------------------------------------------------------------------------------
+    13.313    PREPROCESSOR     FIA                   FIA preprocessor is disabled!
+----------------------------------------------------------------------------------------------------
+    13.313    PREPROCESSOR     FIA                   SUCCESS
+
+
+  TIME [s]    SERVICE          CONFIGURATION         INFO: Configure SCA
+----------------------------------------------------------------------------------------------------
+    13.315    PREPROCESSOR     SCA                   Disabled auto-dynamic reordering for BDDs.
+    13.315    PREPROCESSOR     SCA                   Determined 8 shared inputs.
+    13.315    PREPROCESSOR     SCA                      Minimum number of shares: 4
+    13.315    PREPROCESSOR     SCA                   Determined 2288 probe positions.
+    13.315    PREPROCESSOR     SCA                   Determined 0 probe combinations.
+----------------------------------------------------------------------------------------------------
+    13.315    PREPROCESSOR     SCA                   SUCCESS
+
+Killed
+
+dmesg
+[910882.936316] Out of memory: Killed process 3664837 (verica) total-vm:75779060kB, anon-rss:55690232kB, file-rss:0kB, shmem-rss:0kB, UID:1000 pgtables:109268kB oom_score_adj:0
