@@ -2,7 +2,7 @@
 
 **Automated Design Space Exploration for Masked Cryptographic Hardware**
 
-DSE-Framework takes an unmasked S-box written in C, applies Boolean masking at a chosen security order, and produces a synthesised, verified Verilog gate-level netlist — all in a single command.
+This is the TETRIS DSE-Framework, it takes an unmasked S-box written in C, applies Boolean masking at a chosen security order, and produces a synthesised, verified Verilog gate-level netlist — all in a single command.
 
 Three algorithms cover the main design trade-offs:
 
@@ -262,7 +262,7 @@ Goal:   spend bonus cycles converting HPC3 → HPC2 to save the most randomness
 
 ---
 
-### MLRC — Minimize Latency under Randomness Constraint
+### MLRC — Minimize Latency under Randomness Constraint 
 
 Given a randomness budget, MLRC finds the gadget assignment with the shortest critical path.
 
@@ -293,7 +293,10 @@ python src/run_mlrc.py --design skinny_sbox_nor.c --randomness 80 --order 1 --sk
 
 ---
 
-
+## Generate Tables 6,7,8
+```bash
+make mlrc-synth
+```
 
 ---
 
@@ -384,7 +387,7 @@ python run_verify.py \
 - Scalar `unsigned char` / `_Bool` inputs and outputs
 - No arrays, no loops, no stdlib calls, no external functions
 
-If your function has a `dec_1` parameter (a decomposition selector), the framework detects and handles it automatically.
+*Important* If your function has a `dec_1` parameter, the framework detects and handles it automatically.
 
 ---
 
