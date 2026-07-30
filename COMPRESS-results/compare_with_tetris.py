@@ -15,6 +15,23 @@ Produces a per-row comparison of:
     Area (TETRIS), Area (COMPRESS:Opt),
     Speedup (COMPRESS:Opt / TETRIS)
 
+NOTE ON AREA COMPARABILITY:
+    COMPRESS's "Area Estimate (GE)" field bakes in the cost of randomness
+    distribution:
+
+        Area Estimate (GE) == base_gadget_area + RNG Bits * RNG Cost Per Bit
+
+    TETRIS's area (from Yosys synthesis) treats random bits as free
+    primary inputs, with no distribution cost charged. To make an
+    apples-to-apples comparison, we back out COMPRESS's RNG contribution:
+
+        area_no_rng = Area Estimate (GE) - (RNG Bits * RNG Cost Per Bit)
+
+    The original COMPRESS total is preserved as area_ge_total in every
+    record and surfaced as extra columns in the table/CSV for
+    transparency, so reviewers can see both the RNG-free area we compare
+    against TETRIS and COMPRESS's original reported total.
+
 Usage:
     python compare_with_tetris.py --benchmark aes_bp
     python compare_with_tetris.py --benchmark aes_bp --csv table2.csv
@@ -60,7 +77,11 @@ MODE_MAP = {
 
 
 def load_compress_records():
-    """Load all COMPRESS stats files into a dict keyed by (bench, mode, d-1, latency)."""
+    """Load all COMPRESS stats files into a dict keyed by (bench, mode, d-1, latency).
+
+    See module docstring for why area_ge is derived (RNG-free) rather than
+    read directly from "Area Estimate (GE)".
+    """
     records = {}
     if not COMPRESS_DIR.exists():
         return records
@@ -79,10 +100,24 @@ def load_compress_records():
                 data = json.load(f)
         except Exception:
             continue
+
+        rng_bits         = data.get("RNG Bits")
+        rng_cost_per_bit = data.get("RNG Cost Per Bit")
+        area_total       = data.get("Area Estimate (GE)")
+
+        area_no_rng = None
+        if area_total is not None and rng_bits is not None and rng_cost_per_bit is not None:
+            try:
+                area_no_rng = area_total - (rng_bits * rng_cost_per_bit)
+            except (TypeError, ValueError):
+                area_no_rng = None
+
         records[(benchmark, mode, d_minus_1, latency)] = {
-            "rng_bits":   data.get("RNG Bits"),
-            "area_ge":    data.get("Area Estimate (GE)"),
-            "solve_time": data.get("solve_time"),
+            "rng_bits":         rng_bits,
+            "area_ge":          area_no_rng,   # RNG-free, comparable to TETRIS
+            "area_ge_total":    area_total,    # original COMPRESS value, for reference
+            "rng_cost_per_bit": rng_cost_per_bit,
+            "solve_time":       data.get("solve_time"),
         }
     return records
 
@@ -135,15 +170,18 @@ def build_table(benchmark: str, compress_records: dict):
             "t_rng":           tetris["rng_bits"] if tetris else None,
             "t_area":          tetris["area_ge"] if tetris else None,
             "t_dse":           tetris["dse_time"] if tetris else None,
-            "c_base_rng":      c_base["rng_bits"]   if c_base else None,
-            "c_base_area":     c_base["area_ge"]    if c_base else None,
-            "c_base_solve":    c_base["solve_time"] if c_base else None,
-            "c_sep_rng":       c_sep["rng_bits"]    if c_sep else None,
-            "c_sep_area":      c_sep["area_ge"]     if c_sep else None,
-            "c_sep_solve":     c_sep["solve_time"]  if c_sep else None,
-            "c_opt_rng":       c_opt["rng_bits"]    if c_opt else None,
-            "c_opt_area":      c_opt["area_ge"]     if c_opt else None,
-            "c_opt_solve":     c_opt["solve_time"]  if c_opt else None,
+            "c_base_rng":         c_base["rng_bits"]      if c_base else None,
+            "c_base_area":        c_base["area_ge"]        if c_base else None,
+            "c_base_area_total":  c_base["area_ge_total"]  if c_base else None,
+            "c_base_solve":       c_base["solve_time"]     if c_base else None,
+            "c_sep_rng":          c_sep["rng_bits"]        if c_sep else None,
+            "c_sep_area":         c_sep["area_ge"]         if c_sep else None,
+            "c_sep_area_total":   c_sep["area_ge_total"]   if c_sep else None,
+            "c_sep_solve":        c_sep["solve_time"]      if c_sep else None,
+            "c_opt_rng":          c_opt["rng_bits"]        if c_opt else None,
+            "c_opt_area":         c_opt["area_ge"]         if c_opt else None,
+            "c_opt_area_total":   c_opt["area_ge_total"]   if c_opt else None,
+            "c_opt_solve":        c_opt["solve_time"]      if c_opt else None,
             "speedup_vs_opt":  speedup,
         })
     return rows
@@ -159,17 +197,18 @@ def fmt(x, spec=".2f", none="—"):
 
 
 def print_table(benchmark: str, rows: list):
-    print(f"\n{'='*140}")
+    print(f"\n{'='*160}")
     print(f"  TETRIS vs COMPRESS — {benchmark}")
-    print(f"{'='*140}")
+    print(f"  (Area columns are RNG-free; '*Total' columns include COMPRESS's baked-in RNG cost)")
+    print(f"{'='*160}")
     headers = ["d-1", "Lat",
                "T:RNG", "T:Area(GE)", "T:DSE(s)",
-               "C:Base RNG", "C:Base Area", "C:Base Solve",
-               "C:Sep RNG",  "C:Sep Area",  "C:Sep Solve",
-               "C:Opt RNG",  "C:Opt Area",  "C:Opt Solve",
+               "C:Base RNG", "C:Base Area", "C:Base Total", "C:Base Solve",
+               "C:Sep RNG",  "C:Sep Area",  "C:Sep Total",  "C:Sep Solve",
+               "C:Opt RNG",  "C:Opt Area",  "C:Opt Total",  "C:Opt Solve",
                "Speedup vs Opt"]
     print("  ".join(headers))
-    print("-" * 140)
+    print("-" * 160)
     for r in rows:
         print("  ".join([
             fmt(r["d_minus_1"], "d"),
@@ -179,15 +218,19 @@ def print_table(benchmark: str, rows: list):
             fmt(r["t_dse"], ".3f"),
             fmt(r["c_base_rng"], "d"),
             fmt(r["c_base_area"], ".0f"),
+            fmt(r["c_base_area_total"], ".0f"),
             fmt(r["c_base_solve"], ".2f"),
             fmt(r["c_sep_rng"], "d"),
             fmt(r["c_sep_area"], ".0f"),
+            fmt(r["c_sep_area_total"], ".0f"),
             fmt(r["c_sep_solve"], ".2f"),
             fmt(r["c_opt_rng"], "d"),
             fmt(r["c_opt_area"], ".0f"),
+            fmt(r["c_opt_area_total"], ".0f"),
             fmt(r["c_opt_solve"], ".2f"),
             fmt(r["speedup_vs_opt"], ".1f") + "×" if r["speedup_vs_opt"] else "—",
         ]))
+
 
 def save_csv(rows: list, path: str):
     with open(path, "w", newline="") as f:
