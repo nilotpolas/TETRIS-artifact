@@ -71,21 +71,29 @@ The following sequence produced the cached results. Following these steps agains
 git clone --recursive https://github.com/cassiersg/compress_artifact
 cd compress_artifact
 git checkout a2da3e50c4cfd01d77f0b696730a2cf3986ac8f1
+```
 
-# Verify the submodule commit
+# 2. Verify the submodule commit
+```
 git submodule status
 #  8c0a6ae4a5ce4de25198c0bbcf93b8651f4a36e8 compress (8c0a6ae)
+```
 
-# 2. Set up dependencies
+# 3. Set up dependencies
+```
 python3.10 -m venv venv
 source venv/bin/activate
 pip install -r compress/requirements.txt
+```
 
 # 3. Environment variables (adjust paths for your system)
+```
 export yosys=/usr/bin/yosys
 export iverilog=/usr/bin/iverilog
+```
 
 # 4. Run the make targets
+```
 # The top-level Makefile at compress_artifact/Makefile drives everything.
 # For the three modes on Boyer-Peralta AES:
 make aes_base_all
