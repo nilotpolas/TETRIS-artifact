@@ -1,22 +1,17 @@
 # TCHES 2026 Artifact Submission
 
-This artifact accompanies the paper:
+This artifact accompanies the conditionally accepted paper:
 
 **TETRIS: Automated Design Space Exploration of Randomness-Latency Trade-offs in Masked Hardware**
 Nilotpola Sarma, Tapish Patidar, Nupur Brahamanya, Chandan Karfa
-Indian Institute of Technology Guwahati
 IACR Transactions on Cryptographic Hardware and Embedded Systems, Vol. 2026, Issue 4
 
-## Target badges
-
-- **Artifacts Available**: source code is publicly available on GitHub at `https://github.com/nilotpolas/TETRIS-artifact` (tag `artifact-tches-2026`).
-- **Artifacts Functional**: the artifact reproduces the algorithmic results reported in the paper.
 
 ## Scope
 
 This artifact reproduces the MRLC (Minimize Randomness under Latency Constraint) and MLRC (Minimize Latency under Randomness Constraint) algorithms described in the paper.
 
-The repository also contains a MARC algorithm (multi-constraint area minimization). MARC is ongoing work and **not** part of this artifact's evaluation, so it is disabled from the default reproduction flow. Reviewers do not need to run or verify MARC. See the main `README.md` for MARC documentation if of interest.
+The repository also contains a MARC algorithm (multi-constraint area minimization). MARC is ongoing work and **not** part of this artifact's evaluation, so it is disabled from the default reproduction flow.
 
 ## What the artifact contains
 
@@ -32,24 +27,24 @@ The repository also contains a MARC algorithm (multi-constraint area minimizatio
 
 ## Paper claims reproducible from this artifact
 
+### Without COMPRESS comparision
+
 | Paper element | Reproduction command | Notes |
 |---|---|---|
-| MRLC on Boyer-Peralta (Table 2) | `make mrlc-synth` | Reports latency, randomness, area, runtime |
-| MRLC on Canright (Table 3) | `make mrlc-synth` | Included in same batch run |
-| MRLC on SKINNY (Table 4) | `make mrlc-synth` | Included in same batch run |
-| MLRC on Boyer-Peralta (Table 6) | `make mlrc-synth` | Reports latency, randomness, area, runtime |
-| MLRC on SKINNY (Table 7) | `make mlrc-synth` | Included in same batch run |
-| MLRC on Canright (Table 8) | `make mlrc-synth` | Included in same batch run |
+| MRLC on Boyer-Peralta  | `make mrlc-synth` | Reports latency, randomness, area, runtime |
+| MRLC on Canright  | `make mrlc-synth` | Included in same batch run |
+| MRLC on SKINNY | `make mrlc-synth` | Included in same batch run |
+| MLRC on Boyer-Peralta  | `make mlrc-synth` | Reports latency, randomness, area, runtime |
+| MLRC on SKINNY  | `make mlrc-synth` | Included in same batch run |
+| MLRC on Canright | `make mlrc-synth` | Included in same batch run |
 | All MRLC + MLRC results | `make all-synth` | Runs everything; ~30-45 minutes with synthesis |
 | DSE runtimes | See per-run output | Sub-second for S-box benchmarks |
 
-## Paper claims NOT reproducible from this artifact
+## With COMPRESS comparision for MRLC (since COMPRESS is MRLC-only optimization)
 
-The following paper elements require commercial or third-party tools that we cannot bundle:
+Refer to COMPRESS-results/README.md and COMPRESS-results/PROVENANCE.md
 
-- **Full AES-128 area figures (Table 5)** using Synopsys Design Compiler with a proprietary standard-cell library. The artifact uses Yosys with the open-source NanGate45 library, which produces area estimates in a comparable form (kGE) but with different absolute numbers.
-
-- **VERICA PINI verification results (Table 9)** were produced with VERICA 3.1.0. Log files from our runs are included in `verification/`; reviewers with VERICA installed can re-run using VERICA.
+## **VERICA PINI verification results (Table 9)** were produced with VERICA 3.1.0. Log files from our runs are included in `verification/`;
 
 Our TETRIS DSE runtime numbers, area (via Yosys), latency (in cycles), and randomness (in bits) are all fully reproducible with the open-source tools listed below.
 
