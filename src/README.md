@@ -391,7 +391,7 @@ python run_verify.py \
 
 ---
 
-## Gadget system
+## Gadgets Library
 
 Masked AND gadgets from the HPC family are stored in `gadget_info.db` (SQLite).  Each gadget has a `(latency, randomness, area)` triple for every security order.
 
