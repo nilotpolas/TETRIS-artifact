@@ -86,13 +86,13 @@ source venv/bin/activate
 pip install -r compress/requirements.txt
 ```
 
-# 3. Environment variables (adjust paths for your system)
+# 4. Environment variables (adjust paths for your system)
 ```
 export yosys=/usr/bin/yosys
 export iverilog=/usr/bin/iverilog
 ```
 
-# 4. Run the make targets
+# 5. Run the make targets
 ```
 # The top-level Makefile at compress_artifact/Makefile drives everything.
 # For the three modes on Boyer-Peralta AES:
