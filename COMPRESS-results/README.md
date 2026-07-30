@@ -1,6 +1,6 @@
 # TETRIS vs COMPRESS — Comparison Data
 
-This directory contains everything needed to verify the "TETRIS vs COMPRESS" comparison in the TETRIS TCHES 2026 paper (Tables 2, 3, 4, 6, 7, 8):
+This directory contains everything needed to verify the "TETRIS vs COMPRESS" comparison in the TETRIS TCHES 2026 paper (Tables 2, 4):
 
 1. **Cached COMPRESS results** (`compress_logs/`) — the exact per-configuration stats from the runs used to populate the paper tables.
 2. **COMPRESS source code** (`compress-results/`) — the version of COMPRESS used to generate those results, minus the NanGate45 PDK (which TETRIS ships elsewhere).
@@ -46,7 +46,7 @@ python3 parse_compress_logs.py --mode opt --order 1     # Opt mode, first-order
 python3 parse_compress_logs.py --csv all_compress.csv   # export as CSV
 ```
 
-### Compare TETRIS vs COMPRESS
+### Compare TETRIS vs COMPRESS Table 2
 
 Requires TETRIS results to exist under `../src/Results/`. Run TETRIS first:
 
@@ -60,7 +60,7 @@ Then:
 
 ```bash
 python3 compare_with_tetris.py --benchmark aes_bp
-/TETRIS-artefact/COMPRESS-results$ python compare_with_tetris.py --benchmark canright --csv table3.csv
+python compare_with_tetris.py --benchmark aes_bp --csv table2.csv
 ```
 
 Output is a table like the paper's Table 2:
@@ -72,10 +72,27 @@ d-1  Lat  T:RNG  T:Area  T:DSE(s)  C:Base RNG/Solve  C:Sep RNG/Solve  C:Opt RNG/
 1    6    34     -       0.063     34/    2.54      34/    8.69      34/   17.43      316.9×
 ...
 ```
+### Compare TETRIS vs COMPRESS Table 4
 
-The last column is the speedup TETRIS achieves over COMPRESS:Opt at the same randomness budget.
+Requires TETRIS results to exist under `../src/Results/`. Run TETRIS first:
 
-### Re-run COMPRESS from scratch (optional)
+```bash
+cd ../src
+make mrlc-synth   # or make all-synth
+cd ../COMPRESS-results
+```
+
+Then:
+
+```bash
+python3 compare_with_tetris.py --benchmark skinny
+python compare_with_tetris.py --benchmark skinny --csv table4.csv
+```
+
+Output is a table like the paper's Table 4:
+
+
+### Re-run COMPRESS from scratch (optional) see PROVENANCE.md for more information
 
 If you want to verify the cached numbers by re-running COMPRESS itself:
 
@@ -105,7 +122,7 @@ export iverilog=/usr/bin/iverilog
 
 Full instructions are in `PROVENANCE.md`.
 
-## Field mapping
+## Masking order vs Num Shares mapping
 
 COMPRESS uses `Num Shares` (2, 3, 4, 5). The TETRIS paper uses `d-1` (1, 2, 3, 4).
 
