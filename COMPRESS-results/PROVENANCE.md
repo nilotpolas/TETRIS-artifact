@@ -1,4 +1,4 @@
-# COMPRESS Comparison — Provenance
+# How to get COMPRESS running from scratch or from bundle at COMPRESS-results/
 
 This document records the exact version, environment, and commands used to produce the cached COMPRESS results in `compress_logs/`. Following these steps against the code in `compress_source/` (plus a NanGate45 PDK) should reproduce the same numbers.
 
