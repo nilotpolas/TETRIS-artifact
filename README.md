@@ -262,4 +262,5 @@ MIT License. See `LICENSE` file.
 
 Third-party components:
 - MaskedHLS (in `MaskedHLS_LP/`): see `MaskedHLS_LP/LICENSE`
+- COMPRESS (in `COMPRESS-results/`) see `COMPRESS-results/README.md`
 - NanGate45 open cell library: see the corresponding license file in the library directory
