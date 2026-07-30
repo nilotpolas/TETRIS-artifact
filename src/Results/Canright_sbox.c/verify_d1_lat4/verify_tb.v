@@ -1,18 +1,3 @@
-================================================================================
-DSE RUN LOG
-Algorithm  : VERIFY
-Design     : Canright_sbox.c
-Order      : d = 1
-Latency: 4
-Timestamp  : 2026-07-30 13:17:27
-================================================================================
-
-=== C TESTBENCH OUTPUT ===
-
-C-LEVEL RESULT: 4096 / 4096 passed
-ALL TESTS PASSED
-
-=== VERILOG TESTBENCH ===
 `timescale 1ns/1ps
 
 module verify_tb;
@@ -485,12 +470,3 @@ module verify_tb;
         $finish;
     end
 endmodule
-
-=== IVERILOG COMPILE ===
-
-=== VVP SIMULATION ===
-
-RTL RESULT: 4096 / 4096 passed
-ALL TESTS PASSED
-/home/nilotpola/Downloads/TETRIS-artefact/src/Results/Canright_sbox.c/verify_d1_lat4/verify_tb.v:470: $finish called at 204856000 (1ps)
-

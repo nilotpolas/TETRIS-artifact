@@ -126,13 +126,13 @@ No further build steps are needed — all scripts run from the repository root.
 
 ```bash
 # See all available designs
-python run_mrlc.py --list-designs
+python src/run_mrlc.py --list-designs
 
 # MRLC: minimise randomness, Canright S-box, latency ≤ 4 cycles, order d=1
-python run_mrlc.py --design Canright_sbox.c --latency 4 --order 1
+python src/run_mrlc.py --design Canright_sbox.c --latency 4 --order 1
 
 # MLRC: minimise latency, Boyer-Peralta S-box, randomness ≤ 168 bits, order d=2
-python run_mlrc.py --design Boyer_Peraltas_sbox.c --randomness 168 --order 2
+python src/run_mlrc.py --design Boyer_Peraltas_sbox.c --randomness 168 --order 2
 
 ```
 
@@ -150,6 +150,7 @@ Results are printed to the terminal and saved to `Results/all_results.txt`.
 ### Run everything
 
 ```bash
+cd src            # Only inside the TETRIS source
 make all          # MRLC + MLRC + MARC for all designs (synthesis skipped)
 make all-synth    # same, with Yosys synthesis — adds area (kGE) to tables (slow, 30+ min)
 ```
@@ -157,6 +158,7 @@ make all-synth    # same, with Yosys synthesis — adds area (kGE) to tables (sl
 ### Run a single algorithm
 
 ```bash
+cd src            # Only inside the TETRIS source
 make mrlc         # MRLC only  (no synthesis)
 make mlrc         # MLRC only  (no synthesis)
 
@@ -167,8 +169,8 @@ make mlrc-synth   # MLRC with synthesis
 Or equivalently via the script directly:
 
 ```bash
-python3 run_all_experiments.py --algo mrlc
-python3 run_all_experiments.py --algo mlrc
+python3 src/run_all_experiments.py --algo mrlc
+python3 src/run_all_experiments.py --algo mlrc
 ```
 
 ### Regenerate tables without re-running
@@ -178,14 +180,14 @@ If results are already cached in `src/Results/`, rebuild the summary table insta
 ```bash
 make tables
 # or:
-python3 run_all_experiments.py --tables-only
+python3 src/run_all_experiments.py --tables-only
 ```
 
 ### Other targets
 
 ```bash
-make clean-results    # delete all results.json files (keeps directory structure)
-make help             # print target list
+make src/clean-results    # delete all results.json files (keeps directory structure)
+make src/help             # print target list
 ```
 
 The combined summary table (`src/Results/all_results.txt`) always shows `—` for any
@@ -219,7 +221,7 @@ Given a latency budget, MRLC finds the gadget assignment that uses the fewest ra
 **Use when** you have a fixed clock budget (throughput requirement) and want to minimise the key-refresh rate or the size of the random number generator.
 
 ```bash
-python run_mrlc.py --design <design>.c --latency <cycles> --order <d> [options]
+python src/run_mrlc.py --design <design>.c --latency <cycles> --order <d> [options]
 ```
 
 **MRLC-specific flag:**
@@ -233,19 +235,19 @@ python run_mrlc.py --design <design>.c --latency <cycles> --order <d> [options]
 
 ```bash
 # Canright S-box, order d=1, latency ≤ 4 cycles
-python run_mrlc.py --design Canright_sbox.c --latency 4 --order 1
+python src/run_mrlc.py --design Canright_sbox.c --latency 4 --order 1
 
 # Boyer-Peralta S-box, order d=2, latency ≤ 5 cycles
-python run_mrlc.py --design Boyer_Peraltas_sbox.c --latency 5 --order 2
+python src/run_mrlc.py --design Boyer_Peraltas_sbox.c --latency 5 --order 2
 
 # Skinny S-box, order d=1, skip synthesis for a quick estimate
-python run_mrlc.py --design skinny_sbox_nor.c --latency 3 --order 1 --skip-synth
+python src/run_mrlc.py --design skinny_sbox_nor.c --latency 3 --order 1 --skip-synth
 
 # Include COMAR gadget (order d=1 only)
-python run_mrlc.py --design Canright_sbox.c --latency 4 --order 1 --use-comar
+python src/run_mrlc.py --design Canright_sbox.c --latency 4 --order 1 --use-comar
 
 # Save results to a custom directory
-python run_mrlc.py --design Canright_sbox.c --latency 4 --order 1 \
+python src/run_mrlc.py --design Canright_sbox.c --latency 4 --order 1 \
     --output-dir ./my_results/canright_lat4
 ```
 
@@ -267,7 +269,7 @@ Given a randomness budget, MLRC finds the gadget assignment with the shortest cr
 **Use when** fresh randomness is scarce or expensive and you want the fastest design within a fixed randomness limit.
 
 ```bash
-python run_mlrc.py --design <design>.c --randomness <bits> --order <d> [options]
+python src/run_mlrc.py --design <design>.c --randomness <bits> --order <d> [options]
 ```
 
 **MLRC-specific flag:**
@@ -280,13 +282,13 @@ python run_mlrc.py --design <design>.c --randomness <bits> --order <d> [options]
 
 ```bash
 # Boyer-Peralta S-box, order d=2, randomness ≤ 168 bits
-python run_mlrc.py --design Boyer_Peraltas_sbox.c --randomness 168 --order 2
+python src/run_mlrc.py --design Boyer_Peraltas_sbox.c --randomness 168 --order 2
 
 # Canright S-box, order d=1, randomness ≤ 102 bits
-python run_mlrc.py --design Canright_sbox.c --randomness 102 --order 1
+python src/run_mlrc.py --design Canright_sbox.c --randomness 102 --order 1
 
 # Skinny S-box, order d=1, skip synthesis
-python run_mlrc.py --design skinny_sbox_nor.c --randomness 80 --order 1 --skip-synth
+python src/run_mlrc.py --design skinny_sbox_nor.c --randomness 80 --order 1 --skip-synth
 ```
 
 ---
@@ -300,16 +302,16 @@ python run_mlrc.py --design skinny_sbox_nor.c --randomness 80 --order 1 --skip-s
 After running any algorithm, verify the generated design in two stages:
 
 ```bash
-python run_verify.py [options]
+python src/run_verify.py [options]
 ```
 
 **Option 1 — point directly to the files:**
 
 ```bash
-python run_verify.py \
+python src/run_verify.py \
     --design Canright_sbox.c \
-    --masked-c Results/Canright_sbox/MRLC_d1_lat4/masked_output.c \
-    --rtl      Results/Canright_sbox/MRLC_d1_lat4/design_synth.v \
+    --masked-c src/Results/Canright_sbox/MRLC_d1_lat4/masked_output.c \
+    --rtl      src/Results/Canright_sbox/MRLC_d1_lat4/design_synth.v \
     --order 1
 ```
 
@@ -354,7 +356,7 @@ python run_verify.py \
 1. **Write your S-box in C** — use only bitwise operators:
 
    ```c
-   // File: TestFiles/C_files/my_sbox.c
+   // File: src/TestFiles/C_files/my_sbox.c
    // Function name must match --top-module (default: sbox)
    unsigned char sbox(unsigned char x) {
        unsigned char a = (x >> 7) & 1;
