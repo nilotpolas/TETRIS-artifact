@@ -53,6 +53,13 @@ The following paper elements require commercial or third-party tools that we can
 
 Our TETRIS DSE runtime numbers, area (via Yosys), latency (in cycles), and randomness (in bits) are all fully reproducible with the open-source tools listed below.
 
+## Comparision with COMPRESS
+
+- move to COMPRESS results : details inside COMPRESS-results/README.md
+  ```
+  cd COMPRESS-results
+  ```
+
 ## Dependencies
 
 ### Required
@@ -117,7 +124,7 @@ Every generated masked design can be verified against its unmasked golden refere
 
 ```bash
 cd src
-python run_verify.py --design Canright_sbox.c --latency 4 --order 1 --results-dir Results/Canright_sbox/MRLC_d1_lat4
+python run_verify.py --design Canright_sbox.c --latency 4 --order 1 --results-dir Results/Canright_sbox/MRLC_d1_lat4 --rtl --rtl Results/Canright_sbox/MRLC_d1_lat4/design_synth.v 
 ```
 
 Expected output (verified in our tests):
@@ -258,15 +265,15 @@ TETRIS/
 
 | Paper section / algorithm | Code location |
 |---|---|
-| Algorithm 1 (Linear Gadget) | `Gadgets/base.py`, linear gadget class |
-| Algorithm 2 (Linear NOT Gadget) | `Gadgets/base.py`, NOT gadget class |
-| Algorithm 3 (ReduceRandomnessWithBufferLatency) | `DSE_algorithm/mrlc.py::_reduce_randomness_with_buffer` |
-| Algorithm 4 (MRLCWrapper) | `DSE_algorithm/mrlc.py::MRLC.run` |
-| Algorithm 5 (referenced) | `DSE_algorithm/mrlc.py::MRLC._initial_assignment` |
-| Algorithm 6 (MLRC) | `DSE_algorithm/mlrc.py::MLRC.run` |
-| Algorithm 7 (Transform 1) | `Gadgets/hpc2_swapped.py`, integrated in `DSE_algorithm/mrlc.py` |
+| Algorithm 1 (Linear Gadget) | `src/Gadgets/base.py`, linear gadget class |
+| Algorithm 2 (Linear NOT Gadget) | `src/Gadgets/base.py`, NOT gadget class |
+| Algorithm 3 (ReduceRandomnessWithBufferLatency) | `src/DSE_algorithm/mrlc.py::_reduce_randomness_with_buffer` |
+| Algorithm 4 (MRLCWrapper) | `src/DSE_algorithm/mrlc.py::MRLC.run` |
+| Algorithm 5 (referenced) | `src/DSE_algorithm/mrlc.py::MRLC._initial_assignment` |
+| Algorithm 6 (MLRC) | `src/DSE_algorithm/mlrc.py::MLRC.run` |
+| Algorithm 7 (Transform 1) | `src/Gadgets/hpc2_swapped.py`, integrated in `DSE_algorithm/mrlc.py` |
 | Algorithm 8 (Transforms 2, 3, 4) | Same |
-| Section 9 (Asymmetric Gadget Composition) | `asymmetric_gadget_optimization.py` |
+| Section 9 (Asymmetric Gadget Composition) | src/`asymmetric_gadget_optimization.py` |
 
 
 ## Runtime and hardware
