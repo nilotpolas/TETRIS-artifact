@@ -82,13 +82,14 @@ cd src
 python3.10 -m venv myenv
 source myenv/bin/activate
 pip install -r requirement.txt
-
-# System packages needed:
-# sudo apt install graphviz iverilog build-essential
-# Yosys 0.33 (build from source or install matching version)
 ```
+### System packages needed:
+```bash
+sudo apt install graphviz iverilog build-essential
+```
+-Yosys 0.33 (build from source or install matching version)
 
-### Smoke test (5 minutes, no synthesis)
+### Smoke test (no synthesis)
 
 ```bash
 make mrlc
@@ -96,7 +97,7 @@ make mrlc
 
 Expected: MRLC runs on all three benchmarks at four masking orders and three latency budgets (36 configurations) and prints a summary table to the terminal.
 
-### Full reproduction (30-45 minutes, with synthesis)
+### Full reproduction (with synthesis)
 
 ```bash
 make all-synth
@@ -106,7 +107,7 @@ Expected: MRLC + MLRC run on all three benchmarks with Yosys synthesis, producin
 
 ### Individual experiments
 
-Refer to the main README for per-algorithm flags and examples. Key commands:
+Refer to the src/README.md for per-algorithm flags and examples. Key commands:
 
 ```bash
 python run_mrlc.py --design Canright_sbox.c --latency 4 --order 1
@@ -147,43 +148,6 @@ Each script writes:
 ## Directory organization
 
 ```
-TETRIS/
-├── LICENSE
-├── README.md                  # Main documentation (user-facing)
-├── ARTIFACT.md                # This file (reviewer-facing)
-├── Dockerfile                 # Reproducible environment (Option A)
-├── .dockerignore
-├── requirement.txt            # Python dependencies
-├── Makefile                   # Batch reproduction targets
-│
-├── run_mrlc.py                # MRLC entry point
-├── run_mlrc.py                # MLRC entry point
-├── run_marc.py                # MARC entry point (not part of TCHES 2026)
-├── run_all_experiments.py     # Batch runner (default scope: MRLC + MLRC)
-├── run_verify.py              # Optional VERICA verification wrapper
-│
-├── DSE_algorithm/             # DSE core: algorithms
-│   ├── dse.py                 # Base DSE class
-│   ├── mrlc.py                # MRLC (Algorithm 4/9)
-│   ├── mlrc.py                # MLRC (Algorithm 6/10)
-│   ├── marc.py                # MARC (not in TCHES 2026 paper)
-│   └── utility.py
-│
-├── Gadgets/                   # Gadget library
-│   ├── base.py                # Gadget base class
-│   ├── hpc1.py, hpc2.py, hpc3.py, hpc2o.py, hpc3o.py
-│   ├── comar.py, domand.py
-│   └── hpc2_swapped.py, hpc2o_swapped.py   # Asymmetric transforms
-│
-├── ANDCloud/                  # AST → AND-tree conversion
-├── MaskedHLS_LP/              # MaskedHLS integration (register balancing + RTL)
-│
-├── TestFiles/C_files/         # Benchmark designs
-│   ├── Boyer_Peraltas_sbox.c
-│   ├── Canright_sbox.c
-│   └── skinny_sbox_nor.c
-│
-└── Results/                   # Generated at runtime (default output directory)
 ├── comparision                # Required to run for linking TETRIS library to COMPRESS
 │   └── setup.sh
 ├── COMPRESS-results           # Required to generate COMPRESS results for tables 2 and 4
