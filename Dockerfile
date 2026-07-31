@@ -23,6 +23,14 @@ RUN git clone --depth 1 --branch yosys-0.33 \
     && make install \
     && cd / && rm -rf /tmp/yosys
 
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        build-essential clang bison flex \
+        libreadline-dev gawk tcl-dev libffi-dev git \
+        pkg-config python3 python3-pip python3-venv python-is-python3 \
+        libboost-system-dev libboost-python-dev libboost-filesystem-dev \
+        zlib1g-dev graphviz iverilog ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
 # --- Python dependencies (cached separately from the source tree) --------
 WORKDIR /artifact
 COPY src/requirement.txt /artifact/src/requirement.txt
