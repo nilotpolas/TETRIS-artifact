@@ -118,8 +118,6 @@ source myenv/bin/activate        # Linux / macOS
 pip install -r requirement.txt
 ```
 
-No further build steps are needed — all scripts run from the repository root.
-
 ---
 
 ## Quick start
