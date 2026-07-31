@@ -249,15 +249,6 @@ python src/run_mrlc.py --design Canright_sbox.c --latency 4 --order 1 \
     --output-dir ./my_results/canright_lat4
 ```
 
-**Algorithm — 3-D Dynamic Programming:**
-
-```
-State:  dp[level][bonus_latency_spent][comar_used]  →  minimum randomness
-Bonus:  B = max(0, target_latency − L × latency_HPC3)
-Choice: HPC3 (free, 2 bits/node)  vs  HPC2 (costs 1 bonus cycle, 1 bit/node)
-Goal:   spend bonus cycles converting HPC3 → HPC2 to save the most randomness
-```
-
 ---
 
 ### MLRC — Minimize Latency under Randomness Constraint 
