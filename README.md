@@ -145,6 +145,40 @@ Each script writes:
 - Generated masked C code to the same directory
 - If synthesis enabled: generated Verilog RTL and synthesis logs
 
+## Docker (recommended)
+
+A Dockerfile is provided that bundles Ubuntu 22.04, Yosys 0.33, Icarus Verilog, Graphviz, and all Python dependencies. This is the fastest way to reproduce the paper's results without configuring a local environment.
+
+```bash
+docker build -t tetris-artifact .
+```
+
+Build time is approximately 15–25 minutes, dominated by compiling Yosys 0.33 from source. Yosys is built from source rather than installed from `apt` because the paper's area figures were produced with version 0.33 specifically.
+
+### Running an experiment
+
+The container's working directory is `/artifact/src`, so scripts are invoked directly:
+
+```bash
+docker run --rm tetris-artifact \
+    python3 run_mrlc.py --design Canright_sbox.c --latency 4 --order 1
+```
+
+### Running an experiment with functional verification
+
+Results are written inside the container and do not persist between `docker run` invocations, so DSE and verification must be chained in a single command:
+
+```bash
+docker run --rm tetris-artifact bash -c \
+    "python3 run_mrlc.py --design Canright_sbox.c --latency 4 --order 1 && \
+     python3 run_verify.py --latency 4 --design Canright_sbox.c --order 1 \
+       --results-dir Results/Canright_sbox/MRLC_d1_lat4"
+```
+
+The `--latency` value passed to `run_verify.py` must match the value used for `run_mrlc.py`. A mismatch causes the testbench to sample the pipeline at the wrong cycle and report a spurious failure.
+
+---
+
 ## Directory organization
 
 ```
