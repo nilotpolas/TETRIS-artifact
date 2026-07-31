@@ -40,11 +40,11 @@ The repository also contains a MARC algorithm (multi-constraint area minimizatio
 | All MRLC + MLRC results | `make all-synth` | Runs everything; ~30-45 minutes with synthesis |
 | DSE runtimes | See per-run output | Sub-second for S-box benchmarks |
 
-## With COMPRESS comparision for MRLC (since COMPRESS is MRLC-only optimization)
+### With COMPRESS comparision for MRLC (since COMPRESS is MRLC-only optimization)
 
 Refer to COMPRESS-results/README.md and COMPRESS-results/PROVENANCE.md
 
-## **VERICA PINI verification results (Table 9)** were produced with VERICA 3.1.0. Log files from our runs are included in `verification/`;
+### **VERICA PINI verification results (Table 9)** were produced with VERICA 3.1.0. Log files from our runs are included in `verification/`;
 
 Our TETRIS DSE runtime numbers, area (via Yosys), latency (in cycles), and randomness (in bits) are all fully reproducible with the open-source tools listed below.
 
