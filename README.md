@@ -177,6 +177,7 @@ docker run --rm tetris-artifact bash -c \
 
 The `--latency` value passed to `run_verify.py` must match the value used for `run_mrlc.py`. A mismatch causes the testbench to sample the pipeline at the wrong cycle and report a spurious failure.
 
+> **Note:** if you encounter `permission denied while trying to connect to the Docker daemon socket`, either prefix these commands with `sudo`, or add your user to the `docker` group with `sudo usermod -aG docker $USER && newgrp docker`.
 ---
 
 ## Directory organization
