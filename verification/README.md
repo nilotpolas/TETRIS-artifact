@@ -1,4 +1,4 @@
-# VERICA Test Suite README
+# VERICA Test Files
 
 ## File Structure
 
