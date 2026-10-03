@@ -288,6 +288,7 @@ Expected runtimes on Intel i7-8700 @ 3.20 GHz, 16 GB RAM (Ubuntu 22.04):
 Any issues during evaluation, please contact:
 - Nilotpola Sarma — `s.nilotpola@iitg.ac.in`
 - Chandan Karfa — `ckarfa@iitg.ac.in`
+- Tapish patidar — `p.tapish@iitg.ac.in`
 
 We commit to responding within 24 hours during the evaluation period.
 
