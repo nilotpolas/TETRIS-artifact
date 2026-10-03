@@ -183,7 +183,7 @@ def main():
         constraint_label = "Randomness budget",
         constraint_val   = randomness_budget,
         achieved_randomness = achieved_randomness,
-        achieved_latency    = achieved_latency,
+        achieved_latency    = hls_latency,
         hls_latency         = hls_latency,
         area             = area,
         cell_count       = cell_count,
