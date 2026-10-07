@@ -261,13 +261,13 @@ The `--latency` value passed to `run_verify.py` must match the value used for `r
 |---|---|
 | Algorithm 1 (Linear Gadget) | `src/Gadgets/base.py`, linear gadget class |
 | Algorithm 2 (Linear NOT Gadget) | `src/Gadgets/base.py`, NOT gadget class |
-| Algorithm 3 (ReduceRandomnessWithBufferLatency) | `src/DSE_algorithm/mrlc.py::_reduce_randomness_with_buffer` |
-| Algorithm 4 (MRLCWrapper) | `src/DSE_algorithm/mrlc.py::MRLC.run` |
-| Algorithm 5 (referenced) | `src/DSE_algorithm/mrlc.py::MRLC._initial_assignment` |
-| Algorithm 6 (MLRC) | `src/DSE_algorithm/mlrc.py::MLRC.run` |
-| Algorithm 7 (Transform 1) | `src/Gadgets/hpc2_swapped.py`, integrated in `DSE_algorithm/mrlc.py` |
-| Algorithm 8 (Transforms 2, 3, 4) | Same |
-| Section 9 (Asymmetric Gadget Composition) | src/`asymmetric_gadget_optimization.py` |
+| Algorithm 3 (ReduceRandomnessWithBufferLatency) | `src/DSE_algorithm/mrlc.py`: `MRLC.initialise_dp`, `MRLC.dp_iteration` (DP over level × bonus latency spent × COMAR used), `MRLC.choose_gadgets_for_each_level` (backtracking) |
+| Algorithm 4 (MRLCWrapper) | `src/DSE_algorithm/mrlc.py::MRLC._mrlc_dp` (entry point) |
+| Algorithm 5 (referenced) | `src/DSE_algorithm/mrlc.py::MRLC.initial_gadget_and_list_possible_replacement` (minimum-latency gadget and bonus latency) |
+| Algorithm 6 (MLRC) | `src/DSE_algorithm/mlrc.py::MLRC.mlrc` (entry point). Helpers: `initial_gadget_and_list_possible_replacement`, `_compute_randomness_budget`, `construct_min_heap`, `find_min_gate_level`, `_replace_full_level`, `_find_best_area_gadget`, `_replace_partial_level`, `_compute_critical_path_latency` |
+| Algorithm 7 (Transform 1) | `src/Gadgets/` (`HPC2Swapped`, `HPC2oSwapped`); applied in `mrlc.py::MRLC._mrlc_dp` (step 2.5, via `optimize_mrlc_with_asymmetric_gadgets`) and preserved in `MRLC.nodes_gadget_assignment`; in `mlrc.py::MLRC.optimize_gadget_mapping_for_cost_asymmetric` |
+| Algorithm 8 (Transforms 2, 3, 4) | `_analyze_and_xor_tree_for_patterns` (AND→XOR pattern detection) and `nodes_gadget_assignment` (HPC2→HPC2o, HPC3→HPC3o, HPC2_swapped→HPC2o_swapped), in both `mrlc.py::MRLC` and `mlrc.py::MLRC` |
+| Section 9 (Asymmetric Gadget Composition) | `src/asymmetric_gadget_optimization.py` (`optimize_mrlc_with_asymmetric_gadgets`); `src/asymmetric_latency_optimizer.py` (`AsymmetricLatencyOptimizer`); `MLRC._compute_arrival_depths` |
 
 
 ## Runtime and hardware
