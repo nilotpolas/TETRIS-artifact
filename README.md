@@ -120,7 +120,7 @@ Every generated masked design can be verified against its unmasked golden refere
 
 ```bash
 cd src
-python run_verify.py --design Canright_sbox.c --latency 4 --order 1 --results-dir Results/Canright_sbox/MRLC_d1_lat4 --rtl --rtl Results/Canright_sbox/MRLC_d1_lat4/design_synth.v 
+python run_verify.py --design Canright_sbox.c --latency 4 --order 1 --results-dir Results/Canright_sbox/MRLC_d1_lat4 --rtl Results/Canright_sbox/MRLC_d1_lat4/design_synth.v 
 ```
 
 Expected output (verified in our tests):
